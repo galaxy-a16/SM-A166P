@@ -1,0 +1,76 @@
+1.
+
+root@vivobook:/home/ravindu644/Desktop/a16/extracted_super# mkdir ext4_system
+
+2. 
+
+root@vivobook:/home/ravindu644/Desktop/a16/extracted_super# du -sb extracted_system/
+4962533364	extracted_system/
+
+3. 4962533364 * 125% = 6203166705
+
+4. 6203166705/4096 = 1514444.996337891
+
+1514444.996337891 ~= 1514445
+
+Creating an empty image:
+
+dd if=/dev/zero of=system_new.img bs=4096 count=1514445
+
+5. Formatting the created empty image:
+
+mkfs.ext4 -O ext_attr,dir_index,filetype,extent,sparse_super,large_file,huge_file,uninit_bg,dir_nlink,extra_isize -O ^has_journal,^resize_inode,^64bit,^flex_bg,^metadata_csum system_new.img
+
+6. mounting the new image:
+
+sudo mount -o loop,rw system_new.img ext4_system
+
+7. copying stuffs to the new location:
+
+(cd extracted_system && sudo tar --selinux -cf - .) | (cd ext4_system && sudo tar --selinux -xvf -)
+
+8. unmount the image to apply changes:
+
+sudo umount ext4_system
+
+9. fixup the new image:
+
+sudo e2fsck -f system_new.img
+sudo resize2fs system_new.img
+
+10. sign the new system_new.img:
+
+- get the size in bytes: stat -c '%n %s' system_new.img
+> system_new.img 4718407680
+
+4718407680÷4096
+1151955×101% = 1163474.55
+1163475×4096 = 4765593600
+
+- sign it using this command:
+> avbtool.py add_hash_footer --image system_repacked.img --partition_name system --partition_size 4765593600 --key testkey_rsa4096.pem --algorithm SHA256_RSA4096
+
+
+10. cooking the super image:
+
+lpmake --metadata-size 65536 \
+       --super-name super \
+       --metadata-slots 2 \
+       --device super:12582912000 \
+       --group main:8484716544 \
+       --partition system:none:4765593600:main \
+       --partition odm:none:1744896:main \
+       --partition product:none:1867530240:main \
+       --partition system_dlkm:none:348160:main \
+       --partition system_ext:none:469913600:main \
+       --partition vendor:none:1341947904:main \
+       --partition vendor_dlkm:none:37638144:main \
+       --image system=system_new.img \
+       --image odm=odm.img \
+       --image product=product.img \
+       --image system_dlkm=system_dlkm.img \
+       --image system_ext=system_ext.img \
+       --image vendor=vendor.img \
+       --image vendor_dlkm=vendor_dlkm.img \
+       --sparse \
+       --output new_super.img
