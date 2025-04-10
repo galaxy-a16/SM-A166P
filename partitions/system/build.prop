@@ -266,5 +266,14 @@ debug.sf.auto_latch_unsignaled=false
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.enable_transaction_tracing=false
 com.samsung.speg.prelauncher.disable=true
+
+# build prop tweaks
+debug.hwui.renderer=skiagl
+video.accelerate.hw=1
+debug.sf.hw=1
+debug.performance.tuning=0
+debug.egl.hw=1
+debug.composition.type=gpu
+
 # end of file
 
