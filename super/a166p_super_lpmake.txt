@@ -1,0 +1,68 @@
+README:
+
+- Values for `--metadata-size` and `--metadata-slots` were taken from the lpdump result.
+- `--device super:` is the size in bytes of the super block device of the phone, obtained from the lpdump result.
+
+    ------------------------
+    Block device table:
+    ------------------------
+    Partition name: super
+    First sector: 2048
+    Size: 12582912000 bytes
+    Flags: none
+    ------------------------
+
+- The value for `--group` is taken from the lpdump result:
+
+    Example:
+
+        Partition table:
+        ------------------------
+        Name: system
+        Group: main
+        Attributes: readonly
+        ------------------------
+
+- Partitions are defined respectively according to the lpdump result.
+- Partition sizes must be defined in bytes. I got them by unpacking the super.img into a separate folder and then running this command:
+
+        odm.img 1744896
+        product.img 1867530240
+        system_dlkm.img 348160
+        system_ext.img 469913600
+        system.img 5042634752
+        vendor_dlkm.img 37638144
+        vendor.img 1341947904
+
+- `--group main:` is the sum of the partitions, which will fit inside the 'main' group.
+- In our case, they are: odm, product, system_dlkm, system_ext, system, vendor_dlkm, and vendor.
+- I just used a calculator to calculate the final size of the group xD:
+
+    1744896 + 1867530240 + 348160 + 469913600 + 5042634752 + 37638144 + 1341947904 = 8761757696
+
+- the value `none` is required to make our super image editable from the TWRP.
+
+Here's the LPMAKE command for SM-A166P (make sure to edit the partition names accordingly):
+
+
+lpmake --metadata-size 65536 \
+       --super-name super \
+       --metadata-slots 2 \
+       --device super:12582912000 \
+       --group main:8761757696 \
+       --partition system:none:5042634752:main \
+       --partition odm:none:1744896:main \
+       --partition product:none:1867530240:main \
+       --partition system_dlkm:none:348160:main \
+       --partition system_ext:none:469913600:main \
+       --partition vendor:none:1341947904:main \
+       --partition vendor_dlkm:none:37638144:main \
+       --image system=system.img \
+       --image odm=odm.img \
+       --image product=product.img \
+       --image system_dlkm=system_dlkm.img \
+       --image system_ext=system_ext.img \
+       --image vendor=vendor.img \
+       --image vendor_dlkm=vendor_dlkm.img \
+       --sparse \
+       --output new_super.img
