@@ -287,5 +287,10 @@ ro.camcorder.videoModes=true
 ro.media.enc.hprof.vid.fps=65
 ro.camera.enableCamera1MaxZsl=1
 camera.disable_zsl_mode=1
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-rtsp=true
+media.stagefright.enable-record=false
 # end of file
 
