@@ -276,5 +276,6 @@ debug.egl.hw=1
 debug.composition.type=gpu
 ro.opa.eligible_device=true
 persist.debug.atrace.boottrace=0
+persist.sys.lmk.reportkills=false
 # end of file
 
