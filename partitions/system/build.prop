@@ -314,5 +314,6 @@ vendor.audio.playback.mch.downsample=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 af.fast_track_multiplier=1
+ro.gfx.angle.supported=true
 # end of file
 
