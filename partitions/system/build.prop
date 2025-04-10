@@ -309,5 +309,12 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 af.fast_track_multiplier=1
 ro.gfx.angle.supported=true
+
+# Remove ICCC prop
+ro.config.iccc_version=
+
+# Disable HDCP in WFD
+wlan.wfd.hdcp=disable
+
 # end of file
 
