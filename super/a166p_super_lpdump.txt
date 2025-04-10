@@ -1,0 +1,77 @@
+Slot 0:
+Metadata version: 10.0
+Metadata size: 820 bytes
+Metadata max size: 65536 bytes
+Metadata slot count: 2
+Header flags: none
+Partition table:
+------------------------
+  Name: system
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 9848895 linear super 2048
+------------------------
+  Name: odm
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 3407 linear super 9852928
+------------------------
+  Name: product
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 3647519 linear super 9857024
+------------------------
+  Name: system_dlkm
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 679 linear super 13506560
+------------------------
+  Name: system_ext
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 917799 linear super 13508608
+------------------------
+  Name: vendor
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 2620991 linear super 14428160
+------------------------
+  Name: vendor_dlkm
+  Group: main
+  Attributes: readonly
+  Extents:
+    0 .. 73511 linear super 17049600
+------------------------
+Super partition layout:
+------------------------
+super: 2048 .. 9850944: system (9848896 sectors)
+super: 9852928 .. 9856336: odm (3408 sectors)
+super: 9857024 .. 13504544: product (3647520 sectors)
+super: 13506560 .. 13507240: system_dlkm (680 sectors)
+super: 13508608 .. 14426408: system_ext (917800 sectors)
+super: 14428160 .. 17049152: vendor (2620992 sectors)
+super: 17049600 .. 17123112: vendor_dlkm (73512 sectors)
+------------------------
+Block device table:
+------------------------
+  Partition name: super
+  First sector: 2048
+  Size: 12582912000 bytes
+  Flags: none
+------------------------
+Group table:
+------------------------
+  Name: default
+  Maximum size: 0 bytes
+  Flags: none
+------------------------
+  Name: main
+  Maximum size: 0 bytes
+  Flags: none
+------------------------
