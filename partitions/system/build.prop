@@ -277,5 +277,15 @@ debug.composition.type=gpu
 ro.opa.eligible_device=true
 persist.debug.atrace.boottrace=0
 persist.sys.lmk.reportkills=false
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.capture.maxres=8m
+ro.media.panorama.defres=3264×1840
+ro.media.panorama.frameres=1280×720
+ro.camcorder.videoModes=true
+ro.media.enc.hprof.vid.fps=65
+ro.camera.enableCamera1MaxZsl=1
+camera.disable_zsl_mode=1
 # end of file
 
