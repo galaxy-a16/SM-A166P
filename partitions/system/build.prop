@@ -274,6 +274,6 @@ debug.sf.hw=1
 debug.performance.tuning=0
 debug.egl.hw=1
 debug.composition.type=gpu
-
+ro.opa.eligible_device=true
 # end of file
 
