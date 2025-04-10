@@ -292,5 +292,27 @@ media.stagefright.enable-scan=true
 media.stagefright.enable-http=true
 media.stagefright.enable-rtsp=true
 media.stagefright.enable-record=false
+vendor.audio.media.stereo.control=0
+persist.audio.dualmic.config=endfire
+persist.audio.fluence.mode=endfire
+persist.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+audio.deep_buffer.media=true
+vendor.voice.conc.fallbackpath=deep-buffer
+ro.media.dec.aud.mp3.enabled=1
+ro.media.enc.aud.mp3.enabled=1
+ro.media.dec.aud.flac.enabled=1
+ro.media.enc.aud.flac.enabled=1
+ro.media.dec.aud.wma.enabled=1
+ro.media.enc.aud.wma.enabled=1
+media.aac_51_output_enabled=true
+flac.sw.decoder.24bit.support=true
+persist.audio.speaker.dualmode=true
+vendor.audio.playback.mch.downsample=true
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+af.fast_track_multiplier=1
 # end of file
 
