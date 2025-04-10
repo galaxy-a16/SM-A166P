@@ -1,0 +1,24 @@
+How to sign your custom images with Google's test key?
+
+Requirements:
+
+01. Download avbtool from here: https://android.googlesource.com/platform/external/avb/+archive/refs/heads/main.tar.gz  
+02. Extract it.
+
+Locations:
+
+    avbtool.py -> located in the root of the extracted directory  
+    testkey_rsa4096.pem -> located in extracted_directory/test/data
+
+Example template:
+
+    avbtool add_hashtree_footer \
+    --image system.img \
+    --partition_name system \
+    --key testkey_rsa4096.pem \
+    --algorithm SHA256_RSA4096 \
+    --partition_size 5042634752
+
+Values for `--algorithm` and `--partition_size` can be found by dumping the info from the original image using the following command:
+
+    avbtool.py info_image --image system.img
