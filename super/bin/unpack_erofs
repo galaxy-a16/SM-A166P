@@ -1,0 +1,213 @@
+#!/bin/bash
+# EROFS Image Unpacker Script
+# Usage: ./unpack_erofs.sh <image_file>
+
+set -e
+
+# Define color codes
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+BLUE="\033[0;34m"
+BOLD="\033[1m"
+RESET="\033[0m"
+
+# Banner function
+print_banner() {
+  echo -e "${BOLD}${GREEN}"
+  echo "┌───────────────────────────────────────────┐"
+  echo "│         Unpack EROFS - by @ravindu644     │"
+  echo "└───────────────────────────────────────────┘"
+  echo -e "${RESET}"
+}
+
+print_banner
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo -e "${RED}This script requires root privileges. Please run with sudo.${RESET}"
+  exit 1
+fi
+
+# Check if image file is provided
+if [ $# -ne 1 ]; then
+  echo -e "${YELLOW}Usage: $0 <image_file>${RESET}"
+  echo -e "Example: $0 vendor.img"
+  exit 1
+fi
+
+IMAGE_FILE="$1"
+PARTITION_NAME=$(basename "$IMAGE_FILE" .img)
+MOUNT_DIR="/tmp/${PARTITION_NAME}_mount"
+EXTRACT_DIR="extracted_${PARTITION_NAME}"
+RAW_IMAGE=""
+METADATA_FILE=".${PARTITION_NAME}_info.txt"
+
+# Check if image file exists
+if [ ! -f "$IMAGE_FILE" ]; then
+  echo -e "${RED}Error: Image file '$IMAGE_FILE' not found.${RESET}"
+  exit 1
+fi
+
+# Function to clean up mount point and temporary files
+cleanup() {
+  echo -e "\n${YELLOW}Cleaning up...${RESET}"
+  if mountpoint -q "$MOUNT_DIR" 2>/dev/null; then
+    echo -e "Unmounting ${MOUNT_DIR}..."
+    umount "$MOUNT_DIR" 2>/dev/null || true
+  fi
+  
+  # Remove raw image if it was created
+  if [ -n "$RAW_IMAGE" ] && [ -f "$RAW_IMAGE" ]; then
+    echo -e "Removing temporary raw image..."
+    rm -f "$RAW_IMAGE" 2>/dev/null || true
+  fi
+  
+  # Remove mount directory
+  if [ -d "$MOUNT_DIR" ]; then
+    echo -e "Removing mount directory..."
+    rm -rf "$MOUNT_DIR" 2>/dev/null || true
+  fi
+  
+  echo -e "Cleanup completed."
+}
+
+# Register cleanup function to run on script exit or interrupt
+trap cleanup EXIT INT TERM
+
+# Create or recreate mount directory
+if [ -d "$MOUNT_DIR" ]; then
+  echo -e "${YELLOW}Removing existing mount directory...${RESET}\n"
+  rm -rf "$MOUNT_DIR"
+fi
+mkdir -p "$MOUNT_DIR"
+
+# Remove extraction directory if it exists
+if [ -d "$EXTRACT_DIR" ]; then
+  echo -e "${YELLOW}Removing existing extraction directory: ${EXTRACT_DIR}${RESET}"
+  rm -rf "$EXTRACT_DIR"
+fi
+mkdir -p "$EXTRACT_DIR"
+
+# Try to mount the image
+echo -e "Attempting to mount ${BOLD}$IMAGE_FILE${RESET}..."
+if ! mount -o loop,ro "$IMAGE_FILE" "$MOUNT_DIR" 2>/dev/null; then
+  echo -e "${YELLOW}Direct mounting failed. Trying to convert image...${RESET}"
+  
+  # Try to determine image format
+  IMAGE_TYPE=$(file "$IMAGE_FILE" | grep -o -E 'Android.*|Linux.*|EROFS.*|data')
+  
+  if [ -n "$IMAGE_TYPE" ]; then
+    echo -e "${BLUE}Detected image type: ${BOLD}$IMAGE_TYPE${RESET}"
+    
+    # Create a raw copy to try mounting
+    RAW_IMAGE="${IMAGE_FILE%.img}_raw.img"
+    echo -e "${BLUE}Creating raw image as ${BOLD}$RAW_IMAGE${RESET}${BLUE}...${RESET}"
+    
+    # Try using simg2img for sparse images
+    if command -v simg2img &> /dev/null; then
+      echo -e "${BLUE}Converting with simg2img...${RESET}"
+      simg2img "$IMAGE_FILE" "$RAW_IMAGE"
+    else
+      # Simple copy as fallback
+      echo -e "${YELLOW}simg2img not found, creating direct copy...${RESET}"
+      cp "$IMAGE_FILE" "$RAW_IMAGE"
+    fi
+    
+    echo -e "${BLUE}Attempting to mount raw image...${RESET}"
+    if ! mount -o loop,ro "$RAW_IMAGE" "$MOUNT_DIR" 2>/dev/null; then
+      echo -e "${RED}Failed to mount even after conversion. No luck with this image.${RESET}"
+      exit 1
+    fi
+    
+    echo -e "${GREEN}Successfully mounted raw image.${RESET}"
+    
+    # Use the raw image for metadata extraction
+    MOUNTED_IMAGE="$RAW_IMAGE"
+  else
+    echo -e "${RED}Failed to identify image type for conversion. No luck with this image.${RESET}"
+    exit 1
+  fi
+else
+  echo -e "${GREEN}Successfully mounted original image.${RESET}"
+  
+  # Use the original image for metadata extraction
+  MOUNTED_IMAGE="$IMAGE_FILE"
+fi
+
+# Extract metadata from the mounted image
+echo -e "\n${BLUE}Extracting image metadata...${RESET}"
+
+# Wait a moment for the loop device to be fully established
+sleep 1
+
+# Find the loop device that's associated with our mount
+LOOP_DEVICE=$(losetup -a | grep -F "$MOUNTED_IMAGE" | cut -d: -f1)
+
+if [ -z "$LOOP_DEVICE" ]; then
+  echo -e "${YELLOW}Could not find loop device for metadata extraction. Using fallback method...${RESET}"
+  # Fallback: find the loop device associated with the mount point
+  LOOP_DEVICE=$(findmnt -n -o SOURCE "$MOUNT_DIR" | grep -o '/dev/loop[0-9]*')
+fi
+
+# Extract the metadata if we found a loop device
+if [ -n "$LOOP_DEVICE" ]; then
+  echo -e "${BLUE}Found loop device: ${BOLD}$LOOP_DEVICE${RESET}"
+  
+  # Get the metadata using blkid
+  BLKID_INFO=$(blkid "$LOOP_DEVICE" 2>/dev/null || echo "")
+  
+  # Extract UUID, and LABEL
+  UUID=$(echo "$BLKID_INFO" | grep -o 'UUID="[^"]*"' || echo 'UUID=""')
+  LABEL=$(echo "$BLKID_INFO" | grep -o 'LABEL="[^"]*"' || echo 'LABEL=""')
+  
+  # Also get the filesystem type
+  FS_TYPE=$(echo "$BLKID_INFO" | grep -o 'TYPE="[^"]*"' || echo 'TYPE="erofs"')
+  
+  # Save the information to the metadata file
+  echo "# EROFS Image Metadata - Generated by unpack_erofs script" > "$METADATA_FILE"
+  echo "# Original image: $IMAGE_FILE" >> "$METADATA_FILE"
+  echo "PARTITION_NAME=\"$PARTITION_NAME\"" >> "$METADATA_FILE"
+  echo "$UUID" >> "$METADATA_FILE"
+  echo "$LABEL" >> "$METADATA_FILE"
+  echo "$FS_TYPE" >> "$METADATA_FILE"
+  echo "EXTRACT_DATE=\"$(date)\"" >> "$METADATA_FILE"
+  
+  echo -e "${GREEN}Metadata saved to ${BOLD}$METADATA_FILE${RESET}"
+else
+  echo -e "${YELLOW}Could not find loop device. Metadata extraction skipped.${RESET}"
+  
+  # Create a minimal metadata file with defaults
+  echo "# EROFS Image Metadata - Generated by unpack_erofs script" > "$METADATA_FILE"
+  echo "# Original image: $IMAGE_FILE" >> "$METADATA_FILE"
+  echo "PARTITION_NAME=\"$PARTITION_NAME\"" >> "$METADATA_FILE"
+  echo "UUID=\"\"" >> "$METADATA_FILE"
+  echo "LABEL=\"\"" >> "$METADATA_FILE"
+  echo "TYPE=\"erofs\"" >> "$METADATA_FILE"
+  echo "EXTRACT_DATE=\"$(date)\"" >> "$METADATA_FILE"
+  
+  echo -e "${YELLOW}Default metadata saved to ${BOLD}$METADATA_FILE${RESET}"
+fi
+
+# Copy files with preservation of SELinux contexts and permissions
+echo -e "\nExtracting files with preserved contexts and permissions..."
+echo -e "This may take some time depending on the size of the image...\n"
+
+(cd "$MOUNT_DIR" && tar --selinux -cf - .) | (cd "$EXTRACT_DIR" && tar --selinux -xf -)
+
+# Verify extraction
+if [ $? -eq 0 ]; then
+  echo -e "${GREEN}Extraction completed successfully.${RESET}\n"
+  echo -e "${BOLD}Files extracted to: ${EXTRACT_DIR}${RESET}\n"
+else
+  echo -e "${RED}Error occurred during extraction.${RESET}"
+  exit 1
+fi
+
+# Unmount the image
+if mountpoint -q "$MOUNT_DIR" 2>/dev/null; then
+  umount "$MOUNT_DIR"
+  echo -e "${GREEN}Image unmounted successfully.${RESET}"
+fi
+
+echo -e "${GREEN}${BOLD}Done!${RESET}"

@@ -1,0 +1,165 @@
+#!/bin/bash
+# EROFS Image Repacker Script
+# Usage: ./repack_erofs.sh <extracted_folder_path>
+
+set -e
+
+# Define color codes
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+BLUE="\033[0;34m"
+BOLD="\033[1m"
+RESET="\033[0m"
+
+# Banner function
+print_banner() {
+  echo -e "${BOLD}${GREEN}"
+  echo "┌───────────────────────────────────────────┐"
+  echo "│         Repack EROFS - by @ravindu644     │"
+  echo "└───────────────────────────────────────────┘"
+  echo -e "${RESET}"
+}
+
+print_banner
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo -e "${RED}This script requires root privileges. Please run with sudo.${RESET}"
+  exit 1
+fi
+
+# Check if mkfs.erofs is installed
+if ! command -v mkfs.erofs &> /dev/null; then
+  echo -e "${RED}mkfs.erofs command not found. Please install erofs-utils package.${RESET}"
+  echo -e "For Ubuntu/Debian: sudo apt install erofs-utils"
+  echo -e "For other distributions, check your package manager.${RESET}"
+  exit 1
+fi
+
+# Check if extracted folder is provided
+if [ $# -ne 1 ]; then
+  echo -e "${YELLOW}Usage: $0 <extracted_folder_path>${RESET}"
+  echo -e "Example: $0 extracted_vendor"
+  exit 1
+fi
+
+EXTRACT_DIR="$1"
+
+# Remove trailing slash if present
+EXTRACT_DIR=${EXTRACT_DIR%/}
+
+# Check if extracted directory exists
+if [ ! -d "$EXTRACT_DIR" ]; then
+  echo -e "${RED}Error: Directory '$EXTRACT_DIR' not found.${RESET}"
+  exit 1
+fi
+
+
+PARTITION_NAME=$(basename "$EXTRACT_DIR" | sed 's/^extracted_//')
+
+# Check if metadata file exists
+METADATA_FILE=".${PARTITION_NAME}_info.txt"
+if [ ! -f "$METADATA_FILE" ]; then
+  echo -e "${YELLOW}Warning: Metadata file not found at ${METADATA_FILE}.${RESET}"
+  echo -e "${YELLOW}Using default values for repacking.${RESET}"
+  PARTITION_NAME=$(basename "$EXTRACT_DIR" | sed 's/^extracted_//')
+  UUID=""
+  LABEL=""
+else
+  echo -e "${GREEN}Found metadata file. Reading properties...${RESET}"
+  # Source the metadata file to get the variables
+  source "$METADATA_FILE"
+  echo -e "${BLUE}Partition name: ${BOLD}${PARTITION_NAME}${RESET}"
+  echo -e "${BLUE}UUID: ${BOLD}${UUID//UUID=/}${RESET}"
+  echo -e "${BLUE}Label: ${BOLD}${LABEL//LABEL=/}${RESET}"
+fi
+
+# Extract the numeric values from the variables
+UUID="${UUID/UUID=/}"
+LABEL="${LABEL/LABEL=/}"
+
+# If partition name isn't in the metadata, extract it from directory name
+if [ -z "$PARTITION_NAME" ]; then
+  PARTITION_NAME=$(basename "$EXTRACT_DIR" | sed 's/^extracted_//')
+fi
+
+# Output file name
+OUTPUT_IMG="${PARTITION_NAME}_repacked.img"
+
+# Ask for compression method
+echo -e "\n${BLUE}${BOLD}Select compression method:${RESET}"
+echo -e "1. none (default)"
+echo -e "2. lz4"
+echo -e "3. lz4hc"
+read -p "Enter your choice [1-3]: " COMP_CHOICE
+
+case $COMP_CHOICE in
+  2)
+    COMPRESSION="-zlz4"
+    ;;
+  3)
+    COMPRESSION="-zlz4hc"
+    ;;
+  *)
+    COMPRESSION=""
+    echo -e "${BLUE}Using no compression.${RESET}"
+    ;;
+esac
+
+# Ask for compression level if using compression
+if [[ "$COMPRESSION" == *"lz4"* ]]; then
+  echo -e "\n${BLUE}${BOLD}Select compression level:${RESET}"
+  echo -e "For lz4: 1-9 (default: 6, higher = better compression but slower)"
+  echo -e "For lz4hc: 1-12 (default: 9, higher = better compression but slower)"
+  read -p "Enter compression level: " COMP_LEVEL
+  
+  # Validate compression level
+  if [[ "$COMPRESSION" == "-zlz4" && "$COMP_LEVEL" =~ ^[1-9]$ ]]; then
+    COMPRESSION="$COMPRESSION,level=$COMP_LEVEL"
+  elif [[ "$COMPRESSION" == "-zlz4hc" && "$COMP_LEVEL" =~ ^([1-9]|1[0-2])$ ]]; then
+    COMPRESSION="$COMPRESSION,level=$COMP_LEVEL"
+  elif [[ -n "$COMP_LEVEL" ]]; then
+    echo -e "${YELLOW}Invalid compression level. Using default level.${RESET}"
+  fi
+fi
+
+# Prepare the mkfs.erofs command
+MKFS_CMD="mkfs.erofs"
+
+# Add UUID if it's not empty
+if [ -n "$UUID" ]; then
+  MKFS_CMD="$MKFS_CMD -U $UUID"
+fi
+
+# Add label if it's not empty
+if [ -n "$LABEL" ]; then
+  MKFS_CMD="$MKFS_CMD -L $LABEL"
+fi
+
+# Add compression if selected
+if [ -n "$COMPRESSION" ]; then
+  MKFS_CMD="$MKFS_CMD $COMPRESSION"
+fi
+
+# Add output and input paths
+MKFS_CMD="$MKFS_CMD $OUTPUT_IMG $EXTRACT_DIR"
+
+# Show the command
+echo -e "\n${BLUE}Executing command:${RESET}"
+echo -e "${BOLD}$MKFS_CMD${RESET}\n"
+
+# Create the EROFS image
+echo -e "${BLUE}Creating EROFS image... This may take some time.${RESET}\n"
+eval $MKFS_CMD
+
+# Check if image creation was successful
+if [ $? -eq 0 ]; then
+  echo -e "\n${GREEN}${BOLD}Successfully created EROFS image: $OUTPUT_IMG${RESET}"
+  echo -e "${BLUE}Image size: $(du -h "$OUTPUT_IMG" | cut -f1)${RESET}"
+else
+  echo -e "\n${RED}Error occurred during image creation.${RESET}"
+  exit 1
+fi
+
+echo -e "\n${GREEN}${BOLD}Done!${RESET}"

@@ -1,0 +1,28 @@
+#!/bin/bash
+# Simple EROFS Cleanup Script
+# Usage: ./cleanup_erofs.sh
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo "This script requires root privileges. Please run with sudo."
+  exit 1
+fi
+
+# Look for extracted directories and raw images
+EXTRACTED_DIRS=$(find . -maxdepth 1 -type d -name "extracted_*")
+RAW_IMAGES=$(find . -maxdepth 1 -type f -name "*_raw.img")
+
+# Confirm deletion
+echo "The following items will be removed:"
+[ -n "$EXTRACTED_DIRS" ] && echo "$EXTRACTED_DIRS"
+[ -n "$RAW_IMAGES" ] && echo "$RAW_IMAGES"
+read -p "Continue? (y/n) " -n 1 -r
+echo
+
+# Remove if confirmed
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  [ -n "$EXTRACTED_DIRS" ] && rm -rf $EXTRACTED_DIRS
+  [ -n "$RAW_IMAGES" ] && rm -f $RAW_IMAGES
+  echo "Cleanup completed."
+fi
+
