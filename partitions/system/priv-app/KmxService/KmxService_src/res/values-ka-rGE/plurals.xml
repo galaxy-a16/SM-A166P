@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">დარჩა %d მცდელობა</item>
+        <item quantity="one">%d ცდა დარჩა</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">ვინაიდან %d მცდელობის შემდეგ თქვენი პირადობის დამოწმება ვერ შეძელით, თქვენი უსაფრთხოების მიზნით წაიშლება თქვენი დაშიფრული მონაცემები:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ვინაიდან %d მცდელობის შემდეგ თქვენი პირადობის დამოწმება ვერ შეძელით, თქვენი უსაფრთხოების მიზნით წაიშლება თქვენი დაშიფრული მონაცემები:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">ისევ სცადეთ 1 საათსა და %d წუთში</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ისევ სცადეთ 1 საათსა და %d წუთში</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">ისევ მოსინჯეთ %d საათში</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ისევ სცადეთ %d საათში</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">ისევ სცადეთ %d საათსა და 1 წუთში</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ისევ სცადეთ %d საათსა და 1 წუთში</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">ისევ სცადეთ %d წუთში</item>
+        <item quantity="one">ისევ სცადეთ %d წუთში</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">კიდევ სცადეთ %d წამში</item>
+        <item quantity="one">ისევ სცადეთ %d წამში</item>
+    </plurals>
+</resources>

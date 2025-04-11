@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Atlikuši %d mēģinājumi</item>
+        <item quantity="one">Atlicis %d mēģinājums</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d jauni paziņojumi</item>
+        <item quantity="zero">%d jaunu paziņojumu</item>
+        <item quantity="one">%d jauns paziņojums</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Tā kā jūs nevarējāt verificēt savu identitāti pēc %d mēģinājumiem, drošības labad jūsu šifrētie dati tiks izdzēsti:</item>
+        <item quantity="zero">Tā kā jūs nevarējāt verificēt savu identitāti pēc %d mēģinājumiem, drošības labad jūsu šifrētie dati tiks izdzēsti:</item>
+        <item quantity="one">Tā kā jūs nevarējāt verificēt savu identitāti pēc %d mēģinājuma, drošības labad jūsu šifrētie dati tiks izdzēsti:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Mēģiniet vēlreiz pēc 1 stundas un %d minūtēm</item>
+        <item quantity="zero">Mēģiniet vēlreiz pēc 1 stundas un %d minūtēm</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc 1 stundas un %d minūtes</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Mēģiniet vēlreiz pēc %d stundām</item>
+        <item quantity="zero">Mēģiniet vēlreiz pēc %d stundām</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc %d stundas</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Mēģiniet vēlreiz pēc %d stundām un 1 minūtes</item>
+        <item quantity="zero">Mēģiniet vēlreiz pēc %d stundām un 1 minūtes</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc %d stundas un 1 minūtes</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Mēģiniet vēlreiz pēc %d minūtēm</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc %d minūtes</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Mēģiniet vēlreiz pēc %d sekundēm</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc %d sekundes</item>
+    </plurals>
+</resources>

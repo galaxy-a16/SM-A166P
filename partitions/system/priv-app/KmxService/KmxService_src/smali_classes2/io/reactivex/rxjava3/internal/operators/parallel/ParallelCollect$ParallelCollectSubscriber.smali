@@ -1,0 +1,187 @@
+.class final Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;
+.super Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        "C:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber<",
+        "TT;TC;>;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J = -0x42292ea02dae7f04L
+
+
+# instance fields
+.field collection:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TC;"
+        }
+    .end annotation
+.end field
+
+.field final collector:Llb/b;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Llb/b;"
+        }
+    .end annotation
+.end field
+
+.field done:Z
+
+
+# direct methods
+.method public constructor <init>(Lvc/c;Ljava/lang/Object;Llb/b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lvc/c;",
+            "TC;",
+            "Llb/b;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;-><init>(Lvc/c;)V
+
+    iput-object p2, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->collection:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public cancel()V
+    .locals 0
+
+    invoke-super {p0}, Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;->cancel()V
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;->upstream:Lvc/d;
+
+    invoke-interface {p0}, Lvc/d;->cancel()V
+
+    return-void
+.end method
+
+.method public onComplete()V
+    .locals 2
+
+    iget-boolean v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->done:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->done:Z
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->collection:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->collection:Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Lio/reactivex/rxjava3/internal/subscriptions/DeferredScalarSubscription;->complete(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->done:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lv4/b;->Q(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->done:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->collection:Ljava/lang/Object;
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/subscriptions/DeferredScalarSubscription;->downstream:Lvc/c;
+
+    invoke-interface {p0, p1}, Lvc/c;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public onNext(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-boolean p1, p0, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->done:Z
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :try_start_0
+    throw p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Li4/f;->L(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->cancel()V
+
+    invoke-virtual {p0, p1}, Lio/reactivex/rxjava3/internal/operators/parallel/ParallelCollect$ParallelCollectSubscriber;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public onSubscribe(Lvc/d;)V
+    .locals 2
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;->upstream:Lvc/d;
+
+    invoke-static {v0, p1}, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->validate(Lvc/d;Lvc/d;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lio/reactivex/rxjava3/internal/subscribers/DeferredScalarSubscriber;->upstream:Lvc/d;
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/subscriptions/DeferredScalarSubscription;->downstream:Lvc/c;
+
+    invoke-interface {v0, p0}, Lvc/c;->onSubscribe(Lvc/d;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lvc/d;->request(J)V
+
+    :cond_0
+    return-void
+.end method

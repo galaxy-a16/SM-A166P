@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">입력 기회가 %d회 남았습니다</item>
+        <item quantity="one">입력 기회가 %d회 남았습니다</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">새 알림 %d개</item>
+        <item quantity="one">새 알림 %d개</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">%d번의 시도 후에도 본인을 인증하지 못했으므로 보안을 위해 암호화된 데이터를 삭제합니다.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1시간 %d분 후에 시도하세요</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d시간 후에 시도하세요</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d시간 1분 후에 시도하세요</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d분 후에 시도하세요</item>
+        <item quantity="one">%d분 후 다시 해보세요</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d초 후에 시도하세요</item>
+        <item quantity="one">%d초 후 다시 해보세요</item>
+    </plurals>
+</resources>

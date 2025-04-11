@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s کے بارے میں</string>
+    <string name="back">پیچھے</string>
+    <string name="chan_mkt">قانونی</string>
+    <string name="chan_ntc">نوٹس</string>
+    <string name="character_counter_content_description">%2$d حروف میں سے %1$d باقی</string>
+    <string name="close_app">ایپلیکیشن بند کریں</string>
+    <string name="contact_us">ہم سے رابطہ کریں</string>
+    <string name="couldnt_get_samsung_account_information">آپ کے اکاؤنٹ کی معلومات حاصل نہ کی جا سکی</string>
+    <string name="couldnt_get_samsung_account_information_description">اپنا نیٹ ورک کنکشن چیک کریں اور یہ یقینی بنائیں کہ Samsung account تازہ ترین ورژن پر اپ ڈیٹ ہے، پھر دوبارہ کوشش کریں۔</string>
+    <string name="data_info_dialog_title">وہ ڈیٹا جسے آپ ان لاک کر سکتے ہیں</string>
+    <string name="data_info_menu">دیکھیں کہ آپ کون سا ڈیٹا ان لاک کر سکتے ہیں</string>
+    <string name="delete_dialog_message">اگر آپ کو اپنے پچھلے آلے کا پن، پیٹرن یا پاس ورڈ یاد نہیں ہے، تو آپ اپنے ڈیٹا کو ان لاک کرنا چھوڑ سکتے ہیں۔ تاہم، نیچے دیا گیا اینکرپٹ کردہ ڈیٹا کو سیکیورٹی کیلئے حذف کر دیا جائے گا کیونکہ ہم آپ کی شناخت کی توثیق نہیں کر سکے۔</string>
+    <string name="delete_dialog_title">ان لاک کرنے میں دشواری؟</string>
+    <string name="delete_menu">ان لاک کرنے کا طریقہ یاد نہیں ہے؟</string>
+    <string name="dragndroplist_drag_move">اب %d پوزیشن پر ہے</string>
+    <string name="dragndroplist_drag_release">آئٹم کو پوزیشن %d پر ڈالا گیا۔</string>
+    <string name="dragndroplist_drag_start">پوزیشن %d سے کارڈ کو گھسیٹنا شروع کیا۔</string>
+    <string name="dragndroplist_item_cannot_be_dragged">آئٹم پوزیشن %d کو گھسیٹا نہیں جاسکتا۔</string>
+    <string name="go_to">%s پر جائیں</string>
+    <string name="go_to_developer_options">ڈیولپر کے اختیارات پر جائیں</string>
+    <string name="go_to_sign_out">سائن آؤٹ پر جائیں</string>
+    <string name="incorrect_password_entered">غلط پاس ورڈ داخل کیا گیا</string>
+    <string name="incorrect_pattern_drawn">غلط نمونہ ڈرائنگ کیا گیا</string>
+    <string name="incorrect_pin_entered">غلط پن درج کیا گیا</string>
+    <string name="latest_version_is_already_installed">تازہ ترین ورژن پہلے سے انسٹال ہے۔</string>
+    <string name="menu_cancel">منسوخ کریں</string>
+    <string name="menu_continue">جاری کریں</string>
+    <string name="new_version_is_available">نیا ورژن دستیاب ہے</string>
+    <string name="next">اگلا</string>
+    <string name="no_network_connection">کوئی نیٹ ورک کنیکشن نہیں ہے</string>
+    <string name="no_network_connection_description">آپ کے آلات کے سیکیورٹی اسٹیٹس کو اپ ڈیٹ نہیں کیا جا سکا۔ کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
+    <string name="no_threats_found">کوئی خطرہ نہیں ملا</string>
+    <string name="notify_delete_dialog_title">آپ کا اینکرپٹ کردہ ڈیٹا حذف ہو جائے گا</string>
+    <string name="notify_delete_dialog_title_previous_devices">آپ کے پچھلے آلات کا استعمال کر کے آپ کی توثیق نہیں ہو سکی</string>
+    <string name="notify_delete_dialog_title_previous_phone">آپ کے پچھلے فون کا استعمال کر کے آپ کی توثیق نہیں ہو سکی</string>
+    <string name="notify_delete_dialog_title_previous_phones">آپ کے پچھلے فونز کا استعمال کر کے آپ کی توثیق نہیں ہو سکی</string>
+    <string name="notify_delete_dialog_title_previous_tablet">آپ کے پچھلے ٹیبلیٹ کا استعمال کر کے آپ کی توثیق نہیں ہو سکی</string>
+    <string name="notify_delete_dialog_title_previous_tablets">آپ کے پچھلے ٹیبلیٹس کا استعمال کر کے آپ کی توثیق نہیں ہو سکی</string>
+    <string name="oem_unlocking_is_turned_on">‏OEM ان لاکنگ آن ہے</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"‏OEM ان لاکنگ آپ کے فون پر غیر مجاز سافٹ ویئر کو انسٹال ہونے کی سہولت دیتا ہے۔ غیر مجاز سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، سیٹنگز > ڈیولپر کے اختیارات میں اپنے فون پر OEM ان لاکنگ کو آف کریں۔
+
+آپ کے اسے آف کرنے کے بعد، یہاں سیکیورٹی کا اسٹیٹس تبدیل ہونے میں کچھ وقت لگ سکتا ہے۔"</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"‏OEM ان لاکنگ آپ کے ٹیبلیٹ پر غیر مجاز سافٹ ویئر کو انسٹال ہونے کی سہولت دیتا ہے۔ غیر مجاز سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، سیٹنگز > ڈیولپر کے اختیارات میں اپنے ٹیبلیٹ پر OEM ان لاکنگ کو آف کریں۔
+
+آپ کے اسے آف کرنے کے بعد، یہاں سیکیورٹی کا اسٹیٹس تبدیل ہونے میں کچھ وقت لگ سکتا ہے۔"</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">‏OEM ان لاکنگ آپ کے فون پر غیر مجاز سافٹ ویئر کو انسٹال ہونے کی سہولت دیتا ہے۔ غیر مجاز سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، سیٹنگز > ڈیولپر کے اختیارات میں OEM ان لاکنگ کو آف کریں۔</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">‏OEM ان لاکنگ آپ کے ٹیبلیٹ پر غیر مجاز سافٹ ویئر کو انسٹال ہونے کی سہولت دیتا ہے۔ غیر مجاز سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، سیٹنگز > ڈیولپر کے اختیارات میں OEM ان لاکنگ کو آف کریں۔</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="open_source_licenses">اوپن سورس لائسنس‬</string>
+    <string name="other_devices">دیگر آلات</string>
+    <string name="password_set">پاس ورڈ سیٹ کرنے کی تاریخ %s</string>
+    <string name="pattern_set">پیٹرن سیٹ کرنے کی تاریخ %s</string>
+    <string name="pin_set">پن سیٹ کرنے کی تاریخ %s</string>
+    <string name="ppp_delegate_description">اپنا ڈیٹا محفوظ کرنے کیلئے پن، پیٹرن یا پاس ورڈ سیٹ کریں۔</string>
+    <string name="ppp_delegate_title">محفوظ اسکرین لاک سیٹ کریں</string>
+    <string name="ppp_dialog_description_SamsungCloud">‏Samsung Cloud میں بہتر کردہ ڈیٹا کے تحفظ کا بیک اپ اور سنکنگ کیلئے اسکرین لاک</string>
+    <string name="ppp_dialog_description_SamsungPass">پاس کیز کو Samsung Pass میں محفوظ کیا گیا</string>
+    <string name="remove_this_device">یہ آلہ ہٹائيں</string>
+    <string name="security_status_main_description">ایک محفوظ نجی بلاک چین کا استعمال کرتے ہوئے Knox Matrix آپ کے Samsung account میں لاگ ان ہونے والے تعاون یافتہ آلات کی نگرانی کرتا ہے۔ سلسلے میں موجود ہر آلہ دیگر آلات کی سیکیورٹی اسٹیٹس کی جانچ کر سکتا ہے اور آپ کو بتا سکتا ہے کہ آیا کوئی خطرہ لاحق ہے۔</string>
+    <string name="security_status_not_available_yet">سیکیورٹی اسٹیٹس ابھی تک دستیاب نہیں ہے</string>
+    <string name="security_status_not_available_yet_description">اس میں کچھ وقت لگ سکتا ہے۔ بعد میں دوبارہ چیک کریں۔</string>
+    <string name="security_status_not_up_to_date">سیکیورٹی اسٹیٹس اپ ٹو ڈیٹ نہیں ہے</string>
+    <string name="security_status_not_up_to_date_description_phone">"اس فون کی سیکیورٹی کے اسٹیٹس کو 30 سے زیادہ دنوں سے اپ ڈیٹ نہیں کیا گیا ہے۔ ہو سکتا ہے کہ فون آف لائن ہو یا کوئی چیز اس کے اسٹیٹس کو چیک کرنے سے روک رہی ہو۔ اگر آپ اب اس فون کو استعمال نہیں کر رہے ہیں، تو آپ کو اپنے Samsung account سے سائن آؤٹ کرنے کی تجویز دی جاتی ہے۔ آپ سیٹنگز > Samsung account > آلات میں سائن آؤٹ کر سکتے ہیں۔
+
+اگر آپ اس فون کا استعمال کر رہے ہیں، لیکن اس کی سیکیورٹی کا اسٹیٹس اپ ڈیٹ نہیں ہو رہا ہے، تو یہ یقینی بنائیں کہ یہ کسی نیٹ ورک سے منسلک ہے۔"</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"اس آلے کی سیکیورٹی کے اسٹیٹس کو 30 سے زیادہ دنوں سے اپ ڈیٹ نہیں کیا گیا ہے۔ ہو سکتا ہے کہ آلے آف لائن ہو یا کوئی چیز اس کے اسٹیٹس کو چیک کرنے سے روک رہی ہو۔ اگر آپ اب اس آلے کو استعمال نہیں کر رہے ہیں، تو SmartThings ایپ میں اس آلے کو ہٹانے کی تجویز دی جاتی ہے۔
+
+اگر آپ اس آلے کا استعمال کر رہے ہیں، لیکن اس کی سیکیورٹی کا اسٹیٹس اپ ڈیٹ نہیں ہو رہا ہے، تو یہ یقینی بنائیں کہ یہ کسی نیٹ ورک سے منسلک ہے۔"</string>
+    <string name="security_status_not_up_to_date_description_tablet">"اس ٹیبلیٹ کی سیکیورٹی کے اسٹیٹس کو 30 سے زیادہ دنوں سے اپ ڈیٹ نہیں کیا گیا ہے۔ ہو سکتا ہے کہ ٹیبلیٹ آف لائن ہو یا کوئی چیز اس کے اسٹیٹس کو چیک کرنے سے روک رہی ہو۔ اگر آپ اب اس ٹیبلیٹ کو استعمال نہیں کر رہے ہیں، تو آپ کو اپنے Samsung account سے سائن آؤٹ کرنے کی تجویز دی جاتی ہے۔ آپ سیٹنگز > Samsung account > آلات میں سائن آؤٹ کر سکتے ہیں۔
+
+اگر آپ اس ٹیبلیٹ کا استعمال کر رہے ہیں، لیکن اس کی سیکیورٹی کا اسٹیٹس اپ ڈیٹ نہیں ہو رہا ہے، تو یہ یقینی بنائیں کہ یہ کسی نیٹ ورک سے منسلک ہے۔"</string>
+    <string name="security_status_not_up_to_date_description_vd">"اس آلے کی سیکیورٹی کے اسٹیٹس کو 30 سے زیادہ دنوں سے اپ ڈیٹ نہیں کیا گیا ہے۔ ہو سکتا ہے کہ آلہ آف لائن ہو یا کوئی چیز اس کے اسٹیٹس کو چیک کرنے سے روک رہی ہو۔ اگر آپ اب اس آلے کو استعمال نہیں کر رہے ہیں، تو آپ کو اپنے Samsung account سے سائن آؤٹ کرنے کی تجویز دی جاتی ہے۔ آپ سیٹنگز > Samsung account > آلات > سائن ان کردہ آلات کا نظم کریں میں سائن آؤٹ کر سکتے ہیں۔
+
+اگر آپ اس آلے کا استعمال کر رہے ہیں، لیکن اس کی سیکیورٹی کا اسٹیٹس اپ ڈیٹ نہیں ہو رہا ہے، تو یہ یقینی بنائیں کہ یہ کسی نیٹ ورک سے منسلک ہے۔"</string>
+    <string name="security_status_of_your_devices">آپ کے آلات کا سیکیورٹی اسٹیٹس</string>
+    <string name="sesl_action_bar_up_description">اوپر کی طرف نیویگیٹ کریں</string>
+    <string name="sesl_action_menu_overflow_badge_description">نیا مواد دستیاب ہے</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">مزيد اختیارات</string>
+    <string name="sesl_appbar_suggest_all_dismissed">تمام تجاویز مسترد ہو گئیں</string>
+    <string name="sesl_appbar_suggest_dismiss">تجویز کو مسترد کریں</string>
+    <string name="sesl_appbar_suggest_dismissed">تجویز مسترد ہو گئی</string>
+    <string name="sesl_appbar_suggest_pagination">صفحہ %1$d کا %2$d</string>
+    <string name="sesl_index_assistant_text">اسکرول کرنے کیلئے دو انگلیوں کی مدد سے اوپر یا نیچے سوائپ کریں۔</string>
+    <string name="sesl_index_scrollbar">اسکرول بار</string>
+    <string name="sesl_index_section">سیکشن انڈیکس</string>
+    <string name="sesl_index_selected">منتخب شدہ</string>
+    <string name="sesl_material_badge_description">نیا مواد دستیاب ہے</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">مزید</string>
+    <string name="sesl_preferecne_badge_description">نیا نوٹیفکیشن</string>
+    <string name="sesl_preferencecategory_added_title">ہیڈر</string>
+    <string name="sesl_search_hint">تلاش کریں</string>
+    <string name="sesl_searchview_description_clear">تلاش فیلڈ صاف کریں</string>
+    <string name="sesl_searchview_description_clear_field">تلاش کی فیلڈ صاف ہو گئی</string>
+    <string name="sesl_searchview_description_query">سوال تلاش کریں</string>
+    <string name="sesl_searchview_description_search">تلاش کریں</string>
+    <string name="sesl_searchview_description_submit">سوال ارسال کریں</string>
+    <string name="sesl_searchview_description_voice">آواز کے ذریعے تلاش</string>
+    <string name="sesl_switch_off">آف</string>
+    <string name="sesl_switch_on">آن</string>
+    <string name="sesl_switchbar_off_text">آف</string>
+    <string name="sesl_switchbar_on_text">آن</string>
+    <string name="sesl_toolbar_collapse_description">ڈھیر کریں</string>
+    <string name="skip">اسکپ کریں</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">آپ کے فون پر SmartThings انسٹال نہیں ہے۔ اسے Play اسٹور سے ڈاؤن لوڈ کریں۔</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">آپ کے ٹیبلیٹ پر SmartThings انسٹال نہیں ہے۔ اسے Play اسٹور سے ڈاؤن لوڈ کریں۔</string>
+    <string name="this_phone">یہ فون</string>
+    <string name="this_tablet">یہ ٹیبلیٹ</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d گھنٹے اور %2$d منٹ میں دوبارہ کوشش کریں</string>
+    <string name="unauthorized_software_detected">غیرمجاز سافٹ ویئر کا پتا چلا</string>
+    <string name="unauthorized_software_detected_description_other_phone">غیر مجاز سسٹم سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا سیٹنگز > Samsung account > آلات میں اپنے Samsung account سے سائن آؤٹ کریں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">غیر مجاز سسٹم سافٹ ویئر آپ کے آلے کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا SmartThings ایپ میں اس آلے کو ہٹائیں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unauthorized_software_detected_description_other_tablet">غیر مجاز سسٹم سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا سیٹنگز > Samsung account > آلات میں اپنے Samsung account سے سائن آؤٹ کریں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unauthorized_software_detected_description_other_vd">غیر مجاز سسٹم سافٹ ویئر آپ کے آلے کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا سیٹنگز > Samsung account > آلات > سائن ان کردہ آلات کا نظم کریں میں اپنے Samsung account سے سائن آؤٹ کریں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unauthorized_software_detected_description_this_phone">غیر مجاز سسٹم سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا اپنے Samsung account سے سائن آؤٹ کریں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unauthorized_software_detected_description_this_tablet">غیر مجاز سسٹم سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، آفیشل Samsung سافٹ ویئر انسٹال کریں یا اپنے Samsung account سے سائن آؤٹ کریں۔ آفیشل سافٹ ویئر انسٹال کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unlocked_bootloader">ان لاک کردہ بوٹ لوڈر</string>
+    <string name="unlocked_bootloader_description_other_phone">"آپ کے فون کا بوٹ لوڈر ان لاک ہونے پر، غیر مجاز سسٹم سافٹ ویئر کو انسٹال کیا جا سکتا ہے۔ غیر مجاز سسٹم سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، اپنے فون کا بوٹ لوڈر لاک کریں یا سیٹنگز > Samsung account > آلات میں اپنے Samsung account سے سائن آؤٹ کریں۔ بوٹ لوڈر کو لاک کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔
+
+اسے لاک کرنے کے بعد، سیکیورٹی کے اسٹیٹس کو یہاں تبدیل ہونے میں کچھ وقت لگ سکتا ہے۔"</string>
+    <string name="unlocked_bootloader_description_other_tablet">"آپ کے ٹیبلیٹ کا بوٹ لوڈر ان لاک ہونے پر، غیر مجاز سسٹم سافٹ ویئر کو انسٹال کیا جا سکتا ہے۔ غیر مجاز سسٹم سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، اپنے ٹیبلیٹ کا بوٹ لوڈر لاک کریں یا سیٹنگز > Samsung account > آلات میں اپنے Samsung account سے سائن آؤٹ کریں۔ بوٹ لوڈر کو لاک کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔
+
+اسے لاک کرنے کے بعد، سیکیورٹی کے اسٹیٹس کو یہاں تبدیل ہونے میں کچھ وقت لگ سکتا ہے۔"</string>
+    <string name="unlocked_bootloader_description_this_phone">آپ کے فون کا بوٹ لوڈر ان لاک ہونے پر، غیر مجاز سسٹم سافٹ ویئر کو انسٹال کیا جا سکتا ہے۔ غیر مجاز سسٹم سافٹ ویئر آپ کے فون کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، اپنے فون کا بوٹ لوڈر لاک کریں یا اپنے Samsung account سے سائن آؤٹ کریں۔ بوٹ لوڈر کو لاک کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="unlocked_bootloader_description_this_tablet">آپ کے ٹیبلیٹ کا بوٹ لوڈر ان لاک ہونے پر، غیر مجاز سسٹم سافٹ ویئر کو انسٹال کیا جا سکتا ہے۔ غیر مجاز سسٹم سافٹ ویئر آپ کے ٹیبلیٹ کو سیکیورٹی سے متعلق خطرات کا شکار بنا سکتا ہے۔ اپنے اکاؤنٹ اور ذاتی ڈیٹا کے تحفظ کیلئے، اپنے ٹیبلیٹ کا بوٹ لوڈر لاک کریں یا اپنے Samsung account سے سائن آؤٹ کریں۔ بوٹ لوڈر کو لاک کرنے میں مدد کیلئے، Samsung کسٹمر سروس سے رابطہ کریں۔</string>
+    <string name="update">اپ ڈیٹ کریں</string>
+    <string name="update_multi_apps_to_continue">جاری رکھنے کیلئے، مندرجہ ذیل ایپس اپ ڈیٹ کریں:</string>
+    <string name="update_ps_to_continue">جاری رکھنے کے لیے %s اپ ڈیٹ کریں۔</string>
+    <string name="verify_current_description_phone">آپ اس فون کے پن، پیٹرن یا پاس ورڈ سے اپنی شناخت کی توثیق کر کے، پاس کیز سمیت اپنے اینکرپٹ کردہ ڈیٹا کو غیر مقفل کر سکتے ہیں۔</string>
+    <string name="verify_current_description_tablet">آپ اس ٹیبلیٹ کے پن، پیٹرن یا پاس ورڈ سے اپنی شناخت کی توثیق کر کے، پاس کیز سمیت اپنے اینکرپٹ کردہ ڈیٹا کو غیر مقفل کر سکتے ہیں۔</string>
+    <string name="verify_current_detail_password">اپنا موجودہ پاس ورڈ درج کریں۔</string>
+    <string name="verify_current_detail_pattern">اپنا موجودہ نمونہ بنائیں۔</string>
+    <string name="verify_current_detail_pin">اپنا موجودہ پن درج کریں۔</string>
+    <string name="verify_current_title_phone">اینکرپٹ کردہ ڈیٹا کو ان لاک کرنے کیلئے یہ فون استعمال کریں</string>
+    <string name="verify_current_title_tablet">اینکرپٹ کردہ ڈیٹا کو ان لاک کرنے کیلئے یہ ٹیبلیٹ استعمال کریں</string>
+    <string name="verify_old_password_description_phone">سیکیورٹی کیلئے، اپنے پچھلے فون کے پاس ورڈ سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_password_description_tablet">سیکیورٹی کیلئے، اپنے پچھلے ٹیبلیٹ کے پاس ورڈ سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_pattern_description_phone">سیکیورٹی کیلئے، اپنے پچھلے فون کے پیٹرن سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_pattern_description_tablet">سیکیورٹی کیلئے، اپنے پچھلے ٹیبلیٹ کے پیٹرن سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_pin_description_phone">سیکیورٹی کیلئے، اپنے پچھلے فون کے پن سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_pin_description_tablet">سیکیورٹی کیلئے، اپنے پچھلے ٹیبلیٹ کے پن سے اپنی توثیق کریں۔</string>
+    <string name="verify_old_ppp_title">اپنے اینکرپٹ کردہ ڈیٹا کو ان لاک کریں</string>
+    <string name="version">ورژن %s</string>
+</resources>

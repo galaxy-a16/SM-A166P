@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d tentatives restantes</item>
+        <item quantity="one">%d tentative restante</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nouvelles notifications</item>
+        <item quantity="one">%d nouvelle notification</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">"Comme la vérification de votre identité n'a pas abouti après %d tentatives, vos données chiffrées seront supprimées pour votre sécurité :"</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">"Comme la vérification de votre identité n'a pas abouti après %d tentative, vos données chiffrées seront supprimées pour votre sécurité :"</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Réessayez dans 1 heure %d minutes</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Réessayez dans 1 heure %d minute</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Réessayez dans %d heures</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Réessayez dans %d heure</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Réessayez dans %d heures 1 minute</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Réessayez dans %d heure 1 minute</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Réessayer dans %d minutes</item>
+        <item quantity="one">Réessayer dans %d minute</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Réessayer dans %d secondes</item>
+        <item quantity="one">Réessayer dans %d seconde</item>
+    </plurals>
+</resources>

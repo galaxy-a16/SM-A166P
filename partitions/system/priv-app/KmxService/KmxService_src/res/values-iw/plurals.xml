@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">נותרו %d ניסיונות</item>
+        <item quantity="one">נותר %d ניסיון</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d התראות חדשות</item>
+        <item quantity="one">%d התראות חדשות</item>
+        <item quantity="two">%d התראות חדשות</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">כיוון שלא הצלחת לאמת את זהותך לאחר ‎%d ניסיונות, הנתונים המוצפנים יימחקו למען אבטחתך:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">כיוון שלא הצלחת לאמת את זהותך לאחר ניסיון %d, הנתונים המוצפנים יימחקו למען אבטחתך:</item>
+        <item quantity="two">כיוון שלא הצלחת לאמת את זהותך לאחר ‎%d ניסיונות, הנתונים המוצפנים יימחקו למען אבטחתך:</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">כיוון שלא הצלחת לאמת את זהותך לאחר ‎%d ניסיונות, הנתונים המוצפנים יימחקו למען אבטחתך:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">נסה שוב בעוד שעה אחת ו-%d דקות</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">נסה שוב בעוד שעה אחת ודקה %d</item>
+        <item quantity="two">נסה שוב בעוד שעה אחת ו-%d דקות</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">נסה שוב בעוד שעה אחת ו-%d דקות</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">נסה שוב בעוד %d שעות</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">נסה שוב בעוד שעה %d</item>
+        <item quantity="two">נסה שוב בעוד %d שעות</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">נסה שוב בעוד %d שעות</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">נסה שוב בעוד %d שעות ודקה אחת</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">נסה שוב בעוד %d שעה דקה אחת</item>
+        <item quantity="two">נסה שוב בעוד %d שעות ודקה אחת</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">נסה שוב בעוד %d שעות ודקה אחת</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">נסה שוב בעוד ‎%d‏ דקות</item>
+        <item quantity="one">נסה שוב בעוד ‎%d דקה</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">נסה שוב בעוד ‎%d‏ שניות</item>
+        <item quantity="one">נסה שוב בעוד %d שנייה</item>
+    </plurals>
+</resources>

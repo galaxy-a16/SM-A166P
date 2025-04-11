@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d বার প্রচেষ্টা বাকি আছে</item>
+        <item quantity="one">%dটি প্রচেষ্টা বাকি আছে</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">যেহেতু আপনি %d প্রচেষ্টার পরে আপনার পরিচয় যাচাই করতে অক্ষম ছিলেন, আপনার নিরাপত্তার জন্য আপনার এনক্রিপ্ট করা ডাটা মুছে ফেলা হবে:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">যেহেতু আপনি %d প্রচেষ্টার পরে আপনার পরিচয় যাচাই করতে অক্ষম ছিলেন, আপনার নিরাপত্তার জন্য আপনার এনক্রিপ্ট করা ডাটা মুছে ফেলা হবে:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 ঘণ্টা %d মিনিট পরে আবার চেষ্টা করুন</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 ঘণ্টা %d মিনিট পরে আবার চেষ্টা করুন</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d ঘণ্টা পরে আবার চেষ্টা করুন</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ঘণ্টা পরে আবার চেষ্টা করুন</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d ঘণ্টা 1 মিনিট পরে আবার চেষ্টা করুন</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ঘণ্টা 1 মিনিট পরে আবার চেষ্টা করুন</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d মিনিট পর আবার চেষ্টা করুন</item>
+        <item quantity="one">%d মিনিট পর আবার চেষ্টা করুন</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d সেকেন্ড পর আবার চেষ্টা করুন</item>
+        <item quantity="one">%d সেকেন্ড পর আবার চেষ্টা করুন</item>
+    </plurals>
+</resources>

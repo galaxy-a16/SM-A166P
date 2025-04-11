@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Пра %s</string>
+    <string name="back">Назад</string>
+    <string name="chan_mkt">Маркетынг</string>
+    <string name="chan_ntc">Папярэджанне</string>
+    <string name="character_counter_content_description">%1$d з %2$d сімвалаў</string>
+    <string name="close_app">Закр. праграму</string>
+    <string name="contact_us">Звязацца з намі</string>
+    <string name="couldnt_get_samsung_account_information">Не ўдалося атрымаць інфармацыю ўліковага запісу</string>
+    <string name="couldnt_get_samsung_account_information_description">Праверце падлучэнне да сеткі і упэўніцеся, што Samsung account абноўлены да апошняй версіі, затым паўтарыце спробу.</string>
+    <string name="data_info_dialog_title">Даныя, якія можна разблакіраваць</string>
+    <string name="data_info_menu">Даведайцеся, якія даныя можна разблакіраваць</string>
+    <string name="delete_dialog_message">Вы можаце прапусціць разблакіраванне вашых даных, калі вы не памятаеце PIN-код, узор або пароль ад вашых былых прылад. Аднак зашыфраваныя даныя, прыведзеныя ніжэй, будуць выдалены ў мэтах бяспекі, паколькі мы не можам праверыць сапраўднасць вашай асобы.</string>
+    <string name="delete_dialog_title">Праблема з разблакіроўкай?</string>
+    <string name="delete_menu">Не памятаеце, як разблакіраваць?</string>
+    <string name="dragndroplist_drag_move">Зараз у пазіцыі %d</string>
+    <string name="dragndroplist_drag_release">Элемент перацягнуты ў пазіцыю %d.</string>
+    <string name="dragndroplist_drag_start">Пачалося перацягванне элемента ў пазіцыю %d.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Элемент у пазіцыі %d немагчыма перацягнуць.</string>
+    <string name="go_to">Перайсці да %s</string>
+    <string name="go_to_developer_options">Перайсці да парам распрацоўшч</string>
+    <string name="go_to_sign_out">Перайсці да выхаду</string>
+    <string name="incorrect_password_entered">Уведзены няправільны пароль</string>
+    <string name="incorrect_pattern_drawn">Нарысаваны няправільны ўзор</string>
+    <string name="incorrect_pin_entered">Уведзены няправільны PIN</string>
+    <string name="latest_version_is_already_installed">Апошняя версія ўжо ўсталявана.</string>
+    <string name="menu_cancel">Скасаваць</string>
+    <string name="menu_continue">Працягнуць</string>
+    <string name="new_version_is_available">Ёсць новая версія.</string>
+    <string name="next">Далей</string>
+    <string name="no_network_connection">Няма злучэння з сеткай</string>
+    <string name="no_network_connection_description">Не атрымалася абнавіць стан бяспекі прылад. Праверце падлучэнне і паўтарыце спробу.</string>
+    <string name="no_threats_found">Пагрозы не знойдзены</string>
+    <string name="notify_delete_dialog_title">Вашы зашыфраваныя даныя будуць выдалены</string>
+    <string name="notify_delete_dialog_title_previous_devices">Не атрымалася пацвердзіць вашу асобу з дапамогай папярэдніх прылад</string>
+    <string name="notify_delete_dialog_title_previous_phone">Не атрымалася пацвердзіць вашу асобу з дапамогай папярэдняга тэлефона</string>
+    <string name="notify_delete_dialog_title_previous_phones">Не атрымалася пацвердзіць вашу асобу з дапамогай папярэдніх тэлефонаў</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Не атрымалася пацвердзіць вашу асобу з дапамогай папярэдняга планшэта</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Не атрымалася пацвердзіць вашу асобу з дапамогай папярэдніх планшэтаў</string>
+    <string name="oem_unlocking_is_turned_on">Разблакіроўка OEM уключана</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"Разблакіроўка OEM можа прывесці да ўсталёўкі несанкцыянаванага праграмнага забеспячэння на ваш тэлефон. Несанкцыянаванае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, выключыце разблакіроўку OEM на тэлефоне ў меню «Налады > Параметры распрацоўшчыка».
+
+Пасля выключэння можа прайсці некаторы час да таго, як стан бяспекі зменіцца."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"Разблакіроўка OEM можа прывесці да ўсталёўкі несанкцыянаванага праграмнага забеспячэння на ваш планшэт. Несанкцыянаванае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, выключыце разблакіроўку OEM на планшэце ў меню «Налады > Параметры распрацоўшчыка».
+
+Пасля выключэння можа прайсці некаторы час да таго, як стан бяспекі зменіцца."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">Разблакіроўка OEM можа прывесці да ўсталёўкі несанкцыянаванага праграмнага забеспячэння на ваш тэлефон. Несанкцыянаванае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, выключыце разблакіроўку OEM у меню «Налады > Параметры распрацоўшчыка».</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">Разблакіроўка OEM можа прывесці да ўсталёўкі несанкцыянаванага праграмнага забеспячэння на ваш планшэт. Несанкцыянаванае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, выключыце разблакіроўку OEM у меню «Налады > Параметры распрацоўшчыка».</string>
+    <string name="ok">ОК</string>
+    <string name="open_source_licenses">"Ліцэнзія
+адкрыт.
+ПЗ"</string>
+    <string name="other_devices">Іншыя прылады</string>
+    <string name="password_set">Пароль зададзены %s</string>
+    <string name="pattern_set">Узор зададзены %s</string>
+    <string name="pin_set">PIN-код зададзены %s</string>
+    <string name="ppp_delegate_description">Задайце PIN-код, пароль або ўзор, каб абараніць даныя.</string>
+    <string name="ppp_delegate_title">Задаць бяспечны тып блакіроўкі экрана</string>
+    <string name="ppp_dialog_description_SamsungCloud">Блакіроўка экрана для рэзервовай копіі палепшанай абароны даных і сінхранізацыі з Samsung Cloud</string>
+    <string name="ppp_dialog_description_SamsungPass">Ключы доступу захаваны ў Samsung Pass</string>
+    <string name="remove_this_device">Выдал гэту прыладу</string>
+    <string name="security_status_main_description">Knox Matrix адсочвае прылады, якія падтрымліваюцца і на якіх выкананы ўваход у Samsung account, з дапамогай бяспечнага прыватнага блакчэйна. Кожная прылада ў ланцугу можа правяраць стан бяспекі іншых прылад і паведамляць вам аб наяўнасці пагроз.</string>
+    <string name="security_status_not_available_yet">Стан бяспекі пакуль недаступны</string>
+    <string name="security_status_not_available_yet_description">Гэта можа заняць некаторы час. Вяртайцеся пазней.</string>
+    <string name="security_status_not_up_to_date">Стан бяспекі неактуальны</string>
+    <string name="security_status_not_up_to_date_description_phone">"Стан бяспекі гэтага тэлефона не абнаўляўся болей за 30 дзён. Тэлефон можа знаходзіцца па-за сеткай або нешта можа перашкаджаць праверцы яго стану. Калі вы больш не карыстаецеся гэтым тэлефонам, рэкамендуецца выйсці з Samsung account на ім. Каб выйсці, перайдзіце ў «Налады > Samsung account > Прылады».
+
+Калі вы карыстаецеся гэтым тэлефонам, але яго стан бяспекі не абнаўляецца, пераканайцеся, што ён падключаны да сеткі."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Стан бяспекі гэтай прылады не абнаўляўся болей за 30 дзён. Прылада можа знаходзіцца па-за сеткай або нешта можа перашкаджаць праверцы яе стану. Калі вы больш не карыстаецеся гэтай прыладай, рэкамендуецца выдаліць яе ў праграме SmartThings
+
+Калі вы карыстаецеся гэтай прыладай, але яе стан бяспекі не абнаўляецца, пераканайцеся, што яна падключана да сеткі."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Стан бяспекі гэтага планшэта не абнаўляўся болей за 30 дзён. Планшэт можа знаходзіцца па-за сеткай або нешта можа перашкаджаць праверцы яго стану. Калі вы больш не карыстаецеся гэтым планшэтам, рэкамендуецца выйсці з Samsung account на гэтым планшэце. Каб выйсці, перайдзіце ў «Налады > Samsung account > Прылады».
+
+Калі вы карыстаецеся гэтым планшэтам, але яго стан бяспекі не абнаўляецца, пераканайцеся, што ён падключаны да сеткі."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Стан бяспекі гэтай прылады не абнаўляўся болей за 30 дзён. Прылада можа знаходзіцца па-за сеткай або нешта можа перашкаджаць праверцы яе стану. Калі вы больш не карыстаецеся гэтай прыладай, рэкамендуецца выйсці з Samsung account на гэтай прыладзе. Каб выйсці, перайдзіце ў «Налады > Samsung account > Прылады > Кіраванне прыладамі, на якіх выкананы ўваход».
+
+Калі вы карыстаецеся гэтай прыладай, але яе стан бяспекі не абнаўляецца, пераканайцеся, што яна падключана да сеткі."</string>
+    <string name="security_status_of_your_devices">Стан бяспекі вашых прылад</string>
+    <string name="sesl_action_bar_up_description">Пераход уверх</string>
+    <string name="sesl_action_menu_overflow_badge_description">Даступна новае змесціва</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Н</string>
+    <string name="sesl_action_menu_overflow_description">Іншыя параметры</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Усе прапановы адхілены</string>
+    <string name="sesl_appbar_suggest_dismiss">Адхіліць прапанову</string>
+    <string name="sesl_appbar_suggest_dismissed">Прапанова адхілена</string>
+    <string name="sesl_appbar_suggest_pagination">Старонка %1$d з %2$d</string>
+    <string name="sesl_index_assistant_text">Каб прагартаць, правядзіце ўверх або ўніз двума пальцамі.</string>
+    <string name="sesl_index_scrollbar">Паласа прагорткі</string>
+    <string name="sesl_index_section">Індэкс раздзелу</string>
+    <string name="sesl_index_selected">Выбрана</string>
+    <string name="sesl_material_badge_description">Даступна новае змесціва</string>
+    <string name="sesl_material_overflow_badge_text_n">Н</string>
+    <string name="sesl_more_item_label">Болей</string>
+    <string name="sesl_preferecne_badge_description">Новае апавяшчэнне</string>
+    <string name="sesl_preferencecategory_added_title">Загаловак</string>
+    <string name="sesl_search_hint">Пошук</string>
+    <string name="sesl_searchview_description_clear">Ачысціць поле пошуку</string>
+    <string name="sesl_searchview_description_clear_field">Поле пошуку ачышчана</string>
+    <string name="sesl_searchview_description_query">Пошукавы запыт</string>
+    <string name="sesl_searchview_description_search">Пошук</string>
+    <string name="sesl_searchview_description_submit">Адправіць запыт</string>
+    <string name="sesl_searchview_description_voice">Галасавы пошук</string>
+    <string name="sesl_switch_off">Не выкарыстоўваецца</string>
+    <string name="sesl_switch_on">Выкарыстоўваецца</string>
+    <string name="sesl_switchbar_off_text">Выкл.</string>
+    <string name="sesl_switchbar_on_text">Укл.</string>
+    <string name="sesl_toolbar_collapse_description">Згарнуць</string>
+    <string name="skip">Прапусціць</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings не ўсталявана на вашым тэлефоне. Спампуйце яе з Play Store.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings не ўсталявана на вашым планшэце. Спампуйце яе з Play Store.</string>
+    <string name="this_phone">Гэты тэлефон</string>
+    <string name="this_tablet">Гэты планшэт</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Паўтарыце спробу праз %1$d гадз %2$d хв</string>
+    <string name="unauthorized_software_detected">Выяўлена несанкцыянаванае праграмнае забеспячэнне</string>
+    <string name="unauthorized_software_detected_description_other_phone">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз для бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выйдзіце з Samsung account у меню «Налады > Samsung account > Прылады». Каб атрымаць дапамогу з усталяваннем афіцыйнага праграмнага забеспячэння, звярніцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць вашу прыладу ўразлівай да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выдаліце гэту прыладу ў праграме SmartThings. Па дапамогу ва ўсталёўцы афіцыйнага праграмнага забеспячэння звяртайцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз для бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выйдзіце з Samsung account у меню «Налады > Samsung account > Прылады». Каб атрымаць дапамогу з усталяваннем афіцыйнага праграмнага забеспячэння, звярніцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць вашу прыладу ўразлівай да пагроз для бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выйдзіце з Samsung account у меню «Налады > Samsung account > Прылады > Кіраванне прыладамі, на якіх выкананы ўваход». Каб атрымаць дапамогу з усталяваннем афіцыйнага праграмнага забеспячэння, звярніцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выйдзіце са свайго Samsung account. Па дапамогу ва ўсталёўцы афіцыйнага праграмнага забеспячэння звяртайцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, усталюйце афіцыйнае праграмнае забеспячэнне Samsung або выйдзіце са свайго Samsung account. Па дапамогу ва ўсталёўцы афіцыйнага праграмнага забеспячэння звяртайцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unlocked_bootloader">Загрузчык сістэмы разблакіраваны</string>
+    <string name="unlocked_bootloader_description_other_phone">"Пакуль загрузчык вашага тэлефона разблакіраваны, несанкцыянаванае сістэмнае праграмнае забеспячэнне можа быць усталявана. Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз для бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, заблакіруйце загрузчык тэлефона або выйдзіце з Samsung account у меню «Налады > Samsung account > Прылады». Каб атрымаць дапамогу ў блакіроўцы загрузчыка, звярніцеся ў службу падтрымкі кліентаў Samsung.
+
+Калі вы заблакіруеце яго, можа спатрэбіцца некаторы час, каб стан бяспекі ў гэтым раздзеле змяніўся."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Пакуль загрузчык вашага планшэта разблакіраваны, несанкцыянаванае сістэмнае праграмнае забеспячэнне можа быць усталявана. Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз для бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, заблакіруйце загрузчык планшэта або выйдзіце з Samsung account у меню «Налады > Samsung account > Прылады». Каб атрымаць дапамогу ў блакіроўцы загрузчыка, звярніцеся ў службу падтрымкі кліентаў Samsung.
+
+Калі вы заблакіруеце яго, можа спатрэбіцца некаторы час, каб стан бяспекі ў гэтым раздзеле змяніўся."</string>
+    <string name="unlocked_bootloader_description_this_phone">У той час як загрузчык сістэмы тэлефона разблакіраваны, можа быць усталявана несанкцыянаванае праграмнае забеспячэнне. Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш тэлефон уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, заблакіруйце загрузчык сістэмы тэлефона або выйдзіце са свайго Samsung account. Па дапамогу ў блакіроўцы загрузчыка сістэмы звяртайцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="unlocked_bootloader_description_this_tablet">У той час як загрузчык сістэмы планшэта разблакіраваны, можа быць усталявана несанкцыянаванае праграмнае забеспячэнне. Несанкцыянаванае сістэмнае праграмнае забеспячэнне можа зрабіць ваш планшэт уразлівым да пагроз бяспекі. Каб абараніць свой уліковы запіс і асабістыя даныя, заблакіруйце загрузчык сістэмы планшэта або выйдзіце са свайго Samsung account. Па дапамогу ў блакіроўцы загрузчыка сістэмы звяртайцеся ў службу падтрымкі кліентаў Samsung.</string>
+    <string name="update">Абнавіць</string>
+    <string name="update_multi_apps_to_continue">Абнавіце наступныя праграмы, каб працягнуць:</string>
+    <string name="update_ps_to_continue">Каб працягнуць, абнавіце %s.</string>
+    <string name="verify_current_description_phone">Вы можаце разблакіраваць зашыфраваныя даныя, у тым ліку ключы доступу, шляхам пацвярджэння асобы з дапамогай PIN-кода, узору або пароля для гэтага тэлефона.</string>
+    <string name="verify_current_description_tablet">Вы можаце разблакіраваць зашыфраваныя даныя, у тым ліку ключы доступу, шляхам пацвярджэння асобы з дапамогай PIN-кода, узору або пароля для гэтага планшэта.</string>
+    <string name="verify_current_detail_password">Увядзіце цяперашні пароль.</string>
+    <string name="verify_current_detail_pattern">Намалюйце цяперашні ўзор.</string>
+    <string name="verify_current_detail_pin">Увядзіце цяперашні PIN-код.</string>
+    <string name="verify_current_title_phone">Выкарыстайце гэты тэлефон для разблакіроўкі зашыфраваных даных</string>
+    <string name="verify_current_title_tablet">Выкарыстайце гэты планшэт для разблакіроўкі зашыфраваных даных</string>
+    <string name="verify_old_password_description_phone">У мэтах бяспекі пацвердзіце сваю асобу з дапамогай пароля для папярэдняга тэлефона.</string>
+    <string name="verify_old_password_description_tablet">У мэтах бяспекі пацвердзіце сваю асобу з дапамогай пароля для папярэдняга планшэта.</string>
+    <string name="verify_old_pattern_description_phone">У мэтах бяспекі пацвердзіце сваю асобу з дапамогай узору для пярэдняга тэлефона.</string>
+    <string name="verify_old_pattern_description_tablet">У мэтах бяспекі пацвердзіце сваю асобу з дапамогай узору для папярэдняга планшэта.</string>
+    <string name="verify_old_pin_description_phone">У мэтах бяспекі пацвердзіце сваю асобу з дапамогай PIN-кода для папярэдняга тэлефона.</string>
+    <string name="verify_old_pin_description_tablet">У мэтах бяспекі пацвердзіце асобу з дапамогай PIN-кода з папярэдняга планшэта.</string>
+    <string name="verify_old_ppp_title">Разблакіроўка зашыфраваных даных</string>
+    <string name="version">Версія %s</string>
+</resources>

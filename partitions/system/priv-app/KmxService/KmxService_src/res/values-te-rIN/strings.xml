@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s గురించి</string>
+    <string name="back">వెనుకకు</string>
+    <string name="chan_mkt">మార్కెటింగ్</string>
+    <string name="chan_ntc">నోటీసు</string>
+    <string name="character_counter_content_description">%2$dలో నుండి %1$d అక్షరాలు</string>
+    <string name="close_app">అప్లికేషన్‌ని మూసివేయి</string>
+    <string name="contact_us">మమ్మల్ని సంప్రదించండి</string>
+    <string name="couldnt_get_samsung_account_information">మీ ఖాతా సమాచారాన్ని పొందడం సాధ్యం కాలేదు</string>
+    <string name="couldnt_get_samsung_account_information_description">మీ నెట్‌వర్క్ కనెక్షన్‌ని తనిఖీ చేసి, Samsung account ఇటీవలి వెర్షన్‌కు అప్‌డేట్ చేయబడిందని నిర్ధారించుకుని, ఆపై మళ్లీ ప్రయత్నించండి.</string>
+    <string name="data_info_dialog_title">మీరు అన్‌లాక్ చేయగల డేటా</string>
+    <string name="data_info_menu">మీరు ఏ డేటాను అన్‌లాక్ చేయగలరో చూడండి</string>
+    <string name="delete_dialog_message">మీ మునుపటి పరికర PIN, నమూనా లేదా పాస్‌వర్డ్ మీకు గుర్తు లేనట్లయితే మీరు మీ డేటాను అన్‌లాక్ చేయడాన్ని దాటవేయవచ్చు. అయినప్పటికీ, మేము మీ గుర్తింపును ధృవీకరించడం సాధ్యం కానందున దిగువన ఉన్న ఎన్‌క్రిప్ట్ చేయబడిన డేటా తొలగించబడుతుంది.</string>
+    <string name="delete_dialog_title">అన్‌లాక్ చేయడంలో సమస్య ఉందా?</string>
+    <string name="delete_menu">ఎలా అన్‌లాక్ చేయాలో గుర్తు లేదా?</string>
+    <string name="dragndroplist_drag_move">ఇప్పుడు స్థితి %dలో ఉన్నారు</string>
+    <string name="dragndroplist_drag_release">అంశం %d స్థానంలో పడిపోయింది.</string>
+    <string name="dragndroplist_drag_start">%d స్థానంలోని ఐటెమ్ లాగడం ప్రారంభించారు.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d స్థానంలోని అంశాన్ని లాగలేరు.</string>
+    <string name="go_to">%sకు వెళ్లు</string>
+    <string name="go_to_developer_options">డెవలపర్ ఎంపికలకు వెళ్లండి</string>
+    <string name="go_to_sign_out">సైన్ అవుట్ చేయడానికి వెళ్లండి</string>
+    <string name="incorrect_password_entered">చెల్లని పాస్‌వర్డ్ నమోదు చేయబడింది</string>
+    <string name="incorrect_pattern_drawn">చెల్లని నమూనా గీయబడింది</string>
+    <string name="incorrect_pin_entered">చెల్లని PIN నమోదు చేయబడింది</string>
+    <string name="latest_version_is_already_installed">తాజా వెర్షన్ ఇప్పటికే ఇన్‌స్టాల్ చేయబడింది.</string>
+    <string name="menu_cancel">రద్దు చేయి</string>
+    <string name="menu_continue">కొనసాగించు</string>
+    <string name="new_version_is_available">కొత్త వెర్షన్ అందుబాటులో ఉంది.</string>
+    <string name="next">తదుపరి</string>
+    <string name="no_network_connection">నెట్‌వర్క్ కనెక్షన్ లేదు</string>
+    <string name="no_network_connection_description">మీ పరికరాల భద్రతా స్థితిని అప్‌డేట్ చేయడం సాధ్యం కాలేదు. కనెక్షన్‌ని తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి.</string>
+    <string name="no_threats_found">ముప్పులు కనుగొనబడలేదు</string>
+    <string name="notify_delete_dialog_title">మీ ఎన్‌క్రిప్ట్ చేయబడిన డేటా తొలగించబడుతుంది</string>
+    <string name="notify_delete_dialog_title_previous_devices">మీ మునుపటి పరికరాలను ఉపయోగించి మిమ్మల్ని ధృవీకరించడం సాధ్యం కాలేదు</string>
+    <string name="notify_delete_dialog_title_previous_phone">మీ మునుపటి ఫోన్‌ని ఉపయోగించి మిమ్మల్ని ధృవీకరించడం సాధ్యం కాలేదు</string>
+    <string name="notify_delete_dialog_title_previous_phones">మీ మునుపటి ఫోన్‌లను ఉపయోగించి మిమ్మల్ని ధృవీకరించడం సాధ్యం కాలేదు</string>
+    <string name="notify_delete_dialog_title_previous_tablet">మీ మునుపటి టాబ్లెట్‌ని ఉపయోగించి మిమ్మల్ని ధృవీకరించడం సాధ్యం కాలేదు</string>
+    <string name="notify_delete_dialog_title_previous_tablets">మీ మునుపటి టాబ్లెట్‌లను ఉపయోగించి మిమ్మల్ని ధృవీకరించడం సాధ్యం కాలేదు</string>
+    <string name="oem_unlocking_is_turned_on">OEM అన్‌లాకింగ్ ఆన్ చేయబడింది</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM అన్‌లాకింగ్ మీ ఫోన్‌లో ఇన్‌స్టాల్ చేయడానికి అనధికార సాఫ్ట్‌వేర్‌ని అనుమతిస్తుంది. అనధికార సాఫ్ట్‌వేర్ మీ ఫోన్‌ను భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, సెట్టింగ్‌లు > డెవలపర్ ఎంపికలలో మీ ఫోన్‌లోని OEM అన్‌లాకింగ్‌ని ఆఫ్ చేయండి.
+
+మీరు దీన్ని ఆఫ్ చేసిన తర్వాత, ఇక్కడ భద్రతా స్థితి మారడానికి కొంత సమయం పట్టవచ్చు."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM అన్‌లాకింగ్ మీ టాబ్లెట్‌లో ఇన్‌స్టాల్ చేయడానికి అనధికార సాఫ్ట్‌వేర్‌ని అనుమతిస్తుంది. అనధికార సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ను భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, సెట్టింగ్‌లు > డెవలపర్ ఎంపికలలో మీ టాబ్లెట్‌లోని OEM అన్‌లాకింగ్‌ని ఆఫ్ చేయండి.
+
+మీరు దీన్ని ఆఫ్ చేసిన తర్వాత, ఇక్కడ భద్రతా స్థితి మారడానికి కొంత సమయం పట్టవచ్చు."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM అన్‌లాకింగ్ మీ ఫోన్‌లో ఇన్‌స్టాల్ చేయడానికి అనధికార సాఫ్ట్‌వేర్‌ని అనుమతిస్తుంది. అనధికార సాఫ్ట్‌వేర్ మీ ఫోన్‌ను భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, సెట్టింగ్‌లు > డెవలపర్ ఎంపికలలో OEM అన్‌లాకింగ్‌ని ఆఫ్ చేయండి.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM అన్‌లాకింగ్ మీ టాబ్లెట్‌లో ఇన్‌స్టాల్ చేయడానికి అనధికార సాఫ్ట్‌వేర్‌ని అనుమతిస్తుంది. అనధికార సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ను భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, సెట్టింగ్‌లు > డెవలపర్ ఎంపికలలో OEM అన్‌లాకింగ్‌ని ఆఫ్ చేయండి.</string>
+    <string name="ok">సరే</string>
+    <string name="open_source_licenses">ఓపెన్ సోర్స్ లైసెన్స్</string>
+    <string name="other_devices">ఇతర పరికరాలు</string>
+    <string name="password_set">%sన పాస్‌వర్డ్ సెట్ చేయబడింది</string>
+    <string name="pattern_set">%sన నమూనా సెట్ చేయబడింది</string>
+    <string name="pin_set">%sన PIN సెట్ చేయబడింది</string>
+    <string name="ppp_delegate_description">మీ డేటాను రక్షించడానికి PIN, నమూనా లేదా పాస్‌వర్డ్‌ను సెట్ చేయండి.</string>
+    <string name="ppp_delegate_title">సురక్షిత స్క్రీన్ లాక్‌ని సెట్ చేయి</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloudలో మెరుగైన డేటా రక్షణ బ్యాకప్ మరియు సమకాలీకరించడం కోసం స్క్రీన్ లాక్</string>
+    <string name="ppp_dialog_description_SamsungPass">పాస్‌కీలు Samsung Passలో సేవ్ చేయబడ్డాయి</string>
+    <string name="remove_this_device">ఈ పరికరాన్ని తీసివేయి</string>
+    <string name="security_status_main_description">Knox Matrix సురక్షిత ప్రైవేట్ బ్లాక్‌చైన్‌ను ఉపయోగించి మీ Samsung accountకు సైన్ ఇన్ చేసిన మద్దతు ఉన్న పరికరాలను మానిటర్ చేస్తుంది. చైన్‌లో ఉన్న ప్రతి పరికరం ఇతర పరికరాల భద్రతా స్థితిని తనిఖీ చేసి, ఏవైనా బెదిరింపులు ఉన్నట్లయితే మీకు తెలియజేయవచ్చు.</string>
+    <string name="security_status_not_available_yet">భద్రతా స్థితి ఇంకా అందుబాటులో లేదు</string>
+    <string name="security_status_not_available_yet_description">దీనికి కొంత సమయం పట్టవచ్చు. తర్వాత మళ్లీ తనిఖీ చేయండి.</string>
+    <string name="security_status_not_up_to_date">భద్రతా స్థితి తాజాగా లేదు</string>
+    <string name="security_status_not_up_to_date_description_phone">"ఈ ఫోన్ భద్రతా స్థితి 30 కంటే ఎక్కువ రోజుల పాటు అప్‌డేట్ చేయబడలేదు. ఫోన్ ఆఫ్‌లైన్‌లో ఉండవచ్చు లేదా దాని స్థితిని తనిఖీ చేయకుండా ఏదైనా నివారిస్తూ ఉండవచ్చు. మీరు ఇకపై ఈ ఫోన్‌ను ఉపయోగించనట్లయితే, మీ Samsung account నుండి సైన్ అవుట్ చేయమని సిఫార్సు చేయబడింది. మీరు సెట్టింగ్‌లు > Samsung account > పరికరాలులో సైన్ అవుట్ చేయవచ్చు.
+
+మీరు ఈ ఫోన్‌ను ఉపయోగిస్తున్నప్పటికీ, దాని భద్రతా స్థితి అప్‌డేట్ చేయబడనట్లయితే, అది నెట్‌వర్క్‌కు కనెక్ట్ చేయబడిందని నిర్ధారించుకోండి."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"ఈ పరికర భద్రతా స్థితి 30 కంటే ఎక్కువ రోజుల పాటు అప్‌డేట్ చేయబడలేదు. పరికరం ఆఫ్‌లైన్‌లో ఉండవచ్చు లేదా దాని స్థితిని తనిఖీ చేయకుండా ఏదైనా నివారిస్తూ ఉండవచ్చు. మీరు ఇకపై ఈ పరికరాన్ని ఉపయోగించనట్లయితే, SmartThings అప్లికేషన్‌లో ఈ పరికరాన్ని తీసివేయమని సిఫార్సు చేయబడింది.
+
+మీరు ఈ పరికరాన్ని ఉపయోగిస్తున్నప్పటికీ, దాని భద్రతా స్థితి అప్‌డేట్ చేయబడనట్లయితే, అది నెట్‌వర్క్‌కు కనెక్ట్ చేయబడిందని నిర్ధారించుకోండి."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"ఈ టాబ్లెట్ భద్రతా స్థితి 30 కంటే ఎక్కువ రోజుల పాటు అప్‌డేట్ చేయబడలేదు. టాబ్లెట్ ఆఫ్‌లైన్‌లో ఉండవచ్చు లేదా దాని స్థితిని తనిఖీ చేయకుండా ఏదైనా నివారిస్తూ ఉండవచ్చు. మీరు ఇకపై ఈ టాబ్లెట్‌ను ఉపయోగించనట్లయితే, మీ Samsung account నుండి సైన్ అవుట్ చేయమని సిఫార్సు చేయబడింది. మీరు సెట్టింగ్‌లు > Samsung account > పరికరాలులో సైన్ అవుట్ చేయవచ్చు.
+
+మీరు ఈ టాబ్లెట్‌ను ఉపయోగిస్తున్నప్పటికీ, దాని భద్రతా స్థితి అప్‌డేట్ చేయబడనట్లయితే, అది నెట్‌వర్క్‌కు కనెక్ట్ చేయబడిందని నిర్ధారించుకోండి."</string>
+    <string name="security_status_not_up_to_date_description_vd">"ఈ పరికర భద్రతా స్థితి 30 కంటే ఎక్కువ రోజుల పాటు అప్‌డేట్ చేయబడలేదు. పరికరం ఆఫ్‌లైన్‌లో ఉండవచ్చు లేదా దాని స్థితిని తనిఖీ చేయకుండా ఏదైనా నివారిస్తూ ఉండవచ్చు. మీరు ఇకపై ఈ పరికరాన్ని ఉపయోగించనట్లయితే, మీ Samsung account నుండి సైన్ అవుట్ చేయమని సిఫార్సు చేయబడింది. మీరు సెట్టింగ్‌లు > Samsung account > పరికరాలు > సైన్ ఇన్ చేసిన పరికరాలను నిర్వహించులో సైన్ అవుట్ చేయవచ్చు.
+
+మీరు ఈ పరికరాన్ని ఉపయోగిస్తున్నప్పటికీ, దాని భద్రతా స్థితి అప్‌డేట్ చేయబడనట్లయితే, అది నెట్‌వర్క్‌కు కనెక్ట్ చేయబడిందని నిర్ధారించుకోండి."</string>
+    <string name="security_status_of_your_devices">మీ పరికరాల భద్రతా స్థితి</string>
+    <string name="sesl_action_bar_up_description">ఎగువకు నావిగేట్ చేయి</string>
+    <string name="sesl_action_menu_overflow_badge_description">కొత్త కంటెంట్ అందుబాటులో ఉంది</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">మరిన్ని ఎంపికలు</string>
+    <string name="sesl_appbar_suggest_all_dismissed">అన్ని సూచనలు విస్మరించబడ్డాయి</string>
+    <string name="sesl_appbar_suggest_dismiss">సూచనను విస్మరించు</string>
+    <string name="sesl_appbar_suggest_dismissed">సూచన విస్మరించబడింది</string>
+    <string name="sesl_appbar_suggest_pagination">పేజీ %2$dలో %1$d</string>
+    <string name="sesl_index_assistant_text">స్క్రోల్ చేయడానికి రెండు వేళ్లతో ఎగువకు లేదా దిగువకు స్వైప్ చేయండి.</string>
+    <string name="sesl_index_scrollbar">స్క్రోల్ బార్</string>
+    <string name="sesl_index_section">విభాగం సూచిక</string>
+    <string name="sesl_index_selected">ఎంచుకోబడింది</string>
+    <string name="sesl_material_badge_description">కొత్త కంటెంట్ అందుబాటులో ఉంది</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">మరిన్ని</string>
+    <string name="sesl_preferecne_badge_description">కొత్త నోటిఫికేషన్</string>
+    <string name="sesl_preferencecategory_added_title">శీర్షిక</string>
+    <string name="sesl_search_hint">శోధించు</string>
+    <string name="sesl_searchview_description_clear">శోధన ఫీల్డ్‌ని క్లియర్ చేయి</string>
+    <string name="sesl_searchview_description_clear_field">శోధన ఫీల్డ్ క్లియర్ చేయబడింది</string>
+    <string name="sesl_searchview_description_query">ప్రశ్నను శోధించు</string>
+    <string name="sesl_searchview_description_search">శోధించు</string>
+    <string name="sesl_searchview_description_submit">ప్రశ్నను విన్నవించండి</string>
+    <string name="sesl_searchview_description_voice">వాయిస్ శోధన</string>
+    <string name="sesl_switch_off">ఆఫ్</string>
+    <string name="sesl_switch_on">ఆన్</string>
+    <string name="sesl_switchbar_off_text">ఆఫ్</string>
+    <string name="sesl_switchbar_on_text">ఆన్</string>
+    <string name="sesl_toolbar_collapse_description">కుదించు</string>
+    <string name="skip">దాటవేయి</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">మీ ఫోన్‌లో SmartThings ఇన్‌స్టాల్ చేయబడలేదు. Play Store నుండి దాన్ని డౌన్‌లోడ్ చేయండి.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">మీ టాబ్లెట్‌లో SmartThings ఇన్‌స్టాల్ చేయబడలేదు. Play Store నుండి దాన్ని డౌన్‌లోడ్ చేయండి.</string>
+    <string name="this_phone">ఈ ఫోన్</string>
+    <string name="this_tablet">ఈ టాబ్లెట్</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d గంటల %2$d నిమిషాలలో మళ్లీ ప్రయత్నించండి</string>
+    <string name="unauthorized_software_detected">అనధికార సాఫ్ట్‌వేర్ గుర్తించబడింది</string>
+    <string name="unauthorized_software_detected_description_other_phone">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ ఫోన్‌ను భద్రతాపరమైన ముప్పులకు గురి చేయవచ్చు. మీ ఖాతా మరియు వ్యక్తిగత డేటాను రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయండి లేదా సెట్టింగ్‌లు > Samsung account > పరికరాలులో మీ Samsung account నుండి సైన్ అవుట్ చేయండి. అధికారిక సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయడంలో సహాయం కోసం, స్యామ్‌సంగ్ కస్టమర్ సర్వీస్‌ను సంప్రదించండి.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ పరికరాన్ని భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయండి లేదా SmartThings అప్లికేషన్‌లో ఈ పరికరాన్ని తీసివేయండి. అధికారిక సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయడంలో సహాయపడటానికి, స్యామ్‌సంగ్ కస్టమర్ సేవని సంప్రదించండి.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ను భద్రతాపరమైన ముప్పులకు గురి చేయవచ్చు. మీ ఖాతా మరియు వ్యక్తిగత డేటాను రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయండి లేదా సెట్టింగ్‌లు > Samsung account > పరికరాలులో మీ Samsung account నుండి సైన్ అవుట్ చేయండి. అధికారిక సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయడంలో సహాయం కోసం, స్యామ్‌సంగ్ కస్టమర్ సర్వీస్‌ను సంప్రదించండి.</string>
+    <string name="unauthorized_software_detected_description_other_vd">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ పరికరాన్ని భద్రతాపరమైన ముప్పులకు గురి చేయవచ్చు. మీ ఖాతా మరియు వ్యక్తిగత డేటాను రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయండి లేదా సెట్టింగ్‌లు > Samsung account > పరికరాలు > సైన్ ఇన్ చేసిన పరికరాలను నిర్వహించులో మీ Samsung account నుండి సైన్ అవుట్ చేయండి. అధికారిక సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయడంలో సహాయం కోసం, స్యామ్‌సంగ్ కస్టమర్ సర్వీస్‌ను సంప్రదించండి.</string>
+    <string name="unauthorized_software_detected_description_this_phone">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ ఫోన్‌ని భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయండి లేదా మీ Samsung account నుండి సైన్ అవుట్ చేయండి. అధికారిక సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయడంలో సహాయపడటానికి, స్యామ్‌సంగ్ కస్టమర్ సేవని సంప్రదించండి.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ని భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, అధికారిక స్యామ్‌సంగ్ సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయండి లేదా మీ Samsung account నుండి సైన్ అవుట్ చేయండి. అధికారిక సాఫ్ట్‌వేర్‌ని ఇన్‌స్టాల్ చేయడంలో సహాయపడటానికి, స్యామ్‌సంగ్ కస్టమర్ సేవని సంప్రదించండి.</string>
+    <string name="unlocked_bootloader">అన్‌లాక్ చేయబడిన బూట్‌లోడర్</string>
+    <string name="unlocked_bootloader_description_other_phone">"మీ ఫోన్ బూట్‌లోడర్ అన్‌లాక్ చేయబడిన సమయంలో, అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ చేయబడవచ్చు. అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ ఫోన్‌ను భద్రతాపరమైన ముప్పులకు గురి చేయవచ్చు. మీ ఖాతా మరియు వ్యక్తిగత డేటాను రక్షించడానికి, మీ ఫోన్ బూట్‌లోడర్‌ను లాక్ చేయండి లేదా సెట్టింగ్‌లు > Samsung account > పరికరాలులో మీ Samsung account నుండి సైన్ అవుట్ చేయండి. బూట్‌లోడర్‌ను లాక్ చేయడంలో సహాయం కోసం, స్యామ్‌సంగ్ కస్టమర్ సర్వీస్‌ను సంప్రదించండి.
+
+మీరు దాన్ని లాక్ చేసిన తర్వాత, ఇక్కడ మారడానికి భద్రతా స్థితి కోసం దానికి కొంత సమయం పట్టవచ్చు."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"మీ టాబ్లెట్ బూట్‌లోడర్ అన్‌లాక్ చేయబడిన సమయంలో, అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ చేయబడవచ్చు. అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ను భద్రతాపరమైన ముప్పులకు గురి చేయవచ్చు. మీ ఖాతా మరియు వ్యక్తిగత డేటాను రక్షించడానికి, మీ టాబ్లెట్ బూట్‌లోడర్‌ను లాక్ చేయండి లేదా సెట్టింగ్‌లు > Samsung account > పరికరాలులో మీ Samsung account నుండి సైన్ అవుట్ చేయండి. బూట్‌లోడర్‌ను లాక్ చేయడంలో సహాయం కోసం, స్యామ్‌సంగ్ కస్టమర్ సర్వీస్‌ను సంప్రదించండి.
+
+మీరు దాన్ని లాక్ చేసిన తర్వాత, ఇక్కడ మారడానికి భద్రతా స్థితి కోసం దానికి కొంత సమయం పట్టవచ్చు."</string>
+    <string name="unlocked_bootloader_description_this_phone">మీ ఫోన్ బూట్‌లోడర్ అన్‌లాక్ చేయబడినప్పుడు, అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ చేయబడవచ్చు. అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ ఫోన్‌ని భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, మీ ఫోన్ బూట్‌లోడర్‌ని లాక్ చేయండి లేదా మీ Samsung account నుండి సైన్ అవుట్ చేయండి. బూట్‌లోడర్‌ని లాక్ చేయడంలో సహాయం చేయడం కోసం, స్యామ్‌సంగ్ కస్టమర్ సేవని సంప్రదించండి.</string>
+    <string name="unlocked_bootloader_description_this_tablet">మీ టాబ్లెట్ బూట్‌లోడర్ అన్‌లాక్ చేయబడినప్పుడు, అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ చేయబడవచ్చు. అనధికార సిస్టమ్ సాఫ్ట్‌వేర్ మీ టాబ్లెట్‌ని భద్రతా ప్రమాదాలకు గురి చేస్తుంది. మీ ఖాతా మరియు వ్యక్తిగత డేటాని రక్షించడానికి, మీ టాబ్లెట్ బూట్‌లోడర్‌ని లాక్ చేయండి లేదా మీ Samsung account నుండి సైన్ అవుట్ చేయండి. బూట్‌లోడర్‌ని లాక్ చేయడంలో సహాయం చేయడం కోసం, స్యామ్‌సంగ్ కస్టమర్ సేవని సంప్రదించండి.</string>
+    <string name="update">అప్‌డేట్ చేయండి</string>
+    <string name="update_multi_apps_to_continue">కొనసాగించడానికి కింది అప్లికేషన్‌లను అప్‌డేట్ చేయండి:</string>
+    <string name="update_ps_to_continue">కొనసాగించడానికి %sని అనుమతించండి.</string>
+    <string name="verify_current_description_phone">ఈ ఫోన్ PIN, నమూనా లేదా పాస్‌వర్డ్‌తో మీ గుర్తింపును ధృవీకరించడం ద్వారా పాస్‌కీలతో సహా, మీ ఎన్‌క్రిప్ట్ చేయబడిన డేటాను మీరు అన్‌లాక్ చేయవచ్చు.</string>
+    <string name="verify_current_description_tablet">ఈ టాబ్లెట్ PIN, నమూనా లేదా పాస్‌వర్డ్‌తో మీ గుర్తింపును ధృవీకరించడం ద్వారా పాస్‌కీలతో సహా, మీ ఎన్‌క్రిప్ట్ చేయబడిన డేటాను మీరు అన్‌లాక్ చేయవచ్చు.</string>
+    <string name="verify_current_detail_password">మీ ప్రస్తుత పాస్‌వర్డ్‌ను నమోదు చేయండి.</string>
+    <string name="verify_current_detail_pattern">మీ ప్రస్తుత నమూనాను గీయండి.</string>
+    <string name="verify_current_detail_pin">మీ ప్రస్తుత PINను నమోదు చేయండి.</string>
+    <string name="verify_current_title_phone">ఎన్‌క్రిప్ట్ చేయబడిన డేటాను అన్‌లాక్ చేయడానికి ఈ ఫోన్‌ను ఉపయోగించండి</string>
+    <string name="verify_current_title_tablet">ఎన్‌క్రిప్ట్ చేయబడిన డేటాను అన్‌లాక్ చేయడానికి ఈ టాబ్లెట్‌ను ఉపయోగించండి</string>
+    <string name="verify_old_password_description_phone">భద్రత కోసం, మీ మునుపటి ఫోన్ పాస్‌వర్డ్‌తో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_password_description_tablet">భద్రత కోసం, మీ మునుపటి టాబ్లెట్ పాస్‌వర్డ్‌తో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_pattern_description_phone">భద్రత కోసం, మీ మునుపటి ఫోన్ నమూనాతో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_pattern_description_tablet">భద్రత కోసం, మీ మునుపటి టాబ్లెట్ నమూనాతో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_pin_description_phone">భద్రత కోసం, మీ మునుపటి ఫోన్ PINతో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_pin_description_tablet">భద్రత కోసం, మీ మునుపటి టాబ్లెట్ PINతో మిమ్మల్ని మీరు ధృవీకరించుకోండి.</string>
+    <string name="verify_old_ppp_title">మీ ఎన్‌క్రిప్ట్ చేయబడిన డేటాను అన్‌లాక్ చేయండి</string>
+    <string name="version">వెర్షన్ %s</string>
+</resources>

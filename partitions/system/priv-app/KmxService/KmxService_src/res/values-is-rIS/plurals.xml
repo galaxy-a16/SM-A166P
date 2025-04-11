@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d tilraunir eftir</item>
+        <item quantity="one">%d tilraunir eftir</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Vegna þess að þú gast ekki staðfest hver þú ert eftir %d tilraunir verður dulkóðuðu gögnunum þínum eytt af öryggisástæðum:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Vegna þess að þú gast ekki staðfest hver þú ert eftir %d tilraun verður dulkóðuðu gögnunum þínum eytt af öryggisástæðum:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Reyndu aftur eftir 1 klukkustund og %d mínútur</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Reyndu aftur eftir 1 klukkustund og %d mínútu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Reyndu aftur eftir %d klukkustundir</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Reyndu aftur eftir %d klukkustund</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Reyndu aftur eftir %d klukkustundir og 1 mínútu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Reyndu aftur eftir %d klukkustund og 1 mínútu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Reyndu aftur eftir %d mínútur</item>
+        <item quantity="one">Reyndu aftur eftir %d mínútu</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Reyndu aftur eftir %d sekúndur</item>
+        <item quantity="one">Reyndu aftur eftir %d sekúndu</item>
+    </plurals>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d әрекет қалды</item>
+        <item quantity="one">%d әрекет қалды</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">%d әрекеттен кейін тұлғалығыңызды растай алмағандықтан, қауіпсіздігіңіз үшін шифрланған деректеріңіз жойылады:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d әрекеттен кейін тұлғалығыңызды растай алмағандықтан, қауіпсіздігіңіз үшін шифрланған деректеріңіз жойылады:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Әрекетті 1 сағат %d минуттан кейн қайталап көріңіз</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Әрекетті 1 сағат %d минуттан кейн қайталап көріңіз</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d сағаттан кейін әрекетті қайталап көріңіз</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Әрекетті %d сағаттан кейін қайталап көріңіз</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Әрекетті %d сағат 1 минуттан кейін қайталап көріңіз</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Әрекетті %d сағат 1 минуттан кейін қайталап көріңіз</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d минуттан кейін қайталау</item>
+        <item quantity="one">%d минуттан кейін әрекетті қайталау</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d секундтан кейін қайталау</item>
+        <item quantity="one">%d секундтан кейін әрекетті қайталау</item>
+    </plurals>
+</resources>

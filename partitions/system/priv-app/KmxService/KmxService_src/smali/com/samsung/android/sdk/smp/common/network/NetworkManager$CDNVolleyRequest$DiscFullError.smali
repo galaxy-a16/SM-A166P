@@ -1,0 +1,13 @@
+.class Lcom/samsung/android/sdk/smp/common/network/NetworkManager$CDNVolleyRequest$DiscFullError;
+.super Lcom/android/volley/VolleyError;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/volley/VolleyError;-><init>()V
+
+    return-void
+.end method

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s-н тухай</string>
+    <string name="back">Буцах</string>
+    <string name="chan_mkt">Маркетинг</string>
+    <string name="chan_ntc">Мэдэгдэл</string>
+    <string name="character_counter_content_description">%2$d тэмдэгтээс %1$d</string>
+    <string name="close_app">Хэрэглүүр.г хаа</string>
+    <string name="contact_us">Бидэнтэй холбоо барих</string>
+    <string name="couldnt_get_samsung_account_information">Таны дансны мэдээллийг авч чадсангүй</string>
+    <string name="couldnt_get_samsung_account_information_description">Сүлжээний холболтоо шалгаад, Samsung account-аа хамгийн сүүлийн хувилбар болгон шинэчилсэн эсэхээ шалгаж дахин оролдоно уу.</string>
+    <string name="data_info_dialog_title">Та түгжээг тайлах боломжтой мэдээлэл</string>
+    <string name="data_info_menu">Та ямар мэдээллийн түгжээг тайлж болохыг харах</string>
+    <string name="delete_dialog_message">Хэрэв та өмнөх төхөөрөмжийн PIN, хээ, нууц үгээ санахгүй байгаа бол мэдээллийнхээ түгжээг тайлахыг алгасаж болно. Гэхдээ бид таны таних мэдээллийг баталгаажуулж чадаагүй тул доорх шифрлэгдсэн мэдээллийг хамгаалалтын үүднээс устгана.</string>
+    <string name="delete_dialog_title">Түгжээ тайлахад асуудал гарсан уу?</string>
+    <string name="delete_menu">Түгжээг хэрхэн тайлахаа санахгүй байна уу?</string>
+    <string name="dragndroplist_drag_move">Одоо %d байрлалд</string>
+    <string name="dragndroplist_drag_release">Зүйлийг байршил %d-д тавьсан.</string>
+    <string name="dragndroplist_drag_start">Зүйлийг байршил %d-д чирж эхэллээ.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Байршил %d дахь зүйлийг чирэх боломжгүй.</string>
+    <string name="go_to">%s руу оч</string>
+    <string name="go_to_developer_options">Хөгжүүлэгчийн сонголтууд руу очих</string>
+    <string name="go_to_sign_out">Гарах руу очих</string>
+    <string name="incorrect_password_entered">Буруу нууц үг оруулсан</string>
+    <string name="incorrect_pattern_drawn">Буруу хээ зурсан</string>
+    <string name="incorrect_pin_entered">Буруу PIN оруулсан</string>
+    <string name="latest_version_is_already_installed">Сүүлийн хувилбарыг хэдийнэ суурилуулсан.</string>
+    <string name="menu_cancel">Цуцлах</string>
+    <string name="menu_continue">Үргэлжлүүл</string>
+    <string name="new_version_is_available">Шинэ хувилбар боломжтой байна</string>
+    <string name="next">Дараах</string>
+    <string name="no_network_connection">Сүлжээ холбогдоогүй</string>
+    <string name="no_network_connection_description">Таны төхөөрөмжүүдийн аюулгүй байдлын төлөвийг шинэчилж чадсангүй. Холболтыг шалгаад дахин оролдоно уу.</string>
+    <string name="no_threats_found">Аюул илрээгүй</string>
+    <string name="notify_delete_dialog_title">Таны шифрлэгдсэн мэдээлэл устана</string>
+    <string name="notify_delete_dialog_title_previous_devices">Таны өмнөх төхөөрөмжүүдийг ашиглан таныг баталгаажуулж чадсангүй</string>
+    <string name="notify_delete_dialog_title_previous_phone">Таны өмнөх утсыг ашиглан таныг баталгаажуулж чадсангүй</string>
+    <string name="notify_delete_dialog_title_previous_phones">Таны өмнөх утсуудыг ашиглан таныг баталгаажуулж чадсангүй</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Таны өмнөх таблетыг ашиглан таныг баталгаажуулж чадсангүй</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Таны өмнөх таблетуудыг ашиглан таныг баталгаажуулж чадсангүй</string>
+    <string name="oem_unlocking_is_turned_on">OEM түгжээг тайлах горим асаалттай байна</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM түгжээг тайлах нь таны утсанд зөвшөөрөлгүй программ суулгах боломжийг олгоно. Зөвшөөрөлгүй программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд утасныхаа Тохиргоо > Хөгжүүлэгчийн сонголтууд хэсэгт OEM түгжээг тайлахыг унтраана уу.
+
+Та үүнийг унтраасны дараа энд хамгаалалтын төлөв өөрчлөгдөхөд хэсэг хугацаа шаардлагатай."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM түгжээг тайлах нь таны таблет дээр зөвшөөрөлгүй программ суулгах боломжийг олгоно. Зөвшөөрөлгүй программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд таблетынхаа Тохиргоо > Хөгжүүлэгчийн сонголтууд хэсэгт OEM түгжээг тайлахыг унтраана уу.
+
+Та үүнийг унтраасны дараа энд хамгаалалтын төлөв өөрчлөгдөхөд хэсэг хугацаа шаардлагатай."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM түгжээг тайлах нь таны утсанд зөвшөөрөлгүй программ суулгах боломжийг олгоно. Зөвшөөрөлгүй программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд Тохиргоо > Хөгжүүлэгчийн сонголтуудаас OEM түгжээг тайлахыг унтраана уу.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM түгжээг тайлах нь таны таблет дээр зөвшөөрөлгүй программ суулгах боломжийг олгоно. Зөвшөөрөлгүй программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд Тохиргоо > Хөгжүүлэгчийн сонголтуудаас OEM түгжээг тайлахыг унтраана уу.</string>
+    <string name="ok">ОК</string>
+    <string name="open_source_licenses">Нээлттэй эхийн лиценз</string>
+    <string name="other_devices">Бусад төхөөрөмжүүд</string>
+    <string name="password_set">Нууц үг тохируулсан %s</string>
+    <string name="pattern_set">Хээ тохируулсан %s</string>
+    <string name="pin_set">PIN тохируулсан %s</string>
+    <string name="ppp_delegate_description">Мэдээллээ хамгаалахын тулд PIN код, хээ, нууц үг тохируулна уу.</string>
+    <string name="ppp_delegate_title">Дэлгэцийн найдвартай түгжээг тохируул</string>
+    <string name="ppp_dialog_description_SamsungCloud">Мэдээллийн хамгаалалтыг сайжруулж нөөцлөх, Samsung Cloud дээр синхрончлох дэлгэцийн түгжээ</string>
+    <string name="ppp_dialog_description_SamsungPass">Нууц түлхүүрийг Samsung Pass-д хадгалсан</string>
+    <string name="remove_this_device">Энэ төхөөрөмжийг арилгах</string>
+    <string name="security_status_main_description">Knox Matrix нь найдвартай хувийн blockchain ашиглан таны Samsung account-д нэвтэрсэн дэмжигдсэн төхөөрөмжүүдийг хянадаг. Гинжин дэх төхөөрөмж бүр бусад төхөөрөмжийн аюулгүй байдлын төлөвийг шалгаж, ямар нэгэн аюул заналхийлэл байгаа эсэхийг танд мэдэгдэх боломжтой.</string>
+    <string name="security_status_not_available_yet">Аюулгүй байдлын төлөв хараахан боломжгүй байна</string>
+    <string name="security_status_not_available_yet_description">Үүнд хэсэг хугацаа зарцуулагдаж магадгүй. Дараа дахин шалгана уу.</string>
+    <string name="security_status_not_up_to_date">Аюулгүй байдлын төлөв шинэчлэгдээгүй байна</string>
+    <string name="security_status_not_up_to_date_description_phone">"Энэ утасны хамгаалалтын төлөвийг 30 гаруй хоногийн турш шинэчлээгүй байна. Утас офлайн эсвэл ямар нэг зүйл түүний төлвийг шалгахад саад болж магадгүй. Та энэ утсыг ашиглахгүй байгаа бол өөрийн Samsung account-с гарсан нь дээр. Та Тохиргоо > Samsung account > Төхөөрөмжүүд хэсгээс гарах боломжтой.
+
+Харин та энэ утсыг ашиглаж байгаа ч хамгаалалтын төлөв нь шинэчлэгдээгүй байгаа бол сүлжээнд холбогдсон эсэхийг шалгана уу."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Энэ төхөөрөмжийн хамгаалалтын төлөвийг 30 гаруй хоногийн турш шинэчлээгүй байна. Төхөөрөмж офлайн эсвэл ямар нэг зүйл түүний төлвийг шалгахад саад болж магадгүй. Та энэ төхөөрөмжийг ашиглахгүй байгаа бол SmartThings хэрэглүүрээс энэ төхөөрөмжийг арилгасан нь дээр.
+
+Харин та энэ төхөөрөмжийг ашиглаж байгаа ч хамгаалалтын төлөв нь шинэчлэгдээгүй байгаа бол сүлжээнд холбогдсон эсэхийг шалгана уу."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Энэ таблетын хамгаалалтын төлөвийг 30 гаруй хоногийн турш шинэчлээгүй байна. Таблет офлайн эсвэл ямар нэг зүйл түүний төлөвийг шалгахад саад болж магадгүй. Та энэ таблетыг ашиглахгүй байгаа бол өөрийн Samsung account-с гарсан нь дээр. Та Тохиргоо > Samsung account > Төхөөрөмжүүд хэсгээс гарах боломжтой.
+
+Харин та энэ таблетыг ашиглаж байгаа ч хамгаалалтын төлөв нь шинэчлэгдээгүй байгаа бол сүлжээнд холбогдсон эсэхийг шалгана уу."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Энэ төхөөрөмжийн хамгаалалтын төлөвийг 30 гаруй хоногийн турш шинэчлээгүй байна. Төхөөрөмж офлайн эсвэл ямар нэг зүйл түүний төлвийг шалгахад саад болж магадгүй. Та энэ төхөөрөмжийг ашиглахгүй байгаа бол өөрийн Samsung account-с гарсан нь дээр. Та Тохиргоо > Samsung account > Төхөөрөмжүүд > Нэвтэрсэн төхөөрөмжүүдийг удирдах хэсгээс гарах боломжтой.
+
+Харин та энэ төхөөрөмжийг ашиглаж байгаа ч хамгаалалтын төлөв нь шинэчлэгдээгүй байгаа бол сүлжээнд холбогдсон эсэхийг шалгана уу."</string>
+    <string name="security_status_of_your_devices">Таны төхөөрөмжүүдийн хамгаалалтын төлөв</string>
+    <string name="sesl_action_bar_up_description">Удирдаж дээшлүүлэх</string>
+    <string name="sesl_action_menu_overflow_badge_description">Шинэ контент гарлаа</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Ш</string>
+    <string name="sesl_action_menu_overflow_description">Өөр сонголтууд</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Бүх саналыг хэрэгсэхгүй болгосон</string>
+    <string name="sesl_appbar_suggest_dismiss">Саналыг арилгах</string>
+    <string name="sesl_appbar_suggest_dismissed">Саналыг хэрэгсэхгүй болгосон</string>
+    <string name="sesl_appbar_suggest_pagination">Хуудас %2$d-с %1$d</string>
+    <string name="sesl_index_assistant_text">Гүйлгэхийн тулд хоёр хуруугаараа дээш эсвэл доош шударна уу.</string>
+    <string name="sesl_index_scrollbar">Гүйлгэх мөр</string>
+    <string name="sesl_index_section">Бүлгийн индекс</string>
+    <string name="sesl_index_selected">Сонгосон</string>
+    <string name="sesl_material_badge_description">Шинэ контент гарлаа</string>
+    <string name="sesl_material_overflow_badge_text_n">Ш</string>
+    <string name="sesl_more_item_label">Бусад</string>
+    <string name="sesl_preferecne_badge_description">Шинэ мэдэгдэл</string>
+    <string name="sesl_preferencecategory_added_title">Толгой хэсэг</string>
+    <string name="sesl_search_hint">Хайх</string>
+    <string name="sesl_searchview_description_clear">Хайлтын талбарыг цэвэрлэх</string>
+    <string name="sesl_searchview_description_clear_field">Хайлтын талбарыг арилгасан</string>
+    <string name="sesl_searchview_description_query">Хайлтын лавлагаа</string>
+    <string name="sesl_searchview_description_search">Хайх</string>
+    <string name="sesl_searchview_description_submit">Лавлагаа оруулах</string>
+    <string name="sesl_searchview_description_voice">Дуу хоолойгоор хайх</string>
+    <string name="sesl_switch_off">Идэвхгүй</string>
+    <string name="sesl_switch_on">Идэвхтэй</string>
+    <string name="sesl_switchbar_off_text">Идэвхгүй</string>
+    <string name="sesl_switchbar_on_text">Идэвхтэй</string>
+    <string name="sesl_toolbar_collapse_description">Хураах</string>
+    <string name="skip">Алгасах</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings-г таны утсанд суулгаагүй байна. Үүнийг Play Store-с татаж авна уу.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings-г таны таблетад суулгаагүй байна. Үүнийг Play Store-с татаж авна уу.</string>
+    <string name="this_phone">Энэ утас</string>
+    <string name="this_tablet">Энэ таблет</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d цаг %2$d минутын дараа дахин оролд</string>
+    <string name="unauthorized_software_detected">Зөвшөөрөлгүй программ хангамж илэрлээ</string>
+    <string name="unauthorized_software_detected_description_other_phone">Системийн зөвшөөрөлгүй программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгож болзошгүй. Бүртгэл, хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгах эсвэл Тохиргоо > Samsung account > Төхөөрөмжүүд хэсэгт өөрийн Samsung account-с гарна уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Зөвшөөрөлгүй системийн программ хангамж нь таны төхөөрөмжийг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгаж эсвэл SmartThings хэрэглүүрээс энэ төхөөрөмжийг арилгана уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Системийн зөвшөөрөлгүй программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгож болзошгүй. Бүртгэл, хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгах эсвэл Тохиргоо > Samsung account > Төхөөрөмжүүд хэсэгт өөрийн Samsung account-с гарна уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Системийн зөвшөөрөлгүй программ хангамж нь таны төхөөрөмжийг хамгаалалтын эрсдлүүдэд өртөмтгий болгож болзошгүй. Бүртгэл, хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгах эсвэл Тохиргоо > Samsung account > Төхөөрөмжүүд > Нэвтэрсэн төхөөрөмжүүдийг удирдах хэсэгт өөрийн Samsung account-с гарна уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Зөвшөөрөлгүй системийн программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгаж эсвэл өөрийн Samsung account-с гарна уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Зөвшөөрөлгүй системийн программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд албан ёсны Samsung программ хангамжийг суулгаж эсвэл өөрийн Samsung account-с гарна уу. Албан ёсны программ хангамжийг суулгахад тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unlocked_bootloader">Ачаалагчийн түгжээг тайлсан</string>
+    <string name="unlocked_bootloader_description_other_phone">"Таны утасны ачаалагчийн түгжээг тайлах үед системийн зөвшөөрөлгүй программ хангамж суулгаж болно. Системийн зөвшөөрөлгүй программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгож болзошгүй. Бүртгэл, хувийн мэдээллээ хамгаалахын тулд утасныхаа ачаалагчийг түгжих эсвэл Тохиргоо > Samsung account > Төхөөрөмжүүд хэсэгт өөрийн Samsung account-с гарна уу. Ачаалагчийг түгжихэд тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.
+
+Та үүнийг түгжсэний дараа энд хамгаалалтын төлөв өөрчлөгдөхөд хэсэг хугацаа шаардлагатай."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Таны таблетын ачаалагчийн түгжээг тайлах үед системийн зөвшөөрөлгүй программ хангамж суулгаж болно. Системийн зөвшөөрөлгүй программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгож болзошгүй. Бүртгэл, хувийн мэдээллээ хамгаалахын тулд таблетынхаа ачаалагчийг түгжих эсвэл Тохиргоо > Samsung account > Төхөөрөмжүүд хэсэгт өөрийн Samsung account-с гарна уу. Ачаалагчийг түгжихэд тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.
+
+Та үүнийг түгжсэний дараа энд хамгаалалтын төлөв өөрчлөгдөхөд хэсэг хугацаа шаардлагатай."</string>
+    <string name="unlocked_bootloader_description_this_phone">Таны утасны ачаалагчийн түгжээг тайлсан байхад системд зөвшөөрөлгүй программ хангамж суулгаж болно. Зөвшөөрөлгүй системийн программ хангамж нь таны утсыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд утасныхаа ачаалагчийг түгжих эсвэл өөрийн Samsung account-с гарна уу. Ачаалагчийг түгжихэд тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Таны таблетын ачаалагчийн түгжээг тайлсан байхад системд зөвшөөрөлгүй программ хангамж суулгаж болно. Зөвшөөрөлгүй системийн программ хангамж нь таны таблетыг хамгаалалтын эрсдлүүдэд өртөмтгий болгодог. Бүртгэл болон хувийн мэдээллээ хамгаалахын тулд таблетынхаа ачаалагчийг түгжих эсвэл өөрийн Samsung account-с гарна уу. Ачаалагчийг түгжихэд тусламж авахыг хүсвэл Samsung хэрэглэгчийн үйлчилгээтэй холбогдоно уу.</string>
+    <string name="update">Шинэчлэх</string>
+    <string name="update_multi_apps_to_continue">Дараах хэрэглүүрүүдийг шинэчлээд үргэлжлүүлнэ үү:</string>
+    <string name="update_ps_to_continue">%s-г шинэчлээд үргэлжлүүл.</string>
+    <string name="verify_current_description_phone">Та энэ утасны PIN код, хээ, нууц үгээр өөрийн таних мэдээллээ баталгаажуулснаар нууц түлхүүр зэрэг шифрлэгдсэн мэдээллийнхээ түгжээг тайлах боломжтой.</string>
+    <string name="verify_current_description_tablet">Та энэ таблетын PIN код, хээ, нууц үгээр өөрийн таних мэдээллээ баталгаажуулснаар нууц түлхүүр зэрэг шифрлэгдсэн мэдээллийнхээ түгжээг тайлах боломжтой.</string>
+    <string name="verify_current_detail_password">Одоогийн нууц үгээ оруул.</string>
+    <string name="verify_current_detail_pattern">Одоогийн хээг зур.</string>
+    <string name="verify_current_detail_pin">Одоогийн PIN кодоо оруул.</string>
+    <string name="verify_current_title_phone">Шифрлэгдсэн мэдээллийн түгжээг тайлахын тулд энэ утсыг ашиглах</string>
+    <string name="verify_current_title_tablet">Шифрлэгдсэн мэдээллийн түгжээг тайлахын тулд энэ таблетыг ашиглах</string>
+    <string name="verify_old_password_description_phone">Аюулгүй байдлын үүднээс өмнөх утасныхаа нууц үгээр өөрийгөө баталгаажуулна уу.</string>
+    <string name="verify_old_password_description_tablet">Аюулгүй байдлын үүднээс өмнөх таблетныхаа нууц үгээр өөрийгөө баталгаажуулна уу.</string>
+    <string name="verify_old_pattern_description_phone">Аюулгүй байдлын үүднээс өмнөх утасныхаа хээгээр өөрийгөө баталгаажуулна уу.</string>
+    <string name="verify_old_pattern_description_tablet">Аюулгүй байдлын үүднээс өмнөх таблетныхаа хээгээр өөрийгөө баталгаажуулна уу.</string>
+    <string name="verify_old_pin_description_phone">Аюулгүй байдлын үүднээс өмнөх утасныхаа PIN кодоор өөрийгөө баталгаажуулна уу.</string>
+    <string name="verify_old_pin_description_tablet">Аюулгүй байдлын үүднээс өмнөх таблетынхаа PIN-р өөрийгөө баталгаажуулаарай.</string>
+    <string name="verify_old_ppp_title">Шифрлэгдсэн мэдээллийнхээ түгжээг тайлах</string>
+    <string name="version">%s хувилбар</string>
+</resources>

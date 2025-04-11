@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Teenuse %s teave</string>
+    <string name="back">Tagasi</string>
+    <string name="chan_mkt">Turundus</string>
+    <string name="chan_ntc">Teatis</string>
+    <string name="character_counter_content_description">%1$d tähemärki koguhulgast %2$d</string>
+    <string name="close_app">Sulge rakendus</string>
+    <string name="contact_us">Võtke meiega ühendust</string>
+    <string name="couldnt_get_samsung_account_information">Teie konto teabe hankimine nurjus</string>
+    <string name="couldnt_get_samsung_account_information_description">Kontrollige oma võrguühendust ja veenduge, et Samsung Account oleks värskendatud uusimale versioonile, seejärel proovige uuesti.</string>
+    <string name="data_info_dialog_title">Lukust avatavad andmed</string>
+    <string name="data_info_menu">Vaadake, milliseid andmeid saate lukust avada</string>
+    <string name="delete_dialog_message">Kui te ei mäleta oma eelmise seadme PIN-koodi, mustrit või parooli, võite andmete lukust avamise vahele jätta. Sellest hoolimata kustutatakse allpool olevad krüptitud andmed turvalisuse huvides, kuna me ei saanud teie identiteeti kinnitada.</string>
+    <string name="delete_dialog_title">Kas lukust avamisel on probleeme?</string>
+    <string name="delete_menu">Kas te ei mäleta, kuidas lukust avada?</string>
+    <string name="dragndroplist_drag_move">Nüüd kohas %d</string>
+    <string name="dragndroplist_drag_release">Üksus on lohistatud asukohta %d.</string>
+    <string name="dragndroplist_drag_start">Alustati üksuse lohistamist asukohas %d.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Üksust asukohas %d ei saa lohistada.</string>
+    <string name="go_to">Ava %s</string>
+    <string name="go_to_developer_options">Ava arendaja valikud</string>
+    <string name="go_to_sign_out">Ava väljalogimine</string>
+    <string name="incorrect_password_entered">Sisestati vale parool</string>
+    <string name="incorrect_pattern_drawn">Joonistati vale muster</string>
+    <string name="incorrect_pin_entered">Sisestatud on vale PIN-kood</string>
+    <string name="latest_version_is_already_installed">Uusim versioon on juba installitud.</string>
+    <string name="menu_cancel">Tühista</string>
+    <string name="menu_continue">Jätka</string>
+    <string name="new_version_is_available">Uus versioon on saadaval.</string>
+    <string name="next">Edasi</string>
+    <string name="no_network_connection">Võrguühendus puudub</string>
+    <string name="no_network_connection_description">Teie seadmete turbeolekut ei saanud värskendada. Kontrollige ühendust ja proovige uuesti.</string>
+    <string name="no_threats_found">Ohte ei leitud</string>
+    <string name="notify_delete_dialog_title">Teie krüptitud andmed kustutatakse</string>
+    <string name="notify_delete_dialog_title_previous_devices">Teie kinnitamine eelmiste seadmetega nurjus</string>
+    <string name="notify_delete_dialog_title_previous_phone">Teie kinnitamine eelmise telefoniga nurjus</string>
+    <string name="notify_delete_dialog_title_previous_phones">Teie kinnitamine eelmiste telefonidega nurjus</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Teie kinnitamine eelmise tahvelseadmega nurjus</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Teie kinnitamine eelmiste tahvelseadmetega nurjus</string>
+    <string name="oem_unlocking_is_turned_on">OEM-i avamine on sisse lülitatud</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM-i lukust vabastamine võib lubada teie telefoni volitamata tarkvara installimise. Volitamata tarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Konto ja isikuandmete kaitsmiseks lülitage telefonis OEM-i lukust avamine välja jaotises Seaded > Arendaja valikud.
+
+Pärast selle väljalülitamist võib siinse turbeoleku muutumine veidi aega võtta."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM-i lukust vabastamine võib lubada teie tahvelseadmesse volitamata tarkvara installimise. Volitamata tarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Konto ja isikuandmete kaitsmiseks lülitage tahvelseadmes OEM-i lukust avamine välja jaotises Seaded > Arendaja valikud.
+
+Pärast selle väljalülitamist võib siinse turbeoleku muutumine veidi aega võtta."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM-i lukust vabastamine võib lubada teie telefoni volitamata tarkvara installimise. Volitamata tarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Konto ja isikuandmete kaitsmiseks lülitage OEM-i lukust avamine välja jaotises Seaded > Arendaja valikud.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM-i lukust vabastamine võib lubada teie tahvelseadmesse volitamata tarkvara installimise. Volitamata tarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Konto ja isikuandmete kaitsmiseks lülitage OEM-i lukust avamine välja jaotises Seaded > Arendaja valikud.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Avatud lähtek. litsents</string>
+    <string name="other_devices">Muud seadmed</string>
+    <string name="password_set">Parool määrati %s</string>
+    <string name="pattern_set">Muster määrati %s</string>
+    <string name="pin_set">PIN-kood määrati %s</string>
+    <string name="ppp_delegate_description">Andmete kaitsmiseks määrake PIN-kood, muster või parool.</string>
+    <string name="ppp_delegate_title">Turvalise ekraaniluku määramine</string>
+    <string name="ppp_dialog_description_SamsungCloud">Lukustusekraan täiustatud andmekaitsega varundamiseks ja sünkroonimiseks Samsung Cloudis</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Passi salvestatud pääsukoodid</string>
+    <string name="remove_this_device">Eemalda see seade</string>
+    <string name="security_status_main_description">Knox Matrix jälgib toetatud seadmeid, mis on teie Samsung Accountile sisse logitud turvalise privaatse plokiahela abil. Iga ahelas olev seade saab kontrollida teiste seadmete turbeolekut ja anda teada, kui esineb ohte.</string>
+    <string name="security_status_not_available_yet">Turvalisuse olek pole veel saadaval</string>
+    <string name="security_status_not_available_yet_description">See võib veidi aega võtta. Vaadake hiljem uuesti.</string>
+    <string name="security_status_not_up_to_date">Turvalisuse olek pole ajakohane</string>
+    <string name="security_status_not_up_to_date_description_phone">"Selle telefoni turbeolekut pole värskendatud rohkem kui 30 päeva. Telefon võib olla võrguühenduseta või miski takistab selle oleku kontrollimist. Kui te seda telefoni enam ei kasuta, on soovitatav sellega oma Samsung Accountilt välja logida. Saate välja logida menüüs Seaded > Samsung Account > Seadmed.
+
+Kui kasutate seda telefoni, kuid selle turbeolekut ei värskendata, veenduge, et see oleks võrguga ühendatud."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Selle seadme turbeolekut pole värskendatud rohkem kui 30 päeva. Seade võib olla võrguühenduseta või miski takistab selle oleku kontrollimist. Kui te seda seadet enam ei kasuta, on soovitatav see rakendusest SmartThings eemaldada.
+
+Kui kasutate seda seadet, kuid selle turbeolekut ei värskendata, veenduge, et see oleks võrguga ühendatud."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Selle tahvelseadme turbeolekut pole värskendatud rohkem kui 30 päeva. Tahvelseade võib olla võrguühenduseta või miski takistab selle oleku kontrollimist. Kui te seda tahvelseadet enam ei kasuta, on soovitatav sellega oma Samsung Accountilt välja logida. Saate välja logida menüüs Seaded > Samsung Account > Seadmed.
+
+Kui kasutate seda tahvelseadet, kuid selle turbeolekut ei värskendata, veenduge, et see oleks võrguga ühendatud."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Selle seadme turbeolekut pole värskendatud rohkem kui 30 päeva. Seade võib olla võrguühenduseta või miski takistab selle oleku kontrollimist. Kui te seda seadet enam ei kasuta, on soovitatav sellega oma Samsung Accountilt välja logida. Saate välja logida menüüs Seaded > Samsung Account > Seadmed > Halda sisselogitud seadmeid.
+
+Kui kasutate seda seadet, kuid selle turbeolekut ei värskendata, veenduge, et see oleks võrguga ühendatud."</string>
+    <string name="security_status_of_your_devices">Teie seadmete turbeolek</string>
+    <string name="sesl_action_bar_up_description">Sirvimisklahv üles</string>
+    <string name="sesl_action_menu_overflow_badge_description">Uus sisu on saadaval</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">U</string>
+    <string name="sesl_action_menu_overflow_description">Veel valikuid</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Kõikidest soovitustest loobuti</string>
+    <string name="sesl_appbar_suggest_dismiss">Loobu soovitusest</string>
+    <string name="sesl_appbar_suggest_dismissed">Soovitusest on loobutud</string>
+    <string name="sesl_appbar_suggest_pagination">Lk %1$d/%2$d</string>
+    <string name="sesl_index_assistant_text">Libistage kerimiseks kahe sõrmega üles või alla.</string>
+    <string name="sesl_index_scrollbar">Kerimisriba</string>
+    <string name="sesl_index_section">Jaotise indeks</string>
+    <string name="sesl_index_selected">Valitud</string>
+    <string name="sesl_material_badge_description">Uus sisu on saadaval</string>
+    <string name="sesl_material_overflow_badge_text_n">U</string>
+    <string name="sesl_more_item_label">Veel</string>
+    <string name="sesl_preferecne_badge_description">Uus teavitus</string>
+    <string name="sesl_preferencecategory_added_title">Päis</string>
+    <string name="sesl_search_hint">Otsi</string>
+    <string name="sesl_searchview_description_clear">Tühjenda otsinguväli</string>
+    <string name="sesl_searchview_description_clear_field">Otsinguväli on tühi</string>
+    <string name="sesl_searchview_description_query">Otsingupäring</string>
+    <string name="sesl_searchview_description_search">Otsi</string>
+    <string name="sesl_searchview_description_submit">Edasta päring</string>
+    <string name="sesl_searchview_description_voice">Häälotsing</string>
+    <string name="sesl_switch_off">Väljas</string>
+    <string name="sesl_switch_on">Sees</string>
+    <string name="sesl_switchbar_off_text">Väljas</string>
+    <string name="sesl_switchbar_on_text">Sees</string>
+    <string name="sesl_toolbar_collapse_description">Ahenda</string>
+    <string name="skip">Jäta vahele</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">"SmartThings pole teie telefoni installitud. Laadige see alla Play Store'ist."</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">"SmartThings pole teie tahvelseadmesse installitud. Laadige see alla Play Store'ist."</string>
+    <string name="this_phone">See telefon</string>
+    <string name="this_tablet">See tahvelseade</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Proovige uuesti %1$d tunni ja %2$d minuti pärast</string>
+    <string name="unauthorized_software_detected">Tuvastatud on autoriseerimata tarkvara</string>
+    <string name="unauthorized_software_detected_description_other_phone">Volitamata süsteemitarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Oma konto ja isiklike andmete kaitsmiseks installige ametlik Samsungi tarkvara või logige oma Samsung Accountilt välja menüüs Seaded > Samsung Account > Seadmed. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Volitamata süsteemitarkvara võib muuta teie seadme turberiskide suhtes haavatavaks. Oma konto ja isikuandmete kaitsmiseks installige ametlik Samsungi tarkvara või eemaldage see seade rakendusest SmartThings. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Volitamata süsteemitarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Oma konto ja isiklike andmete kaitsmiseks installige ametlik Samsungi tarkvara või logige oma Samsung Accountilt välja menüüs Seaded > Samsung Account > Seadmed. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Volitamata süsteemitarkvara võib muuta teie seadme turberiskide suhtes haavatavaks. Oma konto ja isiklike andmete kaitsmiseks installige ametlik Samsungi tarkvara või logige oma Samsung Accountilt välja menüüs Seaded > Samsung Account > Seadmed > Sisselogitud seadmete haldamine. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Volitamata süsteemitarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Oma konto ja isikuandmete kaitsmiseks installige ametlik Samsungi tarkvara või logige oma Samsung Accountilt välja. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Volitamata süsteemitarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Oma konto ja isikuandmete kaitsmiseks installige ametlik Samsungi tarkvara või logige oma Samsung Accountilt välja. Ametliku tarkvara installimisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unlocked_bootloader">Lukust avatud buudilaadur</string>
+    <string name="unlocked_bootloader_description_other_phone">"Kui teie telefoni buudilaadur on lukustamata, saab installida volitamata süsteemitarkvara. Volitamata süsteemitarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Konto ja isiklike andmete kaitsmiseks lukustage oma telefoni buudilaadur või logige oma Samsung Accountilt välja menüüs Seaded > Samsung Account > Seadmed. Buudilaaduri lukustamisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.
+
+Pärast selle lukustamist võib siinse turbeoleku muutumine veidi aega võtta."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Kui teie tahvelseadme buudilaadur on lukustamata, saab installida volitamata süsteemitarkvara. Volitamata süsteemitarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Konto ja isiklike andmete kaitsmiseks lukustage oma tahvelseadme buudilaadur või logige oma Samsung Accountilt välja menüüs Seaded > Samsung Account > Seadmed. Buudilaaduri lukustamisel abi saamiseks võtke ühendust Samsungi klienditeenindusega.
+
+Pärast selle lukustamist võib siinse turbeoleku muutumine veidi aega võtta."</string>
+    <string name="unlocked_bootloader_description_this_phone">Kui teie telefoni buudilaadur on lukustamata, on võimalik installida volitamata süsteemitarkvara. Volitamata süsteemitarkvara võib muuta teie telefoni turberiskide suhtes haavatavaks. Oma konto ja isikuandmete kaitsmiseks lukustage telefoni buudilaadur või logige oma Samsung Accountilt välja. Buudilaaduri lukustamisega abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Kui teie tahvelseadme buudilaadur on lukustamata, on võimalik installida volitamata süsteemitarkvara. Volitamata süsteemitarkvara võib muuta teie tahvelseadme turberiskide suhtes haavatavaks. Oma konto ja isikuandmete kaitsmiseks lukustage tahvelseadme buudilaadur või logige oma Samsung Accountilt välja. Buudilaaduri lukustamisega abi saamiseks võtke ühendust Samsungi klienditeenindusega.</string>
+    <string name="update">Värskenda</string>
+    <string name="update_multi_apps_to_continue">Jätkamiseks värskendage järgmisi rakendusi:</string>
+    <string name="update_ps_to_continue">Jätkamiseks värskendage rakendust %s.</string>
+    <string name="verify_current_description_phone">Saate oma krüptitud andmed (sh pääsukoodid) lukust avada, kinnitades oma identiteedi selle telefoni PIN-koodi, mustri või parooliga.</string>
+    <string name="verify_current_description_tablet">Saate oma krüptitud andmed (sh pääsukoodid) lukust avada, kinnitades oma identiteedi selle tahvelseadme PIN-koodi, mustri või parooliga.</string>
+    <string name="verify_current_detail_password">Sisestage oma kehtiv parool.</string>
+    <string name="verify_current_detail_pattern">Joonistage oma kehtiv muster.</string>
+    <string name="verify_current_detail_pin">Sisestage oma kehtiv PIN-kood.</string>
+    <string name="verify_current_title_phone">Kasutage seda telefoni krüptitud andmete avamiseks</string>
+    <string name="verify_current_title_tablet">Kasutage seda tahvelseadet krüptitud andmete avamiseks</string>
+    <string name="verify_old_password_description_phone">Turvalisuse huvides kinnitage enda identiteet oma eelmise telefoni parooliga.</string>
+    <string name="verify_old_password_description_tablet">Turvalisuse huvides kinnitage enda identiteet oma eelmise tahvelseadme parooliga.</string>
+    <string name="verify_old_pattern_description_phone">Turvalisuse huvides kinnitage enda identiteet oma eelmise telefoni mustriga.</string>
+    <string name="verify_old_pattern_description_tablet">Turvalisuse huvides kinnitage enda identiteet oma eelmise tahvelseadme mustriga.</string>
+    <string name="verify_old_pin_description_phone">Turvalisuse huvides kinnitage enda identiteet oma eelmise telefoni PIN-koodiga.</string>
+    <string name="verify_old_pin_description_tablet">Turvalisuse huvides kinnitage enda identiteet oma eelmise tahvelseadme PIN-koodiga.</string>
+    <string name="verify_old_ppp_title">Krüptitud andmete lukust avamine</string>
+    <string name="version">Versioon %s</string>
+</resources>

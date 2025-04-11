@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/ppp_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_dialog_view" android:background="@color/ppp_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/current_ppp_dialog_margin_top" android:weightSum="100.0">
+        <ImageView android:id="@id/lock_image" android:background="@drawable/lock" android:layout_width="@dimen/ppp_lock_icon_size" android:layout_height="@dimen/ppp_lock_icon_size" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/ppp_title_text_color" android:gravity="center" android:id="@id/title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/newsec600semibold" android:layout_marginHorizontal="70.0dip" android:paddingVertical="5.5dip" />
+        <TextView android:gravity="start" android:id="@id/description_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/newsec400regular" android:layout_marginHorizontal="45.0dip" android:paddingVertical="5.5dip" style="@style/TextAppearance.PPP.Detail.Body" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="30.0" />
+        <TextView android:gravity="center" android:id="@id/detail_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ppp_detail_text_view_margin_bottom" android:fontFamily="@font/newsec400regular" style="@style/TextAppearance.PPP.Detail.Body" />
+        <com.andrognito.patternlockview.PatternLockView android:layout_gravity="center" android:id="@id/pattern_lock_view" android:layout_width="@dimen/ppp_pattern_lock_view_size" android:layout_height="@dimen/ppp_pattern_lock_view_size" app:normalStateColor="@color/ppp_pattern_lock" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/pin_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:paddingHorizontal="@dimen/ppp_pin_password_view_padding_horizontal" app:hintEnabled="false" app:passwordToggleDrawable="@drawable/password_toggle_selector" app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/ppp_dialog_edit_text_size" android:id="@id/pin_text_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:inputType="numberPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/password_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:paddingHorizontal="@dimen/ppp_pin_password_view_padding_horizontal" app:hintEnabled="false" app:passwordToggleDrawable="@drawable/password_toggle_selector" app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/ppp_dialog_edit_text_size" android:id="@id/password_text_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottom_menu" android:layout_width="fill_parent" android:layout_height="@dimen/ppp_bnv_height" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" app:elevation="0.0dip" style="@style/Widget.BottomMenu.Text" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_progress_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="@dimen/ppp_progress_size" android:layout_height="@dimen/ppp_progress_size" />
+    </LinearLayout>
+</RelativeLayout>

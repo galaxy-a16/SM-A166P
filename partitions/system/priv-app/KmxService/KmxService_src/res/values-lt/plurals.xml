@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Liko bandymų: %d</item>
+        <item quantity="one">Liko bandymų: %d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d naujų pranešimų</item>
+        <item quantity="one">%d naujas pranešimas</item>
+        <item quantity="few">%d nauji pranešimai</item>
+        <item quantity="many">%d naujo pranešimo</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Kadangi jums nepavyko patvirtinti savo tapatybės %d bandymų, dėl saugumo jūsų šifruoti duomenys bus ištrinti:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Kadangi jums nepavyko patvirtinti savo tapatybės %d bandymu, dėl saugumo jūsų šifruoti duomenys bus ištrinti:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Kadangi jums nepavyko patvirtinti savo tapatybės %d bandymais, dėl saugumo jūsų šifruoti duomenys bus ištrinti:</item>
+        <item quantity="many">Kadangi jums nepavyko patvirtinti savo tapatybės %d bandymų, dėl saugumo jūsų šifruoti duomenys bus ištrinti:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Bandykite dar kartą po 1 val. %d min.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Bandykite dar kartą po 1 val. %d min.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Bandykite dar kartą po 1 val. %d min.</item>
+        <item quantity="many">Bandykite dar kartą po 1 val. %d min.</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Bandykite dar kartą po %d val.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Bandykite dar kartą po %d val.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Bandykite dar kartą po %d val.</item>
+        <item quantity="many">Bandykite dar kartą po %d val.</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Bandykite dar kartą po %d val. 1 min.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Bandykite dar kartą po %d val. 1 min.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Bandykite dar kartą po %d val. 1 min.</item>
+        <item quantity="many">Bandykite dar kartą po %d val. 1 min.</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Bandykite dar kartą po %d min.</item>
+        <item quantity="one">Bandykite po %d min.</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Bandykite dar kartą po %d sek.</item>
+        <item quantity="one">Bandykite po %d sek.</item>
+    </plurals>
+</resources>

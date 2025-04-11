@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Zostávajúce pokusy: %d</item>
+        <item quantity="one">Zostáva %d pokus</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nových upozornení</item>
+        <item quantity="one">%d nové upozornenie</item>
+        <item quantity="few">%d nové upozornenia</item>
+        <item quantity="many">%d new notifications</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Keďže sa vám po %d pokusoch nepodarilo overiť vašu totožnosť, vaše zašifrované údaje budú z dôvodu vašej bezpečnosti odstránené:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Keďže sa vám po %d pokuse nepodarilo overiť vašu totožnosť, vaše zašifrované údaje budú z dôvodu vašej bezpečnosti odstránené:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Keďže sa vám po %d pokusoch nepodarilo overiť vašu totožnosť, vaše zašifrované údaje budú z dôvodu vašej bezpečnosti odstránené:</item>
+        <item quantity="many">Keďže sa vám po %d pokuse nepodarilo overiť vašu totožnosť, vaše zašifrované údaje budú z dôvodu vašej bezpečnosti odstránené:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Skúste to znova o 1 hodinu a %d minút</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Skúste to znova o 1 hodinu a %d minútu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Skúste to znova o 1 hodinu a %d minúty</item>
+        <item quantity="many">Skúste to znova o 1 hodinu a %d minúty</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Skúste to znova o %d hodín</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Skúste to znova o %d hodinu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Skúste to znova o %d hodiny</item>
+        <item quantity="many">Skúste to znova o %d hodiny</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Skúste to znova o %d hodín a 1 minútu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Skúste to znova o %d hodinu a 1 minútu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Skúste to znova o %d hodiny a 1 minútu</item>
+        <item quantity="many">Skúste to znova o %d hodiny a 1 minútu</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Skúste to znova v priebehu %d minút</item>
+        <item quantity="one">Skúste to znova o %d minútu</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Skúste to znova v priebehu %d sekúnd</item>
+        <item quantity="one">Skúste to znova o %d sekundu</item>
+    </plurals>
+</resources>

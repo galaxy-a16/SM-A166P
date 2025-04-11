@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d оролдлого үлдлээ</item>
+        <item quantity="one">%d оролдлого үлдсэн</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Та %d оролдлогын дараа өөрийгөө таниулж чадаагүй тул таны аюулгүй байдлын үүднээс шифрлэсэн өгөгдлийг устгана:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Та %d оролдлогын дараа өөрийгөө таниулж чадаагүй тул таны аюулгүй байдлын үүднээс шифрлэсэн өгөгдлийг устгана:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 цаг %d минутын дараа дахин оролдоно уу</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 цаг %d минутын дараа дахин оролдоно уу</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d цагийн дараа дахин оролдоно уу</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d цагийн дараа дахин оролдоно уу</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d цаг 1 минутын дараа дахин оролдоно уу</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d цаг 1 минутын дараа дахин оролдоно уу</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d минутын дараа дахин оролд</item>
+        <item quantity="one">%d минутын дараа дахин оролд</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d секундийн дараа дахин оролд</item>
+        <item quantity="one">%d секундын дараа дахин оролд</item>
+    </plurals>
+</resources>

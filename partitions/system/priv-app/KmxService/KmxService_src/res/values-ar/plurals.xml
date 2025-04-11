@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">تتبقى %d من المحاولات</item>
+        <item quantity="one">يتبقى %d من المحاولات</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d إشعار جديد</item>
+        <item quantity="zero">%d إشعار جديد</item>
+        <item quantity="one">إشعار جديد واحد (%d)</item>
+        <item quantity="two">إشعاران جديدان (%d)</item>
+        <item quantity="few">%d إشعارات جديدة</item>
+        <item quantity="many">%d إشعارًا جديدًا</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">نظراً لأنه تعذر عليك التحقق من هويتك بعد %d محاولة، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+        <item quantity="zero">نظراً لأنه تعذر عليك التحقق من هويتك بعد %d محاولة، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+        <item quantity="one">نظراً لأنه تعذر عليك التحقق من هويتك بعد محاولة واحدة، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+        <item quantity="two">نظراً لأنه تعذر عليك التحقق من هويتك بعد محاولتين، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+        <item quantity="few">نظراً لأنه تعذر عليك التحقق من هويتك بعد %d محاولات، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+        <item quantity="many">نظراً لأنه تعذر عليك التحقق من هويتك بعد %d محاولةً، سيتم حذف بياناتك المشفرة لحمايتك:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">حاول مرة أخرى خلال ساعة واحدة و%d دقيقة</item>
+        <item quantity="zero">حاول مرة أخرى خلال ساعة واحدة و%d دقيقة</item>
+        <item quantity="one">حاول مرة أخرى خلال ساعة واحدة ودقيقة واحدة</item>
+        <item quantity="two">حاول مرة أخرى خلال ساعة واحدة ودقيقتين</item>
+        <item quantity="few">حاول مرة أخرى خلال ساعة واحدة و%d دقائق</item>
+        <item quantity="many">حاول مرة أخرى خلال ساعة واحدة و%d دقيقةً</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">حاول مرة أخرى خلال %d ساعة</item>
+        <item quantity="zero">حاول مرة أخرى خلال %d ساعة</item>
+        <item quantity="one">حاول مرة أخرى خلال ساعة واحدة</item>
+        <item quantity="two">حاول مرة أخرى خلال ساعتين</item>
+        <item quantity="few">حاول مرة أخرى خلال %d ساعات</item>
+        <item quantity="many">حاول مرة أخرى خلال %d ساعةً</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">حاول مرة أخرى خلال %d ساعة ودقيقة واحدة</item>
+        <item quantity="zero">حاول مرة أخرى خلال %d ساعة ودقيقة واحدة</item>
+        <item quantity="one">حاول مرة أخرى خلال ساعة واحدة ودقيقة واحدة</item>
+        <item quantity="two">حاول مرة أخرى خلال ساعتين ودقيقة واحدة</item>
+        <item quantity="few">حاول مرة أخرى خلال %d ساعات ودقيقة واحدة</item>
+        <item quantity="many">حاول مرة أخرى خلال %d ساعةً ودقيقة واحدة</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">حاول مجدداً بعد %d من الدقائق</item>
+        <item quantity="one">المحاولة مرة أخرى بعد %d من الدقائق</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">حاول مجدداً بعد %d من الثواني</item>
+        <item quantity="one">المحاولة مرة أخرى بعد %d من الثواني</item>
+    </plurals>
+</resources>

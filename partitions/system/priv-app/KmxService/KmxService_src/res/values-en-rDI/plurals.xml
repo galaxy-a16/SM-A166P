@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">IDS_LCKSCN_NPBODY_PD_ATTEMPTS_LEFT %d</item>
+        <item quantity="one">DREAM_LCKSCN_NPBODY_PD_ATTEMPT_LEFT %d</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">PLURAL_OTHER_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+        <item quantity="zero">PLURAL_ZERO_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+        <item quantity="one">PLURAL_ONE_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+        <item quantity="two">PLURAL_TWO_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+        <item quantity="few">PLURAL_FEW_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+        <item quantity="many">PLURAL_MANY_EV_BODY_BECAUSE_YOU_WERE_UNABLE_TO_VERIFY_YOUR_IDENTITY_AFTER_PD_ATTEMPTS_YOUR_ENCRYPTED_DATA_WILL_BE_DELETED_FOR_YOUR_SECURITY_C %d</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">PLURAL_OTHER_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+        <item quantity="zero">PLURAL_ZERO_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+        <item quantity="one">PLURAL_ONE_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+        <item quantity="two">PLURAL_TWO_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+        <item quantity="few">PLURAL_FEW_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+        <item quantity="many">PLURAL_MANY_LCKSCN_NPBODY_TRY_AGAIN_IN_1_HOUR_PD_MINUTES %d</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">PLURAL_OTHER_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+        <item quantity="zero">PLURAL_ZERO_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+        <item quantity="one">PLURAL_ONE_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+        <item quantity="two">PLURAL_TWO_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+        <item quantity="few">PLURAL_FEW_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+        <item quantity="many">PLURAL_MANY_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS %d</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">PLURAL_OTHER_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+        <item quantity="zero">PLURAL_ZERO_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+        <item quantity="one">PLURAL_ONE_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+        <item quantity="two">PLURAL_TWO_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+        <item quantity="few">PLURAL_FEW_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+        <item quantity="many">PLURAL_MANY_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_HOURS_1_MINUTE %d</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">IDS_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_MINUTES %d</item>
+        <item quantity="one">DREAM_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_MINUTE %d</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">IDS_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_SECONDS %d</item>
+        <item quantity="one">DREAM_LCKSCN_NPBODY_TRY_AGAIN_IN_PD_SECOND %d</item>
+    </plurals>
+</resources>

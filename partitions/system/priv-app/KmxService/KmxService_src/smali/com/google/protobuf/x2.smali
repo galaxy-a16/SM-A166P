@@ -1,0 +1,983 @@
+.class public final Lcom/google/protobuf/x2;
+.super Lcom/google/protobuf/d6;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/protobuf/y2;
+
+
+# instance fields
+.field public a:I
+
+.field public b:Lcom/google/protobuf/d7;
+
+.field public c:Lcom/google/protobuf/d7;
+
+.field public d:Ljava/lang/Object;
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Lcom/google/protobuf/m7;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lcom/google/protobuf/d6;-><init>(Lcom/google/protobuf/e6;)V
+
+    .line 2
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->d:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->e:Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/protobuf/l7;->c:Lcom/google/protobuf/l7;
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/protobuf/e6;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0, p1}, Lcom/google/protobuf/d6;-><init>(Lcom/google/protobuf/e6;)V
+
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/d7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/d7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    const-string p1, ""
+
+    iput-object p1, p0, Lcom/google/protobuf/x2;->d:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/google/protobuf/x2;->e:Ljava/lang/Object;
+
+    sget-object p1, Lcom/google/protobuf/l7;->c:Lcom/google/protobuf/l7;
+
+    iput-object p1, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final addRepeatedField(Lcom/google/protobuf/n3;Ljava/lang/Object;)Lcom/google/protobuf/m8;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/d6;->addRepeatedField(Lcom/google/protobuf/n3;Ljava/lang/Object;)Lcom/google/protobuf/d6;
+
+    return-object p0
+.end method
+
+.method public final build()Lcom/google/protobuf/n8;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->c()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->isInitialized()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0}, Lcom/google/protobuf/a;->newUninitializedMessageException(Lcom/google/protobuf/n8;)Lcom/google/protobuf/UninitializedMessageException;
+
+    move-result-object p0
+
+    throw p0
+.end method
+
+.method public final build()Lcom/google/protobuf/r8;
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->c()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->isInitialized()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0}, Lcom/google/protobuf/a;->newUninitializedMessageException(Lcom/google/protobuf/n8;)Lcom/google/protobuf/UninitializedMessageException;
+
+    move-result-object p0
+
+    throw p0
+.end method
+
+.method public final bridge synthetic buildPartial()Lcom/google/protobuf/n8;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->c()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic buildPartial()Lcom/google/protobuf/r8;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->c()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final c()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+    .locals 4
+
+    new-instance v0, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;-><init>(Lcom/google/protobuf/d6;Lcom/google/protobuf/q0;)V
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v2, v1, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    check-cast v2, Lcom/google/protobuf/h;
+
+    iput-boolean v3, v2, Lcom/google/protobuf/h;->a:Z
+
+    and-int/lit8 v1, v1, -0x2
+
+    iput v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25702(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;Lcom/google/protobuf/d7;)Lcom/google/protobuf/d7;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v2, v1, 0x2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    check-cast v2, Lcom/google/protobuf/h;
+
+    iput-boolean v3, v2, Lcom/google/protobuf/h;->a:Z
+
+    and-int/lit8 v1, v1, -0x3
+
+    iput v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_1
+    iget-object v1, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25802(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;Lcom/google/protobuf/d7;)Lcom/google/protobuf/d7;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v1, v1, 0x10
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-interface {v1}, Lcom/google/protobuf/m7;->O()Lcom/google/protobuf/m7;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v1, v1, -0x11
+
+    iput v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_2
+    iget-object v1, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25902(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;Lcom/google/protobuf/m7;)Lcom/google/protobuf/m7;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    if-eqz v1, :cond_5
+
+    and-int/lit8 v2, v1, 0x4
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->d:Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$26002(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v3, 0x1
+
+    :cond_3
+    and-int/lit8 v1, v1, 0x8
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lcom/google/protobuf/x2;->e:Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$26102(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;Ljava/lang/Object;)Ljava/lang/Object;
+
+    or-int/lit8 v3, v3, 0x2
+
+    :cond_4
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$26276(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;I)I
+
+    :cond_5
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onBuilt()V
+
+    return-object v0
+.end method
+
+.method public final clone()Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->clone()Lcom/google/protobuf/d6;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/x2;
+
+    return-object p0
+.end method
+
+.method public final d()V
+    .locals 1
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageV3;->mutableCopy(Lcom/google/protobuf/d7;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageV3;->mutableCopy(Lcom/google/protobuf/d7;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v0, v0, 0x2
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)V
+    .locals 2
+
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25700(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25700(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, -0x2
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->d()V
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25700(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v1
+
+    check-cast v0, Lcom/google/protobuf/w6;
+
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/w6;->addAll(Ljava/util/Collection;)Z
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    :cond_2
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25800(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25800(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, -0x3
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->e()V
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25800(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/d7;
+
+    move-result-object v1
+
+    check-cast v0, Lcom/google/protobuf/w6;
+
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/w6;->addAll(Ljava/util/Collection;)Z
+
+    :goto_1
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->hasLeadingComments()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$26000(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->d:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v0, v0, 0x4
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->hasTrailingComments()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$26100(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->e:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v0, v0, 0x8
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    :cond_6
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25900(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/m7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    iget-object v0, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25900(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/m7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, -0x11
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_2
+
+    :cond_7
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/lit8 v0, v0, 0x10
+
+    if-nez v0, :cond_8
+
+    new-instance v0, Lcom/google/protobuf/l7;
+
+    iget-object v1, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-direct {v0, v1}, Lcom/google/protobuf/l7;-><init>(Lcom/google/protobuf/m7;)V
+
+    iput-object v0, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    iget v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v0, v0, 0x10
+
+    iput v0, p0, Lcom/google/protobuf/x2;->a:I
+
+    :cond_8
+    iget-object v0, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->access$25900(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)Lcom/google/protobuf/m7;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    :goto_2
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    :cond_9
+    invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->getUnknownFields()Lcom/google/protobuf/ob;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/d6;->mergeUnknownFields(Lcom/google/protobuf/ob;)Lcom/google/protobuf/d6;
+
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    return-void
+.end method
+
+.method public final g(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)V
+    .locals 5
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    :cond_0
+    :goto_0
+    if-nez v0, :cond_b
+
+    :try_start_0
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->G()I
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    const/16 v2, 0x8
+
+    if-eq v1, v2, :cond_9
+
+    const/16 v3, 0xa
+
+    if-eq v1, v3, :cond_7
+
+    const/16 v3, 0x10
+
+    if-eq v1, v3, :cond_6
+
+    const/16 v4, 0x12
+
+    if-eq v1, v4, :cond_5
+
+    const/16 v4, 0x1a
+
+    if-eq v1, v4, :cond_4
+
+    const/16 v4, 0x22
+
+    if-eq v1, v4, :cond_3
+
+    const/16 v2, 0x32
+
+    if-eq v1, v2, :cond_1
+
+    invoke-super {p0, p1, p2, v1}, Lcom/google/protobuf/d6;->parseUnknownField(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_1
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->n()Lcom/google/protobuf/ByteString;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/google/protobuf/x2;->a:I
+
+    and-int/2addr v2, v3
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Lcom/google/protobuf/l7;
+
+    iget-object v4, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-direct {v2, v4}, Lcom/google/protobuf/l7;-><init>(Lcom/google/protobuf/m7;)V
+
+    iput-object v2, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    iget v2, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/2addr v2, v3
+
+    iput v2, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_8
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_7
+
+    :cond_2
+    :goto_1
+    iget-object v2, p0, Lcom/google/protobuf/x2;->f:Lcom/google/protobuf/m7;
+
+    invoke-interface {v2, v1}, Lcom/google/protobuf/m7;->y(Lcom/google/protobuf/ByteString;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->n()Lcom/google/protobuf/ByteString;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/google/protobuf/x2;->e:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/2addr v1, v2
+
+    iput v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->n()Lcom/google/protobuf/ByteString;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/google/protobuf/x2;->d:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    or-int/lit8 v1, v1, 0x4
+
+    iput v1, p0, Lcom/google/protobuf/x2;->a:I
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->y()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Lcom/google/protobuf/i0;->l(I)I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->e()V
+
+    :goto_2
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->e()I
+
+    move-result v2
+
+    if-lez v2, :cond_8
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->u()I
+
+    move-result v3
+
+    check-cast v2, Lcom/google/protobuf/w6;
+
+    invoke-virtual {v2, v3}, Lcom/google/protobuf/w6;->c(I)V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->u()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->e()V
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->c:Lcom/google/protobuf/d7;
+
+    :goto_3
+    check-cast v2, Lcom/google/protobuf/w6;
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->y()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Lcom/google/protobuf/i0;->l(I)I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->d()V
+
+    :goto_4
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->e()I
+
+    move-result v2
+
+    if-lez v2, :cond_8
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->u()I
+
+    move-result v3
+
+    check-cast v2, Lcom/google/protobuf/w6;
+
+    invoke-virtual {v2, v3}, Lcom/google/protobuf/w6;->c(I)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {p1, v1}, Lcom/google/protobuf/i0;->k(I)V
+
+    goto/16 :goto_0
+
+    :cond_9
+    invoke-virtual {p1}, Lcom/google/protobuf/i0;->u()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/google/protobuf/x2;->d()V
+
+    iget-object v2, p0, Lcom/google/protobuf/x2;->b:Lcom/google/protobuf/d7;
+
+    goto :goto_3
+
+    :goto_5
+    invoke-virtual {v2, v1}, Lcom/google/protobuf/w6;->c(I)V
+    :try_end_0
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_0
+
+    :cond_a
+    :goto_6
+    const/4 v0, 0x1
+
+    goto/16 :goto_0
+
+    :goto_7
+    :try_start_1
+    invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
+
+    move-result-object p1
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_8
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    throw p1
+
+    :cond_b
+    invoke-virtual {p0}, Lcom/google/protobuf/d6;->onChanged()V
+
+    return-void
+.end method
+
+.method public final getDefaultInstanceForType()Lcom/google/protobuf/n8;
+    .locals 0
+
+    .line 1
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getDefaultInstanceForType()Lcom/google/protobuf/r8;
+    .locals 0
+
+    .line 2
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getDescriptorForType()Lcom/google/protobuf/h3;
+    .locals 0
+
+    sget-object p0, Lcom/google/protobuf/f3;->W:Lcom/google/protobuf/h3;
+
+    return-object p0
+.end method
+
+.method public final internalGetFieldAccessorTable()Lcom/google/protobuf/q6;
+    .locals 2
+
+    sget-object p0, Lcom/google/protobuf/f3;->X:Lcom/google/protobuf/q6;
+
+    const-class v0, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    const-class v1, Lcom/google/protobuf/x2;
+
+    invoke-virtual {p0, v0, v1}, Lcom/google/protobuf/q6;->c(Ljava/lang/Class;Ljava/lang/Class;)V
+
+    return-object p0
+.end method
+
+.method public final isInitialized()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final bridge synthetic mergeFrom(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)Lcom/google/protobuf/a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/x2;->g(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)V
+
+    return-object p0
+.end method
+
+.method public final mergeFrom(Lcom/google/protobuf/n8;)Lcom/google/protobuf/a;
+    .locals 1
+
+    .line 2
+    instance-of v0, p1, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/x2;->f(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-interface {p1}, Lcom/google/protobuf/t8;->getAllFields()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/a;->mergeFrom(Lcom/google/protobuf/n8;Ljava/util/Map;)Lcom/google/protobuf/a;
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public final bridge synthetic mergeFrom(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)Lcom/google/protobuf/e;
+    .locals 0
+
+    .line 4
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/x2;->g(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)V
+
+    return-object p0
+.end method
+
+.method public final mergeFrom(Lcom/google/protobuf/n8;)Lcom/google/protobuf/m8;
+    .locals 1
+
+    .line 5
+    instance-of v0, p1, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/x2;->f(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Location;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-interface {p1}, Lcom/google/protobuf/t8;->getAllFields()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/a;->mergeFrom(Lcom/google/protobuf/n8;Ljava/util/Map;)Lcom/google/protobuf/a;
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public final bridge synthetic mergeFrom(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)Lcom/google/protobuf/q8;
+    .locals 0
+
+    .line 7
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/x2;->g(Lcom/google/protobuf/i0;Lcom/google/protobuf/t4;)V
+
+    return-object p0
+.end method
+
+.method public final mergeUnknownFields(Lcom/google/protobuf/ob;)Lcom/google/protobuf/a;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/d6;->mergeUnknownFields(Lcom/google/protobuf/ob;)Lcom/google/protobuf/d6;
+
+    return-object p0
+.end method
+
+.method public final setField(Lcom/google/protobuf/n3;Ljava/lang/Object;)Lcom/google/protobuf/m8;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/d6;->setField(Lcom/google/protobuf/n3;Ljava/lang/Object;)Lcom/google/protobuf/d6;
+
+    return-object p0
+.end method
+
+.method public final setUnknownFields(Lcom/google/protobuf/ob;)Lcom/google/protobuf/m8;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/d6;->setUnknownFields(Lcom/google/protobuf/ob;)Lcom/google/protobuf/d6;
+
+    return-object p0
+.end method

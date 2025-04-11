@@ -1,0 +1,258 @@
+.class public Lorg/spongycastle/asn1/eac/PackedDate;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field private time:[B
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-direct {p0, p1}, Lorg/spongycastle/asn1/eac/PackedDate;->convert(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/Date;)V
+    .locals 4
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyMMdd\'Z\'"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/util/SimpleTimeZone;
+
+    const/4 v2, 0x0
+
+    const-string v3, "Z"
+
+    invoke-direct {v1, v2, v3}, Ljava/util/SimpleTimeZone;-><init>(ILjava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    invoke-virtual {v0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lorg/spongycastle/asn1/eac/PackedDate;->convert(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/Date;Ljava/util/Locale;)V
+    .locals 3
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyMMdd\'Z\'"
+
+    invoke-direct {v0, v1, p2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    new-instance p2, Ljava/util/SimpleTimeZone;
+
+    const/4 v1, 0x0
+
+    const-string v2, "Z"
+
+    invoke-direct {p2, v1, v2}, Ljava/util/SimpleTimeZone;-><init>(ILjava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    invoke-virtual {v0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lorg/spongycastle/asn1/eac/PackedDate;->convert(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    return-void
+.end method
+
+.method public constructor <init>([B)V
+    .locals 0
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    return-void
+.end method
+
+.method private convert(Ljava/lang/String;)[B
+    .locals 3
+
+    invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object p0
+
+    const/4 p1, 0x6
+
+    new-array v0, p1, [B
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eq v1, p1, :cond_0
+
+    aget-char v2, p0, v1
+
+    add-int/lit8 v2, v2, -0x30
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lorg/spongycastle/asn1/eac/PackedDate;
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    check-cast p1, Lorg/spongycastle/asn1/eac/PackedDate;
+
+    iget-object p0, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    iget-object p1, p1, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    invoke-static {p0, p1}, Lorg/spongycastle/util/Arrays;->areEqual([B[B)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getDate()Ljava/util/Date;
+    .locals 3
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyyMMdd"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "20"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lorg/spongycastle/asn1/eac/PackedDate;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getEncoding()[B
+    .locals 0
+
+    iget-object p0, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    invoke-static {p0}, Lorg/spongycastle/util/Arrays;->clone([B)[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    invoke-static {p0}, Lorg/spongycastle/util/Arrays;->hashCode([B)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    array-length v0, v0
+
+    new-array v1, v0, [C
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-eq v2, v0, :cond_0
+
+    iget-object v3, p0, Lorg/spongycastle/asn1/eac/PackedDate;->time:[B
+
+    aget-byte v3, v3, v2
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v3, v3, 0x30
+
+    int-to-char v3, v3
+
+    aput-char v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, v1}, Ljava/lang/String;-><init>([C)V
+
+    return-object p0
+.end method

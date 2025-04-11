@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Απομένουν %d προσπάθειες</item>
+        <item quantity="one">Απομένει %d προσπάθεια</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d νέες ειδοποιήσεις</item>
+        <item quantity="one">%d νέα ειδοποίηση</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Επειδή δεν μπορέσατε να επαληθεύσετε την ταυτότητά σας μετά από %d προσπάθειες, τα κρυπτογραφημένα δεδομένα θα διαγραφούν για την ασφάλειά σας:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Επειδή δεν μπορέσατε να επαληθεύσετε την ταυτότητά σας μετά από %d προσπάθεια, τα κρυπτογραφημένα δεδομένα θα διαγραφούν για την ασφάλειά σας:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Δοκιμάστε ξανά σε 1 ώρα και %d λεπτά</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 ώρα και %d λεπτό</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Δοκιμάστε ξανά σε %d ώρες</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Δοκιμάστε ξανά σε %d ώρα</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Δοκιμάστε ξανά σε %d ώρες και 1 λεπτό</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Δοκιμάστε ξανά σε %d ώρα και 1 λεπτό</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Δοκιμάστε ξανά σε %d λεπτά</item>
+        <item quantity="one">Δοκιμάστε ξανά σε %d λεπτό</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Δοκιμάστε ξανά σε %d δευτερόλεπτα</item>
+        <item quantity="one">Δοκιμάστε ξανά σε %d δευτερόλεπτο</item>
+    </plurals>
+</resources>

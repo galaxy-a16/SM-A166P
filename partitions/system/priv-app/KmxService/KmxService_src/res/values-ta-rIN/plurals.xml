@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d முயற்சிகள் மீதமுள்ளன</item>
+        <item quantity="one">%d முயற்சி உள்ளது</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">உங்களின் அடையாளத்தை %d முயற்சிகளுக்குப் பிறகும் சரிபார்க்க இயலாததால், உங்கள் பாதுகாப்பிற்காக மறைகுறியாக்கப்பட்ட தரவு நீக்கப்படும்:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">உங்களின் அடையாளத்தை %d முயற்சிக்குப் பிறகும் சரிபார்க்க இயலாததால், உங்கள் பாதுகாப்பிற்காக மறைகுறியாக்கப்பட்ட தரவு நீக்கப்படும்:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 மணிநேரம் %d நிமிடங்களில் மீண்டும் முயலவும்</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 மணிநேரம் %d நிமிடத்தில் மீண்டும் முயலவும்</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d மணிநேரங்களில் மீண்டும் முயலவும்</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d மணிநேரத்தில் மீண்டும் முயலவும்</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d மணிநேரங்கள் 1 நிமிடத்தில் மீண்டும் முயலவும்</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d மணிநேரம் 1 நிமிடத்தில் மீண்டும் முயலவும்</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d நிமிடங்களில் மீண்டும் முயலவும்</item>
+        <item quantity="one">%d நிமிடத்தில் மீண்டும் முயலவும்</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d வினாடிகளில் மீண்டும் முயலவும்</item>
+        <item quantity="one">%d வினாடியில் மீண்டும் முயலவும்</item>
+    </plurals>
+</resources>

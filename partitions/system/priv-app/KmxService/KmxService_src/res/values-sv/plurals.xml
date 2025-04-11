@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d försök kvar</item>
+        <item quantity="one">%d försök kvar</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nya aviseringar</item>
+        <item quantity="one">%d ny avisering</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Eftersom du inte kunde verifiera din identitet efter %d försök, kommer dina krypterade data att raderas för din säkerhets skull:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Eftersom du inte kunde verifiera din identitet efter %d försök, kommer dina krypterade data att raderas för din säkerhets skull:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Försök igen om 1 timme och %d minuter</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Försök igen om 1 timme och %d minut</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Försök igen om %d timmar</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Försök igen om %d timme</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Försök igen om %d timmar och 1 minut</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Försök igen om %d timme och 1 minut</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Försök igen om %d minuter</item>
+        <item quantity="one">Försök igen om %d minut</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Försök igen om %d sekunder</item>
+        <item quantity="one">Försök igen om %d sekund</item>
+    </plurals>
+</resources>

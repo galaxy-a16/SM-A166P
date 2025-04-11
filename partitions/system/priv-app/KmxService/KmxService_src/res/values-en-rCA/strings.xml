@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about">About %s</string>
+    <string name="back">Back</string>
+    <string name="call_notification_answer_action">Answer</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Decline</string>
+    <string name="call_notification_hang_up_action">Hang Up</string>
+    <string name="call_notification_incoming_text">Incoming call</string>
+    <string name="call_notification_ongoing_text">Ongoing call</string>
+    <string name="call_notification_screening_text">Screening an incoming call</string>
+    <string name="chan_mkt">Marketing</string>
+    <string name="chan_ntc">Notice</string>
+    <string name="character_counter_content_description">%1$d out of %2$d characters</string>
+    <string name="close_app">Close app</string>
+    <string name="contact_us">Contact us</string>
+    <string name="copy">Copy</string>
+    <string name="couldnt_get_samsung_account_information">"Couldn't get your account information"</string>
+    <string name="couldnt_get_samsung_account_information_description">Check your network connection and make sure Samsung account is updated to the latest version, then try again.</string>
+    <string name="data_info_dialog_title">Data you can unlock</string>
+    <string name="data_info_menu">See what data you can unlock</string>
+    <string name="delete_dialog_message">"You can skip unlocking your data if you don't remember your previous device's PIN, pattern, or password. However, the encrypted data below will be deleted for security since we couldn't verify your identity."</string>
+    <string name="delete_dialog_title">Trouble unlocking?</string>
+    <string name="delete_menu">"Don't remember how to unlock?"</string>
+    <string name="dragndroplist_drag_move">Now at position %d</string>
+    <string name="dragndroplist_drag_release">Item dropped into position %d.</string>
+    <string name="dragndroplist_drag_start">Started dragging the item at position %d.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Item at position %d cannot be dragged.</string>
+    <string name="expand_button_title">Advanced</string>
+    <string name="go_to">Go to %s</string>
+    <string name="go_to_developer_options">Go to Developer options</string>
+    <string name="go_to_sign_out">Go to Sign out</string>
+    <string name="incorrect_password_entered">Incorrect password entered</string>
+    <string name="incorrect_pattern_drawn">Incorrect pattern drawn</string>
+    <string name="incorrect_pin_entered">Incorrect PIN entered</string>
+    <string name="latest_version_is_already_installed">The latest version is already installed.</string>
+    <string name="menu_cancel">Cancel</string>
+    <string name="menu_continue">Continue</string>
+    <string name="new_version_is_available">A new version is available.</string>
+    <string name="next">Next</string>
+    <string name="no_network_connection">No network connection</string>
+    <string name="no_network_connection_description">"Couldn't update the security status of your devices. Check connection and try again."</string>
+    <string name="no_threats_found">No threats found</string>
+    <string name="not_set">Not set</string>
+    <string name="notify_delete_dialog_title">Your encrypted data will be deleted</string>
+    <string name="notify_delete_dialog_title_previous_devices">"Couldn't verify you using your previous devices"</string>
+    <string name="notify_delete_dialog_title_previous_phone">"Couldn't verify you using your previous phone"</string>
+    <string name="notify_delete_dialog_title_previous_phones">"Couldn't verify you using your previous phones"</string>
+    <string name="notify_delete_dialog_title_previous_tablet">"Couldn't verify you using your previous tablet"</string>
+    <string name="notify_delete_dialog_title_previous_tablets">"Couldn't verify you using your previous tablets"</string>
+    <string name="oem_unlocking_is_turned_on">OEM unlocking is turned on</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM unlocking can allow unauthorized software to be installed on your phone. Unauthorized software can make your phone vulnerable to security risks. To protect your account and personal data, turn off OEM unlocking on your phone in Settings > Developer options.
+
+After you turn it off, it may take some time for the security status to change here."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM unlocking can allow unauthorized software to be installed on your tablet. Unauthorized software can make your tablet vulnerable to security risks. To protect your account and personal data, turn off OEM unlocking on your tablet in Settings > Developer options.
+
+After you turn it off, it may take some time for the security status to change here."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM unlocking can allow unauthorized software to be installed on your phone. Unauthorized software can make your phone vulnerable to security risks. To protect your account and personal data, turn off OEM unlocking in Settings > Developer options.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM unlocking can allow unauthorized software to be installed on your tablet. Unauthorized software can make your tablet vulnerable to security risks. To protect your account and personal data, turn off OEM unlocking in Settings > Developer options.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Open source licence</string>
+    <string name="other_devices">Other devices</string>
+    <string name="password_set">Password set %s</string>
+    <string name="pattern_set">Pattern set %s</string>
+    <string name="pin_set">PIN set %s</string>
+    <string name="ppp_delegate_description">Set a PIN, pattern, or password to protect your data.</string>
+    <string name="ppp_delegate_title">Set secure screen lock</string>
+    <string name="ppp_dialog_description_SamsungCloud">Screen lock for Enhanced data protection backup and syncing in Samsung Cloud</string>
+    <string name="ppp_dialog_description_SamsungPass">Passkeys saved in Samsung Pass</string>
+    <string name="preference_copied">"'%1$s' copied to clipboard."</string>
+    <string name="remove_this_device">Remove this device</string>
+    <string name="search_menu_title">Search</string>
+    <string name="security_status_main_description">Knox Matrix monitors supported devices signed in to your Samsung account using a secure private blockchain. Each device in the chain can check the security status of other devices and let you know if there are any threats.</string>
+    <string name="security_status_not_available_yet">Security status not available yet</string>
+    <string name="security_status_not_available_yet_description">This can take some time. Check again later.</string>
+    <string name="security_status_not_up_to_date">Security status not up to date</string>
+    <string name="security_status_not_up_to_date_description_phone">"The security status of this phone hasn't been updated for more than 30 days. The phone may be offline or something may be preventing its status from being checked. If you aren't using this phone anymore, signing out of your Samsung account is recommended. You can sign out in Settings > Samsung account > Devices.
+
+If you're using this phone but its security status isn't updating, make sure it's connected to a network."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"The security status of this device hasn't been updated for more than 30 days. The device may be offline or something may be preventing its status from being checked. If you aren't using this device anymore, removing this device in the SmartThings app is recommended.
+
+If you're using this device but its security status isn't updating, make sure it's connected to a network."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"The security status of this tablet hasn't been updated for more than 30 days. The tablet may be offline or something may be preventing its status from being checked. If you aren't using this tablet anymore, signing out of your Samsung account is recommended. You can sign out in Settings > Samsung account > Devices.
+
+If you're using this tablet but its security status isn't updating, make sure it's connected to a network."</string>
+    <string name="security_status_not_up_to_date_description_vd">"The security status of this device hasn't been updated for more than 30 days. The device may be offline or something may be preventing its status from being checked. If you aren't using this device anymore, signing out of your Samsung account is recommended. You can sign out in Settings > Samsung account > Devices > Manage signed-in devices.
+
+If you're using this device but its security status isn't updating, make sure it's connected to a network."</string>
+    <string name="security_status_of_your_devices">Security status of your devices</string>
+    <string name="sesl_action_bar_up_description">Navigate up</string>
+    <string name="sesl_action_menu_overflow_badge_description">New content available</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">More options</string>
+    <string name="sesl_appbar_suggest_all_dismissed">All suggestions dismissed</string>
+    <string name="sesl_appbar_suggest_dismiss">Dismiss suggestion</string>
+    <string name="sesl_appbar_suggest_dismissed">Suggestion dismissed</string>
+    <string name="sesl_appbar_suggest_pagination">Page %1$d of %2$d</string>
+    <string name="sesl_index_assistant_text">Swipe up or down with two fingers to scroll.</string>
+    <string name="sesl_index_scrollbar">Scroll bar</string>
+    <string name="sesl_index_section">Section index</string>
+    <string name="sesl_index_selected">Selected</string>
+    <string name="sesl_material_badge_description">New content available</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">More</string>
+    <string name="sesl_preferecne_badge_description">New notification</string>
+    <string name="sesl_preferencecategory_added_title">Header</string>
+    <string name="sesl_search_hint">Search</string>
+    <string name="sesl_searchview_description_clear">Clear search field</string>
+    <string name="sesl_searchview_description_clear_field">Search field cleared</string>
+    <string name="sesl_searchview_description_query">Search query</string>
+    <string name="sesl_searchview_description_search">Search</string>
+    <string name="sesl_searchview_description_submit">Submit query</string>
+    <string name="sesl_searchview_description_voice">Voice search</string>
+    <string name="sesl_switch_off">Off</string>
+    <string name="sesl_switch_on">On</string>
+    <string name="sesl_switchbar_off_text">Off</string>
+    <string name="sesl_switchbar_on_text">On</string>
+    <string name="sesl_toolbar_collapse_description">Collapse</string>
+    <string name="skip">Skip</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">"SmartThings isn't installed on your phone. Download it from the Play Store."</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">"SmartThings isn't installed on your tablet. Download it from the Play Store."</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+    <string name="this_phone">This phone</string>
+    <string name="this_tablet">This tablet</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Try again in %1$d hours %2$d minutes</string>
+    <string name="unauthorized_software_detected">Unauthorized software detected</string>
+    <string name="unauthorized_software_detected_description_other_phone">Unauthorized system software can make your phone vulnerable to security risks. To protect your account and personal data, install official Samsung software or sign out of your Samsung account in Settings > Samsung account > Devices. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Unauthorized system software can make your device vulnerable to security risks. To protect your account and personal data, install official Samsung software or remove this device in the SmartThings app. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Unauthorized system software can make your tablet vulnerable to security risks. To protect your account and personal data, install official Samsung software or sign out of your Samsung account in Settings > Samsung account > Devices. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Unauthorized system software can make your device vulnerable to security risks. To protect your account and personal data, install official Samsung software or sign out of your Samsung account in Settings > Samsung account > Devices > Manage signed-in devices. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Unauthorized system software can make your phone vulnerable to security risks. To protect your account and personal data, install official Samsung software or sign out of your Samsung account. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Unauthorized system software can make your tablet vulnerable to security risks. To protect your account and personal data, install official Samsung software or sign out of your Samsung account. For help installing official software, contact Samsung Customer Service.</string>
+    <string name="unlocked_bootloader">Unlocked bootloader</string>
+    <string name="unlocked_bootloader_description_other_phone">"While your phone's bootloader is unlocked, unauthorized system software can be installed. Unauthorized system software can make your phone vulnerable to security risks. To protect your account and personal data, lock your phone's bootloader or sign out of your Samsung account in Settings > Samsung account > Devices. For help locking the bootloader, contact Samsung Customer Service.
+
+After you lock it, it may take some time for the security status to change here."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"While your tablet's bootloader is unlocked, unauthorized system software can be installed. Unauthorized system software can make your tablet vulnerable to security risks. To protect your account and personal data, lock your tablet's bootloader or sign out of your Samsung account in Settings > Samsung account > Devices. For help locking the bootloader, contact Samsung Customer Service.
+
+After you lock it, it may take some time for the security status to change here."</string>
+    <string name="unlocked_bootloader_description_this_phone">"While your phone's bootloader is unlocked, unauthorized system software can be installed. Unauthorized system software can make your phone vulnerable to security risks. To protect your account and personal data, lock your phone's bootloader or sign out of your Samsung account. For help locking the bootloader, contact Samsung Customer Service."</string>
+    <string name="unlocked_bootloader_description_this_tablet">"While your tablet's bootloader is unlocked, unauthorized system software can be installed. Unauthorized system software can make your tablet vulnerable to security risks. To protect your account and personal data, lock your tablet's bootloader or sign out of your Samsung account. For help locking the bootloader, contact Samsung Customer Service."</string>
+    <string name="update">Update</string>
+    <string name="update_multi_apps_to_continue">Update the following apps to continue:</string>
+    <string name="update_ps_to_continue">Update %s to continue.</string>
+    <string name="v7_preference_off">OFF</string>
+    <string name="v7_preference_on">ON</string>
+    <string name="verify_current_description_phone">"You can unlock your encrypted data, including passkeys, by verifying your identity with this phone's PIN, pattern, or password."</string>
+    <string name="verify_current_description_tablet">"You can unlock your encrypted data, including passkeys, by verifying your identity with this tablet's PIN, pattern, or password."</string>
+    <string name="verify_current_detail_password">Enter your current password.</string>
+    <string name="verify_current_detail_pattern">Draw your current pattern.</string>
+    <string name="verify_current_detail_pin">Enter your current PIN.</string>
+    <string name="verify_current_title_phone">Use this phone to unlock encrypted data</string>
+    <string name="verify_current_title_tablet">Use this tablet to unlock encrypted data</string>
+    <string name="verify_old_password_description_phone">"For security, verify yourself with your previous phone's password."</string>
+    <string name="verify_old_password_description_tablet">"For security, verify yourself with your previous tablet's password."</string>
+    <string name="verify_old_pattern_description_phone">"For security, verify yourself with your previous phone's pattern."</string>
+    <string name="verify_old_pattern_description_tablet">"For security, verify yourself with your previous tablet's pattern."</string>
+    <string name="verify_old_pin_description_phone">"For security, verify yourself with your previous phone's PIN."</string>
+    <string name="verify_old_pin_description_tablet">"For security, verify yourself with your previous tablet's PIN."</string>
+    <string name="verify_old_ppp_title">Unlock your encrypted data</string>
+    <string name="version">Version %s</string>
+</resources>

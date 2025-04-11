@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s-ის შესახებ</string>
+    <string name="back">უკან</string>
+    <string name="chan_mkt">მარკეტინგი</string>
+    <string name="chan_ntc">შენიშვნა</string>
+    <string name="character_counter_content_description">%1$d სიმბოლო %2$d-დან</string>
+    <string name="close_app">აპის დახურვა</string>
+    <string name="contact_us">დაგვიკავშირდით</string>
+    <string name="couldnt_get_samsung_account_information">თქვენი ანგარიშის ინფორმაციის მიღება ვერ მოხერხდა</string>
+    <string name="couldnt_get_samsung_account_information_description">შეამოწმეთ ქსელთან კავშირი და დარწმუნდით, რომ Samsung account განახლებულია უახლესი ვერსიით, შემდეგ კი ისევ სცადეთ.</string>
+    <string name="data_info_dialog_title">მონაცემები, რომლებიც შეგიძლიათ განბლოკოთ</string>
+    <string name="data_info_menu">ნახეთ, რომელი მონაცემების განბლოკვა შეგიძლიათ</string>
+    <string name="delete_dialog_message">თქვენ შეგიძლიათ გამოტოვოთ მონაცემთა განბლოკვა, თუ ადრინდელი მოწყობილობის PIN, ნიმუში, ან პაროლი არ გახსოვთ. ამასთან, ქვემოთ მოცემული დაშიფრული მონაცემები წაიშლება უსაფრთხოების მიზნით, რადგან თქვენი ვინაობა ვერ დავამოწმეთ.</string>
+    <string name="delete_dialog_title">ვერ ახერხებთ განბლოკვას?</string>
+    <string name="delete_menu">არ გახსოვთ როგორ განბლოკოთ?</string>
+    <string name="dragndroplist_drag_move">ახლა მისი პოზიციაა %d</string>
+    <string name="dragndroplist_drag_release">ელემენტი გადასულია პოზიცია %d-ში.</string>
+    <string name="dragndroplist_drag_start">დაწყებულია ელემენტის გადატანა პოზიცია %d-ში.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">პოზიცია %d-ში მყოფი ელემენტის გადატანა შეუძლებელია.</string>
+    <string name="go_to">გახსენით %s</string>
+    <string name="go_to_developer_options">გადადი დეველოპერის ვარიანტებზე</string>
+    <string name="go_to_sign_out">გამოსვლაზე გადასვლა</string>
+    <string name="incorrect_password_entered">მითითებული პაროლი არასწორია</string>
+    <string name="incorrect_pattern_drawn">დახაზული ნიმუში არასწორია</string>
+    <string name="incorrect_pin_entered">შეყვანილი PIN არასწორია</string>
+    <string name="latest_version_is_already_installed">უახლესი ვერსია უკვე დაინსტალირებულია.</string>
+    <string name="menu_cancel">გაუქმება</string>
+    <string name="menu_continue">გაგრძელება</string>
+    <string name="new_version_is_available">გამოვიდა ახალი ვერსია.</string>
+    <string name="next">შემდეგი</string>
+    <string name="no_network_connection">ქსელთან კავშირი არ არის</string>
+    <string name="no_network_connection_description">თქვენი მოწყობილობების უსაფრთხოების სტატუსი ვერ განახლდა. შეამოწმეთ კავშირი და ისევ სცადეთ.</string>
+    <string name="no_threats_found">საფრთხე ვერ მოიძებნა</string>
+    <string name="notify_delete_dialog_title">თქვენი დაშიფრული მონაცემები წაიშლება</string>
+    <string name="notify_delete_dialog_title_previous_devices">თქვენი დამოწმება წინა მოწყობილობებით ვერ მოხერხდა</string>
+    <string name="notify_delete_dialog_title_previous_phone">თქვენი დამოწმება წინა ტელეფონით ვერ მოხერხდა</string>
+    <string name="notify_delete_dialog_title_previous_phones">თქვენი დამოწმება წინა ტელეფონებით ვერ მოხერხდა</string>
+    <string name="notify_delete_dialog_title_previous_tablet">თქვენი დამოწმება წინა პლანშეტით ვერ მოხერხდა</string>
+    <string name="notify_delete_dialog_title_previous_tablets">თქვენი დამოწმება წინა პლანშეტებით ვერ მოხერხდა</string>
+    <string name="oem_unlocking_is_turned_on">OEM განბლოკვა ჩართულია</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM-თი განბლოკვას შეუძლია არაავტორიზებულ პროგრამულ უზრუნველყოფას თქვენს ტელეფონში დაინსტალირების საშუალება მისცეს. არაავტორიზებულ პროგრამულ უზრუნველყოფას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიში და პერსონალური მონაცემები რომ დაიცვათ, გახსენით „პარამეტრები“ > „დეველოპერის ვარიანტები“ და ტელეფონში გამორთეთ „OEM-თი განბლოკვა“.
+
+მისი გამორთვის შემდეგ, შეიძლება გარკვეული დრო დასჭირდეს, სანამ უსაფრთხოების სტატუსი აქ შეიცვლება."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM-თი განბლოკვას შეუძლია არაავტორიზებულ პროგრამულ უზრუნველყოფას თქვენს პლანშეტში დაინსტალირების საშუალება მისცეს. არაავტორიზებულ პროგრამულ უზრუნველყოფას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიში და პერსონალური მონაცემები რომ დაიცვათ, გახსენით „პარამეტრები“ > „დეველოპერის ვარიანტები“ და პლანშეტში გამორთეთ „OEM-თი განბლოკვა“.
+
+მისი გამორთვის შემდეგ, შეიძლება გარკვეული დრო დასჭირდეს, სანამ უსაფრთხოების სტატუსი აქ შეიცვლება."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM-თი განბლოკვას შეუძლია არაავტორიზებულ პროგრამულ უზრუნველყოფას თქვენს ტელეფონში დაინსტალირების საშუალება მისცეს. არაავტორიზებულ პროგრამულ უზრუნველყოფას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიში და პერსონალური მონაცემები რომ დაიცვათ, გახსენით „პარამეტრები“ > „დეველოპერის ვარიანტები“ და გამორთეთ „OEM-თი განბლოკვა“.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM-თი განბლოკვას შეუძლია არაავტორიზებულ პროგრამულ უზრუნველყოფას თქვენს პლანშეტში დაინსტალირების საშუალება მისცეს. არაავტორიზებულ პროგრამულ უზრუნველყოფას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიში და პერსონალური მონაცემები რომ დაიცვათ, გახსენით „პარამეტრები“ > „დეველოპერის ვარიანტები“ და გამორთეთ „OEM-თი განბლოკვა“.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">ღია წყაროს ლიცენზია</string>
+    <string name="other_devices">სხვა მოწყობილობები</string>
+    <string name="password_set">პაროლის დაყენების დროა %s</string>
+    <string name="pattern_set">ნიმუშის დაყენების დროა %s</string>
+    <string name="pin_set">PIN-ის დაყენების დროა %s</string>
+    <string name="ppp_delegate_description">მონაცემთა დასაცავად დააყენეთ PIN, ნიმუში, ან პაროლი.</string>
+    <string name="ppp_delegate_title">დააყენეთ ეკრანის დამცავი დაბლოკვა</string>
+    <string name="ppp_dialog_description_SamsungCloud">ეკრანის დაბლოკვა მონაცემების გაძლიერებული დაცვისთვის და Samsung Cloud-ში დასასინქრონებლად</string>
+    <string name="ppp_dialog_description_SamsungPass">პაროლ-კოდი შენახულია Samsung Pass-ში</string>
+    <string name="remove_this_device">მოწყობილობის წაშლა</string>
+    <string name="security_status_main_description">Knox Matrix მონიტორების მხარდაჭერის მქონე მოწყობილობებით შესული ხართ თქვენს Samsung account-ზე, უსაფრთხო პირადი ბლოკჩეინის გამოყენებით. ამ ჯაჭვის თითოეულ მოწყობილობას შეუძლია შეამოწმოს სხვა მოწყობილობების უსაფრთხოების სტატუსი და შეგატყობინოთ, არის თუ არა რაიმე საფრთხე.</string>
+    <string name="security_status_not_available_yet">უსაფრთხოების სტატუსი ჯერ არ არის ხელმისაწვდომი</string>
+    <string name="security_status_not_available_yet_description">შესაძლოა, ამას გარკვეული დრო დასჭირდეს. მოგვიანებით შეამოწმეთ.</string>
+    <string name="security_status_not_up_to_date">უსაფრთხოების სტატუსი არ არის განახლებული</string>
+    <string name="security_status_not_up_to_date_description_phone">"30 დღეზე მეტია, რაც ამ ტელეფონის უსაფრთხოების სტატუსი არ განახლებულა. შესაძლოა, ტელეფონი კავშირგარეშეა, ან რაღაც უშლის ხელს მისი სტატუსის შემოწმებას. თუ ამ ტელეფონს აღარ იყენებთ, გირჩევთ გამოხვიდეთ Samsung account-დან. გამოსასვლელად შეგიძლიათ გახსნათ „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“.
+
+თუ ამ ტელეფონს იყენებთ, მაგრამ მისი უსაფრთხოების სტატუსის განახლება არ ხდება, დარწმუნდით, რომ ის დაკავშირებულია ქსელთან."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"30 დღეზე მეტია, რაც ამ მოწყობილობის უსაფრთხოების სტატუსი არ განახლებულა. შესაძლოა, მოწყობილობა კავშირგარეშეა, ან რაღაც უშლის ხელს მისი სტატუსის შემოწმებას. თუ ამ მოწყობილობას აღარ იყენებთ, გირჩევთ ეს მოწყობილობა წაშალოთ SmartThings-ის აპლიკაციებიდან.
+
+თუ ამ მოწყობილობას იყენებთ, მაგრამ მისი უსაფრთხოების სტატუსის განახლება არ ხდება, დარწმუნდით, რომ ის დაკავშირებულია ქსელთან."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"30 დღეზე მეტია, რაც ამ პლანშეტის უსაფრთხოების სტატუსი არ განახლებულა. შესაძლოა, პლანშეტი კავშირგარეშეა, ან რაღაც უშლის ხელს მისი სტატუსის შემოწმებას. თუ ამ პლანშეტს აღარ იყენებთ, გირჩევთ გამოხვიდეთ Samsung account-დან. გამოსასვლელად შეგიძლიათ გახსნათ „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“.
+
+თუ ამ პლანშეტს იყენებთ, მაგრამ მისი უსაფრთხოების სტატუსის განახლება არ ხდება, დარწმუნდით, რომ ის დაკავშირებულია ქსელთან."</string>
+    <string name="security_status_not_up_to_date_description_vd">"30 დღეზე მეტია, რაც ამ მოწყობილობის უსაფრთხოების სტატუსი არ განახლებულა. შესაძლოა, მოწყობილობა კავშირგარეშეა, ან რაღაც უშლის ხელს მისი სტატუსის შემოწმებას. თუ ამ მოწყობილობას აღარ იყენებთ, გირჩევთ გამოხვიდეთ Samsung account-დან. გამოსასვლელად შეგიძლიათ გახსნათ „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ > „შესული მოწყობილობების მართვა“.
+
+თუ ამ მოწყობილობას იყენებთ, მაგრამ მისი უსაფრთხოების სტატუსის განახლება არ ხდება, დარწმუნდით, რომ ის დაკავშირებულია ქსელთან."</string>
+    <string name="security_status_of_your_devices">მოწყობილობების უსაფრთხოება</string>
+    <string name="sesl_action_bar_up_description">ნავიგაცია ზემოთ</string>
+    <string name="sesl_action_menu_overflow_badge_description">გამოვიდა ახალი მასალა</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">ა</string>
+    <string name="sesl_action_menu_overflow_description">სხვა ოფციები</string>
+    <string name="sesl_appbar_suggest_all_dismissed">ყველა შეთავაზება გაითიშა</string>
+    <string name="sesl_appbar_suggest_dismiss">შეთავაზების გათიშვა</string>
+    <string name="sesl_appbar_suggest_dismissed">შეთავაზება გაითიშა</string>
+    <string name="sesl_appbar_suggest_pagination">გვერდი %1$d, სულ %2$d</string>
+    <string name="sesl_index_assistant_text">გადასახვევად გადაუსვით ორი თითი ზემოთ ან ქვემოთ.</string>
+    <string name="sesl_index_scrollbar">გადასახვევი ზოლი</string>
+    <string name="sesl_index_section">სექციის ინდექსი</string>
+    <string name="sesl_index_selected">არჩეულია</string>
+    <string name="sesl_material_badge_description">გამოვიდა ახალი მასალა</string>
+    <string name="sesl_material_overflow_badge_text_n">ა</string>
+    <string name="sesl_more_item_label">სხვა</string>
+    <string name="sesl_preferecne_badge_description">ახალი შეტყობინება</string>
+    <string name="sesl_preferencecategory_added_title">თავსართი</string>
+    <string name="sesl_search_hint">ძებნა</string>
+    <string name="sesl_searchview_description_clear">საძიებო ველის გასუფთავება</string>
+    <string name="sesl_searchview_description_clear_field">საძიებო ველი გასუფთავებულია</string>
+    <string name="sesl_searchview_description_query">საძიებო ფრაზა</string>
+    <string name="sesl_searchview_description_search">ძებნა</string>
+    <string name="sesl_searchview_description_submit">მოთხოვნის გაგზავნა</string>
+    <string name="sesl_searchview_description_voice">ძებნა ხმით</string>
+    <string name="sesl_switch_off">გამორთული</string>
+    <string name="sesl_switch_on">ჩართული</string>
+    <string name="sesl_switchbar_off_text">გამორთ.</string>
+    <string name="sesl_switchbar_on_text">ჩართ.</string>
+    <string name="sesl_toolbar_collapse_description">აკეცვა</string>
+    <string name="skip">გამოტოვება</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings არ გაქვთ დაინსტალირებული ტელეფონში. ჩამოტვირთეთ Play Store-დან.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings არ გაქვთ დაინსტალირებული პლანშეტში. ჩამოტვირთეთ Play Store-დან.</string>
+    <string name="this_phone">ეს ტელეფონი</string>
+    <string name="this_tablet">ეს პლანშეტი</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">ისევ სცადეთ %1$d საათსა და %2$d წუთში</string>
+    <string name="unauthorized_software_detected">არაავტორიზებული პროგრამა წაშლილია</string>
+    <string name="unauthorized_software_detected_description_other_phone">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან გახსენით „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ და გამოდით თქვენი Samsung account-იდან. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას მოწყობილობას. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან ეს მოწყობილობა წაშალეთ SmartThings-ში. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან გახსენით „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ და გამოდით თქვენი Samsung account-იდან. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unauthorized_software_detected_description_other_vd">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას მოწყობილობას. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან გახსენით „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ > „შესული მოწყობილობების მართვა“ და გამოდით თქვენი Samsung account-იდან. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unauthorized_software_detected_description_this_phone">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან გამოდით თქვენი Samsung account-იდან. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დააინსტალირეთ Samsung-ის ოფიციალური პროგრამული უზრუნველყოფა, ან გამოდით თქვენი Samsung account-იდან. ოფიციალური პროგრამული უზრუნველყოფის დაინსტალირებაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unlocked_bootloader">განბლოკილი ჩამტვირთველი</string>
+    <string name="unlocked_bootloader_description_other_phone">"სანამ თქვენი ტელეფონის ჩამტვირთავი განბლოკილია, შეიძლება არაავტორიზებული სისტემური პროგრამა დაინსტალირდეს. არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დაბლოკეთ ტელეფონის ჩამტვირთავი, ან გახსენით „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ და გამოდით თქვენი Samsung account-იდან. ჩამტვირთავის დაბლოკვაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.
+
+მისი დაბლოკვის შემდეგ, შეიძლება გარკვეული დრო დასჭირდეს, სანამ უსაფრთხოების სტატუსი აქ შეიცვლება."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"სანამ თქვენი პლანშეტის ჩამტვირთავი განბლოკილია, შეიძლება არაავტორიზებული სისტემური პროგრამა დაინსტალირდეს. არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დაბლოკეთ პლანშეტის ჩამტვირთავი, ან გახსენით „პარამეტრები“ > „Samsung account“ > „მოწყობილობები“ და გამოდით თქვენი Samsung account-იდან. ჩამტვირთავის დაბლოკვაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.
+
+მისი დაბლოკვის შემდეგ, შეიძლება გარკვეული დრო დასჭირდეს, სანამ უსაფრთხოების სტატუსი აქ შეიცვლება."</string>
+    <string name="unlocked_bootloader_description_this_phone">სანამ თქვენი ტელეფონის ჩამტვირთავი განბლოკილია, შეიძლება არაავტორიზებული სისტემური პროგრამა დაინსტალირდეს. არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას ტელეფონს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დაბლოკეთ ტელეფონის ჩამტვირთავი, ან გამოდით თქვენი Samsung account-იდან. ტელეფონის ჩამტვირთავის დაბლოკვაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="unlocked_bootloader_description_this_tablet">სანამ თქვენი პლანშეტის ჩამტვირთავი განბლოკილია, შეიძლება არაავტორიზებული სისტემური პროგრამა დაინსტალირდეს. არაავტორიზებულ სისტემურ პროგრამას შეუძლია უსაფრთხოების რისკი შეუქმნას პლანშეტს. თქვენი ანგარიშისა და პერსონალური მონაცემების დასაცავად დაბლოკეთ პლანშეტის ჩამტვირთავი, ან გამოდით თქვენი Samsung account-იდან. ტელეფონის ჩამტვირთავის დაბლოკვაში დახმარების მისაღებად დაუკავშირდით Samsung-ის მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="update">განახლება</string>
+    <string name="update_multi_apps_to_continue">განაახლეთ შემდეგი აპლიკაციები, რომ განაგრძოთ:</string>
+    <string name="update_ps_to_continue">განაახლეთ %s, რომ განაგრძოთ.</string>
+    <string name="verify_current_description_phone">თქვენ შეგიძლიათ განბლოკოთ თქვენი დაშიფრული მონაცემები, მათ შორის პაროლ-კოდები, რისთვისაც თქვენი ვინაობა უნდა დაამოწმოთ ამ ტელეფონის PIN-ით, ნიმუშით ან პაროლით.</string>
+    <string name="verify_current_description_tablet">თქვენ შეგიძლიათ განბლოკოთ თქვენი დაშიფრული მონაცემები, მათ შორის პაროლ-კოდები, რისთვისაც თქვენი ვინაობა უნდა დაამოწმოთ ამ პლანშეტის PIN-ით, ნიმუშით ან პაროლით.</string>
+    <string name="verify_current_detail_password">შეიყვანეთ მიმდინარე პაროლი.</string>
+    <string name="verify_current_detail_pattern">მოხაზეთ მიმდინარე ნიშანი.</string>
+    <string name="verify_current_detail_pin">შეიყვანეთ მიმდინარე PIN.</string>
+    <string name="verify_current_title_phone">დაშიფრული მონაცემების განსაბლოკად გამოიყენეთ ეს ტელეფონი</string>
+    <string name="verify_current_title_tablet">დაშიფრული მონაცემების განსაბლოკად გამოიყენეთ ეს პლანშეტი</string>
+    <string name="verify_old_password_description_phone">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი ტელეფონის პაროლით.</string>
+    <string name="verify_old_password_description_tablet">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი პლანშეტის პაროლით.</string>
+    <string name="verify_old_pattern_description_phone">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი ტელეფონის ნიმუშით.</string>
+    <string name="verify_old_pattern_description_tablet">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი პლანშეტის ნიმუშით.</string>
+    <string name="verify_old_pin_description_phone">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი ტელეფონის PIN-ით.</string>
+    <string name="verify_old_pin_description_tablet">უსაფრთხოების მიზნით, თქვენი ვინაობა დაამოწმეთ ადრინდელი პლანშეტის PIN-ით.</string>
+    <string name="verify_old_ppp_title">დაშიფრული მონაცემების განბლოკვა</string>
+    <string name="version">ვერსია %s</string>
+</resources>

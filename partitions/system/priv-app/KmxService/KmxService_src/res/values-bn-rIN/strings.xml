@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s সম্বন্ধে</string>
+    <string name="back">ব্যাক</string>
+    <string name="chan_mkt">বিপণন</string>
+    <string name="chan_ntc">বিজ্ঞপ্তি</string>
+    <string name="character_counter_content_description">%2$dটি অক্ষরের মধ্যে %1$dটি</string>
+    <string name="close_app">অ্যাপ বন্ধ</string>
+    <string name="contact_us">আমাদের সাথে যোগাযোগ করুন</string>
+    <string name="couldnt_get_samsung_account_information">আপনার অ্যাকাউন্টের তথ্য পাওয়া যায়নি</string>
+    <string name="couldnt_get_samsung_account_information_description">আপনার নেটওয়ার্ক কানেকশন পরীক্ষা করুন এবং Samsung account সাম্প্রতিকতম সংস্করণে আপডেট রয়েছে তা নিশ্চিত করুন তারপর আবার চেষ্টা করুন।</string>
+    <string name="data_info_dialog_title">আপনি আনলক করতে পারেন এমন তথ্য</string>
+    <string name="data_info_menu">আপনি কোন তথ্য আনলক করতে পারেন তা দেখুন</string>
+    <string name="delete_dialog_message">আপনি আপনার আগের ডিভাইসের PIN, প্যাটার্ন বা পাসওয়ার্ড মনে না রাখলে আপনি আপনার তথ্য আনলক করা স্কিপ করতে পারেন। যাইহোক, আমরা আপনার পরিচয় যাচাই করতে না পারার কারণে নীচের এনক্রিপ্ট করা তথ্য নিরাপত্তার জন্য মুছে ফেলা হবে।</string>
+    <string name="delete_dialog_title">আনলক করতে সমস্যা হচ্ছে?</string>
+    <string name="delete_menu">কীভাবে আনলক করতে হয় তা মনে নেই?</string>
+    <string name="dragndroplist_drag_move">এখন অবস্থান %d-এ রয়েছে</string>
+    <string name="dragndroplist_drag_release">%d অবস্থানে আইটেম ছাড়া হয়েছে।</string>
+    <string name="dragndroplist_drag_start">%d অবস্থানে আইটেম টানা শুরু হয়েছে।</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d অবস্থানে আইটেম টেনে আনা যাবে না।</string>
+    <string name="go_to">%s-এ যান</string>
+    <string name="go_to_developer_options">বিকাশকারীর বিকল্পগুলিতে যান</string>
+    <string name="go_to_sign_out">সাইন আউটে যান</string>
+    <string name="incorrect_password_entered">ভুল পাসওয়ার্ড লেখা হয়েছে</string>
+    <string name="incorrect_pattern_drawn">ভুল প্যাটার্ন আঁকা হয়েছে</string>
+    <string name="incorrect_pin_entered">ভুল PIN লেখা হয়েছে</string>
+    <string name="latest_version_is_already_installed">সাম্প্রতিকতম সংস্করণটি ইতিমধ্যে ইনস্টল আছে।</string>
+    <string name="menu_cancel">বাতিল</string>
+    <string name="menu_continue">অবিরত</string>
+    <string name="new_version_is_available">একটি নতুন সংস্করণ উপলব্ধ রয়েছে।</string>
+    <string name="next">পরে</string>
+    <string name="no_network_connection">কোনও নেটওয়ার্ক কানেকশন নেই</string>
+    <string name="no_network_connection_description">আপনার ডিভাইসগুলির নিরাপত্তা সংক্রান্ত স্থিতি আপডেট করা যায়নি। কানেকশন পরীক্ষা করুন এবং আবার চেষ্টা করুন।</string>
+    <string name="no_threats_found">কোনও হুমকি খুঁজে পাওয়া যায়নি</string>
+    <string name="notify_delete_dialog_title">আপনার এনক্রিপ্ট করা তথ্য মুছে ফেলা হবে</string>
+    <string name="notify_delete_dialog_title_previous_devices">আপনার আগের ডিভাইসগুলি ব্যবহার করে আপনাকে যাচাই করা যায়নি</string>
+    <string name="notify_delete_dialog_title_previous_phone">আপনার আগের ফোন ব্যবহার করে আপনাকে যাচাই করা যায়নি</string>
+    <string name="notify_delete_dialog_title_previous_phones">আপনার আগের ফোনগুলি ব্যবহার করে আপনাকে যাচাই করা যায়নি</string>
+    <string name="notify_delete_dialog_title_previous_tablet">আপনার আগের ট্যাবলেট ব্যবহার করে আপনাকে যাচাই করা যায়নি</string>
+    <string name="notify_delete_dialog_title_previous_tablets">আপনার আগের ট্যাবলেটগুলি ব্যবহার করে আপনাকে যাচাই করা যায়নি</string>
+    <string name="oem_unlocking_is_turned_on">OEM আনলকিং চালু আছে</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM আনলকিং আপনার ফোনে অননুমোদিত সফ্টওয়্যার ইনস্টল করার অনুমতি দিতে পারে। অননুমোদিত সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, সেটিংস > বিকাশকারী বিকল্পগুলিতে আপনার ফোনে OEM আনলকিং বন্ধ করুন।
+
+আপনি এটি বন্ধ করার পরে, এখানে নিরাপত্তার স্থিতি পরিবর্তন হতে কিছু সময় লাগতে পারে।"</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM আনলকিং আপনার ট্যাবলেটে অননুমোদিত সফ্টওয়্যার ইনস্টল করার অনুমতি দিতে পারে। অননুমোদিত সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, সেটিংস > বিকাশকারী বিকল্পগুলিতে আপনার ট্যাবলেটে OEM আনলকিং বন্ধ করুন।
+
+আপনি এটি বন্ধ করার পরে, এখানে নিরাপত্তার স্থিতি পরিবর্তন হতে কিছু সময় লাগতে পারে।"</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM আনলকিং আপনার ফোনে অননুমোদিত সফ্টওয়্যার ইনস্টল করার অনুমতি দিতে পারে। অননুমোদিত সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, সেটিংস > বিকাশকারী বিকল্পগুলিতে OEM আনলকিং বন্ধ করুন।</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM আনলকিং আপনার ট্যাবলেটে অননুমোদিত সফ্টওয়্যার ইনস্টল করার অনুমতি দিতে পারে। অননুমোদিত সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, সেটিংস > বিকাশকারী বিকল্পগুলিতে OEM আনলকিং বন্ধ করুন।</string>
+    <string name="ok">ওকে</string>
+    <string name="open_source_licenses">ওপেন সোর্স লাইসেন্স</string>
+    <string name="other_devices">অন্যান্য ডিভাইস</string>
+    <string name="password_set">পাসওয়ার্ড %s হিসাবে সেট করা হয়েছে</string>
+    <string name="pattern_set">প্যাটার্ন %s হিসাবে সেট করা হয়েছে</string>
+    <string name="pin_set">PIN %s হিসাবে সেট করা হয়েছে</string>
+    <string name="ppp_delegate_description">আপনার তথ্য সুরক্ষিত করতে একটি PIN, প্যাটার্ন বা পাসওয়ার্ড সেট করুন।</string>
+    <string name="ppp_delegate_title">নিরাপদ স্ক্রিন লকটি সেট করুন</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud-এ উন্নত তথ্য সুরক্ষার ব্যাকআপ এবং সিঙ্কিংয়ের জন্য স্ক্রিন লক</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass-এ পাসকীগুলি সংরক্ষিত হয়েছে</string>
+    <string name="remove_this_device">এই ডিভাইসটি অপসারণ</string>
+    <string name="security_status_main_description">Knox Matrix একটি নিরাপদ ব্যক্তিগত ব্লকচেন ব্যবহার করে আপনার Samsung account এ সাইন ইন করা সমর্থিত ডিভাইসগুলি মনিটর করে। চেনের প্রতিটি ডিভাইস অন্যান্য ডিভাইসের নিরাপত্তা স্থিতি দেখতে পারে এবং কোনও হুমকি আছে কিনা তা আপনাকে জানাতে পারে।</string>
+    <string name="security_status_not_available_yet">নিরাপত্তার স্থিতি এখনও উপলব্ধ নয়</string>
+    <string name="security_status_not_available_yet_description">এতে কিছু সময় লাগতে পারে। পরে আবার দেখুন।</string>
+    <string name="security_status_not_up_to_date">নিরাপত্তার স্থিতি আপ টু ডেট অবস্থায় নেই</string>
+    <string name="security_status_not_up_to_date_description_phone">"এই ফোনের নিরাপত্তার স্থিতি 30 দিনের বেশি সময় ধরে আপডেট করা হয়নি। ফোনটি অফলাইনে থাকতে পারে বা কিছু এর স্থিতি পরীক্ষা করার থেকে বাধা দিতে পারে। আপনি এই ফোনটি আর ব্যবহার না করলে, আপনার Samsung account থেকে সাইন আউট করার সুপারিশ করা হয়। আপনি সেটিংস > Samsung account > ডিভাইসে সাইন আউট করতে পারেন।
+
+আপনি এই ফোনটি ব্যবহার করছেন কিন্তু এর নিরাপত্তার স্থিতি আপডেট হচ্ছে না, এমন হলে এটি একটি নেটওয়ার্কের সাথে কানেক্ট অবস্থায় আছে তা নিশ্চিত করুন।"</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"এই ডিভাইসের নিরাপত্তার স্থিতি 30 দিনের বেশি সময় ধরে আপডেট করা হয়নি। ডিভাইসটি অফলাইনে থাকতে পারে বা কিছু এর স্থিতি পরীক্ষা করার থেকে বাধা দিতে পারে। আপনি এই ডিভাইসটি আর ব্যবহার না করলে SmartThings অ্যাপ থেকে এই ডিভাইসটি অপসারণ করার সুপারিশ করা হয়।
+
+আপনি এই ডিভাইসটি ব্যবহার করছেন কিন্তু এর নিরাপত্তার স্থিতি আপডেট হচ্ছে না, এমন হলে এটি একটি নেটওয়ার্কের সাথে কানেক্ট অবস্থায় আছে তা নিশ্চিত করুন।"</string>
+    <string name="security_status_not_up_to_date_description_tablet">"এই ট্যাবলেটের নিরাপত্তার স্থিতি 30 দিনের বেশি সময় ধরে আপডেট করা হয়নি। ট্যাবলেটটি অফলাইনে থাকতে পারে বা কিছু এর স্থিতি পরীক্ষা করার থেকে বাধা দিতে পারে। আপনি এই ট্যাবলেটটি আর ব্যবহার না করলে, আপনার Samsung account থেকে সাইন আউট করার সুপারিশ করা হয়। আপনি সেটিংস > Samsung account > ডিভাইসে সাইন আউট করতে পারেন।
+
+আপনি এই ট্যাবলেটটি ব্যবহার করছেন কিন্তু এর নিরাপত্তার স্থিতি আপডেট হচ্ছে না, এমন হলে এটি একটি নেটওয়ার্কের সাথে কানেক্ট অবস্থায় আছে তা নিশ্চিত করুন।"</string>
+    <string name="security_status_not_up_to_date_description_vd">"এই ডিভাইসের নিরাপত্তার স্থিতি 30 দিনের বেশি সময় ধরে আপডেট করা হয়নি। ডিভাইসটি অফলাইনে থাকতে পারে বা কিছু এর স্থিতি পরীক্ষা করার থেকে বাধা দিতে পারে। আপনি এই ডিভাইসটি আর ব্যবহার না করলে, আপনার Samsung account থেকে সাইন আউট করার সুপারিশ করা হয়। আপনি সেটিংস > Samsung account > ডিভাইস > সাইন ইন থাকা ডিভাইসগুলি পরিচালনায় সাইন আউট করতে পারেন।
+
+আপনি এই ডিভাইসটি ব্যবহার করছেন কিন্তু এর নিরাপত্তার স্থিতি আপডেট হচ্ছে না, এমন হলে এটি একটি নেটওয়ার্কের সাথে কানেক্ট অবস্থায় আছে তা নিশ্চিত করুন।"</string>
+    <string name="security_status_of_your_devices">আপ. ডিভাইসগুলির নিরাপ. স্থিতি</string>
+    <string name="sesl_action_bar_up_description">উপরে নেভিগেট করুন</string>
+    <string name="sesl_action_menu_overflow_badge_description">নতুন সামগ্রী সুলভ</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">ন</string>
+    <string name="sesl_action_menu_overflow_description">আরও বিকল্প</string>
+    <string name="sesl_appbar_suggest_all_dismissed">সমস্ত পরামর্শ খারিজ হয়েছে</string>
+    <string name="sesl_appbar_suggest_dismiss">পরামর্শ খারিজ করুন</string>
+    <string name="sesl_appbar_suggest_dismissed">পরামর্শ খারিজ করা হয়েছে</string>
+    <string name="sesl_appbar_suggest_pagination">পৃষ্ঠা %2$d-এর %1$d</string>
+    <string name="sesl_index_assistant_text">স্ক্রোল করতে দুটি আঙুল দিয়ে উপরে বা নীচে সোয়াইপ করুন।</string>
+    <string name="sesl_index_scrollbar">স্ক্রোল বার</string>
+    <string name="sesl_index_section">বিভাগ সূচক</string>
+    <string name="sesl_index_selected">নির্বাচিত</string>
+    <string name="sesl_material_badge_description">নতুন সামগ্রী সুলভ</string>
+    <string name="sesl_material_overflow_badge_text_n">ন</string>
+    <string name="sesl_more_item_label">আরও</string>
+    <string name="sesl_preferecne_badge_description">নতুন বিজ্ঞপ্তি</string>
+    <string name="sesl_preferencecategory_added_title">শিরোলেখ</string>
+    <string name="sesl_search_hint">অনুসন্ধান করুন</string>
+    <string name="sesl_searchview_description_clear">সার্চের ক্ষেত্র পরিষ্কার করুন</string>
+    <string name="sesl_searchview_description_clear_field">সার্চ ফিল্ড মোছা হয়েছে</string>
+    <string name="sesl_searchview_description_query">কোয়্যারি সার্চ</string>
+    <string name="sesl_searchview_description_search">সার্চ করুন</string>
+    <string name="sesl_searchview_description_submit">প্রশ্ন দাখিল</string>
+    <string name="sesl_searchview_description_voice">ভয়েস সার্চ</string>
+    <string name="sesl_switch_off">বন্ধ</string>
+    <string name="sesl_switch_on">চালু</string>
+    <string name="sesl_switchbar_off_text">বন্ধ</string>
+    <string name="sesl_switchbar_on_text">চালু</string>
+    <string name="sesl_toolbar_collapse_description">সঙ্কোচন করুন</string>
+    <string name="skip">স্কিপ করুন</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings আপনার ফোনে ইনস্টল হয়নি। এটি Play Store থেকে ডাউনলোড করুন।</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings আপনার ট্যাবলেটে ইনস্টল হয়নি। এটি Play Store থেকে ডাউনলোড করুন।</string>
+    <string name="this_phone">এই ফোন</string>
+    <string name="this_tablet">এই ট্যাবলেট</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d ঘণ্টা %2$d মিনিটে আবার চেষ্টা করুন</string>
+    <string name="unauthorized_software_detected">অননুমোদিত সফ্টওয়্যার শনাক্ত করা হয়েছে</string>
+    <string name="unauthorized_software_detected_description_other_phone">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা সেটিংস > Samsung account > ডিভাইসে আপনার Samsung account থেকে সাইন আউট করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ডিভাইসকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা SmartThings অ্যাপে এই ডিভাইসটি অপসারণ করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unauthorized_software_detected_description_other_tablet">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা সেটিংস > Samsung account > ডিভাইসে আপনার Samsung account থেকে সাইন আউট করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unauthorized_software_detected_description_other_vd">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ডিভাইসকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা সেটিংস > Samsung account > ডিভাইস > সাইন ইন থাকা ডিভাইসগুলি পরিচালনায় আপনার Samsung account থেকে সাইন আউট করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unauthorized_software_detected_description_this_phone">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা আপনার Samsung account থেকে সাইন আউট করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unauthorized_software_detected_description_this_tablet">অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে অফিশিয়াল স্যামসাং সফ্টওয়্যার ইনস্টল করুন বা আপনার Samsung account থেকে সাইন আউট করুন। অফিশিয়াল সফ্টওয়্যার ইনস্টল করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unlocked_bootloader">বুটলোডার আনলক করা হয়েছে</string>
+    <string name="unlocked_bootloader_description_other_phone">"আপনার ফোনের বুটলোডার আনলক থাকা অবস্থায়, অননুমোদিত সিস্টেম সফ্টওয়্যার ইনস্টল করা যাবে। অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, আপনার ফোনের বুটলোডার লক করুন বা সেটিংস > Samsung account > ডিভাইসে আপনার Samsung account থেকে সাইন আউট করুন। বুটলোডার লক করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।
+
+আপনি এটি লক করার পরে, এখানে নিরাপত্তা সংক্রান্ত স্থিতি পরিবর্তিত হতে কিছু সময় লাগতে পারে।"</string>
+    <string name="unlocked_bootloader_description_other_tablet">"আপনার ট্যাবলেটের বুটলোডার আনলক থাকা অবস্থায়, অননুমোদিত সিস্টেম সফ্টওয়্যার ইনস্টল করা যাবে। অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, আপনার ট্যাবলেটের বুটলোডার লক করুন বা সেটিংস > Samsung account > ডিভাইসে আপনার Samsung account থেকে সাইন আউট করুন। বুটলোডার লক করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।
+
+আপনি এটি লক করার পরে, এখানে নিরাপত্তা সংক্রান্ত স্থিতি পরিবর্তিত হতে কিছু সময় লাগতে পারে।"</string>
+    <string name="unlocked_bootloader_description_this_phone">আপনার ফোনের বুটলোডার আনলক থাকা অবস্থায়, অননুমোদিত সিস্টেম সফ্টওয়্যার ইনস্টল করা যাবে। অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ফোনকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, আপনার ফোনের বুটলোডার লক করুন বা আপনার Samsung account থেকে সাইন আউট করুন। বুটলোডার লক করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="unlocked_bootloader_description_this_tablet">আপনার ট্যাবলেটের বুটলোডার আনলক থাকা অবস্থায়, অননুমোদিত সিস্টেম সফ্টওয়্যার ইনস্টল করা যাবে। অননুমোদিত সিস্টেম সফ্টওয়্যার আপনার ট্যাবলেটকে নিরাপত্তা সংক্রান্ত ঝুঁকির ক্ষেত্রে ঝুঁকিপূর্ণ করে তুলতে পারে। আপনার অ্যাকাউন্ট এবং ব্যক্তিগত তথ্য সুরক্ষিত করতে, আপনার ট্যাবলেটের বুটলোডার লক করুন বা আপনার Samsung account থেকে সাইন আউট করুন। বুটলোডার লক করতে সাহায্য করার জন্য, স্যামসাং গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।</string>
+    <string name="update">আপডেট</string>
+    <string name="update_multi_apps_to_continue">অবিরত রাখতে নিম্নলিখিত অ্যাপগুলি আপডেট করুন:</string>
+    <string name="update_ps_to_continue">অবিরত রাখতে %s আপডেট করুন।</string>
+    <string name="verify_current_description_phone">আপনি এই ফোনের PIN, প্যাটার্ন বা পাসওয়ার্ড দিয়ে আপনার পরিচয় যাচাই করে পাসকী সহ আপনার এনক্রিপ্ট করা তথ্য আনলক করতে পারেন।</string>
+    <string name="verify_current_description_tablet">আপনি এই ট্যাবলেটের PIN, প্যাটার্ন বা পাসওয়ার্ড দিয়ে আপনার পরিচয় যাচাই করে পাসকী সহ আপনার এনক্রিপ্ট করা তথ্য আনলক করতে পারেন।</string>
+    <string name="verify_current_detail_password">আপনার বর্তমান পাসওয়ার্ড লিখুন।</string>
+    <string name="verify_current_detail_pattern">আপনার বর্তমান প্যাটার্ন আঁকুন।</string>
+    <string name="verify_current_detail_pin">আপনার বর্তমান PINটি লিখুন।</string>
+    <string name="verify_current_title_phone">এনক্রিপ্ট করা তথ্য আনলক করতে এই ফোনটি ব্যবহার করুন</string>
+    <string name="verify_current_title_tablet">এনক্রিপ্ট করা তথ্য আনলক করতে এই ট্যাবলেটটি ব্যবহার করুন</string>
+    <string name="verify_old_password_description_phone">নিরাপত্তার জন্য, আপনার আগের ফোনের পাসওয়ার্ড দিয়ে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_password_description_tablet">নিরাপত্তার জন্য, আপনার আগের ট্যাবলেটের পাসওয়ার্ড দিয়ে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_pattern_description_phone">নিরাপত্তার জন্য, আপনার আগের ফোনের প্যাটার্ন দিয়ে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_pattern_description_tablet">নিরাপত্তার জন্য, আপনার আগের ট্যাবলেটের প্যাটার্ন দিয়ে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_pin_description_phone">নিরাপত্তার জন্য, আপনার আগের ফোনের PIN দিয়ে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_pin_description_tablet">নিরাপত্তার জন্য, আপনার আগের ট্যাবলেটের PIN-এর সাহায্যে নিজেকে যাচাই করুন।</string>
+    <string name="verify_old_ppp_title">আপনার এনক্রিপ্ট করা তথ্য আনলক করা</string>
+    <string name="version">সংস্করণ %s</string>
+</resources>

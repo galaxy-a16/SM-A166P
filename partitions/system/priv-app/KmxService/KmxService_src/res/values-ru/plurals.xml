@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Осталось попыток: %d</item>
+        <item quantity="one">Осталось попыток: %d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нового уведомления</item>
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Поскольку вы не смогли подтвердить свою личность после %d попытки, в целях безопасности ваши зашифрованные данные будут удалены:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Поскольку вы не смогли подтвердить свою личность после %d попытки, в целях безопасности ваши зашифрованные данные будут удалены:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Поскольку вы не смогли подтвердить свою личность после %d попыток, в целях безопасности ваши зашифрованные данные будут удалены:</item>
+        <item quantity="many">Поскольку вы не смогли подтвердить свою личность после %d попыток, в целях безопасности ваши зашифрованные данные будут удалены:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Повторите попытку через 1 час %d минуты</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Повторите попытку через 1 час %d минуту</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Повторите попытку через 1 час %d минуты</item>
+        <item quantity="many">Повторите попытку через 1 час %d минут</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Повторите попытку через %d часа</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Повторите попытку через %d час</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Повторите попытку через %d часа</item>
+        <item quantity="many">Повторите попытку через %d часов</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Повторите попытку через %d часа 1 минуту</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Повторите попытку через %d час 1 минуту</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Повторите попытку через %d часа 1 минуту</item>
+        <item quantity="many">Повторите попытку через %d часов 1 минуту</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Повторите попытку через %d мин.</item>
+        <item quantity="one">Повторите попытку через %d мин.</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Повторите через %d сек.</item>
+        <item quantity="one">Повторите попытку через %d с</item>
+    </plurals>
+</resources>

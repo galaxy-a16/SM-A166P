@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s-ի մասին</string>
+    <string name="back">Հետ</string>
+    <string name="chan_mkt">Մարկետինգ</string>
+    <string name="chan_ntc">Ծանուցագիր</string>
+    <string name="character_counter_content_description">%1$d-ը՝ %2$d նիշից</string>
+    <string name="close_app">Փակել ծրագիրը</string>
+    <string name="contact_us">Դիմեք մեզ</string>
+    <string name="couldnt_get_samsung_account_information">Չհաջողվեց ստանալ Ձեր հաշվի տվյալները</string>
+    <string name="couldnt_get_samsung_account_information_description">Ստուգեք Ձեր ցանցային միացումը և համոզվեք, որ Samsung account-ը թարմացված է ամենավերջին վարկածով, հետո նորից փորձեք:</string>
+    <string name="data_info_dialog_title">Տվյալներ, որոնք կարող եք արգելաբացել</string>
+    <string name="data_info_menu">Տեսեք, թե ինչ տվյալներ կարող եք արգելաբացել</string>
+    <string name="delete_dialog_message">Կարող եք բաց թողնել Ձեր տվյալների արգելաբացման քայլը, եթե չեք հիշում նախորդ սարքի PIN-ը, նախշը կամ գաղտնաբառը: Սակայն ներքևի ծածկագրված տվյալները կվերացվեն անվտանգության նկատառումներով, քանի որ մենք չկարողացանք ստուգել Ձեր ինքնությունը:</string>
+    <string name="delete_dialog_title">Դժվարանու՞մ եք արգելաբացել:</string>
+    <string name="delete_menu">Չե՞ք հիշում՝ ինչպես արգելաբացել:</string>
+    <string name="dragndroplist_drag_move">Ներկա դիրքը՝ %d</string>
+    <string name="dragndroplist_drag_release">Միույթը գցված է %d դիրքում։</string>
+    <string name="dragndroplist_drag_start">Սկսված է միույթի քաշումը %d դիրք։</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d դիրքի միույթը անհնար է քաշել։</string>
+    <string name="go_to">Գնալ %s</string>
+    <string name="go_to_developer_options">Գնացեք «Մշակողի ընտրանքներ»</string>
+    <string name="go_to_sign_out">Գնացեք «Դուրս գալ»</string>
+    <string name="incorrect_password_entered">Սխալ գաղտնաբառ է մուտքագրվել</string>
+    <string name="incorrect_pattern_drawn">Սխալ նախշ է գծվել</string>
+    <string name="incorrect_pin_entered">Սխալ PIN է մուտքագրվել</string>
+    <string name="latest_version_is_already_installed">Ամենավերջին վարկածն արդեն տեղադրված է:</string>
+    <string name="menu_cancel">Դադարեցնել</string>
+    <string name="menu_continue">Շարունակել</string>
+    <string name="new_version_is_available">Նոր վարկած է մատչելի:</string>
+    <string name="next">Հաջորդ</string>
+    <string name="no_network_connection">Ցանցային միացում չկա</string>
+    <string name="no_network_connection_description">Չհաջողվեց թարմացնել Ձեր սարքերի անվտանգության կարգավիճակը: Ստուգեք կապը և նորից փորձեք:</string>
+    <string name="no_threats_found">Սպառնալիքներ չեն գտնվել</string>
+    <string name="notify_delete_dialog_title">Ձեր ծածկագրված տվյալները կվերացվեն</string>
+    <string name="notify_delete_dialog_title_previous_devices">Չհաջողվեց Ձեր ինքնությունը հաստատել նախորդ սարքերի միջոցով</string>
+    <string name="notify_delete_dialog_title_previous_phone">Չհաջողվեց Ձեր ինքնությունը հաստատել նախորդ հեռախոսի միջոցով</string>
+    <string name="notify_delete_dialog_title_previous_phones">Չհաջողվեց Ձեր ինքնությունը հաստատել նախորդ հեռախոսների միջոցով</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Չհաջողվեց Ձեր ինքնությունը հաստատել նախորդ պլանշետի միջոցով</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Չհաջողվեց Ձեր ինքնությունը հաստատել նախորդ պլանշետների միջոցով</string>
+    <string name="oem_unlocking_is_turned_on">OEM-ով արգելաբացումը միացված է</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM-ով արգելաբացումը կարող է թույլատրել չարտոնված ծրագրակազմի տեղադրում Ձեր հեռախոսում: Չարտոնված ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար անջատեք OEM-ով արգելաբացումը Ձեր հեռախոսում՝ գնալով Դրվածքներ > Մշակողի ընտրանքներ:
+
+Այն անջատելուց հետո կարող է որոշ ժամանակ պահանջվել, որպեսզի անվտանգության կարգավիճակը փոխվի այստեղ:"</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM-ով արգելաբացումը կարող է թույլատրել չարտոնված ծրագրակազմի տեղադրում Ձեր պլանշետում: Չարտոնված ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար անջատեք OEM-ով արգելաբացումը Ձեր պլանշետում՝ գնալով Դրվածքներ > Մշակողի ընտրանքներ:
+
+Այն անջատելուց հետո կարող է որոշ ժամանակ պահանջվել, որպեսզի անվտանգության կարգավիճակը փոխվի այստեղ:"</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM-ով արգելաբացումը կարող է թույլատրել չարտոնված ծրագրակազմի տեղադրում Ձեր հեռախոսում: Չարտոնված ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար անջատեք OEM-ով արգելաբացումը՝ գնալով Դրվածքներ > Մշակողի ընտրանքներ:</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM-ով արգելաբացումը կարող է թույլատրել չարտոնված ծրագրակազմի տեղադրում Ձեր պլանշետում: Չարտոնված ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար անջատեք OEM-ով արգելաբացումը՝ գնալով Դրվածքներ > Մշակողի ընտրանքներ:</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">"Բաց սկզ.
+կոդ. ար-
+տոնագիր"</string>
+    <string name="other_devices">Այլ սարքեր</string>
+    <string name="password_set">Գաղտնաբառի թարմացման ամսաթիվը՝ %s</string>
+    <string name="pattern_set">Նախշի ստեղծման ամսաթիվը՝ %s</string>
+    <string name="pin_set">PIN-ի ստեղծման ամսաթիվը՝ %s</string>
+    <string name="ppp_delegate_description">Դրեք PIN, նախշ կամ գաղտնաբառ՝ Ձեր տվյալները պաշտպանելու համար:</string>
+    <string name="ppp_delegate_title">Դնել էկրանի ապահով կողպումը</string>
+    <string name="ppp_dialog_description_SamsungCloud">Էկրանի կողպում Samsung Cloud-ում Տվյալների ուժեղացված պաշտպանության միջոցով կրկնօրինակման և համաժամացման համար</string>
+    <string name="ppp_dialog_description_SamsungPass">Մուտքի բանալիները պահպանվեցին Samsung Pass-ում</string>
+    <string name="remove_this_device">Հեռացնել այս սարքը</string>
+    <string name="security_status_main_description">Knox Matrix-ը մշտադիտարկում է աջակցվող սարքերը, որոնք Ձեր Samsung account-ն են մտել անվտանգ գաղտնի բլոկ-շղթայի միջոցով: Շղթայում յուրաքանչյուր սարք կարող է ստուգել մյուս սարքերի անվտանգության կարգավիճակը և Ձեզ տեղեկացնել առկա սպառնալիքների մասին:</string>
+    <string name="security_status_not_available_yet">Անվտանգության կարգավիճակը դեռ մատչելի չէ</string>
+    <string name="security_status_not_available_yet_description">Դա կարող է որոշ ժամանակ տևել: Ավելի ուշ նորից ստուգեք:</string>
+    <string name="security_status_not_up_to_date">Անվտանգության կարգավիճակն արդիական չէ</string>
+    <string name="security_status_not_up_to_date_description_phone">"Այս հեռախոսի անվտանգության կարգավիճակը չի թարմացվել 30 օրից ավելի: Հնարավոր է՝ հեռախոսը ցանցից դուրս է, կամ ինչ-որ բան թույլ չի տալիս կարգավիճակի ստուգում: Եթե այլևս չեք օգտագործում այս հեռախոսը, խորհուրդ է տրվում դուրս գալ Samsung account-ից: Կարող եք դուրս գալ՝ գնալով Դրվածքներ > Samsung account > Սարքեր:
+
+Եթե օգտագործում եք այս հեռախոսը, բայց անվտանգության կարգավիճակը չի թարմացվում, համոզվեք, որ այն միացված է ցանցի:"</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Այս սարքի անվտանգության կարգավիճակը չի թարմացվել 30 օրից ավելի: Հնարավոր է՝ սարքը ցանցից դուրս է, կամ ինչ-որ բան թույլ չի տալիս կարգավիճակի ստուգում: Եթե այլևս չեք օգտագործում այս սարքը, խորհուրդ է տրվում SmartThings ծրագրում հեռացնել այս սարքը:
+
+Եթե օգտագործում եք այս սարքը, բայց անվտանգության կարգավիճակը չի թարմացվում, համոզվեք, որ այն միացված է ցանցի:"</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Այս պլանշետի անվտանգության կարգավիճակը չի թարմացվել 30 օրից ավելի: Հնարավոր է՝ պլանշետը ցանցից դուրս է, կամ ինչ-որ բան թույլ չի տալիս կարգավիճակի ստուգում: Եթե այլևս չեք օգտագործում այս պլանշետը, խորհուրդ է տրվում դուրս գալ Samsung account-ից: Կարող եք դուրս գալ՝ գնալով Դրվածքներ > Samsung account > Սարքեր:
+
+Եթե օգտագործում եք այս պլանշետը, բայց անվտանգության կարգավիճակը չի թարմացվում, համոզվեք, որ այն միացված է ցանցի:"</string>
+    <string name="security_status_not_up_to_date_description_vd">"Այս սարքի անվտանգության կարգավիճակը չի թարմացվել 30 օրից ավելի: Հնարավոր է՝ սարքը ցանցից դուրս է, կամ ինչ-որ բան թույլ չի տալիս կարգավիճակի ստուգում: Եթե այլևս չեք օգտագործում այս սարքը, խորհուրդ է տրվում դուրս գալ Samsung account-ից: Կարող եք դուրս գալ՝ գնալով Դրվածքներ > Samsung account > Սարքեր > Կառավարել մուտք գործած սարքեր:
+
+Եթե օգտագործում եք այս սարքը, բայց անվտանգության կարգավիճակը չի թարմացվում, համոզվեք, որ այն միացված է ցանցի:"</string>
+    <string name="security_status_of_your_devices">Ձեր սարքերի անվտանգ. կարգավիճակ</string>
+    <string name="sesl_action_bar_up_description">Նավարկել վեր</string>
+    <string name="sesl_action_menu_overflow_badge_description">Նոր բովանդակություն կա</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Ն</string>
+    <string name="sesl_action_menu_overflow_description">Այլ ընտրանքներ</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Բոլոր առաջարկները բաց թողնվեցին</string>
+    <string name="sesl_appbar_suggest_dismiss">Բաց թողնել առաջարկը</string>
+    <string name="sesl_appbar_suggest_dismissed">Առաջարկը բաց թողնվեց</string>
+    <string name="sesl_appbar_suggest_pagination">Էջ %1$d՝ %2$d-ից</string>
+    <string name="sesl_index_assistant_text">Անցավազքի համար երկու մատը սահեցրեք վերև կամ ներքև:</string>
+    <string name="sesl_index_scrollbar">Ոլորագոտի</string>
+    <string name="sesl_index_section">Բաժինների ցուցիչ</string>
+    <string name="sesl_index_selected">Ընտրված</string>
+    <string name="sesl_material_badge_description">Նոր բովանդակություն կա</string>
+    <string name="sesl_material_overflow_badge_text_n">Ն</string>
+    <string name="sesl_more_item_label">Ավելին</string>
+    <string name="sesl_preferecne_badge_description">Նոր ծանուցում</string>
+    <string name="sesl_preferencecategory_added_title">Գլխագիր</string>
+    <string name="sesl_search_hint">Որոնել</string>
+    <string name="sesl_searchview_description_clear">Մաքրել որոնման դաշտը</string>
+    <string name="sesl_searchview_description_clear_field">Որոնման դաշտը մաքրվեց</string>
+    <string name="sesl_searchview_description_query">Որոնման հարցում</string>
+    <string name="sesl_searchview_description_search">Որոնել</string>
+    <string name="sesl_searchview_description_submit">Ներկայացնել հարցում</string>
+    <string name="sesl_searchview_description_voice">Ձայնով որոնում</string>
+    <string name="sesl_switch_off">Անջատված</string>
+    <string name="sesl_switch_on">Միացված</string>
+    <string name="sesl_switchbar_off_text">Անջտված է</string>
+    <string name="sesl_switchbar_on_text">Միացած</string>
+    <string name="sesl_toolbar_collapse_description">Կոծկել</string>
+    <string name="skip">Բաց թողնել</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings տեղադրված չէ Ձեր հեռախոսում: Այն ներբեռնեք Play Store-ից:</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings տեղադրված չէ Ձեր պլանշետում: Այն ներբեռնեք Play Store-ից:</string>
+    <string name="this_phone">Այս հեռախոսը</string>
+    <string name="this_tablet">Այս պլանշետը</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Նորից փորձեք %1$d ժամ %2$d րոպեից</string>
+    <string name="unauthorized_software_detected">Չարտոնված ծրագրակազմ է հայտնաբերվել</string>
+    <string name="unauthorized_software_detected_description_other_phone">Չարտոնված համակարգի ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ դուրս եկեք Ձեր Samsung account-ից՝ գնալով Դրվածքներ > Samsung account > Սարքեր: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Չարտոնված համակարգի ծրագրակազմը կարող է սարքը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ հեռացրեք այս սարքը SmartThings ծրագրում: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Չարտոնված համակարգի ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ դուրս եկեք Ձեր Samsung account-ից՝ գնալով Դրվածքներ > Samsung account > Սարքեր: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unauthorized_software_detected_description_other_vd">Չարտոնված համակարգի ծրագրակազմը կարող է սարքը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ դուրս եկեք Ձեր Samsung account-ից՝ գնալով Դրվածքներ > Samsung account > Սարքեր > Կառավարել մուտք գործած սարքեր: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unauthorized_software_detected_description_this_phone">Չարտոնված համակարգի ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ դուրս եկեք Ձեր Samsung account-ից: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Չարտոնված համակարգի ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար տեղադրեք պաշտոնական Samsung ծրագրակազմ կամ դուրս եկեք Ձեր Samsung account-ից: Պաշտոնական ծրագրակազմի տեղադրման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unlocked_bootloader">Արգելաբացված սկզբնաբեռնիչ</string>
+    <string name="unlocked_bootloader_description_other_phone">"Քանի դեռ Ձեր հեռախոսի սկզբնաբեռնիչն արգելաբացված է, չարտոնված համակարգի ծրագրակազմ կարող է տեղադրվել: Չարտոնված համակարգի ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար կողպեք հեռախոսի սկզբնաբեռնիչը կամ դուրս եկեք Ձեր Samsung account-ից՝ գնալով Դրվածքներ > Samsung account > Սարքեր: Սկզբնաբեռնիչի կողպման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:
+
+Այն կողպելուց հետո կարող է որոշ ժամանակ պահանջվել, որպեսզի անվտանգության կարգավիճակը փոխվի այստեղ:"</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Քանի դեռ Ձեր պլանշետի սկզբնաբեռնիչն արգելաբացված է, չարտոնված համակարգի ծրագրակազմ կարող է տեղադրվել: Չարտոնված համակարգի ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար կողպեք պլանշետի սկզբնաբեռնիչը կամ դուրս եկեք Ձեր Samsung account-ից՝ գնալով Դրվածքներ > Samsung account > Սարքեր: Սկզբնաբեռնիչի կողպման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:
+
+Այն կողպելուց հետո կարող է որոշ ժամանակ պահանջվել, որպեսզի անվտանգության կարգավիճակը փոխվի այստեղ:"</string>
+    <string name="unlocked_bootloader_description_this_phone">Քանի դեռ Ձեր հեռախոսի սկզբնաբեռնիչն արգելաբացված է, չարտոնված համակարգի ծրագրակազմ կարող է տեղադրվել: Չարտոնված համակարգի ծրագրակազմը կարող է հեռախոսը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար կողպեք հեռախոսի սկզբնաբեռնիչը կամ դուրս եկեք Ձեր Samsung account-ից: Սկզբնաբեռնիչի կողպման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="unlocked_bootloader_description_this_tablet">Քանի դեռ Ձեր պլանշետի սկզբնաբեռնիչն արգելաբացված է, չարտոնված համակարգի ծրագրակազմ կարող է տեղադրվել: Չարտոնված համակարգի ծրագրակազմը կարող է պլանշետը խոցելի դարձնել անվտանգությանը սպառնացող ռիսկերի հանդեպ: Ձեր հաշիվն ու անձնական տվյալները պաշտպանելու համար կողպեք պլանշետի սկզբնաբեռնիչը կամ դուրս եկեք Ձեր Samsung account-ից: Սկզբնաբեռնիչի կողպման հարցում օգնություն ստանալու համար դիմեք Samsung-ի Հաճախորդների սպասարկման ծառայություն:</string>
+    <string name="update">Թարմացնել</string>
+    <string name="update_multi_apps_to_continue">Շարունակելու համար թարմացրեք հետևյալ ծրագրերը՝</string>
+    <string name="update_ps_to_continue">Շարունակելու համար թարմացրեք %s-ը:</string>
+    <string name="verify_current_description_phone">Դուք կարող եք արգելաբացել Ձեր ծածկագրված տվյալները, ներառյալ մուտքի բանալիները՝ Ձեր ինքնությունն այս հեռախոսի PIN-ով, նախշով կամ գաղտնաբառով հաստատելով:</string>
+    <string name="verify_current_description_tablet">Դուք կարող եք արգելաբացել Ձեր ծածկագրված տվյալները, ներառյալ մուտքի բանալիները՝ Ձեր ինքնությունն այս պլանշետի PIN-ով, նախշով կամ գաղտնաբառով հաստատելով:</string>
+    <string name="verify_current_detail_password">Մուտքագրեք Ձեր ընթացիկ գաղտնաբառը:</string>
+    <string name="verify_current_detail_pattern">Գծեք Ձեր ընթացիկ նախշը:</string>
+    <string name="verify_current_detail_pin">Մուտքագրեք Ձեր ընթացիկ PIN-ը:</string>
+    <string name="verify_current_title_phone">Օգտագործեք այս հեռախոսը՝ ծածկագրված տվյալներն արգելաբացելու համար</string>
+    <string name="verify_current_title_tablet">Օգտագործեք այս պլանշետը՝ ծածկագրված տվյալներն արգելաբացելու համար</string>
+    <string name="verify_old_password_description_phone">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ հեռախոսի գաղտնաբառով:</string>
+    <string name="verify_old_password_description_tablet">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ պլանշետի գաղտնաբառով:</string>
+    <string name="verify_old_pattern_description_phone">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ հեռախոսի նախշով:</string>
+    <string name="verify_old_pattern_description_tablet">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ պլանշետի նախշով:</string>
+    <string name="verify_old_pin_description_phone">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ հեռախոսի PIN-ով:</string>
+    <string name="verify_old_pin_description_tablet">Անվտանգության նկատառումներով՝ հաստատեք Ձեր ինքնությունը նախորդ պլանշետի PIN-ով:</string>
+    <string name="verify_old_ppp_title">Արգելաբացեք Ձեր ծածկագրված տվյալները</string>
+    <string name="version">Վարկած %s</string>
+</resources>

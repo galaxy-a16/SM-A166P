@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">เหลือความพยายาม %d ครั้ง</item>
+        <item quantity="one">เหลือความพยายาม %d ครั้ง</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">การแจ้งเตือนใหม่ %d รายการ</item>
+        <item quantity="one">การแจ้งเตือนใหม่ %d รายการ</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">ข้อมูลที่เข้ารหัสของคุณจะถูกลบเพื่อความปลอดภัยของคุณ เนื่องจากคุณไม่สามารถตรวจสอบตัวตนของคุณได้หลังจากพยายาม %d ครั้ง:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">ลองอีกครั้งใน 1 ชั่วโมง %d นาที</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">ลองอีกครั้งใน %d ชั่วโมง</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">ลองอีกครั้งใน %d ชั่วโมง 1 นาที</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">ลองอีกครั้งใน %d นาที</item>
+        <item quantity="one">ลองอีกครั้งใน %d นาที</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">ลองอีกครั้งใน %d วินาที</item>
+        <item quantity="one">ลองอีกครั้งใน %d วินาที</item>
+    </plurals>
+</resources>

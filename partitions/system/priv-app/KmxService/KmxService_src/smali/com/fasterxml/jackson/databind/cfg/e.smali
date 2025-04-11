@@ -1,0 +1,30 @@
+.class public abstract Lcom/fasterxml/jackson/databind/cfg/e;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract getAttribute(Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract withPerCallAttribute(Ljava/lang/Object;Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/cfg/e;
+.end method
+
+.method public abstract withSharedAttribute(Ljava/lang/Object;Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/cfg/e;
+.end method
+
+.method public abstract withSharedAttributes(Ljava/util/Map;)Lcom/fasterxml/jackson/databind/cfg/e;
+.end method
+
+.method public abstract withoutSharedAttribute(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/cfg/e;
+.end method

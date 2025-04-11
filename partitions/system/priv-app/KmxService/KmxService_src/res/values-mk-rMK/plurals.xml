@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Имате уште %d обиди</item>
+        <item quantity="one">Останува уште %d обид</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Бидејќи не можевте да го потврдите Вашиот идентитет по %d обиди, Вашите шифрирани податоци ќе бидат избришани за Ваша безбедност:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Бидејќи не можевте да го потврдите Вашиот идентитет по %d обид, Вашите шифрирани податоци ќе бидат избришани за Ваша безбедност:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Обидете се повторно за 1 час и %d минути</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Обидете се повторно за 1 час и %d минута</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Обидете се повторно за %d часа</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Обидете се повторно за %d час</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Обидете се повторно за %d часа и 1 минута</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Обидете се повторно за %d час и 1 минута</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Обидете се повторно за %d минути</item>
+        <item quantity="one">Обидете се повторно за %d минута</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Обидете се повторно за %d секунди</item>
+        <item quantity="one">Обидете се повторно за %d секунда</item>
+    </plurals>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Még %d próbálkozása van</item>
+        <item quantity="one">Még %d próbálkozása van</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d új értesítés</item>
+        <item quantity="one">%d új értesítés</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Mivel %d kísérlet után sem tudta igazolni a személyazonosságát, a titkosított adatai a saját biztonsága érdekében törlődni fognak:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Mivel %d kísérlet után sem tudta igazolni a személyazonosságát, a titkosított adatai a saját biztonsága érdekében törlődni fognak:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Próbálkozzon újra 1 óra %d perc múlva</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Próbálkozzon újra 1 óra %d perc múlva</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Próbálkozzon újra %d óra múlva</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Próbálkozzon újra %d óra múlva</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Próbálkozzon újra %d óra 1 perc múlva</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Próbálkozzon újra %d óra 1 perc múlva</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Próbálja meg %d perc múlva</item>
+        <item quantity="one">Próbálja meg %d perc múlva</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Próbálja meg %d másodperc múlva</item>
+        <item quantity="one">Próbálja meg %d másodperc múlva</item>
+    </plurals>
+</resources>

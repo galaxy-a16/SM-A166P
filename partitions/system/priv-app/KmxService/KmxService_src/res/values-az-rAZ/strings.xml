@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s haqda</string>
+    <string name="back">Geri</string>
+    <string name="chan_mkt">Marketinq</string>
+    <string name="chan_ntc">Qeyd</string>
+    <string name="character_counter_content_description">%1$d / %2$d simvol</string>
+    <string name="close_app">Proqramı bağla</string>
+    <string name="contact_us">Bizimlə əlaqə</string>
+    <string name="couldnt_get_samsung_account_information">Hesab məlumatlarınızı əldə etmək mümkün olmadı</string>
+    <string name="couldnt_get_samsung_account_information_description">Şəbəkə bağlantınızı yoxlayın və Samsung account-un ən axırıncı versiyaya yeniləndiyindən əmin olun, sonra yenidən cəhd edin.</string>
+    <string name="data_info_dialog_title">Kilidini aça biləcəyiniz məlumatlar</string>
+    <string name="data_info_menu">Kilidini aça biləcəyiniz məlumatlara baxın</string>
+    <string name="delete_dialog_message">Əvvəlki cihazınızın PIN-kodunu, naxışını və ya parolunu xatırlamadığınız halda məlumatlarınızın kilidinin açılması addımını buraxa bilərsiniz. Ancaq şəxsiyyətinizi təsdiqləyə bilmədiyimiz üçün təhlükəsizlik məqsədilə aşağıdakı şifrlənmiş məlumatlar silinəcək.</string>
+    <string name="delete_dialog_title">Kilidi açmaqla bağlı problem var?</string>
+    <string name="delete_menu">Kilidi necə açmalı olduğunuzu xatırlamırsınız?</string>
+    <string name="dragndroplist_drag_move">İndi %d mövqeyindədir</string>
+    <string name="dragndroplist_drag_release">Element %d mövqeyinə gətirilmişdir.</string>
+    <string name="dragndroplist_drag_start">%d mövqeyindəki elementi dartmağa başlayır.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d mövqedəki element dartıla bilməz.</string>
+    <string name="go_to">%s keç</string>
+    <string name="go_to_developer_options">Proqramçı funksiyalarına keç</string>
+    <string name="go_to_sign_out">Çıxış etməyə keç</string>
+    <string name="incorrect_password_entered">Səhv parol daxil edilib</string>
+    <string name="incorrect_pattern_drawn">Yalnız model çəkildi</string>
+    <string name="incorrect_pin_entered">Yanlış PIN daxil edildi</string>
+    <string name="latest_version_is_already_installed">Ən son versiya artıq quraşdırılmışdır.</string>
+    <string name="menu_cancel">Ləğv et</string>
+    <string name="menu_continue">Davam et</string>
+    <string name="new_version_is_available">Yeni versiya movcuddur.</string>
+    <string name="next">Növbəti</string>
+    <string name="no_network_connection">Şəbəkə bağlantısı yoxdur</string>
+    <string name="no_network_connection_description">Cihazlarınızın təhlükəsizlik statusunu yeniləmək mümkün olmadı. Bağlantını yoxlayın və yenidən cəhd edin.</string>
+    <string name="no_threats_found">Təhlükə aşkar edilmədi</string>
+    <string name="notify_delete_dialog_title">Şifrlənmiş məlumatlarınız silinəcək</string>
+    <string name="notify_delete_dialog_title_previous_devices">Əvvəlki cihazlarınızdan istifadə edərək sizi təsdiqləmək mümkün olmadı</string>
+    <string name="notify_delete_dialog_title_previous_phone">Əvvəlki telefonunuzdan istifadə edərək sizi təsdiqləmək mümkün olmadı</string>
+    <string name="notify_delete_dialog_title_previous_phones">Əvvəlki telefonlarınızdan istifadə edərək sizi təsdiqləmək mümkün olmadı</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Əvvəlki tabletinizdən istifadə edərək sizi təsdiqləmək mümkün olmadı</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Əvvəlki tabletlərinizdən istifadə edərək sizi təsdiqləmək mümkün olmadı</string>
+    <string name="oem_unlocking_is_turned_on">OEM kilid açma funksiyası yanılıdır</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM kilidinin açılması icazəsiz proqram təminatının telefonunuzda quraşdırılmasına icazə verə bilər. İcazəsiz proqram təminatı telefonunuzun təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün Parametrlər > Tərtibatçı seçimləri bölməsində telefonunuzda OEM kilidinin açılması seçimini söndürün.
+
+Onu söndürdükdən sonra təhlükəsizlik statusunun burada dəyişməsi üçün bir az vaxt lazım ola bilər."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM kilidinin açılması icazəsiz proqram təminatının tabletinizdə quraşdırılmasına icazə verə bilər. İcazəsiz proqram təminatı tabletinizin təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün Parametrlər > Tərtibatçı seçimləri bölməsində tabletinizdə OEM kilidinin açılması seçimini söndürün.
+
+Onu söndürdükdən sonra təhlükəsizlik statusunun burada dəyişməsi üçün bir az vaxt lazım ola bilər."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM kilidinin açılması icazəsiz proqram təminatının telefonunuzda quraşdırılmasına icazə verə bilər. İcazəsiz proqram təminatı telefonunuzun təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün Parametrlər > Tərtibatçı seçimləri bölməsində OEM kilidinin açılması seçimini söndürün.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM kilidinin açılması icazəsiz proqram təminatının tabletinizdə quraşdırılmasına icazə verə bilər. İcazəsiz proqram təminatı tabletinizin təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün Parametrlər > Tərtibatçı seçimləri bölməsində OEM kilidinin açılması seçimini söndürün.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">"Açıq mən 
+lisenz."</string>
+    <string name="other_devices">Digər cihazlar</string>
+    <string name="password_set">Parol təyin olunub: %s</string>
+    <string name="pattern_set">Naxış təyin olunub: %s</string>
+    <string name="pin_set">PIN təyin olunub: %s</string>
+    <string name="ppp_delegate_description">Məlumatlarınızı mühafizə etmək üçün PIN, naxış və ya parol təyin edin.</string>
+    <string name="ppp_delegate_title">Təhlükəsizlik ekran kilidini qur</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud-da Verilənlərin təkmil mühafizəsi nüsxələməsi və sinxronlaşdırma üçün ekran kilidi</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass proqramında yaddaşda saxlanılan şifrələr</string>
+    <string name="remove_this_device">Bu cihazı sil</string>
+    <string name="security_status_main_description">Knox Matrix təhlükəsiz şəxsi blokçeyndən istifadə edərək Samsung account-a daxil olan dəstəklənən cihazları izləyir. Silsilədəki hər bir cihaz digər cihazların təhlükəsizlik statusunu yoxlaya və hər hansı təhlükə olarsa, sizə məlumat verə bilər.</string>
+    <string name="security_status_not_available_yet">Təhlükəsizlik statusu hələ əlçatan deyil</string>
+    <string name="security_status_not_available_yet_description">Bir az vaxt tələb oluna bilər. Bir qədər sonra yenidən yoxlayın.</string>
+    <string name="security_status_not_up_to_date">Təhlükəsizlik statusu yeni deyil</string>
+    <string name="security_status_not_up_to_date_description_phone">"Bu telefonun təhlükəsizlik statusu 30 gündən artıqdır ki, yenilənməyib. Telefon oflayn ola və ya nə isə onun statusunun yoxlanılmasına mane ola bilər. Artıq bu telefondan istifadə etmirsinizsə, Samsung account-dan çıxmanız tövsiyə olunur. Parametrlər > Samsung account > Cihazlar bölməsində hesabdan çıxa bilərsiniz.
+
+Bu telefondan istifadə edirsinizsə, lakin təhlükəsizlik statusu yenilənmirsə, telefonun şəbəkəyə qoşulduğundan əmin olun."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Bu cihazın təhlükəsizlik statusu 30 gündən artıqdır ki, yenilənməyib. Cihaz oflayn ola və ya nə isə onun statusunun yoxlanılmasına mane ola bilər. Bu cihazdan artıq istifadə etmirsinizsə, cihazı SmartThings proqramında silməyiniz tövsiyə olunur.
+
+Bu cihazdan istifadə edirsinizsə, lakin onun təhlükəsizlik statusu yenilənmirsə, onun şəbəkəyə qoşulduğundan əmin olun."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Bu tabletin təhlükəsizlik statusu 30 gündən artıqdır ki, yenilənməyib. Tablet oflayn ola və ya nə isə onun statusunun yoxlanılmasına mane ola bilər. Artıq bu tabletdən istifadə etmirsinizsə, Samsung account-dan çıxmanız tövsiyə olunur. Parametrlər > Samsung account > Cihazlar bölməsində hesabdan çıxa bilərsiniz.
+
+Bu tabletdən istifadə edirsinizsə, lakin təhlükəsizlik statusu yenilənmirsə, onun şəbəkəyə qoşulduğundan əmin olun."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Bu cihazın təhlükəsizlik statusu 30 gündən artıqdır ki, yenilənməyib. Cihaz oflayn ola və ya nə isə onun statusunun yoxlanılmasına mane ola bilər. Artıq bu cihazdan istifadə etmirsinizsə, Samsung account-dan çıxmanız tövsiyə olunur. Parametrlər > Samsung account > Cihazlar > Daxil olunmuş cihazları idarə et bölməsində hesabdan çıxa bilərsiniz.
+
+Bu cihazdan istifadə edirsinizsə, lakin təhlükəsizlik statusu yenilənmirsə, cihazın şəbəkəyə qoşulduğundan əmin olun."</string>
+    <string name="security_status_of_your_devices">Cihazların təhlük. statusu</string>
+    <string name="sesl_action_bar_up_description">Yuxarı keç</string>
+    <string name="sesl_action_menu_overflow_badge_description">Yeni məzmun mövcuddur</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Yn</string>
+    <string name="sesl_action_menu_overflow_description">Daha çox seçim</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Bütün tövsiyələr rədd edildi</string>
+    <string name="sesl_appbar_suggest_dismiss">Tövsiyəni rədd et</string>
+    <string name="sesl_appbar_suggest_dismissed">Tövsiyə rədd edildi</string>
+    <string name="sesl_appbar_suggest_pagination">Səhifə %1$d / %2$d</string>
+    <string name="sesl_index_assistant_text">Sürüşdürmək üçün iki barmağınızla yuxarı və ya aşağı sürüşdürün.</string>
+    <string name="sesl_index_scrollbar">Sürüşdürmə paneli</string>
+    <string name="sesl_index_section">Bölmə indeksi</string>
+    <string name="sesl_index_selected">Seçilmiş</string>
+    <string name="sesl_material_badge_description">Yeni məzmun mövcuddur</string>
+    <string name="sesl_material_overflow_badge_text_n">Yn</string>
+    <string name="sesl_more_item_label">Daha çox</string>
+    <string name="sesl_preferecne_badge_description">Yeni bildiriş</string>
+    <string name="sesl_preferencecategory_added_title">Başlıq</string>
+    <string name="sesl_search_hint">Axtar</string>
+    <string name="sesl_searchview_description_clear">Axtarış sahəsini sil</string>
+    <string name="sesl_searchview_description_clear_field">Axtarış sahəsi təmizləndi</string>
+    <string name="sesl_searchview_description_query">Axtarış sorğusu</string>
+    <string name="sesl_searchview_description_search">Axtar</string>
+    <string name="sesl_searchview_description_submit">Sorğunu göndər</string>
+    <string name="sesl_searchview_description_voice">Səs axtarışı</string>
+    <string name="sesl_switch_off">Sönülü</string>
+    <string name="sesl_switch_on">Yanılı</string>
+    <string name="sesl_switchbar_off_text">Söndür</string>
+    <string name="sesl_switchbar_on_text">Qoş</string>
+    <string name="sesl_toolbar_collapse_description">Yığ</string>
+    <string name="skip">Ötürün</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">Telefonunuzda SmartThings proqramı quraşdırılmayıb. Onu Play Store-dan yükləyin.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">Tabletinizdə SmartThings proqramı quraşdırılmayıb. Onu Play Store-dan yükləyin.</string>
+    <string name="this_phone">Bu telefon</string>
+    <string name="this_tablet">Bu tablet</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d saat %2$d dəqiqədən sonra yenidən cəhd edin</string>
+    <string name="unauthorized_software_detected">İcazəsiz proqram təminatı aşkar edilib</string>
+    <string name="unauthorized_software_detected_description_other_phone">İcazəsiz sistem proqram təminatı telefonunuzu təhlükəsizlik risklərinə qarşı həssas edə bilər. Hesabınızı və şəxsi məlumatlarınızı qorumaq üçün rəsmi Samsung proqram təminatını quraşdırın və ya Parametrlər > Samsung account > Cihazlar bölməsində Samsung account-dan çıxın. Rəsmi proqram təminatının quraşdırılması ilə bağlı kömək üçün Samsung Müştəri Xidmətləri ilə əlaqə saxlayın.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">İcazəsiz sistem proqram təminatı cihazınızın təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün rəsmi Samsung proqram təminatını quraşdırın və ya bu cihazı SmartThings proqramından çıxarın. Rəsmi proqram təminatını quraşdırmağa kömək etmək üçün Samsung Müştəri Xidməti ilə əlaqə saxlayın.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">İcazəsiz sistem proqram təminatı tabletinizi təhlükəsizlik risklərinə qarşı həssas edə bilər. Hesabınızı və şəxsi məlumatlarınızı qorumaq üçün rəsmi Samsung proqram təminatını quraşdırın və ya Parametrlər > Samsung account > Cihazlar bölməsində Samsung account-dan çıxın. Rəsmi proqram təminatının quraşdırılması ilə bağlı kömək üçün Samsung Müştəri Xidmətləri ilə əlaqə saxlayın.</string>
+    <string name="unauthorized_software_detected_description_other_vd">İcazəsiz sistem proqram təminatı cihazınızı təhlükəsizlik risklərinə qarşı həssas edə bilər. Hesabınızı və şəxsi məlumatlarınızı qorumaq üçün rəsmi Samsung proqram təminatını quraşdırın və ya Parametrlər > Samsung account > Cihazlar > Daxil olunmuş cihazları idarə et bölməsində Samsung account-dan çıxın. Rəsmi proqram təminatının quraşdırılması ilə bağlı kömək üçün Samsung Müştəri Xidmətləri ilə əlaqə saxlayın.</string>
+    <string name="unauthorized_software_detected_description_this_phone">İcazəsiz sistem proqram təminatı telefonunuzun təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün rəsmi Samsung proqram təminatını quraşdırın, yaxud Samsung account-dan çıxın. Rəsmi proqram təminatını quraşdırmağa kömək etmək üçün Samsung Müştəri Xidməti ilə əlaqə saxlayın.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">İcazəsiz sistem proqram təminatı tabletinizin təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün rəsmi Samsung proqram təminatını quraşdırın, yaxud Samsung account-dan çıxın. Rəsmi proqram təminatını quraşdırmağa kömək etmək üçün Samsung Müştəri Xidməti ilə əlaqə saxlayın.</string>
+    <string name="unlocked_bootloader">Kilidi açılmış yükləyici</string>
+    <string name="unlocked_bootloader_description_other_phone">"Telefonunuzun yükləyicisi kiliddə olmadıqda icazəsiz sistem proqramı quraşdırıla bilər. İcazəsiz sistem proqram təminatı telefonunuzu təhlükəsizlik risklərinə qarşı həssas edə bilər. Hesabınızı və şəxsi məlumatlarınızı qorumaq üçün telefonunuzun yükləyicisini kilidləyin və ya Parametrlər > Samsung account > Cihazlar bölməsində Samsung account-dan çıxın. Yükləyicinin kilidlənməsi ilə bağlı kömək üçün Samsung Müştəri Xidmətləri ilə əlaqə saxlayın.
+
+Onu kilidlədikdən sonra təhlükəsizlik statusunun dəyişməsi bir qədər vaxt ala bilər."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Tabletinizin yükləyicisi kiliddə olmadıqda icazəsiz sistem proqramı quraşdırıla bilər. İcazəsiz sistem proqram təminatı tabletinizi təhlükəsizlik risklərinə qarşı həssas edə bilər. Hesabınızı və şəxsi məlumatlarınızı qorumaq üçün tabletinizin yükləyicisini kilidləyin və ya Parametrlər > Samsung account > Cihazlar bölməsində Samsung account-dan çıxın. Yükləyicinin kilidlənməsi ilə bağlı kömək üçün Samsung Müştəri Xidmətləri ilə əlaqə saxlayın.
+
+Onu kilidlədikdən sonra təhlükəsizlik statusunun dəyişməsi bir qədər vaxt ala bilər."</string>
+    <string name="unlocked_bootloader_description_this_phone">Telefonunuzun yükləyicisi kiliddən çıxarıldığı zaman icazəsiz sistem proqram təminatı quraşdırıla bilər. İcazəsiz sistem proqram təminatı telefonunuzun təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün telefonunuzun yükləyicisini kilidləyin, yaxud Samsung account-dan çıxın. Yükləyicini kilidləməyə kömək etmək üçün Samsung Müştəri Xidməti ilə əlaqə saxlayın.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Tabletinizin yükləyicisi kiliddən çıxarıldığı zaman icazəsiz sistem proqram təminatı quraşdırıla bilər. İcazəsiz sistem proqram təminatı tabletinizin təhlükəsizlik risklərinə məruz qalmasına səbəb ola bilər. Hesabınızı və şəxsi məlumatlarınızı mühafizə etmək üçün tabletinizin yükləyicisini kilidləyin, yaxud Samsung account-dan çıxın. Yükləyicini kilidləməyə kömək etmək üçün Samsung Müştəri Xidməti ilə əlaqə saxlayın.</string>
+    <string name="update">Yenilə</string>
+    <string name="update_multi_apps_to_continue">Davam etmək üçün aşağıdakı proqramları yeniləyin:</string>
+    <string name="update_ps_to_continue">Davam etmək üçün %s yeniləyin.</string>
+    <string name="verify_current_description_phone">Telefonunuzun PIN-i, naxışı və ya şifrəsi ilə şəxsiyyətinizi təsdiq etməklə parollar da daxil olmaqla, şifrlənmiş məlumatlarınızın kilidini aça bilərsiniz.</string>
+    <string name="verify_current_description_tablet">Tabletinizin PIN-i, naxışı və ya şifrəsi ilə şəxsiyyətinizi təsdiq etməklə parollar da daxil olmaqla, şifrlənmiş məlumatlarınızın kilidini aça bilərsiniz.</string>
+    <string name="verify_current_detail_password">Cari parolu daxil et.</string>
+    <string name="verify_current_detail_pattern">Cari modeli çəkin.</string>
+    <string name="verify_current_detail_pin">Cari PIN-i daxil et.</string>
+    <string name="verify_current_title_phone">Şifrlənmiş məlumatların kilidini açmaq üçün bu telefondan istifadə edin</string>
+    <string name="verify_current_title_tablet">Şifrlənmiş məlumatların kilidini açmaq üçün bu tabletdən istifadə edin</string>
+    <string name="verify_old_password_description_phone">Təhlükəsizlik üçün əvvəlki telefonunuzun parolu ilə şəxsiyyətinizi təsdiq edin.</string>
+    <string name="verify_old_password_description_tablet">Təhlükəsizlik üçün əvvəlki tabletinizin parolu ilə şəxsiyyətinizi təsdiq edin.</string>
+    <string name="verify_old_pattern_description_phone">Təhlükəsizlik üçün əvvəlki telefonunuzun naxışı ilə şəxsiyyətinizi təsdiq edin.</string>
+    <string name="verify_old_pattern_description_tablet">Təhlükəsizlik üçün əvvəlki tabletinizin naxışı ilə şəxsiyyətinizi təsdiq edin.</string>
+    <string name="verify_old_pin_description_phone">Təhlükəsizlik üçün əvvəlki telefonunuzun PIN-i ilə şəxsiyyətinizi təsdiq edin.</string>
+    <string name="verify_old_pin_description_tablet">Təhlükəsizlik üçün əvvəlki tabletinizin PIN-kodu ilə kimliyinizi təsdiqləyin.</string>
+    <string name="verify_old_ppp_title">Şifrlənmiş məlumatlarınızın kilidini açın</string>
+    <string name="version">Versiya %s</string>
+</resources>

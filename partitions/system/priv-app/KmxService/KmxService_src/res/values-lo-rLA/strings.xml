@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">ກ່ຽວກັບ %s</string>
+    <string name="back">ກັບ​ຄືນ</string>
+    <string name="chan_mkt">ການຕະຫຼາດ</string>
+    <string name="chan_ntc">ແຈ້ງການ</string>
+    <string name="character_counter_content_description">%1$d ຈາກ %2$d ຕົວອັກສອນ</string>
+    <string name="close_app">ປິດ​ແອັບ</string>
+    <string name="contact_us">ຕິດຕໍ່ພວກເຮົາ</string>
+    <string name="couldnt_get_samsung_account_information">ບໍ່ສາມາດຮັບເອົາຂໍ້ມູນບັນຊີຂອງທ່ານໄດ້</string>
+    <string name="couldnt_get_samsung_account_information_description">ກວດເບິ່ງການເຊື່ອມຕໍ່ເຄືອຂ່າຍຂອງທ່ານ ແລະ ເບິ່ງໃຫ້ແນ່ໃຈວ່າ Samsung account ຖືກອັບເດດເປັນເວີຊັນຫຼ້າສຸດແລ້ວ, ຈາກນັ້ນ ລອງໃໝ່ອີກ.</string>
+    <string name="data_info_dialog_title">ຂໍ້ມູນທີ່ທ່ານສາມາດປົດລັອກໄດ້</string>
+    <string name="data_info_menu">ເບິ່ງຂໍ້ມູນທີ່ທ່ານສາມາດປົດລັອກໄດ້</string>
+    <string name="delete_dialog_message">ທ່ານສາມາດຂ້າມການປົດລັອກຂໍ້ມູນຂອງທ່ານໄດ້ຖ້າທ່ານບໍ່ຈື່ PIN, ຮູບແບບ, ຫຼື ລະຫັດຜ່ານຂອງອຸປະກອນກ່ອນໜ້າຂອງທ່ານ. ຢ່າງໃດກໍ່ຕາມ, ຂໍ້ມູນທີ່ໃສ່ລະຫັດລຸ່ມນີ້ຈະຖືກລຶບສຳລັບຄວາມປອດໄພເນື່ອງຈາກພວກເຮົາບໍ່ສາມາດກວດສອບຕົວຕົນຂອງທ່ານໄດ້.</string>
+    <string name="delete_dialog_title">ພົບບັນຫາໃນການປົດລັອກບໍ?</string>
+    <string name="delete_menu">ບໍ່ຈື່ວິທີປົດລັອກບໍ?</string>
+    <string name="dragndroplist_drag_move">ຕອນນີ້ຢູ່ທີ່ຕຳແໜ່ງ %d</string>
+    <string name="dragndroplist_drag_release">ລາຍການຕົກລົງໄປສູ່ຕໍາແໜ່ງ %d.</string>
+    <string name="dragndroplist_drag_start">ເລີ່ມຕົ້ນລາກລາຍການຢູ່ທີ່ຕໍາແໜ່ງ %d ແລ້ວ.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">ລາຍການຢູ່ທີ່ຕໍາແໜ່ງ %d ບໍ່ສາມາດລາກໄປໄດ້.</string>
+    <string name="go_to">ໄປທີ່ %s</string>
+    <string name="go_to_developer_options">ໄປທີ່ ຕົວເລືອກຜູ້ພັດທະນາ</string>
+    <string name="go_to_sign_out">ໄປທີ່ ອອກຈາກລະບົບ</string>
+    <string name="incorrect_password_entered">ປ້ອນລະຫັດບໍ່ຖືກຕ້ອງເຂົ້າໄປແລ້ວ</string>
+    <string name="incorrect_pattern_drawn">ແຕ້ມຮູບ​ແບບບໍ່​ຖືກ​ຕ້ອງ​ແລ້ວ</string>
+    <string name="incorrect_pin_entered">ປ້ອນ PIN ບໍ່ຖືກຕ້ອງເຂົ້າໄປ</string>
+    <string name="latest_version_is_already_installed">ຕິດຕັ້ງລຸ້ນຫຼ້າສຸດຮຽບຮ້ອຍແລ້ວ.</string>
+    <string name="menu_cancel">ຍົກ​ເລີກ</string>
+    <string name="menu_continue">ສືບ​ຕໍ່</string>
+    <string name="new_version_is_available">ມີເວີເຊິນໃໝ່ໃຫ້ຢູ່.</string>
+    <string name="next">ຖັດໄປ</string>
+    <string name="no_network_connection">ບໍ່ມີການເຊື່ອມຕໍ່ເຄືອຂ່າຍ</string>
+    <string name="no_network_connection_description">ບໍ່ສາມາດອັບເດດສະຖານະຄວາມປອດໄພຂອງອຸປະກອນຂອງທ່ານ. ກວດເບິ່ງການເຊື່ອມຕໍ່ ແລະ ລອງໃໝ່ອີກ.</string>
+    <string name="no_threats_found">ບໍ່ພົບໄພຄຸກຄາມ</string>
+    <string name="notify_delete_dialog_title">ຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້ຂອງທ່ານຈະຖືກລຶບ</string>
+    <string name="notify_delete_dialog_title_previous_devices">ບໍ່ສາມາດກວດສອບທ່ານໂດຍໃຊ້ອຸປະກອນກ່ອນໜ້າຂອງທ່ານ</string>
+    <string name="notify_delete_dialog_title_previous_phone">ບໍ່ສາມາດກວດສອບທ່ານໂດຍໃຊ້ໂທລະສັບກ່ອນໜ້າຂອງທ່ານ</string>
+    <string name="notify_delete_dialog_title_previous_phones">ບໍ່ສາມາດກວດສອບທ່ານໂດຍໃຊ້ໂທລະສັບກ່ອນໜ້າຂອງທ່ານ</string>
+    <string name="notify_delete_dialog_title_previous_tablet">ບໍ່ສາມາດກວດສອບທ່ານໂດຍໃຊ້ແທັບເລັດກ່ອນໜ້າຂອງທ່ານ</string>
+    <string name="notify_delete_dialog_title_previous_tablets">ບໍ່ສາມາດກວດສອບທ່ານໂດຍໃຊ້ແທັບເລັດກ່ອນໜ້າຂອງທ່ານ</string>
+    <string name="oem_unlocking_is_turned_on">ການປົດລັອກ OEM ຖືກເປີດຢູ່</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"ການປົດລັອກ OEM ສາມາດອະນຸຍາດໃຫ້ຕິດຕັ້ງຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດໃນໂທລະສັບຂອງທ່ານ. ຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ປິດ ການປົດລັອກ OEM ໃນໂທລະສັບຂອງທ່ານໃນການຕັ້ງຄ່າ > ຕົວເລືອກນັກພັດທະນາ.
+
+ຫຼັງຈາກທ່ານປິດມັນ, ມັນອາດໃຊ້ເວລາຄາວໜຶ່ງສຳລັບສະຖານະຄວາມປອດໄພທີ່ຈະປ່ຽນແປງຢູ່ບ່ອນນີ້."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"ການປົດລັອກ OEM ສາມາດອະນຸຍາດໃຫ້ຕິດຕັ້ງຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດໃນແທັບເລັດຂອງທ່ານ. ຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ປິດ ການປົດລັອກ OEM ໃນແທັບເລັດຂອງທ່ານໃນການຕັ້ງຄ່າ > ຕົວເລືອກນັກພັດທະນາ.
+
+ຫຼັງຈາກທ່ານປິດມັນ, ມັນອາດໃຊ້ເວລາຄາວໜຶ່ງສຳລັບສະຖານະຄວາມປອດໄພທີ່ຈະປ່ຽນແປງຢູ່ບ່ອນນີ້."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">ການປົດລັອກ OEM ສາມາດອະນຸຍາດໃຫ້ຕິດຕັ້ງຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດໃນໂທລະສັບຂອງທ່ານ. ຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ປິດ ການປົດລັອກ OEM ໃນການຕັ້ງຄ່າ > ຕົວເລືອກນັກພັດທະນາ.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">ການປົດລັອກ OEM ສາມາດອະນຸຍາດໃຫ້ຕິດຕັ້ງຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດໃນແທັບເລັດຂອງທ່ານ. ຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ປິດ ການປົດລັອກ OEM ໃນການຕັ້ງຄ່າ > ຕົວເລືອກນັກພັດທະນາ.</string>
+    <string name="ok">ຕົກລົງ</string>
+    <string name="open_source_licenses">ໃບອະນຸຍາດ open source</string>
+    <string name="other_devices">ອຸປະກອນອື່ນ</string>
+    <string name="password_set">ຕັ້ງລະຫັດຜ່ານແລ້ວ %s</string>
+    <string name="pattern_set">ຕັ້ງຮູບແບບແລ້ວ %s</string>
+    <string name="pin_set">ຕັ້ງ PIN ແລ້ວ %s</string>
+    <string name="ppp_delegate_description">ຕັ້ງ PIN, ຮູບແບບ ຫຼື ລະຫັດຜ່ານເພື່ອປົກປ້ອງຂໍ້ມູນຂອງທ່ານ.</string>
+    <string name="ppp_delegate_title">ຕັ້ງການລັອກໜ້າຈໍທີ່ປອດໄພ</string>
+    <string name="ppp_dialog_description_SamsungCloud">ໜ້າຈໍລັອກສຳລັບການແບັກອັບ ແລະ ການຊິງຄ໌ການປົກປ້ອງຂໍ້ມູນຂັ້ນສູງໃນ Samsung Cloud</string>
+    <string name="ppp_dialog_description_SamsungPass">ບັນທຶກລະຫັດຜ່ານໄວ້ໃນ Samsung Pass ແລ້ວ</string>
+    <string name="remove_this_device">ເອົາເຄື່ອງນີ້ອອກໄປ</string>
+    <string name="security_status_main_description">Knox Matrix ຕິດຕາມອຸປະກອນທີ່ຮອງຮັບທີ່ລົງຊື່ເຂົ້າໃຊ້ Samsung account ຂອງທ່ານໂດຍໃຊ້ບລັອກເຊນສ່ວນຕົວທີ່ປອດໄພ. ແຕ່ລະອຸປະກອນໃນເຄືອຂ່າຍສາມາດກວດເບິ່ງສະຖານະຄວາມປອດໄພຂອງອຸປະກອນອື່ນໄດ້ ແລະ ແຈ້ງໃຫ້ທ່ານຮູ້ຖ້າມີໄພຄຸກຄາມໃດໆ.</string>
+    <string name="security_status_not_available_yet">ສະຖານະຄວາມປອດໄພບໍ່ມີຢູ່ເທື່ອ</string>
+    <string name="security_status_not_available_yet_description">ສິ່ງນີ້ສາມາດໃຊ້ເວລາເລັກນ້ອຍ. ກວດເບິ່ງໃໝ່ອີກພາຍຫຼັງ.</string>
+    <string name="security_status_not_up_to_date">ສະຖານະຄວາມປອດໄພບໍ່ທັນສະໄໝ</string>
+    <string name="security_status_not_up_to_date_description_phone">"ສະຖານະຄວາມປອດໄພຂອງໂທລະສັບນີ້ບໍ່ໄດ້ຖືກອັບເດດເປັນເວລາຫຼາຍກວ່າ 30 ວັນ. ໂທລະສັບອາດອອຟໄລນ໌ຢູ່ ຫຼື ມີບາງສິ່ງບາງຢ່າງປ້ອງກັນບໍ່ໃຫ້ກວດເບິ່ງສະຖານະໄດ້. ຖ້າທ່ານບໍ່ໄດ້ໃຊ້ໂທລະສັບນີ້ອີກຕໍ່ໄປ, ຂໍແນະນຳໃຫ້ອອກຈາກລະບົບ Samsung account ຂອງທ່ານ. ທ່ານສາມາດອອກຈາກລະບົບໄດ້ໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ.
+
+ຖ້າທ່ານກຳລັງໃຊ້ໂທລະສັບນີ້ ແຕ່ສະຖານະຄວາມປອດໄພຂອງມັນບໍ່ໄດ້ອັບເດດ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນຖືກເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍຢູ່."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"ສະຖານະຄວາມປອດໄພຂອງອຸປະກອນນີ້ບໍ່ໄດ້ຖືກອັບເດດເປັນເວລາຫຼາຍກວ່າ 30 ວັນ. ອຸປະກອນອາດອອຟໄລນ໌ຢູ່ ຫຼື ມີບາງສິ່ງບາງຢ່າງປ້ອງກັນບໍ່ໃຫ້ກວດເບິ່ງສະຖານະໄດ້. ຖ້າທ່ານບໍ່ໄດ້ໃຊ້ອຸປະກອນນີ້ອີກຕໍ່ໄປ, ຂໍແນະນຳໃຫ້ເອົາອຸປະກອນນີ້ອອກຈາກແອັບ SmartThings.
+
+ຖ້າທ່ານກຳລັງໃຊ້ອຸປະກອນນີ້ ແຕ່ສະຖານະຄວາມປອດໄພຂອງມັນບໍ່ໄດ້ອັບເດດ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນຖືກເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍຢູ່."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"ສະຖານະຄວາມປອດໄພຂອງແທັບເລັດນີ້ບໍ່ໄດ້ຖືກອັບເດດເປັນເວລາຫຼາຍກວ່າ 30 ວັນ. ແທັບເລັດອາດອອຟໄລນ໌ຢູ່ ຫຼື ມີບາງສິ່ງບາງຢ່າງປ້ອງກັນບໍ່ໃຫ້ກວດເບິ່ງສະຖານະໄດ້. ຖ້າທ່ານບໍ່ໄດ້ໃຊ້ແທັບເລັດນີ້ອີກຕໍ່ໄປ, ຂໍແນະນຳໃຫ້ອອກຈາກລະບົບ Samsung account ຂອງທ່ານ. ທ່ານສາມາດອອກຈາກລະບົບໄດ້ໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ.
+
+ຖ້າທ່ານກຳລັງໃຊ້ແທັບເລັດນີ້ ແຕ່ສະຖານະຄວາມປອດໄພຂອງມັນບໍ່ໄດ້ອັບເດດ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນຖືກເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍຢູ່."</string>
+    <string name="security_status_not_up_to_date_description_vd">"ສະຖານະຄວາມປອດໄພຂອງອຸປະກອນນີ້ບໍ່ໄດ້ຖືກອັບເດດເປັນເວລາຫຼາຍກວ່າ 30 ວັນ. ອຸປະກອນອາດອອຟໄລນ໌ຢູ່ ຫຼື ມີບາງສິ່ງບາງຢ່າງປ້ອງກັນບໍ່ໃຫ້ກວດເບິ່ງສະຖານະໄດ້. ຖ້າທ່ານບໍ່ໄດ້ໃຊ້ອຸປະກອນນີ້ອີກຕໍ່ໄປ, ຂໍແນະນຳໃຫ້ອອກຈາກລະບົບ Samsung account ຂອງທ່ານ. ທ່ານສາມາດອອກຈາກລະບົບໄດ້ໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ > ຈັດການອຸປະກອນທີ່ລົງຊື່ເຂົ້າໃຊ້.
+
+ຖ້າທ່ານກຳລັງໃຊ້ອຸປະກອນນີ້ ແຕ່ສະຖານະຄວາມປອດໄພຂອງມັນບໍ່ໄດ້ອັບເດດ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນຖືກເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍຢູ່."</string>
+    <string name="security_status_of_your_devices">ສະຖານະຄວາມປອດໄພຂອງອຸປະກອນຂອງທ່ານ</string>
+    <string name="sesl_action_bar_up_description">ກວດນໍາທາງຂຶ້ນໄປ</string>
+    <string name="sesl_action_menu_overflow_badge_description">ເນື້ອໃນໃໝ່ມີຢູ່</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">ຕົວເລືອກເພີ່ມເຕີມ</string>
+    <string name="sesl_appbar_suggest_all_dismissed">ປ່ອຍຄຳແນະນຳທັງໝົດໄປແລ້ວ</string>
+    <string name="sesl_appbar_suggest_dismiss">ປ່ອຍຄຳແນະນຳໄປ</string>
+    <string name="sesl_appbar_suggest_dismissed">ປ່ອຍຄຳແນະນຳໄປແລ້ວ</string>
+    <string name="sesl_appbar_suggest_pagination">ໜ້າ %1$d ໃນ %2$d</string>
+    <string name="sesl_index_assistant_text">ຮູດຂຶ້ນເທິງ ຫຼື ລົງລຸ່ມດ້ວຍມືສອງນິ້ວເພື່ອເລື່ອນ.</string>
+    <string name="sesl_index_scrollbar">ແຖບເລື່ອນ</string>
+    <string name="sesl_index_section">ດັດຊະນີພາກສ່ວນ</string>
+    <string name="sesl_index_selected">ເລືອກແລ້ວ</string>
+    <string name="sesl_material_badge_description">ເນື້ອໃນໃໝ່ມີຢູ່</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">ເພີ່ມເຕີມ</string>
+    <string name="sesl_preferecne_badge_description">ການແຈ້ງເຕືອນໃໝ່</string>
+    <string name="sesl_preferencecategory_added_title">ສ່ວນຫົວ</string>
+    <string name="sesl_search_hint">ຄົ້ນຫາ</string>
+    <string name="sesl_searchview_description_clear">ລຶບຊ່ອງຊອກຫາ</string>
+    <string name="sesl_searchview_description_clear_field">ລຶບລ້າງຊ່ອງຊອກຫາແລ້ວ</string>
+    <string name="sesl_searchview_description_query">ຄົ້ນຫາການສືບຖາມ</string>
+    <string name="sesl_searchview_description_search">ຄົ້ນຫາ</string>
+    <string name="sesl_searchview_description_submit">ສົ່ງການສືບຖາມ</string>
+    <string name="sesl_searchview_description_voice">ຄົ້ນຫາດ້ວຍສຽງ</string>
+    <string name="sesl_switch_off">ປິດ</string>
+    <string name="sesl_switch_on">ເປີດ</string>
+    <string name="sesl_switchbar_off_text">ປິດ</string>
+    <string name="sesl_switchbar_on_text">ເປີດ</string>
+    <string name="sesl_toolbar_collapse_description">ຫຍໍ້ລົງ</string>
+    <string name="skip">ຂ້າມໄປ</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings ບໍ່ຖືກຕິດຕັ້ງໃນໂທລະສັບຂອງທ່ານ. ດາວໂຫຼດມັນຈາກ Play Store.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings ບໍ່ຖືກຕິດຕັ້ງໃນແທັບເລັດຂອງທ່ານ. ດາວໂຫຼດມັນຈາກ Play Store.</string>
+    <string name="this_phone">ໂທລະສັບນີ້</string>
+    <string name="this_tablet">ແທັບເລັດນີ້</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">ລອງໃໝ່ອີກໃນ %1$d ຊົ່ວໂມງ %2$d ນາທີ</string>
+    <string name="unauthorized_software_detected">ກວດພົບຊອບແວທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດແລ້ວ</string>
+    <string name="unauthorized_software_detected_description_other_phone">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພໄດ້. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ອຸປະກອນຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ເອົາອຸປະກອນນີ້ໃນແອັບ SmartThings ອອກ. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວຢ່າງເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊໍາຊຸງ.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພໄດ້. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.</string>
+    <string name="unauthorized_software_detected_description_other_vd">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ອຸປະກອນຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພໄດ້. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ > ຈັດການອຸປະກອນທີ່ລົງຊື່ເຂົ້າໃຊ້. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.</string>
+    <string name="unauthorized_software_detected_description_this_phone">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ອອກຈາກລະບົບຂອງ Samsung account ຂອງທ່ານ. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວຢ່າງເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊໍາຊຸງ.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ຕິດຕັ້ງຊອບແວທີ່ເປັນທາງການຂອງຊຳຊຸງ ຫຼື ອອກຈາກລະບົບຂອງ Samsung account ຂອງທ່ານ. ສຳລັບການຊ່ວຍເຫຼືອໃນການຕິດຕັ້ງຊອບແວຢ່າງເປັນທາງການ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊໍາຊຸງ.</string>
+    <string name="unlocked_bootloader">ປົດລັອກບູດໂຫຼດເດີ</string>
+    <string name="unlocked_bootloader_description_other_phone">"ໃນຂະນະທີ່ບູດໂຫຼດເດີຂອງໂທລະສັບຂອງທ່ານຖືກປົດລັອກ, ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດຖືກຕິດຕັ້ງໄດ້. ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພໄດ້. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ລັອກບູດໂຫຼດເດີຂອງໂທລະສັບຂອງທ່ານ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ. ສຳລັບການຊ່ວຍເຫຼືອໃນການລັອກບູດໂຫຼດເດີ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.
+
+ຫຼັງຈາກທ່ານລັອກມັນ, ມັນອາດໃຊ້ເວລາຄາວໜຶ່ງເພື່ອໃຫ້ສະຖານະຄວາມປອດໄພປ່ຽນແປງຢູ່ບ່ອນນີ້."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"ໃນຂະນະທີ່ບູດໂຫຼດເດີຂອງແທັບເລັດຂອງທ່ານຖືກປົດລັອກ, ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດຖືກຕິດຕັ້ງໄດ້. ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພໄດ້. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ລັອກບູດໂຫຼດເດີຂອງແທັບເລັດຂອງທ່ານ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານໃນການຕັ້ງຄ່າ > Samsung account > ອຸປະກອນ. ສຳລັບການຊ່ວຍເຫຼືອໃນການລັອກບູດໂຫຼດເດີ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.
+
+ຫຼັງຈາກທ່ານລັອກມັນ, ມັນອາດໃຊ້ເວລາຄາວໜຶ່ງເພື່ອໃຫ້ສະຖານະຄວາມປອດໄພປ່ຽນແປງຢູ່ບ່ອນນີ້."</string>
+    <string name="unlocked_bootloader_description_this_phone">ໃນຂະນະທີ່ບູດໂຫຼດເດີຂອງໂທລະສັບຂອງທ່ານຖືກປົດລັອກ, ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດຖືກຕິດຕັ້ງໄດ້. ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ໂທລະສັບຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ລັອກບູດໂຫຼດເດີຂອງໂທລະສັບຂອງທ່ານ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານ. ສຳລັບການຊ່ວຍເຫຼືອໃນການລັອກບູດໂຫຼດເດີ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.</string>
+    <string name="unlocked_bootloader_description_this_tablet">ໃນຂະນະທີ່ບູດໂຫຼດເດີຂອງແທັບເລັດຂອງທ່ານຖືກປົດລັອກ, ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດຖືກຕິດຕັ້ງໄດ້. ຊອບແວລະບົບທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດເຮັດໃຫ້ແທັບເລັດຂອງທ່ານສ່ຽງຕໍ່ຄວາມສ່ຽງດ້ານຄວາມປອດໄພ. ເພື່ອປົກປ້ອງບັນຊີ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ, ລັອກບູດໂຫຼດເດີຂອງແທັບເລັດຂອງທ່ານ ຫຼື ອອກຈາກລະບົບ Samsung account ຂອງທ່ານ. ສຳລັບການຊ່ວຍເຫຼືອໃນການລັອກບູດໂຫຼດເດີ, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າຂອງຊຳຊຸງ.</string>
+    <string name="update">ອັບເດດ</string>
+    <string name="update_multi_apps_to_continue">ອັບເດດແອັບຕໍ່ໄປນີ້ເພື່ອສືບຕໍ່:</string>
+    <string name="update_ps_to_continue">ອັບເດດ %s ເພື່ອສືບຕໍ່.</string>
+    <string name="verify_current_description_phone">ທ່ານສາມາດປົດລັອກຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້ຂອງທ່ານ, ລວມທັງລະຫັດຜ່ານ, ໂດຍການກວດສອບຕົວຕົນຂອງທ່ານດ້ວຍ PIN, ຮູບແບບ ຫຼື ລະຫັດຜ່ານຂອງໂທລະສັບນີ້.</string>
+    <string name="verify_current_description_tablet">ທ່ານສາມາດປົດລັອກຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້ຂອງທ່ານ, ລວມທັງລະຫັດຜ່ານໂດຍການກວດສອບຕົວຕົນຂອງທ່ານດ້ວຍ PIN, ຮູບແບບ ຫຼື ລະຫັດຜ່ານຂອງແທັບເລັດນີ້.</string>
+    <string name="verify_current_detail_password">ປ້ອນລະຫັດຜ່ານປະຈຸບັນຂອງທ່ານເຂົ້າ.</string>
+    <string name="verify_current_detail_pattern">ແຕ້ມຮູບແບບປະຈຸບັນຂອງທ່ານ.</string>
+    <string name="verify_current_detail_pin">ປ້ອນ PIN ປະຈຸບັນຂອງທ່ານເຂົ້າ.</string>
+    <string name="verify_current_title_phone">ໃຊ້ໂທລະສັບນີ້ເພື່ອປົດລັອກຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້</string>
+    <string name="verify_current_title_tablet">ໃຊ້ແທັບເລັດນີ້ເພື່ອປົດລັອກຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້</string>
+    <string name="verify_old_password_description_phone">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍລະຫັດຜ່ານຂອງໂທລະສັບກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_password_description_tablet">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍລະຫັດຜ່ານຂອງແທັບເລັດກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_pattern_description_phone">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍຮູບແບບຂອງໂທລະສັບກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_pattern_description_tablet">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍຮູບແບບຂອງແທັບເລັດກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_pin_description_phone">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍ PIN ຂອງໂທລະສັບກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_pin_description_tablet">ເພື່ອຄວາມປອດໄພ, ກວດສອບຕົວທ່ານເອງດ້ວຍ PIN ຂອງແທັບເລັດກ່ອນໜ້າຂອງທ່ານ.</string>
+    <string name="verify_old_ppp_title">ປົດລັອກຂໍ້ມູນທີ່ໃສ່ລະຫັດໄວ້ຂອງທ່ານ</string>
+    <string name="version">ຊຸດ %s</string>
+</resources>

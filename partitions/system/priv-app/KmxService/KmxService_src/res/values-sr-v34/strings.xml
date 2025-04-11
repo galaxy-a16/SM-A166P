@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">О услузи %s</string>
+    <string name="back">Назад</string>
+    <string name="close_app">Затвори апликацију</string>
+    <string name="contact_us">Контактирајте нас</string>
+    <string name="couldnt_get_samsung_account_information">Информације о налогу нису добијене</string>
+    <string name="couldnt_get_samsung_account_information_description">Проверите мрежну везу и уверите се да је Samsung account ажуриран на најновију верзију, а затим покушајте поново.</string>
+    <string name="data_info_dialog_title">Подаци које можете да откључате</string>
+    <string name="data_info_menu">Погледајте које податке можете да откључате</string>
+    <string name="delete_dialog_message">Можете да прескочите откључавање података ако се не сећате PIN кода, обрасца или лозинке свог претходног уређаја. Међутим, шифровани подаци у наставку ће бити избрисани ради безбедности јер нисмо могли да верификујемо ваш идентитет.</string>
+    <string name="delete_dialog_title">Имате проблем са откључавањем?</string>
+    <string name="delete_menu">Не сећате се како да откључате?</string>
+    <string name="go_to">Иди на %s</string>
+    <string name="go_to_developer_options">Иди на Програмерске опције</string>
+    <string name="go_to_sign_out">Иди на Одјава</string>
+    <string name="incorrect_password_entered">Унета је неисправна лозинка</string>
+    <string name="incorrect_pattern_drawn">Нацртан је неисправан облик</string>
+    <string name="incorrect_pin_entered">Унет је неисправан ПИН код</string>
+    <string name="latest_version_is_already_installed">Најновија верзија је већ инсталирана.</string>
+    <string name="menu_cancel">Откажи</string>
+    <string name="menu_continue">Настави</string>
+    <string name="new_version_is_available">Нова верзија је доступна.</string>
+    <string name="next">Наредно</string>
+    <string name="no_network_connection">Нема мрежне везе</string>
+    <string name="no_network_connection_description">Није могуће ажурирати безбедносни статус ваших уређаја. Проверите везу и покушајте поново.</string>
+    <string name="no_threats_found">Претње нису пронађене</string>
+    <string name="notify_delete_dialog_title">Шифровани подаци ће бити избрисани</string>
+    <string name="notify_delete_dialog_title_previous_devices">Нисмо могли да вас верификујемо помоћу претходних уређаја</string>
+    <string name="notify_delete_dialog_title_previous_phone">Нисмо могли да вас верификујемо помоћу претходног телефона</string>
+    <string name="notify_delete_dialog_title_previous_phones">Нисмо могли да вас верификујемо помоћу претходних телефона</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Нисмо могли да вас верификујемо помоћу претходног таблета</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Нисмо могли да вас верификујемо помоћу претходних таблета</string>
+    <string name="oem_unlocking_is_turned_on">OEM откључавање је укључено</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM откључавање може дозволити инсталирање неовлашћеног софтвера на ваш телефон. Неовлашћени софтвер може изложити ваш телефон безбедносним ризицима. Да бисте заштитили налог и личне податке, искључите OEM откључавање на телефону у оквиру Подешавања > Програмерске опције.
+
+Након што то искључите, може проћи неко време да се безбедносни статус промени овде."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM откључавање може дозволити инсталирање неовлашћеног софтвера на ваш таблет. Неовлашћени софтвер може изложити ваш таблет безбедносним ризицима. Да бисте заштитили налог и личне податке, искључите OEM откључавање на таблету у оквиру Подешавања > Програмерске опције.
+
+Након што то искључите, може проћи неко време да се безбедносни статус промени овде."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM откључавање може дозволити инсталирање неовлашћеног софтвера на ваш телефон. Неовлашћени софтвер може изложити ваш телефон безбедносним ризицима. Да бисте заштитили налог и личне податке, искључите OEM откључавање у оквиру Подешавања > Програмерске опције.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM откључавање може дозволити инсталирање неовлашћеног софтвера на ваш таблет. Неовлашћени софтвер може изложити ваш таблет безбедносним ризицима. Да бисте заштитили налог и личне податке, искључите OEM откључавање у оквиру Подешавања > Опције за програмере.</string>
+    <string name="open_source_licenses">Лиценца за отв. код</string>
+    <string name="other_devices">Други уређаји</string>
+    <string name="password_set">Лозинка је подешена %s</string>
+    <string name="pattern_set">Образац је подешен %s</string>
+    <string name="pin_set">PIN код је подешен %s</string>
+    <string name="ppp_delegate_description">Подесите PIN код, образац или лозинку да бисте заштитили податке.</string>
+    <string name="ppp_delegate_title">Подесите безбедно закључавање екрана</string>
+    <string name="ppp_dialog_description_SamsungCloud">Закључавање екрана за бекаповање и синхронизацију Побољшане заштите података у Samsung Cloud-у</string>
+    <string name="ppp_dialog_description_SamsungPass">Приступни кључеви сачувани у Samsung Pass-у</string>
+    <string name="remove_this_device">Уклони овај уређај</string>
+    <string name="security_status_main_description">Knox Matrix прати подржане уређаје који су пријављени на ваш Samsung account помоћу безбедног приватног blockchain-а. Сваки уређај у ланцу може да провери безбедносни статус других уређаја и да вас обавести ако постоје претње.</string>
+    <string name="security_status_not_available_yet">Сигурносни статус још није доступан</string>
+    <string name="security_status_not_available_yet_description">Ово може потрајати. Проверите поново касније.</string>
+    <string name="security_status_not_up_to_date">Безбедносни статус није ажуран</string>
+    <string name="security_status_not_up_to_date_description_phone">"Безбедносни статус овог телефона није ажуриран више од 30 дана. Телефон је можда ван мреже или нешто спречава проверу његовог статуса. Ако више не користите овај телефон, препоручујемо да се одјавите са Samsung account-а. Можете да се одјавите у оквиру Подешавања > Samsung account > Уређаји.
+
+Ако користите овај телефон, али се његов безбедносни статус не ажурира, проверите да ли је повезан на мрежу."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Безбедносни статус овог уређаја није ажуриран више од 30 дана. Уређај је можда ван мреже или нешто спречава проверу његовог статуса. Ако више не користите овај уређај, препоручујемо да га уклоните из апликације SmartThings.
+
+Ако користите овај уређај, али се његов безбедносни статус не ажурира, проверите да ли је повезан на мрежу."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Безбедносни статус овог таблета није ажуриран више од 30 дана. Таблет је можда ван мреже или нешто спречава проверу његовог статуса. Ако више не користите овај таблет, препоручујемо да се одјавите са Samsung account-а. Можете да се одјавите у оквиру Подешавања > Samsung account > Уређаји.
+
+Ако користите овај таблет, али се његов безбедносни статус не ажурира, проверите да ли је повезан на мрежу."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Безбедносни статус овог уређаја није ажуриран више од 30 дана. Уређај је можда ван мреже или нешто спречава проверу његовог статуса. Ако више не користите овај уређај, препоручујемо да се одјавите са Samsung account-а. Можете да се одјавите у оквиру Подешавања > Samsung account > Уређаји > Управљајте пријављеним уређајима.
+
+Ако користите овај уређај, али се његов безбедносни статус не ажурира, проверите да ли је повезан на мрежу."</string>
+    <string name="security_status_of_your_devices">Безбедносни статус ваших уређаја</string>
+    <string name="sesl_action_bar_up_description">Померај се нагоре</string>
+    <string name="sesl_action_menu_overflow_badge_description">Нови садржај је доступан</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Н</string>
+    <string name="sesl_action_menu_overflow_description">Још опција</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Сви предлози су одбачени</string>
+    <string name="sesl_appbar_suggest_dismiss">Одбаци предлог</string>
+    <string name="sesl_appbar_suggest_dismissed">Предлог је одбачен</string>
+    <string name="sesl_appbar_suggest_pagination">Страна %1$d од %2$d</string>
+    <string name="sesl_index_assistant_text">Превуците нагоре или надоле користећи два прста да бисте померили.</string>
+    <string name="sesl_index_scrollbar">Трака за померање</string>
+    <string name="sesl_index_section">Индекс одељка</string>
+    <string name="sesl_index_selected">Изабрано</string>
+    <string name="sesl_material_badge_description">Нови садржај је доступан</string>
+    <string name="sesl_more_item_label">Још</string>
+    <string name="sesl_preferecne_badge_description">Ново обавештење</string>
+    <string name="sesl_preferencecategory_added_title">Заглавље</string>
+    <string name="sesl_searchview_description_clear">Обриши поље претраге</string>
+    <string name="sesl_searchview_description_clear_field">Поље за претрагу је обрисано</string>
+    <string name="sesl_searchview_description_query">Претражи упит</string>
+    <string name="sesl_searchview_description_search">Претрага</string>
+    <string name="sesl_searchview_description_submit">Пошаљи упит</string>
+    <string name="sesl_searchview_description_voice">Говорна претрага</string>
+    <string name="sesl_switch_off">Искључено</string>
+    <string name="sesl_switch_on">Укључено</string>
+    <string name="sesl_switchbar_off_text">Искључено</string>
+    <string name="sesl_switchbar_on_text">Укључено</string>
+    <string name="sesl_toolbar_collapse_description">Скупи</string>
+    <string name="skip">Прескочи</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings није инсталиран на вашем телефону. Преузмите га из Play продавнице.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings није инсталиран на вашем таблету. Преузмите га из Play продавнице.</string>
+    <string name="this_phone">Овај телефон</string>
+    <string name="this_tablet">Овај таблет</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Покушајте поново за %1$d сата/и и %2$d минут(а)</string>
+    <string name="unauthorized_software_detected">Откривен је неовлашћени софтвер</string>
+    <string name="unauthorized_software_detected_description_other_phone">Неовлашћени системски софтвер може изложити телефон безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или се одјавите са Samsung account-а у оквиру Подешавања > Samsung account > Уређаји. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Неовлашћени системски софтвер може изложити уређај безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или уклоните овај уређај у апликацији SmartThings. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Неовлашћени системски софтвер може изложити таблет безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или се одјавите са Samsung account-а у оквиру Подешавања > Samsung account > Уређаји. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Неовлашћени системски софтвер може изложити уређај безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или се одјавите са Samsung account-а у оквиру Подешавања > Samsung account > Уређаји > Управљајте пријављеним уређајима. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Неовлашћени системски софтвер може изложити телефон безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или се одјавите са Samsung account-а. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Неовлашћени системски софтвер може изложити таблет безбедносним ризицима. Да бисте заштитили налог и личне податке, инсталирајте званични Samsung софтвер или се одјавите са Samsung account-а. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unlocked_bootloader">Програм за покретање оперативног система је откључан</string>
+    <string name="unlocked_bootloader_description_other_phone">"Док је програм за покретање оперативног система вашег телефона откључан, може се инсталирати неовлашћени системски софтвер. Неовлашћени системски софтвер може изложити телефон безбедносним ризицима. Да бисте заштитили свој налог и личне податке, закључајте програм за покретање оперативног система на телефону или се одјавите са Samsung account-а у оквиру Подешавања > Samsung account > Уређаји. Ако вам је потребна помоћ за закључавање програма за покретање оперативног система, обратите се Samsung корисничкој служби.
+
+Након што га закључате, може проћи неко време да се безбедносни статус промени овде."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Док је програм за покретање оперативног система вашег таблета откључан, може се инсталирати неовлашћени системски софтвер. Неовлашћени системски софтвер може изложити таблет безбедносним ризицима. Да бисте заштитили свој налог и личне податке, закључајте програм за покретање оперативног система на таблету или се одјавите са Samsung account-а у оквиру Подешавања > Samsung account > Уређаји. Ако вам је потребна помоћ за закључавање програма за покретање оперативног система, обратите се Samsung корисничкој служби.
+
+Након што га закључате, може проћи неко време да се безбедносни статус промени овде."</string>
+    <string name="unlocked_bootloader_description_this_phone">Док је програм за покретање оперативног система телефона откључан, може се инсталирати неовлашћени системски софтвер. Неовлашћени системски софтвер може изложити телефон безбедносним ризицима. Да бисте заштитили налог и личне податке, закључајте програм за покретање оперативног система телефона или се одјавите са Samsung account-а. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Док је програм за покретање оперативног система таблета откључан, може се инсталирати неовлашћени системски софтвер. Неовлашћени системски софтвер може изложити таблет безбедносним ризицима. Да бисте заштитили налог и личне податке, закључајте програм за покретање оперативног система таблета или се одјавите са Samsung account-а. Ако вам је потребна помоћ при инсталирању званичног софтвера, обратите се Samsung корисничкој служби.</string>
+    <string name="update">Ажурирај</string>
+    <string name="update_multi_apps_to_continue">Ажурирајте следеће апликације да бисте наставили:</string>
+    <string name="update_ps_to_continue">Ажурирајте %s да бисте наставили.</string>
+    <string name="verify_current_description_phone">Можете да откључате своје шифроване податке (укључујући приступне кључеве) тако што ћете верификовати идентитет помоћу PIN кода, обрасца или лозинке овог телефона.</string>
+    <string name="verify_current_description_tablet">Можете да откључате своје шифроване податке (укључујући приступне кључеве) тако што ћете верификовати идентитет помоћу PIN кода, обрасца или лозинке овог таблета.</string>
+    <string name="verify_current_detail_password">Унесите актуелну лозинку.</string>
+    <string name="verify_current_detail_pattern">Нацртајте актуелни образац.</string>
+    <string name="verify_current_detail_pin">Унесите актуелни ПИН код.</string>
+    <string name="verify_current_title_phone">Користите овај телефон за откључавање шифрованих података</string>
+    <string name="verify_current_title_tablet">Користите овај таблет за откључавање шифрованих података</string>
+    <string name="verify_old_password_description_phone">Ради безбедности, верификујте се помоћу лозинке претходног телефона.</string>
+    <string name="verify_old_password_description_tablet">Ради безбедности, верификујте се помоћу лозинке претходног таблета.</string>
+    <string name="verify_old_pattern_description_phone">Ради безбедности, верификујте се помоћу обрасца претходног телефона.</string>
+    <string name="verify_old_pattern_description_tablet">Ради безбедности, верификујте се помоћу обрасца претходног таблета.</string>
+    <string name="verify_old_pin_description_phone">Ради безбедности, верификујте се помоћу PIN кода претходног телефона.</string>
+    <string name="verify_old_pin_description_tablet">Ради безбедности, верификујте се помоћу PIN кода претходног таблета.</string>
+    <string name="verify_old_ppp_title">Откључајте шифроване податке</string>
+    <string name="version">Верзија %s</string>
+</resources>

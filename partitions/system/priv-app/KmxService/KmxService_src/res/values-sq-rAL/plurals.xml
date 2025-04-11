@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d orvatje mbetur</item>
+        <item quantity="one">%d orvatje mbetur</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Meqë ti nuk arrite ta verifikosh identitetin pas %d orvatjesh, të dhënat e tua të enkriptuara do të hiqen, për sigurinë tënde:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Meqë ti nuk arrite ta verifikosh identitetin pas %d orvatjeje, të dhënat e tua të enkriptuara do të hiqen, për sigurinë tënde:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Provo sërish pas 1 ore %d minutash</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Provo sërish pas 1 ore %d minute</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Provo sërish pas %d orësh</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Provo sërish pas %d ore</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Provo sërish pas %d orësh 1 minute</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Provo sërish pas %d ore 1 minute</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Riprovo pas %d minutash</item>
+        <item quantity="one">Riprovo pas %d minute</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Provo sërish pas %d sekondash</item>
+        <item quantity="one">Provo sërish pas %d sekonde</item>
+    </plurals>
+</resources>

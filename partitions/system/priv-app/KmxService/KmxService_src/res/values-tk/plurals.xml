@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d synanyşyk galdy</item>
+        <item quantity="one">%d synanyşyk galdy</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">%d synanyşykda şahsyýetiňizi tassyklap bilmediňiz, şol sebäpli öz howpsuzlygyňyz üçin, şifrlenen maglumatyňyz öçüriler:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d synanyşykda şahsyýetiňizi tassyklap bilmediňiz, şol sebäpli öz howpsuzlygyňyz üçin, şifrlenen maglumatyňyz öçüriler:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Ýene 1 sagat %d minutdan synan</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Ýene 1 sagat %d minutdan synan</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Ýene %d sagatdan synan</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Ýene %d sagatdan synan</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Ýene %d sagat 1 minutdan synan</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Ýene %d sagat 1 minutdan synan</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Ýene %d minutdan synanyş</item>
+        <item quantity="one">Ýene %d minutdan synanyş</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Ýene %d sekuntdan synanyş</item>
+        <item quantity="one">Ýene %d sekuntdan synanyş</item>
+    </plurals>
+</resources>

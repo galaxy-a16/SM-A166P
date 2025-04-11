@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d tangka ang nalalabi</item>
+        <item quantity="one">%d tangka ang nalalabi</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d na bagong notification</item>
+        <item quantity="one">%d bagong notification</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Dahil hindi mo nagawang i-verify ang pagkakakilanlan mo pagkatapos ng %d tangka, tatanggalin ang naka-encrypt na data mo para sa seguridad mo:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Dahil hindi mo nagawang i-verify ang pagkakakilanlan mo pagkatapos ng %d tangka, tatanggalin ang naka-encrypt na data mo para sa seguridad mo:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Subukang muli sa loob ng 1 oras %d minuto</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Subukang muli sa loob ng 1 oras %d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Subukang muli sa loob ng %d oras</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Subukang muli sa loob ng %d oras</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Subukang muli sa loob ng %d oras 1 minuto</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Subukang muli sa loob ng %d oras 1 minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Subukan muli sa loob ng %d minuto</item>
+        <item quantity="one">Subukan muli sa loob ng %d minuto</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Subukan muli sa loob ng %d segundo</item>
+        <item quantity="one">Subukan muli sa loob ng %d segundo</item>
+    </plurals>
+</resources>

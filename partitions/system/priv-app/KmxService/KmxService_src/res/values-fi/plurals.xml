@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d yritystä jäljellä</item>
+        <item quantity="one">%d yritystä jäljellä</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uutta ilmoitusta</item>
+        <item quantity="one">%d uusi ilmoitus</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Koska et pystynyt vahvistamaan henkilöllisyyttäsi %d yrityskerran jälkeen, salatut tietosi poistetaan turvallisuussyistä:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Koska et pystynyt vahvistamaan henkilöllisyyttäsi %d yrityskerran jälkeen, salatut tietosi poistetaan turvallisuussyistä:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Yritä uudelleen 1 tunnin %d minuutin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen 1 tunnin %d minuutin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Yritä uudelleen %d tunnin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen %d tunnin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Yritä uudelleen %d tunnin 1 minuutin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen %d tunnin 1 minuutin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Yritä %d minuutin kuluttua uudelleen</item>
+        <item quantity="one">Yritä %d minuutin kuluttua uudelleen</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Yritä %d sekunnin kuluttua uudelleen</item>
+        <item quantity="one">Yritä %d sekunnin kuluttua uudelleen</item>
+    </plurals>
+</resources>

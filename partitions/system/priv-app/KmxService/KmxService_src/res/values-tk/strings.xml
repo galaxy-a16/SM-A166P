@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s hakynda</string>
+    <string name="back">Yza</string>
+    <string name="chan_mkt">Marketing</string>
+    <string name="chan_ntc">Bildiriş</string>
+    <string name="character_counter_content_description">%1$d / %2$d nyşan</string>
+    <string name="close_app">Programmany ýap</string>
+    <string name="contact_us">Bize ýüz tut</string>
+    <string name="couldnt_get_samsung_account_information">Hasap maglumatyňyzy alyp bolmady</string>
+    <string name="couldnt_get_samsung_account_information_description">Tor birikmäňizi barlaň we Samsung account-yň iň täze wersiýa täzelenendigini anyklap, täzeden synanyň.</string>
+    <string name="data_info_dialog_title">Gulpuny açyp biljek maglumatyňyz</string>
+    <string name="data_info_menu">Näme maglumatyň gulpuny açyp biljekdigiňizi görüň</string>
+    <string name="delete_dialog_message">Eger öňki enjamyňyzyň PIN-ini, şablonyny ýa-da parolyny ýatdan çykarsaňyz, maglumatyňyzyň gulpuny açmakdan ätläp bilersiňiz. Ýöne, aşakdaky şifrlenen maglumat howpsuzlyk sebäpli öçüriler, sebäbi siziň şahsyýetiňizi tassyklap bilmedik.</string>
+    <string name="delete_dialog_title">Gulpuny açmakda kynçylyk çekýäňizmi?</string>
+    <string name="delete_menu">Gulp açmagyň usuly ýada düşenokmy?</string>
+    <string name="dragndroplist_drag_move">Häzir %d orunda</string>
+    <string name="dragndroplist_drag_release">Madda %d orna oklandy.</string>
+    <string name="dragndroplist_drag_start">%d orundaky maddanyň süýşürilmegi başlandy.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d orundaky maddany tutup süýşürip bolmaýar.</string>
+    <string name="go_to">%s baryň</string>
+    <string name="go_to_developer_options">Işläp düzüji opsiýalaryna git</string>
+    <string name="go_to_sign_out">Hasapdan çyk-a git</string>
+    <string name="incorrect_password_entered">Nädogry parol girizildi</string>
+    <string name="incorrect_pattern_drawn">Nädogry şablon çyzyldy</string>
+    <string name="incorrect_pin_entered">Nädogry PIN girizildi</string>
+    <string name="latest_version_is_already_installed">Iň täze wersiýa eýýäm gurnalan.</string>
+    <string name="menu_cancel">Ýatyr</string>
+    <string name="menu_continue">Dowam et</string>
+    <string name="new_version_is_available">Täze wersiýa elýeterli</string>
+    <string name="next">Indiki</string>
+    <string name="no_network_connection">Tor birikmesi ýok</string>
+    <string name="no_network_connection_description">Enjamlaryňyzyň howpsuzlyk ýagdaýyny täzeläp bolmady. Birikmäni barlap, täzeden synanyň.</string>
+    <string name="no_threats_found">Howp tapylmady</string>
+    <string name="notify_delete_dialog_title">Şifrlenen maglumatyňyz öçüriler</string>
+    <string name="notify_delete_dialog_title_previous_devices">Öňki enjamlar arkaly tassyklap bolmady</string>
+    <string name="notify_delete_dialog_title_previous_phone">Öňki telefonyňyz arkaly tassyklap bolmady</string>
+    <string name="notify_delete_dialog_title_previous_phones">Öňki telefonlaryňyz arkaly tassyklap bolmady</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Öňki planşetiňiz arkaly tassyklap bolmady</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Öňki planşetleriňiz arkaly tassyklap bolmady</string>
+    <string name="oem_unlocking_is_turned_on">OEM gulp açmak açyldy</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM gulp açmak telefonyňyzda ygtyýarsyz programma üpjünçiliginiň gurnalmagyna rugsat berip biler. Ygtyýarsyz programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, telefonyňyzda Sazlamalar > Işläp düzüji opsiýalary-nda OEM gulp açmagy ýapyň.
+
+Ony ýapanyňyzdan soň, howpsuzlyk ýagdaýynyň şu ýerde üýtgemegi biraz wagt alyp biler."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM gulp açmak planşetiňizde ygtyýarsyz programma üpjünçiliginiň gurnalmagyna rugsat berip biler. Ygtyýarsyz programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, planşetiňizde Sazlamalar > Işläp düzüji opsiýalary-nda OEM gulp açmagy ýapyň.
+
+Ony ýapanyňyzdan soň, howpsuzlyk ýagdaýynyň şu ýerde üýtgemegi biraz wagt alyp biler."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM gulp açmak telefonyňyzda ygtyýarsyz programma üpjünçiliginiň gurnalmagyna rugsat berip biler. Ygtyýarsyz programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, Sazlamalar > Işläp düzüji opsiýalary-nda OEM gulp açmagy ýapyň.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM gulp açmak planşetiňizde ygtyýarsyz programma üpjünçiliginiň gurnalmagyna rugsat berip biler. Ygtyýarsyz programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, Sazlamalar > Işläp düzüji opsiýalary-nda OEM gulp açmagy ýapyň.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Açyk çeşme ygtyýarnamasy</string>
+    <string name="other_devices">Başga enjamlar</string>
+    <string name="password_set">Parol bellenildi %s</string>
+    <string name="pattern_set">Şablon bellenildi %s</string>
+    <string name="pin_set">PIN bellenildi %s</string>
+    <string name="ppp_delegate_description">Maglumatyňyzy goramak üçin PIN, şablon ýa-da parol belläň.</string>
+    <string name="ppp_delegate_title">Howpsuz ekran gulpuny belle</string>
+    <string name="ppp_dialog_description_SamsungCloud">Güýçlendirilen maglumat goragy ätiýaçlamasy we Samsung Cloud-da sinhronlamak üçin ekran gulpy</string>
+    <string name="ppp_dialog_description_SamsungPass">Geçiş açarlary Samsung Pass-da ýazdyryldy</string>
+    <string name="remove_this_device">Bu enjamy aýyr</string>
+    <string name="security_status_main_description">Knox Matrix goragly hususy blok-zynjyr arkaly Samsung account-yňyza hasaba girilgi goldanylýan enjamlara gözegçilik edýär. Zynjyrdaky her bir enjam beýleki enjamlaryň howpsuzlyk ýagdaýyny barlap bilýär we eger howp bar bolsa, size habar berýär.</string>
+    <string name="security_status_not_available_yet">Howpsuzlyk ýagdaýy heniz elýeterli däl</string>
+    <string name="security_status_not_available_yet_description">Ol biraz wagt alyp biler. Soň ýene barlaň.</string>
+    <string name="security_status_not_up_to_date">Howpsuzlyk ýagdaýy täzelenen däl</string>
+    <string name="security_status_not_up_to_date_description_phone">"Bu telefonyň howpsuzlyk ýagdaýy 30 günden köp wagtlap täzelenmedi. Belki, telefon awtonomdadyr ýa-da bir zat onuň ýagdaýyny barlamaga ýol berýän däldir. Bu telefony indi ulanmaýan bolsaňyz, Samsung account-yňyzdan hasapdan çykmak maslahat berilýär. Sazlamalar > Samsung account > Enjamlar-da hasapdan çykyp bilersiňiz.
+
+Eger bu telefony ulanýan bolsaňyz, ýöne onuň howpsuzlyk ýagdaýy täzelenmeýän bolsa, onuň tora birigendigini anyklaň."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Bu enjamyň howpsuzlyk ýagdaýy 30 günden köp wagtlap täzelenmedi. Belki, enjam awtonomdadyr ýa-da bir zat onuň ýagdaýyny barlamaga ýol berýän däldir. Eger bu enjamy indi ulanmaýan bolsaňyz, bu enjamy SmartThings programmasynda aýyrmak maslahat berilýär.
+
+Eger bu enjamy ulanýan bolsaňyz, ýöne onuň howpsuzlyk ýagdaýy täzelenmeýän bolsa, onuň tora birigendigini anyklaň."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Bu planşetiň howpsuzlyk ýagdaýy 30 günden köp wagtlap täzelenmedi. Belki, planşet awtonomdadyr ýa-da bir zat onuň ýagdaýyny barlamaga ýol berýän däldir. Bu planşeti indi ulanmaýan bolsaňyz, Samsung account-yňyzdan hasapdan çykmak maslahat berilýär. Sazlamalar > Samsung account > Enjamlar-da hasapdan çykyp bilersiňiz.
+
+Eger bu planşeti ulanýan bolsaňyz, ýöne onuň howpsuzlyk ýagdaýy täzelenmeýän bolsa, onuň tora birigendigini anyklaň."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Bu enjamyň howpsuzlyk ýagdaýy 30 günden köp wagtlap täzelenmedi. Belki, enjam awtonomdadyr ýa-da bir zat onuň ýagdaýyny barlamaga ýol berýän däldir. Bu enjamy indi ulanmaýan bolsaňyz, Samsung account-yňyzdan hasapdan çykmak maslahat berilýär. Sazlamalar > Samsung account > Enjamlar > Hasaba girilen enjamlary dolandyr-da hasapdan çykyp bilersiňiz.
+
+Eger bu enjamy ulanýan bolsaňyz, ýöne onuň howpsuzlyk ýagdaýy täzelenmeýän bolsa, onuň tora birigendigini anyklaň."</string>
+    <string name="security_status_of_your_devices">Enjamlaryň howpsuzlyk ýagdaýy</string>
+    <string name="sesl_action_bar_up_description">Ýokaryk</string>
+    <string name="sesl_action_menu_overflow_badge_description">Täze material elýeterli</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">T</string>
+    <string name="sesl_action_menu_overflow_description">Goşmaça opsiýalar</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Ähli teklipler aýryldy</string>
+    <string name="sesl_appbar_suggest_dismiss">Teklibi aýyr</string>
+    <string name="sesl_appbar_suggest_dismissed">Teklip aýryldy</string>
+    <string name="sesl_appbar_suggest_pagination">Sahypa %1$d / %2$d</string>
+    <string name="sesl_index_assistant_text">Süýşürmek üçin, iki barmak bilen ýokaryk ýa-da aşak syryň.</string>
+    <string name="sesl_index_scrollbar">Süýşüriş paneli</string>
+    <string name="sesl_index_section">Bölüm indeksi</string>
+    <string name="sesl_index_selected">Saýlanyldy</string>
+    <string name="sesl_material_badge_description">Täze material elýeterli</string>
+    <string name="sesl_material_overflow_badge_text_n">T</string>
+    <string name="sesl_more_item_label">Başgalar</string>
+    <string name="sesl_preferecne_badge_description">Täze habarnama</string>
+    <string name="sesl_preferencecategory_added_title">Sözbaşy</string>
+    <string name="sesl_search_hint">Gözleg</string>
+    <string name="sesl_searchview_description_clear">Gözleg zolagy öçür</string>
+    <string name="sesl_searchview_description_clear_field">Gözleg zolagy arassalanyldy</string>
+    <string name="sesl_searchview_description_query">Gözleme talaby</string>
+    <string name="sesl_searchview_description_search">Gözleg</string>
+    <string name="sesl_searchview_description_submit">Tassyklama talaby</string>
+    <string name="sesl_searchview_description_voice">Ses gözleme</string>
+    <string name="sesl_switch_off">Ýapyk</string>
+    <string name="sesl_switch_on">Açyk</string>
+    <string name="sesl_switchbar_off_text">Ýapyk</string>
+    <string name="sesl_switchbar_on_text">Aç</string>
+    <string name="sesl_toolbar_collapse_description">Düýrlemek</string>
+    <string name="skip">Ätle</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings telefonyňyzda gurnalmadyk. Ony Play Store-dan göçürip alyň.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings planşetiňizde gurnalmadyk. Ony Play Store-dan göçürip alyň.</string>
+    <string name="this_phone">Bu telefon</string>
+    <string name="this_tablet">Bu planşet</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Ýene %1$d sagat %2$d minutdan synan</string>
+    <string name="unauthorized_software_detected">Ygtyýarsyz programma üpjünçiligi anyklanyldy</string>
+    <string name="unauthorized_software_detected_description_other_phone">Ygtyýarsyz ulgam programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da Sazlamalar > Samsung account > Enjamlar-da Samsung account-yňyzdan hasapdan çykyň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Ygtyýarsyz ulgam programma üpjünçiligi enjamyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da bu enjamy SmartThings programmasynda aýryň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Ygtyýarsyz ulgam programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da Sazlamalar > Samsung account > Enjamlar-da Samsung account-yňyzdan hasapdan çykyň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Ygtyýarsyz ulgam programma üpjünçiligi enjamyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da Sazlamalar > Samsung account > Enjamlar > Hasaba girilen enjamlary dolandyr-da Samsung account-yňyzdan hasapdan çykyň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Ygtyýarsyz ulgam programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da Samsung account-yňyzdan hasapdan çykyň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Ygtyýarsyz ulgam programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, resmi Samsung programma üpjünçiligini gurnaň ýa-da Samsung account-yňyzdan hasapdan çykyň. Resmi programma üpjünçiligini gurnamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unlocked_bootloader">Gulpy açylan ýükleýji</string>
+    <string name="unlocked_bootloader_description_other_phone">"Telefonyňyzyň ýükleýjisiniň gulpy açyk wagty, ygtyýarsyz ulgam programma üpjünçiligini gurnap bolýar. Ygtyýarsyz ulgam programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, telefonyňyzyň ýükleýjisini gulplaň ýa-da Sazlamalar > Samsung account > Enjamlar-da Samsung account-yňyzdan hasapdan çykyň. Ýükleýjini gulplamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.
+
+Ony gulplanyňyzdan soň, howpsuzlyk ýagdaýynyň şu ýerde üýtgemegi biraz wagt alyp biler."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Planşetiňiziň ýükleýjisiniň gulpy açyk wagty, ygtyýarsyz ulgam programma üpjünçiligini gurnap bolýar. Ygtyýarsyz ulgam programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, planşetiňiziň ýükleýjisini gulplaň ýa-da Sazlamalar > Samsung account > Enjamlar-da Samsung account-yňyzdan hasapdan çykyň. Ýükleýjini gulplamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.
+
+Ony gulplanyňyzdan soň, howpsuzlyk ýagdaýynyň şu ýerde üýtgemegi biraz wagt alyp biler."</string>
+    <string name="unlocked_bootloader_description_this_phone">Telefonyňyzyň ýükleýjisiniň gulpy açyk wagty, ygtyýarsyz ulgam programma üpjünçiligini gurnap bolýar. Ygtyýarsyz ulgam programma üpjünçiligi telefonyňyzy howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, telefonyňyzyň ýükleýjisini gulplaň ýa-da Samsung account-yňyzdan hasapdan çykyň. Ýükleýjini gulplamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Planşetiňiziň ýükleýjisiniň gulpy açyk wagty, ygtyýarsyz ulgam programma üpjünçiligini gurnap bolýar. Ygtyýarsyz ulgam programma üpjünçiligi planşetiňizi howpsuzlyk howplaryna garşy goragsyz edip biler. Hasabyňyzy we şahsy maglumatyňyzy goramak üçin, planşetiňiziň ýükleýjisini gulplaň ýa-da Samsung account-yňyzdan hasapdan çykyň. Ýükleýjini gulplamak barada kömek almak üçin, Samsung Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="update">Täzele</string>
+    <string name="update_multi_apps_to_continue">Dowam etmek üçin, aşakdaky programmalary täzeläň:</string>
+    <string name="update_ps_to_continue">Dowam etmek üçin, %s täzeläň.</string>
+    <string name="verify_current_description_phone">Şu telefonyň PIN-i, şablony ýa-da paroly bilen şahsyýetiňizi tassyklamak arkaly, şifrlenen maglumatyňyzyň gulpuny açyp bilersiňiz.</string>
+    <string name="verify_current_description_tablet">Şu planşetiň PIN-i, şablony ýa-da paroly bilen şahsyýetiňizi tassyklamak arkaly, şifrlenen maglumatyňyzyň gulpuny açyp bilersiňiz.</string>
+    <string name="verify_current_detail_password">Häzirki parolyňyzy giriziň.</string>
+    <string name="verify_current_detail_pattern">Häzirki şablonyňyzy çyzyň.</string>
+    <string name="verify_current_detail_pin">Häzirki PIN-iňizi giriziň.</string>
+    <string name="verify_current_title_phone">Şifrlenen maglumatyň gulpuny açmak üçin, şu telefony ulan</string>
+    <string name="verify_current_title_tablet">Şifrlenen maglumatyň gulpuny açmak üçin, şu planşeti ulan</string>
+    <string name="verify_old_password_description_phone">Howpsuzlyk üçin, özüňizi öňki telefonyňyzyň paroly bilen tassyklaň.</string>
+    <string name="verify_old_password_description_tablet">Howpsuzlyk üçin, özüňizi öňki planşetiňiziň paroly bilen tassyklaň.</string>
+    <string name="verify_old_pattern_description_phone">Howpsuzlyk üçin, özüňizi öňki telefonyňyzyň şablony bilen tassyklaň.</string>
+    <string name="verify_old_pattern_description_tablet">Howpsuzlyk üçin, özüňizi öňki planşetiňiziň şablony bilen tassyklaň.</string>
+    <string name="verify_old_pin_description_phone">Howpsuzlyk üçin, özüňizi öňki telefonyňyzyň PIN-i bilen tassyklaň.</string>
+    <string name="verify_old_pin_description_tablet">Howpsuzlyk üçin, özüňizi öňki planşetiňiziň PIN-i bilen tassyklaň.</string>
+    <string name="verify_old_ppp_title">Şifrlenen maglumatyňyzyň gulpuny açyň</string>
+    <string name="version">Wersiýa %s</string>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s အေၾကာင္း</string>
+    <string name="back">ေနာက္သို႔</string>
+    <string name="chan_mkt">ေဈးကြက္ျမႇင့္တင္ျခင္း</string>
+    <string name="chan_ntc">ေၾကညာခ်က္</string>
+    <string name="character_counter_content_description">စကားလံုး %2$d လံုးအနက္မွ %1$d လံုး</string>
+    <string name="close_app">အက္ပ္ကို ပိတ္ပါ</string>
+    <string name="contact_us">ကၽြႏ္ုပ္တို႔ထံ ဆက္သြယ္ပါ</string>
+    <string name="couldnt_get_samsung_account_information">သင့္အေကာင့္ အခ်က္အလက္ကို မရယူႏိုင္ပါ</string>
+    <string name="couldnt_get_samsung_account_information_description">သင့္ကြန္ရက္ခ်ိတ္ဆက္မႈကို စစ္ေဆးၿပီး Samsung account ကို ေနာက္ဆုံးဗားရွင္းသို႔ အပ္ဒိတ္လုပ္ထားေၾကာင္း ေသခ်ာေအာင္လုပ္၍ ထပ္မံႀကိဳးစားပါ။</string>
+    <string name="data_info_dialog_title">သင္ေသာ့ဖြင့္ႏိုင္သည့္ေဒတာမ်ား</string>
+    <string name="data_info_menu">သင္ေသာ့ဖြင့္ႏိုင္သည့္ေဒတာမ်ားကို ၾကည့္ပါ</string>
+    <string name="delete_dialog_message">သင့္ယခင္ကိရိယာ၏ PIN၊ ပက္တန္ (သို႔) စကားဝွက္ကို မမွတ္မိပါက သင့္ေဒတာကို ေသာ့ဖြင့္ျခင္းအား ေက်ာ္သြားႏိုင္သည္။ သို႔ေသာ္ သင့္အေထာက္အထားကို အတည္ျပဳ၍ မရႏိုင္သျဖင့္ လုံၿခဳံေရးအတြက္ ေအာက္ပါ ကုဒ္ေျပာင္းဝွက္ထားေသာ ေဒတာကို ဖ်က္ပစ္ပါမည္။</string>
+    <string name="delete_dialog_title">ေသာ့ဖြင့္ရန္ အခက္ေတြ႕ေနသလား?</string>
+    <string name="delete_menu">ေသာ့ဖြင့္နည္းကို မမွတ္မိဘူးလား?</string>
+    <string name="dragndroplist_drag_move">ယခု အေနအထား %d တြင္ရွိသည္</string>
+    <string name="dragndroplist_drag_release">%d တည္ေနရာ အတြင္းသို႔ ဆြဲယူထည့္ထားေသာ အရာ။</string>
+    <string name="dragndroplist_drag_start">%d တည္ေနရာမွာ အရာပစၥည္းအား ဆြဲယူျခင္းကို စတင္ခဲ့ၿပီးၿပီ။</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d တည္ေနရာတြင္ ရွိေနေသာ အရာမ်ားကို ဆြဲယူလို႔ မရပါ။</string>
+    <string name="go_to">%s သို႔ သြားပါ</string>
+    <string name="go_to_developer_options">ေဆာ့ဖ္ဝဲ ဖန္တီးသူ ေ႐ြးစရာမ်ားသို႔ သြားပါ</string>
+    <string name="go_to_sign_out">ထြက္ခြာရန္သို႔ သြားပါ</string>
+    <string name="incorrect_password_entered">မမွန္ေသာ စကားဝွက္ ထည့္ထားသည္</string>
+    <string name="incorrect_pattern_drawn">မမွန္ေသာ ပံုစံ ေရးဆြဲထားသည္</string>
+    <string name="incorrect_pin_entered">မွားေနသည့္ PIN ထည့္ထားသည္</string>
+    <string name="latest_version_is_already_installed">ေနာက္ဆုံးေပၚဗားရွင္းကို ထည့္သြင္းထားၿပီးျဖစ္သည္။</string>
+    <string name="menu_cancel">မလုပ္ေတာ့</string>
+    <string name="menu_continue">ဆက္လုပ္ပါ</string>
+    <string name="new_version_is_available">ဗားရွင္း အသစ္တစ္ခု ရႏိုင္သည္။</string>
+    <string name="next">ေနာက္သို႔</string>
+    <string name="no_network_connection">ကြန္ရက္ ခ်ိတ္ဆက္မႈ မရွိပါ</string>
+    <string name="no_network_connection_description">သင့္ကိရိယာမ်ား၏ လုံၿခဳံေရး အေျခအေနကို အပ္ဒိတ္လုပ္၍မရပါ။ ခ်ိတ္ဆက္မႈကို စစ္ေဆးၿပီး ထပ္မံႀကိဳးစားပါ။</string>
+    <string name="no_threats_found">မည္သည့္ အႏၲရာယ္မွ မေတြ႕ပါ</string>
+    <string name="notify_delete_dialog_title">သင္၏ ကုဒ္ေျပာင္းဝွက္ထားေသာ ေဒတာကို ဖ်က္ပစ္ပါမည္</string>
+    <string name="notify_delete_dialog_title_previous_devices">သင္၏ ယခင္ကိရိယာမ်ားကိုသုံး၍ သင့္ကို အတည္မျပဳႏိုင္ပါ</string>
+    <string name="notify_delete_dialog_title_previous_phone">သင္၏ ယခင္ဖုန္းကိုသုံး၍ သင့္ကို အတည္မျပဳႏိုင္ပါ</string>
+    <string name="notify_delete_dialog_title_previous_phones">သင္၏ ယခင္ဖုန္းမ်ားကိုသုံး၍ သင့္ကို အတည္မျပဳႏိုင္ပါ</string>
+    <string name="notify_delete_dialog_title_previous_tablet">သင္၏ ယခင္တက္ဘလက္ကိုသုံး၍ သင့္ကို အတည္မျပဳႏိုင္ပါ</string>
+    <string name="notify_delete_dialog_title_previous_tablets">သင္၏ ယခင္တက္ဘလက္မ်ားကိုသုံး၍ သင့္ကို အတည္မျပဳႏိုင္ပါ</string>
+    <string name="oem_unlocking_is_turned_on">OEM ေသာ့ဖြင့္ျခင္းကို ဖြင့္ထားသည္</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM ေသာ့ဖြင့္စနစ္ျဖင့္ဆိုလွ်င္ ခြင့္ျပဳမထားေသာေဆာ့ဝဲလ္ကို သင့္ဖုန္းတြင္ ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းတြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္ဖုန္းရွိ သတ္မွတ္ခ်က္မ်ား > ေဆာ့ဝဲလ္ေရးသူ ေ႐ြးစရာမ်ားတြင္ OEM ေသာ့ဖြင့္စနစ္ကို ပိတ္ပါ။
+
+၎ကို ပိတ္ၿပီးေနာက္ ဤေနရာတြင္ လုံၿခဳံေရးအေျခအေနေျပာင္းရန္ အခ်ိန္အနည္းငယ္ၾကာႏိုင္သည္။"</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM ေသာ့ဖြင့္စနစ္ျဖင့္ဆိုလွ်င္ ခြင့္ျပဳမထားေသာေဆာ့ဝဲလ္ကို သင့္တက္ဘလက္တြင္ ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္တြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္တက္ဘလက္ရွိ သတ္မွတ္ခ်က္မ်ား > ေဆာ့ဝဲလ္ေရးသူ ေ႐ြးစရာမ်ားတြင္ OEM ေသာ့ဖြင့္စနစ္ကို ပိတ္ပါ။
+
+၎ကို ပိတ္ၿပီးေနာက္ ဤေနရာတြင္ လုံၿခဳံေရးအေျခအေနေျပာင္းရန္ အခ်ိန္အနည္းငယ္ၾကာႏိုင္သည္။"</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM ေသာ့ဖြင့္စနစ္ျဖင့္ဆိုလွ်င္ ခြင့္ျပဳမထားေသာေဆာ့ဝဲလ္ကို သင့္ဖုန္းတြင္ ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းတြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သတ္မွတ္ခ်က္မ်ား > တီထြင္ဖန္တီးသူ ေ႐ြးစရာမ်ားတြင္ OEM ေသာ့ဖြင့္စနစ္ကို ပိတ္ပါ။</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM ေသာ့ဖြင့္စနစ္ျဖင့္ဆိုလွ်င္ ခြင့္ျပဳမထားေသာေဆာ့ဝဲလ္ကို သင့္တက္ဘလက္တြင္ ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္တြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သတ္မွတ္ခ်က္မ်ား > တီထြင္ဖန္တီးသူ ေ႐ြးစရာမ်ားတြင္ OEM ေသာ့ဖြင့္စနစ္ကို ပိတ္ပါ။</string>
+    <string name="ok">အိုေက</string>
+    <string name="open_source_licenses">ပြင့္လင္းေသာ အရင္းအျမစ္လိုင္စင္</string>
+    <string name="other_devices">အျခား ကိရိယာမ်ား</string>
+    <string name="password_set">စကားဝွက္ သတ္မွတ္ၿပီး %s</string>
+    <string name="pattern_set">ပုံစံသတ္မွတ္ၿပီး %s</string>
+    <string name="pin_set">PIN သတ္မွတ္ၿပီး %s</string>
+    <string name="ppp_delegate_description">သင့္ေဒတာကို ကာကြယ္ရန္ PIN၊ ပက္တန္ (သို႔) စကားဝွက္တစ္ခု သတ္မွတ္ပါ။</string>
+    <string name="ppp_delegate_title">လံုျခံဳစိတ္ခ်ရေသာ ဖန္သားျပင္ေသာ့ကုိ သတ္မွတ္ပါ</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud တြင္ အဆင့္ျမင့္ ေဒတာကာကြယ္ေရးဆိုင္ရာ အရံသိမ္းျခင္းႏွင့္ ဆင့္ခ္လုပ္ျခင္းအတြက္ ဖန္သားျပင္ေသာ့</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass တြင္ သိမ္းထားေသာ လွ်ိဳ႕ဝွက္ကီးမ်ား</string>
+    <string name="remove_this_device">ဤကိရိယာကို ဖယ္ရွားပါ</string>
+    <string name="security_status_main_description">Knox Matrix သည္ လုံၿခဳံေသာ သီးသန႔္ ဘေလာ့ခ်ိန္းကို အသုံးျပဳ၍ သင့္ Samsung account သို႔ ဝင္ေရာက္ထားေသာ ပံ့ပိုးေပးထားသည့္ ကိရိယာမ်ားကို ေစာင့္ၾကည့္သည္။ ခ်ိန္းထဲရွိ ကိရိယာတစ္ခုစီသည္ အျခားကိရိယာမ်ား၏ လုံၿခဳံေရးအေျခအေနကို စစ္ေဆးႏိုင္ၿပီး အႏၲရာယ္မ်ားရွိလွ်င္ သင့္အား အသိေပးႏိုင္သည္။</string>
+    <string name="security_status_not_available_yet">လုံၿခဳံေရးအေျခအေနကို မရႏိုင္ေသးပါ</string>
+    <string name="security_status_not_available_yet_description">ယင္းက အခ်ိန္အနည္းငယ္ ၾကာႏိုင္သည္။ ေနာက္မွ ျပန္စစ္ေဆးပါ။</string>
+    <string name="security_status_not_up_to_date">လုံၿခဳံေရးအေျခအေန အပ္ဒိတ္မျဖစ္ပါ</string>
+    <string name="security_status_not_up_to_date_description_phone">"ဤဖုန္း၏ လုံၿခဳံေရးအေျခအေနကို အပ္ဒိတ္မလုပ္သည္မွာ ရက္ ၃၀ ေက်ာ္ၾကာပါၿပီ။ ဖုန္းက ေအာ့ဖ္လိုင္းျဖစ္ေနႏိုင္သည္ (သို႔) တစ္စုံတစ္ခုက ၎၏အေျခအေနကို စစ္ျခင္းမွ တားျမစ္ေနျခင္းျဖစ္ႏိုင္သည္။ ဤဖုန္းကို အသုံးမျပဳေတာ့ပါက သင့္ Samsung account မွ ထြက္ရန္ အႀကံျပဳသည္။ သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္ ထြက္ႏိုင္သည္။
+
+ဤဖုန္းကို သုံးေနေသာ္လည္း ၎၏လုံၿခဳံေရးအေျခအေနက အပ္ဒိတ္မျဖစ္လွ်င္ ၎ကို ကြန္ရက္တစ္ခုႏွင့္ ခ်ိတ္ဆက္ထားေၾကာင္း ေသခ်ာပါေစ။"</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"ဤကိရိယာ၏ လုံၿခဳံေရးအေျခအေနကို အပ္ဒိတ္မလုပ္သည္မွာ ရက္ ၃၀ ေက်ာ္ၾကာပါၿပီ။ ကိရိယာက ေအာ့ဖ္လိုင္းျဖစ္ေနႏိုင္သည္ (သို႔) တစ္စုံတစ္ခုက ၎၏အေျခအေနကို စစ္ျခင္းမွ တားျမစ္ေနျခင္းျဖစ္ႏိုင္သည္။ ဤကိရိယာကို အသုံးမျပဳေတာ့ပါက SmartThings အက္ပ္တြင္ ဤကိရိယာကို ဖယ္ရွားရန္ အႀကံျပဳသည္။
+
+ဤကိရိယာကို သုံးေနေသာ္လည္း ၎၏လုံၿခဳံေရးအေျခအေနက အပ္ဒိတ္မျဖစ္လွ်င္ ၎ကို ကြန္ရက္တစ္ခုႏွင့္ ခ်ိတ္ဆက္ထားေၾကာင္း ေသခ်ာပါေစ။"</string>
+    <string name="security_status_not_up_to_date_description_tablet">"ဤတက္ဘလက္၏ လုံၿခဳံေရးအေျခအေနကို အပ္ဒိတ္မလုပ္သည္မွာ ရက္ ၃၀ ေက်ာ္ၾကာပါၿပီ။ တက္ဘလက္က ေအာ့ဖ္လိုင္းျဖစ္ေနႏိုင္သည္ (သို႔) တစ္စုံတစ္ခုက ၎၏အေျခအေနကို စစ္ျခင္းမွ တားျမစ္ေနျခင္းျဖစ္ႏိုင္သည္။ ဤတက္ဘလက္ကို အသုံးမျပဳေတာ့ပါက သင့္ Samsung account မွ ထြက္ရန္ အႀကံျပဳသည္။ သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္ ထြက္ႏိုင္သည္။
+
+ဤတက္ဘလက္ကို သုံးေနေသာ္လည္း ၎၏လုံၿခဳံေရးအေျခအေနက အပ္ဒိတ္မျဖစ္လွ်င္ ၎ကို ကြန္ရက္တစ္ခုႏွင့္ ခ်ိတ္ဆက္ထားေၾကာင္း ေသခ်ာပါေစ။"</string>
+    <string name="security_status_not_up_to_date_description_vd">"ဤကိရိယာ၏ လုံၿခဳံေရးအေျခအေနကို အပ္ဒိတ္မလုပ္သည္မွာ ရက္ ၃၀ ေက်ာ္ၾကာပါၿပီ။ ကိရိယာက ေအာ့ဖ္လိုင္းျဖစ္ေနႏိုင္သည္ (သို႔) တစ္စုံတစ္ခုက ၎၏အေျခအေနကို စစ္ျခင္းမွ တားျမစ္ေနျခင္းျဖစ္ႏိုင္သည္။ ဤကိရိယာကို အသုံးမျပဳေတာ့ပါက သင့္ Samsung account မွ ထြက္ရန္ အႀကံျပဳသည္။ သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ား > ဝင္ေရာက္ထားေသာ ကိရိယာမ်ားကို စီမံရန္တြင္ ထြက္ႏိုင္သည္။
+
+ဤကိရိယာကို သုံးေနေသာ္လည္း ၎၏လုံၿခဳံေရးအေျခအေနက အပ္ဒိတ္မျဖစ္လွ်င္ ၎ကို ကြန္ရက္တစ္ခုႏွင့္ ခ်ိတ္ဆက္ထားေၾကာင္း ေသခ်ာပါေစ။"</string>
+    <string name="security_status_of_your_devices">သင့္ကိရိယာမ်ား၏ လုံၿခဳံေရးအေျခအေန</string>
+    <string name="sesl_action_bar_up_description">အေပၚကို ေမာင္းသြားပါ</string>
+    <string name="sesl_action_menu_overflow_badge_description">အေၾကာင္းအရာအသစ္ မရွိပါ</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">ေနာက္ထပ္ ေရြးစရာမ်ား</string>
+    <string name="sesl_appbar_suggest_all_dismissed">အႀကံျပဳခ်က္အားလုံးကို ျဖဳတ္ပယ္ထားသည္</string>
+    <string name="sesl_appbar_suggest_dismiss">အႀကံျပဳခ်က္ကို ျဖဳတ္ပယ္မည္</string>
+    <string name="sesl_appbar_suggest_dismissed">အႀကံျပဳခ်က္ကို ျဖဳတ္ပယ္ၿပီးၿပီ</string>
+    <string name="sesl_appbar_suggest_pagination">စာမ်က္ႏွာ %2$d ၏ %1$d</string>
+    <string name="sesl_index_assistant_text">လွိမ့္ဆြဲရန္ လက္ႏွစ္ေခ်ာင္းျဖင့္ အေပၚ (သို႔) ေအာက္သို႔ ပြတ္ဆြဲပါ။</string>
+    <string name="sesl_index_scrollbar">လွိမ့္ဘား</string>
+    <string name="sesl_index_section">အပိုင္း အညႊန္း</string>
+    <string name="sesl_index_selected">ေ႐ြးထားသည္</string>
+    <string name="sesl_material_badge_description">အေၾကာင္းအရာအသစ္ မရွိပါ</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">ေနာက္ထပ္</string>
+    <string name="sesl_preferecne_badge_description">ေၾကညာအသိေပးခ်က္အသစ္</string>
+    <string name="sesl_preferencecategory_added_title">ေခါင္းစည္း</string>
+    <string name="sesl_search_hint">ရွာေဖြပါ</string>
+    <string name="sesl_searchview_description_clear">ရွာေဖြေနရာ ရွင္းပါ</string>
+    <string name="sesl_searchview_description_clear_field">ရွာေဖြအကြက္ကို ရွင္းလိုက္ပါၿပီ</string>
+    <string name="sesl_searchview_description_query">ေမးျမန္းခ်က္ ရွာပါ</string>
+    <string name="sesl_searchview_description_search">ရွာေဖြပါ</string>
+    <string name="sesl_searchview_description_submit">ေမးျမန္းခ်က္ တင္သြင္းပါ</string>
+    <string name="sesl_searchview_description_voice">အသံျဖင့္ ရွာေဖြျခင္း</string>
+    <string name="sesl_switch_off">ပိတ္</string>
+    <string name="sesl_switch_on">ဖြင့္</string>
+    <string name="sesl_switchbar_off_text">ပိတ္</string>
+    <string name="sesl_switchbar_on_text">ဖြင့္</string>
+    <string name="sesl_toolbar_collapse_description">ေခါက္သိမ္းပါ</string>
+    <string name="skip">ေက်ာ္သြားပါ</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">သင့္ဖုန္းတြင္ SmartThings ကို ထည့္သြင္းမထားပါ။ ၎ကို Play Store မွ ေဒါင္းလုတ္လုပ္ပါ။</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">သင့္တက္ဘလက္တြင္ SmartThings ကို ထည့္သြင္းမထားပါ။ ၎ကို Play Store မွ ေဒါင္းလုတ္လုပ္ပါ။</string>
+    <string name="this_phone">ဤဖုန္း</string>
+    <string name="this_tablet">ဤတက္ဘလက္</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d နာရီ %2$d မိနစ္ အၾကာတြင္ ထပ္မံႀကိဳးစားပါ</string>
+    <string name="unauthorized_software_detected">ခြင့္ျပဳခ်က္မရွိေသာ ေဆာ့ဖ္ဝဲလ္ကို ေတြ႕ထားသည္</string>
+    <string name="unauthorized_software_detected_description_other_phone">ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းအား လုံၿခဳံေရးအႏၲရာယ္မ်ား က်ေရာက္လြယ္ႏိုင္ေစသည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္းေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ (သို႔) သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္​ Samsung account မွ ထြက္ပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ကိရိယာတြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္း ေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ သို႔မဟုတ္ SmartThings အက္ပ္တြင္ ဤကိရိယာကို ဖယ္ရွားပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unauthorized_software_detected_description_other_tablet">ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္အား လုံၿခဳံေရးအႏၲရာယ္မ်ား က်ေရာက္လြယ္ႏိုင္ေစသည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္းေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ (သို႔) သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္​ Samsung account မွ ထြက္ပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unauthorized_software_detected_description_other_vd">ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ကိရိယာအား လုံၿခဳံေရးအႏၲရာယ္မ်ား က်ေရာက္လြယ္ႏိုင္ေစသည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္းေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ (သို႔) သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ား > ဝင္ေရာက္ထားေသာ ကိရိယာမ်ားကို စီမံရန္တြင္​ Samsung account မွ ထြက္ပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unauthorized_software_detected_description_this_phone">ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းတြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္း ေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ သို႔မဟုတ္ သင့္ Samsung account မွ ထြက္ပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unauthorized_software_detected_description_this_tablet">ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္တြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ တရားဝင္ ဆမ္ေဆာင္း ေဆာ့ဝဲလ္ကို ထည့္သြင္းပါ သို႔မဟုတ္ သင့္ Samsung account မွ ထြက္ပါ။ တရားဝင္ေဆာ့ဝဲလ္ကို ထည့္သြင္းရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unlocked_bootloader">ျပန္လည္စတင္စနစ္ကို ေသာ့ဖြင့္ထားသည္</string>
+    <string name="unlocked_bootloader_description_other_phone">"သင့္ဖုန္း၏ စက္ဖြင့္စနစ္ကို ေသာ့ဖြင့္ထားစဥ္ ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္ကို ထည့္သြင္းႏိုင္သည္။ ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းအား လုံၿခဳံေရးအႏၲရာယ္မ်ား က်ေရာက္လြယ္ႏိုင္ေစသည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္ဖုန္း၏ စက္ဖြင့္စနစ္ကို ေသာ့ပိတ္ပါ (သို႔) သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္ Samsung account မွ ထြက္ပါ။ စက္ဖြင့္စနစ္ကို ေသာ့ပိတ္ရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။
+
+၎ကို ေသာ့ပိတ္ၿပီးေနာက္ ဤေနရာတြင္ လုံၿခဳံေရးအေျခအေန ေျပာင္းလဲရန္ အခ်ိန္အနည္းငယ္ၾကာႏိုင္သည္။"</string>
+    <string name="unlocked_bootloader_description_other_tablet">"သင့္တက္ဘလက္၏ စက္ဖြင့္စနစ္ကို ေသာ့ဖြင့္ထားစဥ္ ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္ကို ထည့္သြင္းႏိုင္သည္။ ခြင့္ျပဳခ်က္မရွိေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္အား လုံၿခဳံေရးအႏၲရာယ္မ်ား က်ေရာက္လြယ္ႏိုင္ေစသည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္တက္ဘလက္၏ စက္ဖြင့္စနစ္ကို ေသာ့ပိတ္ပါ (သို႔) သတ္မွတ္ခ်က္မ်ား > Samsung account > ကိရိယာမ်ားတြင္ Samsung account မွ ထြက္ပါ။ စက္ဖြင့္စနစ္ကို ေသာ့ပိတ္ရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။
+
+၎ကို ေသာ့ပိတ္ၿပီးေနာက္ ဤေနရာတြင္ လုံၿခဳံေရးအေျခအေန ေျပာင္းလဲရန္ အခ်ိန္အနည္းငယ္ၾကာႏိုင္သည္။"</string>
+    <string name="unlocked_bootloader_description_this_phone">သင့္ဖုန္း၏ စက္စဖြင့္စနစ္ကို ေသာ့ဖြင့္ထားစဥ္ ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္ကို ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္ဖုန္းတြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္ဖုန္း၏ စက္စဖြင့္စနစ္ကို ေသာ့ပိတ္ပါ သို႔မဟုတ္ သင့္ Samsung account မွ ထြက္ပါ။ စက္စဖြင့္စနစ္ကို ေသာ့ပိတ္ရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="unlocked_bootloader_description_this_tablet">သင့္တက္ဘလက္၏ စက္စဖြင့္စနစ္ကို ေသာ့ဖြင့္ထားစဥ္ ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္ကို ထည့္သြင္းႏိုင္သည္။ ခြင့္မျပဳထားေသာ စနစ္ေဆာ့ဝဲလ္သည္ သင့္တက္ဘလက္တြင္ လုံၿခဳံေရးအႏၲရာယ္မ်ား အလြယ္တကူျဖစ္ပြားေစႏိုင္သည္။ သင့္အေကာင့္ႏွင့္ ကိုယ္ေရးေဒတာကို ကာကြယ္ရန္ သင့္တက္ဘလက္၏ စက္စဖြင့္စနစ္ကို ေသာ့ပိတ္ပါ သို႔မဟုတ္ သင့္ Samsung account မွ ထြက္ပါ။ စက္စဖြင့္စနစ္ကို ေသာ့ပိတ္ရာတြင္ အကူအညီရယူရန္ ဆမ္ေဆာင္း သုံးစြဲသူ ဝန္ေဆာင္မႈကို ဆက္သြယ္ပါ။</string>
+    <string name="update">အပ္ဒိတ္</string>
+    <string name="update_multi_apps_to_continue">ဆက္လက္လုပ္ေဆာင္ရန္ ေအာက္ပါအက္ပ္မ်ားကို အပ္ဒိတ္လုပ္ပါ :</string>
+    <string name="update_ps_to_continue">ဆက္လုပ္ရန္ %s ကို အပ္ဒိတ္လုပ္ပါ။</string>
+    <string name="verify_current_description_phone">သင္သည္ ဤဖုန္း၏ PIN၊ ပက္တန္ (သို႔) စကားဝွက္ျဖင့္ သင့္အေထာက္အထားကို အတည္ျပဳၿပီး သင္၏ လွ်ိဳ႕ဝွက္ကီးမ်ား အပါအဝင္ သင္၏ ကုဒ္ေျပာင္းဝွက္ထားေသာေဒတာကို ေသာ့ဖြင့္ႏိုင္သည္။</string>
+    <string name="verify_current_description_tablet">သင္သည္ ဤတက္ဘလက္၏ PIN၊ ပက္တန္ (သို႔) စကားဝွက္ျဖင့္ သင့္အေထာက္အထားကို အတည္ျပဳၿပီး သင္၏ လွ်ိဳ႕ဝွက္ကီးမ်ား အပါအဝင္ သင္၏ ကုဒ္ေျပာင္းဝွက္ထားေသာေဒတာကို ေသာ့ဖြင့္ႏိုင္သည္။</string>
+    <string name="verify_current_detail_password">သင္၏ လက္ရွိ စကားဝွက္ ထည့္သြင္းပါ။</string>
+    <string name="verify_current_detail_pattern">သင့္ လက္႐ွိ ပုံစံကို ဆြဲပါ။</string>
+    <string name="verify_current_detail_pin">သင့္ လက္ရွိ PIN ထည့္သြင္းပါ။</string>
+    <string name="verify_current_title_phone">ကုဒ္ေျပာင္းဝွက္ထားေသာ ေဒတာကို ေသာ့ဖြင့္ရန္ ဤဖုန္းကို သုံးပါ</string>
+    <string name="verify_current_title_tablet">ကုဒ္ေျပာင္းဝွက္ထားေသာ ေဒတာကို ေသာ့ဖြင့္ရန္ ဤတက္ဘလက္ကို သုံးပါ</string>
+    <string name="verify_old_password_description_phone">လုံၿခဳံေရးအတြက္ သင့္ယခင္ဖုန္း၏ စကားဝွက္ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_password_description_tablet">လုံၿခဳံေရးအတြက္ သင့္ယခင္တက္ဘလက္၏ စကားဝွက္ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_pattern_description_phone">လုံၿခဳံေရးအတြက္ သင့္ယခင္ဖုန္း၏ ပက္တန္ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_pattern_description_tablet">လုံၿခဳံေရးအတြက္ သင့္ယခင္တက္ဘလက္၏ ပက္တန္ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_pin_description_phone">လုံၿခဳံေရးအတြက္ သင့္ယခင္ဖုန္း၏ PIN ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_pin_description_tablet">လုံၿခဳံေရးအတြက္ သင့္ယခင္တက္ဘလက္၏ PIN ျဖင့္ သင္ဟုတ္မွန္ေၾကာင္း အတည္ျပဳပါ။</string>
+    <string name="verify_old_ppp_title">သင္၏ ကုဒ္ေျပာင္းဝွက္ထားေသာ ေဒတာကို ေသာ့ဖြင့္ပါ</string>
+    <string name="version">ပံုစံ %s</string>
+</resources>

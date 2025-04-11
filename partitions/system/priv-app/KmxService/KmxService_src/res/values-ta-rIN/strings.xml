@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s-ஐப் பற்றி</string>
+    <string name="back">பின்</string>
+    <string name="chan_mkt">சந்தைப்படுத்தல்</string>
+    <string name="chan_ntc">அறிவிப்பு</string>
+    <string name="character_counter_content_description">%2$d எழுத்துகளில் %1$d</string>
+    <string name="close_app">பயன்பாட்டை மூடவும்</string>
+    <string name="contact_us">எங்களை தொடர்பு கொள்க</string>
+    <string name="couldnt_get_samsung_account_information">உங்கள் கணக்கு விவரத்தைப் பெற இயலவில்லை</string>
+    <string name="couldnt_get_samsung_account_information_description">உங்கள் நெட்வொர்க் இணைப்பை சரிபார்த்து, Samsung account சமீபத்திய பதிப்பிற்கு புதுப்பிக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தி பிறகு மீண்டும் முயலவும்.</string>
+    <string name="data_info_dialog_title">நீங்கள் பூட்டுநீக்கக்கூடிய தரவு</string>
+    <string name="data_info_menu">எந்தத் தரவை நீங்கள் பூட்டு நீக்கலாம் என்பதைப் பார்க்கவும்</string>
+    <string name="delete_dialog_message">முந்தைய சாதனத்தின் PIN, பேட்டர்ன் அல்லது கடவுச்சொல் உங்களுக்கு நினைவில் இல்லை எனில், உங்கள் தரவை பூட்டு நீக்காமல் தவிர்க்கலாம். இருப்பினும், உங்கள் அடையாளத்தை எங்களால் சரிபார்க்க இயலாததால், கீழே உள்ள மறைகுறியாக்கப்பட்ட தரவு பாதுகாப்புக்காக நீக்கப்படும்.</string>
+    <string name="delete_dialog_title">பூட்டுநீக்குவதில் சிக்கலா?</string>
+    <string name="delete_menu">எவ்வாறு பூட்டு நீக்குவது என மறந்துவிட்டீர்களா?</string>
+    <string name="dragndroplist_drag_move">இப்போது %d-இல் நிலைப்படுத்தவும்</string>
+    <string name="dragndroplist_drag_release">உருப்படியானது %d நிலையில் ட்ராப் செய்யப்பட்டது.</string>
+    <string name="dragndroplist_drag_start">%d நிலையில் உருப்படியை ட்ராக் செய்ய துவங்கியது.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d நிலையிலுள்ள உருப்படியை ட்ராக் செய்ய .</string>
+    <string name="go_to">%s-க்கு செல்க</string>
+    <string name="go_to_developer_options">டெவலப்பர் தெரிவுகளுக்கு செல்க</string>
+    <string name="go_to_sign_out">வெளியேறவும் என்பதற்கு செல்க</string>
+    <string name="incorrect_password_entered">தவறான கடவுச்சொல் உள்ளிடப்பட்டுள்ளது</string>
+    <string name="incorrect_pattern_drawn">தவறான பேட்டர்ன் வரையப்பட்டுள்ளது</string>
+    <string name="incorrect_pin_entered">தவறான PIN உள்ளிடப்பட்டது</string>
+    <string name="latest_version_is_already_installed">சமீபத்திய பதிப்பு ஏற்கனவே நிறுவப்பட்டது.</string>
+    <string name="menu_cancel">ரத்துசெய்யவும்</string>
+    <string name="menu_continue">தொடரவும்</string>
+    <string name="new_version_is_available">புதிய பதிப்பு கிடைக்கிறது.</string>
+    <string name="next">அடுத்து</string>
+    <string name="no_network_connection">நெட்வொர்க் இணைப்பு இல்லை</string>
+    <string name="no_network_connection_description">உங்கள் சாதனங்களின் பாதுகாப்பு நிலையைப் புதுப்பிக்க இயலவில்லை. இணைப்பைச் சரிபார்த்து பின்னர் மீண்டும் முயலவும்.</string>
+    <string name="no_threats_found">அச்சுறுத்தல் எதுவும் கண்டறியப்படவில்லை</string>
+    <string name="notify_delete_dialog_title">உங்கள் மறைகுறியாக்கப்பட்ட தரவு நீக்கப்படும்</string>
+    <string name="notify_delete_dialog_title_previous_devices">உங்களின் முந்தைய சாதனங்களைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்க இயலவில்லை</string>
+    <string name="notify_delete_dialog_title_previous_phone">உங்களின் முந்தைய ஃபோனைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்க இயலவில்லை</string>
+    <string name="notify_delete_dialog_title_previous_phones">உங்களின் முந்தைய ஃபோன்களைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்க இயலவில்லை</string>
+    <string name="notify_delete_dialog_title_previous_tablet">உங்களின் முந்தைய டேப்லெட்டைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்க இயலவில்லை</string>
+    <string name="notify_delete_dialog_title_previous_tablets">உங்களின் முந்தைய டேப்லெட்களைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்க இயலவில்லை</string>
+    <string name="oem_unlocking_is_turned_on">OEM பூட்டுநீக்கம் ஆன் செய்யப்பட்ட நிலையில் உள்ளது</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM பூட்டுநீக்குதல் அம்சம் அங்கீகரிக்கப்படாத மென்பொருளை உங்கள் ஃபோனில் நிறுவ அனுமதிக்கும். அங்கீகரிக்கப்படாத மென்பொருள், உங்கள் ஃபோனைப் பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, உங்கள் ஃபோனில் அமைவுகள் > டெவலப்பர் தெரிவுகளில் OEM பூட்டுநீக்கத்தை ஆஃப் செய்யவும்.
+
+அதை ஆஃப் செய்த பிறகு, இங்கிருந்து பாதுகாப்பு நிலை மாற சிறிது நேரம் ஆகலாம்."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM பூட்டுநீக்குதல் அம்சம் அங்கீகரிக்கப்படாத மென்பொருளை உங்கள் டேப்லெட்டில் நிறுவ அனுமதிக்கும். அங்கீகரிக்கப்படாத மென்பொருள், உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, உங்கள் டேப்லெட்டில் அமைவுகள் > டெவலப்பர் தெரிவுகளில் OEM பூட்டுநீக்கத்தை ஆஃப் செய்யவும்.
+
+அதை ஆஃப் செய்த பிறகு, இங்கிருந்து பாதுகாப்பு நிலை மாற சிறிது நேரம் ஆகலாம்."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM பூட்டுநீக்குதல் அம்சம் அங்கீகரிக்கப்படாத மென்பொருளை உங்கள் ஃபோனில் நிறுவ அனுமதிக்கும். அங்கீகரிக்கப்படாத மென்பொருள், உங்கள் ஃபோனைப் பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, அமைவுகள் > டெவலப்பர் தெரிவுகளில் OEM பூட்டுநீக்கத்தை ஆஃப் செய்யவும்.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM பூட்டுநீக்குதல் அம்சம் அங்கீகரிக்கப்படாத மென்பொருளை உங்கள் டேப்லெட்டில் நிறுவ அனுமதிக்கும். அங்கீகரிக்கப்படாத மென்பொருள், உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, அமைவுகள் > டெவலப்பர் தெரிவுகளில் OEM பூட்டுநீக்கத்தை ஆஃப் செய்யவும்.</string>
+    <string name="ok">சரி</string>
+    <string name="open_source_licenses">பொது மூல உரிமங்கள்</string>
+    <string name="other_devices">மற்ற சாதனங்கள்</string>
+    <string name="password_set">%s அன்று கடவுச்சொல் அமைக்கப்பட்டுள்ளது</string>
+    <string name="pattern_set">%s அன்று பேட்டர்ன் அமைக்கப்பட்டுள்ளது</string>
+    <string name="pin_set">%s அன்று PIN அமைக்கப்பட்டுள்ளது</string>
+    <string name="ppp_delegate_description">உங்கள் தரவைப் பாதுகாக்க PIN, பேட்டர்ன் அல்லது கடவுச்சொல்லை அமைக்கவும்.</string>
+    <string name="ppp_delegate_title">பாதுகாப்பான திரைப் பூட்டை அமைக்கவும்</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud-இல் மேம்படுத்தப்பட்ட தரவு பாதுகாப்பின் பின்சேமிப்பு மற்றும் ஒத்திசைத்தலுக்கான திரைப் பூட்டு</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass-இல் கடவுவிசைகள் சேமிக்கப்பட்டுள்ளன</string>
+    <string name="remove_this_device">இந்த சாதனத்தை நீக்கவும்</string>
+    <string name="security_status_main_description">உங்கள் Samsung account-இல் இணைக்கப்பட்ட ஆதரிக்கப்படும் சாதனங்களை, பாதுகாக்கப்பட்ட தனிப்பட்ட ப்ளாக் செயினைப் பயன்படுத்தி Knox Matrix கண்காணிக்கிறது. செயினில் உள்ள ஒவ்வொரு சாதனமும் மற்ற சாதனங்களின் பாதுகாப்பு நிலையை சரிபார்த்து, எந்த அச்சுறுத்தல்கள் இருந்தாலும் உங்களுக்குத் தெரிவிக்கும்.</string>
+    <string name="security_status_not_available_yet">பாதுகாப்பு நிலை இன்னும் கிடைக்கப்பெறவில்லை</string>
+    <string name="security_status_not_available_yet_description">இதற்கு சிறிது நேரம் ஆகலாம். பின்னர் மீண்டும் சரிபார்க்கவும்.</string>
+    <string name="security_status_not_up_to_date">பாதுகாப்பு நிலை புதுப்பிக்கப்படவில்லை</string>
+    <string name="security_status_not_up_to_date_description_phone">"இந்த ஃபோனின் பாதுகாப்பு நிலை 30 நாட்களுக்கு மேலாக புதுப்பிக்கப்படவில்லை. ஃபோன் ஆஃப்லைனில் இருக்கலாம் அல்லது அதன் நிலையை சரிபார்க்க ஏதாவது தடையாக இருக்கலாம். நீங்கள் இந்த ஃபோனை இனிமேல் பயன்படுத்தப் போவதில்லை எனில், உங்கள் Samsung account-இலிருந்து வெளியேற பரிந்துரைக்கப்படுகிறது. அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று அதிலிருந்து வெளியேறலாம்.
+
+நீங்கள் இந்த ஃபோனை பயன்படுத்திக் கொண்டிருந்தாலும், அதன் பாதுகாப்பு நிலை புதுப்பிக்கப்படவில்லை என்றால், அது நெட்வொர்க்குடன் இணைக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்திக் கொள்ளவும்."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"இந்த சாதனத்தின் பாதுகாப்பு நிலை 30 நாட்களுக்கு மேலாக புதுப்பிக்கப்படவில்லை. சாதனம் ஆஃப்லைனில் இருக்கலாம் அல்லது அதன் நிலையை சரிபார்க்க ஏதாவது தடையாக இருக்கலாம். நீங்கள் இந்த சாதனத்தை இனிமேல் பயன்படுத்தப் போவதில்லை எனில், SmartThings பயன்பாட்டிலிருந்து வெளியேற பரிந்துரைக்கப்படுகிறது.
+
+நீங்கள் இந்த சாதனத்தை பயன்படுத்திக் கொண்டிருந்தாலும், அதன் பாதுகாப்பு நிலை புதுப்பிக்கப்படவில்லை என்றால், அது நெட்வொர்க்குடன் இணைக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்திக் கொள்ளவும்."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"இந்த டேப்லெட்டின் பாதுகாப்பு நிலை 30 நாட்களுக்கு மேலாக புதுப்பிக்கப்படவில்லை. டேப்லெட் ஆஃப்லைனில் இருக்கலாம் அல்லது அதன் நிலையை சரிபார்க்க ஏதாவது தடையாக இருக்கலாம். நீங்கள் இந்த டேப்லெட்டை இனிமேல் பயன்படுத்தப் போவதில்லை எனில், உங்கள் Samsung account-இலிருந்து வெளியேற பரிந்துரைக்கப்படுகிறது. அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று அதிலிருந்து வெளியேறலாம்.
+
+நீங்கள் இந்த டேப்லெட்டை பயன்படுத்திக் கொண்டிருந்தாலும், அதன் பாதுகாப்பு நிலை புதுப்பிக்கப்படவில்லை என்றால், அது நெட்வொர்க்குடன் இணைக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்திக் கொள்ளவும்."</string>
+    <string name="security_status_not_up_to_date_description_vd">"இந்த சாதனத்தின் பாதுகாப்பு நிலை 30 நாட்களுக்கு மேலாக புதுப்பிக்கப்படவில்லை. சாதனம் ஆஃப்லைனில் இருக்கலாம் அல்லது அதன் நிலையை சரிபார்க்க ஏதாவது தடையாக இருக்கலாம். நீங்கள் இந்த சாதனத்தை இனிமேல் பயன்படுத்தப் போவதில்லை எனில், உங்கள் Samsung account-இலிருந்து வெளியேற பரிந்துரைக்கப்படுகிறது. அமைவுகள் > Samsung account > சாதனங்கள் > உள்நுழைந்துள்ள சாதனங்களை நிர்வகிக்கவும் என்பதற்கு சென்று அதிலிருந்து வெளியேறலாம்.
+
+நீங்கள் இந்த சாதனத்தை பயன்படுத்திக் கொண்டிருந்தாலும், அதன் பாதுகாப்பு நிலை புதுப்பிக்கப்படவில்லை என்றால், அது நெட்வொர்க்குடன் இணைக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்திக் கொள்ளவும்."</string>
+    <string name="security_status_of_your_devices">உங்கள் சாதனங்களின் பாதுகாப்பு நிலை</string>
+    <string name="sesl_action_bar_up_description">மேலே நகர்த்தவும்</string>
+    <string name="sesl_action_menu_overflow_badge_description">புதிய உள்ளடக்கம் கிடைக்கிறது</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">மேலும் தெரிவுகள்</string>
+    <string name="sesl_appbar_suggest_all_dismissed">எல்லா பரிந்துரைகளும் நிராகரிக்கப்பட்டன</string>
+    <string name="sesl_appbar_suggest_dismiss">பரிந்துரையை நிராகரிக்கவும்</string>
+    <string name="sesl_appbar_suggest_dismissed">பரிந்துரை நிராகரிக்கப்பட்டது</string>
+    <string name="sesl_appbar_suggest_pagination">பக்கம் %1$d / %2$d</string>
+    <string name="sesl_index_assistant_text">ஸ்க்ரால் செய்ய, இரு விரல்களால் மேல்நோக்கி அல்லது கீழ்நோக்கி ஸ்வைப் செய்யவும்.</string>
+    <string name="sesl_index_scrollbar">ஸ்க்ரால் பட்டை</string>
+    <string name="sesl_index_section">பிரிவு உள்ளடக்கம்</string>
+    <string name="sesl_index_selected">தேர்வுசெய்யப்பட்டது</string>
+    <string name="sesl_material_badge_description">புதிய உள்ளடக்கம் கிடைக்கிறது</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">மேலும்</string>
+    <string name="sesl_preferecne_badge_description">புதிய அறிவிப்பு</string>
+    <string name="sesl_preferencecategory_added_title">தலைப்பு</string>
+    <string name="sesl_search_hint">தேடவும்</string>
+    <string name="sesl_searchview_description_clear">தேடுபுலத்தை அழிக்கவும்</string>
+    <string name="sesl_searchview_description_clear_field">தேடுபுலம் துடைக்கப்பட்டது</string>
+    <string name="sesl_searchview_description_query">வினாவை தேடுக</string>
+    <string name="sesl_searchview_description_search">தேடவும்</string>
+    <string name="sesl_searchview_description_submit">வினாவை சமர்பிக்கவும்</string>
+    <string name="sesl_searchview_description_voice">குரல் தேடல்</string>
+    <string name="sesl_switch_off">ஆஃப்</string>
+    <string name="sesl_switch_on">ஆன்</string>
+    <string name="sesl_switchbar_off_text">ஆஃப்</string>
+    <string name="sesl_switchbar_on_text">ஆன்</string>
+    <string name="sesl_toolbar_collapse_description">சுருக்கவும்</string>
+    <string name="skip">தவிர்</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">உங்கள் ஃபோனில் SmartThings நிறுவப்படவில்லை. Play Store-இல் இருந்து அதை பதிவிறக்கவும்.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">உங்கள் டேப்லெட்டில் SmartThings நிறுவப்படவில்லை. Play Store-இல் இருந்து அதை பதிவிறக்கவும்.</string>
+    <string name="this_phone">இந்த ஃபோன்</string>
+    <string name="this_tablet">இந்த டேப்லெட்</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d மணிநேரம் %2$d நிமிடங்களில் மீண்டும் முயலவும்</string>
+    <string name="unauthorized_software_detected">அங்கீகரிக்கப்படாத மென்பொருள் கண்டறியப்பட்டது</string>
+    <string name="unauthorized_software_detected_description_other_phone">அங்கீகாரமற்ற சிஸ்டம் மென்பொருள் உங்கள் ஃபோனை பாதுகாப்பு அபாயங்களுக்கு வழிவகுக்கும். உங்கள் கணக்கு மற்றும் தனிப்பட்ட தரவுகளைப் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று உங்கள் Samsung account-இலிருந்து வெளியேறவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதில் உதவி தேவைப்பட்டால், சாம்சங் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள், உங்கள் சாதனத்தை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது SmartThings பயன்பாட்டிலிருந்து இந்தச் சாதனத்தை அகற்றவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதற்கான உதவிக்கு, சாம்சங் வாடிக்கையாளர் சேவையைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">அங்கீகாரமற்ற சிஸ்டம் மென்பொருள் உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு வழிவகுக்கும். உங்கள் கணக்கு மற்றும் தனிப்பட்ட தரவுகளைப் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று உங்கள் Samsung account-இலிருந்து வெளியேறவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதில் உதவி தேவைப்பட்டால், சாம்சங் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.</string>
+    <string name="unauthorized_software_detected_description_other_vd">அங்கீகாரமற்ற சிஸ்டம் மென்பொருள் உங்கள் சாதனத்தை பாதுகாப்பு அபாயங்களுக்கு வழிவகுக்கும். உங்கள் கணக்கு மற்றும் தனிப்பட்ட தரவுகளைப் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது அமைவுகள் > Samsung account > சாதனங்கள் > உள்நுழைந்துள்ள சாதனங்களை நிர்வகிக்கவும் என்பதற்கு சென்று உங்கள் Samsung account-இலிருந்து வெளியேறவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதில் உதவி தேவைப்பட்டால், சாம்சங் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.</string>
+    <string name="unauthorized_software_detected_description_this_phone">அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள், உங்கள் ஃபோனை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது Samsung account-இல் இருந்து வெளியேறவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதற்கான உதவிக்கு, சாம்சங் வாடிக்கையாளர் சேவையைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள், உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, அதிகாரப்பூர்வ சாம்சங் மென்பொருளை நிறுவவும் அல்லது Samsung account-இல் இருந்து வெளியேறவும். அதிகாரப்பூர்வ மென்பொருளை நிறுவுவதற்கான உதவிக்கு, சாம்சங் வாடிக்கையாளர் சேவையைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="unlocked_bootloader">பூட்லோடர் பூட்டுநீக்கப்பட்டுள்ளது</string>
+    <string name="unlocked_bootloader_description_other_phone">"உங்கள் ஃபோனின் பூட்லோடர் பூட்டு நீக்கப்பட்டிருக்கும் போது, அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள் நிறுவப்படலாம். அங்கீகாரமற்ற சிஸ்டம் மென்பொருள் உங்கள் ஃபோனை பாதுகாப்பு அபாயங்களுக்கு வழிவகுக்கும். உங்கள் கணக்கு மற்றும் தனிப்பட்ட தரவுகளைப் பாதுகாக்க, உங்கள் ஃபோனின் பூட்லோடரை பூட்டவும் அல்லது அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று உங்கள் Samsung account-இலிருந்து வெளியேறவும். பூட்லோடரை பூட்ட உதவி தேவைப்பட்டால், சாம்சங் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.
+
+அதை பூட்டிய பின்னர், பாதுகாப்பு நிலை இங்கு மாற சிறிது நேரம் ஆகலாம்."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"உங்கள் டேப்லெட்டின் பூட்லோடர் திறக்கப்பட்டிருக்கும் போது, அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள் நிறுவப்படலாம். அங்கீகாரமற்ற சிஸ்டம் மென்பொருள் உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு வழிவகுக்கும். உங்கள் கணக்கு மற்றும் தனிப்பட்ட தரவுகளைப் பாதுகாக்க, உங்கள் டேப்லெட்டின் பூட்லோடரை பூட்டவும் அல்லது அமைவுகள் > Samsung account > சாதனங்கள் என்பதற்கு சென்று உங்கள் Samsung account-இலிருந்து வெளியேறவும். பூட்லோடரை பூட்ட உதவி தேவைப்பட்டால், சாம்சங் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.
+
+அதை பூட்டிய பின்னர், பாதுகாப்பு நிலை இங்கு மாற சிறிது நேரம் ஆகலாம்."</string>
+    <string name="unlocked_bootloader_description_this_phone">உங்கள் ஃபோனின் பூட்லோடர் பூட்டு நீக்கப்பட்டிருக்கும் போது, அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள் நிறுவப்படலாம். அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள், உங்கள் ஃபோனை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, உங்கள் ஃபோனின் பூட்லோடரை பூட்டவும் அல்லது Samsung account-இல் இருந்து வெளியேறவும். பூட்லோடரைப் பூட்டுவதற்கான உதவிக்கு, சாம்சங் வாடிக்கையாளர் சேவையைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="unlocked_bootloader_description_this_tablet">உங்கள் டேப்லெட்டின் பூட்லோடர் பூட்டு நீக்கப்பட்டிருக்கும் போது, அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள் நிறுவப்படலாம். அங்கீகரிக்கப்படாத சிஸ்டம் மென்பொருள், உங்கள் டேப்லெட்டை பாதுகாப்பு அபாயங்களுக்கு உள்ளாக்கலாம். உங்கள் கணக்கையும் தனிப்பட்ட தரவையும் பாதுகாக்க, உங்கள் டேப்லெட்டின் பூட்லோடரை பூட்டவும் அல்லது Samsung account-இல் இருந்து வெளியேறவும். பூட்லோடரைப் பூட்டுவதற்கான உதவிக்கு, சாம்சங் வாடிக்கையாளர் சேவையைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="update">புதுப்பிக்கவும்</string>
+    <string name="update_multi_apps_to_continue">தொடர்வதற்கு, பின்வரும் பயன்பாடுகளைப் புதுப்பிக்கவும்:</string>
+    <string name="update_ps_to_continue">தொடர்வதற்கு %s-ஐப் புதுப்பிக்கவும்.</string>
+    <string name="verify_current_description_phone">இந்த ஃபோனின் PIN, பேட்டர்ன் அல்லது கடவுச்சொல்லைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்ப்பதன் மூலம், கடவுச்சொல் உட்பட, மறைகுறியாக்கப்பட்ட தரவை பூட்டு நீக்கலாம்.</string>
+    <string name="verify_current_description_tablet">இந்த டேப்லெட்டின் PIN, பேட்டர்ன் அல்லது கடவுச்சொல்லைப் பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்ப்பதன் மூலம், கடவுச்சொல் உட்பட, மறைகுறியாக்கப்பட்ட தரவை பூட்டு நீக்கலாம்.</string>
+    <string name="verify_current_detail_password">உங்கள் நடப்பு கடவுச்சொல்லை உள்ளிடவும்.</string>
+    <string name="verify_current_detail_pattern">உங்கள் நடப்பு பேட்டர்னை வரையவும்.</string>
+    <string name="verify_current_detail_pin">உங்கள் நடப்பு PIN -ஐ உள்ளிடவும்.</string>
+    <string name="verify_current_title_phone">மறைகுறியாக்கப்பட்ட தரவை பூட்டுநீக்க இந்த ஃபோனை பயன்படுத்தவும்</string>
+    <string name="verify_current_title_tablet">மறைகுறியாக்கப்பட்ட தரவை பூட்டுநீக்க இந்த டேப்லெட்டை பயன்படுத்தவும்</string>
+    <string name="verify_old_password_description_phone">பாதுகாப்பிற்காக, உங்கள் முந்தைய ஃபோனின் கடவுச்சொல்லை பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_password_description_tablet">பாதுகாப்பிற்காக, உங்கள் முந்தைய டேப்லெட்டின் கடவுச்சொல்லை பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_pattern_description_phone">பாதுகாப்பிற்காக, உங்கள் முந்தைய ஃபோனின் பேட்டர்னை பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_pattern_description_tablet">பாதுகாப்பிற்காக, உங்கள் முந்தைய டேப்லெட்டின் பேட்டர்னை பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_pin_description_phone">பாதுகாப்பிற்காக, உங்கள் முந்தைய ஃபோனின் PIN-ஐ பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_pin_description_tablet">பாதுகாப்பிற்காக, உங்கள் முந்தைய டேப்லெட்டின் PIN-ஐ பயன்படுத்தி உங்கள் அடையாளத்தைச் சரிபார்க்கவும்.</string>
+    <string name="verify_old_ppp_title">உங்கள் மறைகுறியாக்கப்பட்ட தரவைப் பூட்டு நீக்கவும்</string>
+    <string name="version">பதிப்பு %s</string>
+</resources>

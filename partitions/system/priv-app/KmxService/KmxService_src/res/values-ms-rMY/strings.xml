@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Perihal %s</string>
+    <string name="back">Kembali</string>
+    <string name="chan_mkt">Pemasaran</string>
+    <string name="chan_ntc">Notis</string>
+    <string name="character_counter_content_description">%1$d daripada %2$d aksara</string>
+    <string name="close_app">Tutup aplikasi</string>
+    <string name="contact_us">Hubungi kami</string>
+    <string name="couldnt_get_samsung_account_information">Tidak boleh mendapatkan maklumat akaun anda</string>
+    <string name="couldnt_get_samsung_account_information_description">Semak sambungan rangkaian anda dan pastikan Samsung account dikemaskinikan kepada versi terkini kemudian cuba lagi.</string>
+    <string name="data_info_dialog_title">Data yang boleh anda buka kunci</string>
+    <string name="data_info_menu">Lihat jenis data yang boleh anda buka kunci</string>
+    <string name="delete_dialog_message">Anda boleh melangkau buka kunci data anda jika anda terlupa PIN, corak atau kata laluan peranti anda yang sebelumnya. Walau bagaimanapun, data yang disulitkan di bawah akan dipadamkan demi keselamatan kerana kami tidak dapat mengenal pasti identiti anda.</string>
+    <string name="delete_dialog_title">Masalah membuka kunci?</string>
+    <string name="delete_menu">Terlupa cara membuka kunci?</string>
+    <string name="dragndroplist_drag_move">Kini di kedudukan %d</string>
+    <string name="dragndroplist_drag_release">Item dijatuhkan pada kedudukan %d.</string>
+    <string name="dragndroplist_drag_start">Mula menyeret item pada kedudukan %d.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Item pada kedudukan %d tidak boleh diseret.</string>
+    <string name="go_to">Pergi ke %s</string>
+    <string name="go_to_developer_options">Pergi ke Pilihan pembangun</string>
+    <string name="go_to_sign_out">Pergi ke Log keluar</string>
+    <string name="incorrect_password_entered">Kata laluan salah dimasukkan</string>
+    <string name="incorrect_pattern_drawn">Corak yang dilukis salah</string>
+    <string name="incorrect_pin_entered">PIN yang salah dimasukkan</string>
+    <string name="latest_version_is_already_installed">Versi terkini telah dipasang.</string>
+    <string name="menu_cancel">Batal</string>
+    <string name="menu_continue">Teruskan</string>
+    <string name="new_version_is_available">Versi baru tersedia.</string>
+    <string name="next">Berikut</string>
+    <string name="no_network_connection">Tiada sambungan rangkaian</string>
+    <string name="no_network_connection_description">Tidak dapat mengemaskinikan status keselamatan peranti anda. Semak sambungan dan cuba lagi.</string>
+    <string name="no_threats_found">Tiada ancaman ditemui</string>
+    <string name="notify_delete_dialog_title">Data anda yang disulitkan akan dipadamkan</string>
+    <string name="notify_delete_dialog_title_previous_devices">Tidak dapat mengesahkan identiti anda menggunakan peranti anda yang terdahulu</string>
+    <string name="notify_delete_dialog_title_previous_phone">Tidak dapat mengesahkan identiti anda menggunakan telefon anda yang terdahulu</string>
+    <string name="notify_delete_dialog_title_previous_phones">Tidak dapat mengesahkan identiti anda menggunakan telefon anda yang terdahulu</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Tidak dapat mengesahkan identiti anda menggunakan tablet anda yang terdahulu</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Tidak dapat mengesahkan identiti anda menggunakan tablet anda yang terdahulu</string>
+    <string name="oem_unlocking_is_turned_on">Buka kunci OEM dihidupkan</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"Buka kunci OEM boleh membenarkan perisian tanpa kebenaran dipasang pada telefon anda. Perisian tanpa kebenaran boleh mendedahkan telefon anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, matikan buka kunci OEM pada telefon anda dalam Aturan > Pilihan pembangun.
+
+Setelah anda mematikannya, sedikit masa mungkin diperlukan untuk status keselamatan berubah di sini."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"Buka kunci OEM boleh membenarkan perisian tanpa kebenaran dipasang pada tablet anda. Perisian tanpa kebenaran boleh mendedahkan tablet anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, matikan buka kunci OEM pada tablet anda dalam Aturan > Pilihan pembangun.
+
+Setelah anda mematikannya, sedikit masa mungkin diperlukan untuk status keselamatan berubah di sini."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">Buka kunci OEM boleh membenarkan perisian tanpa kebenaran dipasang pada telefon anda. Perisian tanpa kebenaran boleh mendedahkan telefon anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, matikan buka kunci OEM dalam Aturan > Pilihan pemaju.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">Buka kunci OEM boleh membenarkan perisian tanpa kebenaran dipasang pada tablet anda. Perisian tanpa kebenaran boleh mendedahkan tablet anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, matikan buka kunci OEM dalam Aturan > Pilihan pemaju.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Lesen sumber terbuka</string>
+    <string name="other_devices">Peranti lain</string>
+    <string name="password_set">Kata laluan ditetapkan %s</string>
+    <string name="pattern_set">Corak ditetapkan %s</string>
+    <string name="pin_set">PIN ditetapkan %s</string>
+    <string name="ppp_delegate_description">Tetapkan PIN, corak atau kata laluan untuk melindungi data anda.</string>
+    <string name="ppp_delegate_title">Tetapkan kunci skrin selamat</string>
+    <string name="ppp_dialog_description_SamsungCloud">Kunci skrin untuk sandaran Perlindungan data ditingkatkan dan penyelarasan dalam Samsung Cloud</string>
+    <string name="ppp_dialog_description_SamsungPass">Kekunci laluan disimpan dalam Samsung Pass</string>
+    <string name="remove_this_device">Alih keluar peranti</string>
+    <string name="security_status_main_description">Knox Matrix memantau peranti disokong yang dilog masuk ke Samsung account anda menggunakan blok rantai peribadi selamat. Setiap peranti dalam rantai dapat menyemak status keselamatan peranti lain dan memberitahu anda jika terdapat apa-apa ancaman.</string>
+    <string name="security_status_not_available_yet">Status keselamatan tidak tersedia lagi</string>
+    <string name="security_status_not_available_yet_description">Ini mungkin mengambil sedikit masa. Semak lagi kemudian.</string>
+    <string name="security_status_not_up_to_date">Status keselamatan tidak dikemaskinikan</string>
+    <string name="security_status_not_up_to_date_description_phone">"Status keselamatan telefon ini masih belum dikemaskinikan selama lebih daripada 30 hari. Telefon mungkin berada di luar talian atau sesuatu mungkin menghalang statusnya daripada disemak. Jika anda tidak lagi menggunakan telefon ini, anda disyorkan agar log keluar daripada Samsung account anda. Anda boleh log keluar dalam Aturan > Samsung account > Peranti.
+
+Jika anda sedang menggunakan telefon ini tetapi status keselamatannya tidak dikemaskinikan, pastikan telefon disambungkan kepada rangkaian."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Status keselamatan peranti ini belum dikemaskinikan selama lebih daripada 30 hari. Peranti mungkin berada di luar talian atau sesuatu mungkin menghalang statusnya daripada disemak. Jika anda tidak lagi menggunakan peranti ini, anda disyorkan agar mengalih keluar peranti ini dalam aplikasi SmartThings.
+
+Jika anda sedang menggunakan peranti ini tetapi status keselamatannya tidak dikemaskinikan, pastikan peranti disambungkan kepada rangkaian."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Status keselamatan tablet ini belum dikemaskinikan selama lebih daripada 30 hari. Tablet mungkin berada di luar talian atau sesuatu mungkin menghalang statusnya daripada disemak. Jika anda tidak lagi menggunakan tablet ini, anda disyorkan agar log keluar daripada Samsung account anda. Anda boleh log keluar dalam Aturan > Samsung account > Peranti.
+
+Jika anda sedang menggunakan tablet ini tetapi status keselamatannya tidak dikemaskinikan, pastikan tablet disambungkan kepada rangkaian."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Status keselamatan peranti ini belum dikemaskinikan selama lebih daripada 30 hari. Peranti mungkin berada di luar talian atau sesuatu mungkin menghalang statusnya daripada disemak. Jika anda tidak lagi menggunakan peranti ini, anda disyorkan agar log keluar daripada Samsung account anda. Anda boleh log keluar dalam Aturan > Samsung account > Peranti > Urus peranti dilog keluar.
+
+Jika anda sedang menggunakan peranti ini tetapi status keselamatannya tidak dikemaskinikan, pastikan peranti disambungkan kepada rangkaian."</string>
+    <string name="security_status_of_your_devices">Status keselamatan peranti anda</string>
+    <string name="sesl_action_bar_up_description">Pandu arah ke atas</string>
+    <string name="sesl_action_menu_overflow_badge_description">Kandungan baru tersedia</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">B</string>
+    <string name="sesl_action_menu_overflow_description">Lebih pilihan</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Semua cadangan dibuang</string>
+    <string name="sesl_appbar_suggest_dismiss">Buang cadangan</string>
+    <string name="sesl_appbar_suggest_dismissed">Cadangan dibuang</string>
+    <string name="sesl_appbar_suggest_pagination">Halaman %1$d daripada %2$d</string>
+    <string name="sesl_index_assistant_text">Sapu ke atas atau bawah dengan dua jari untuk menatal.</string>
+    <string name="sesl_index_scrollbar">Bar tatal</string>
+    <string name="sesl_index_section">Indeks bahagian</string>
+    <string name="sesl_index_selected">Dipilih</string>
+    <string name="sesl_material_badge_description">Kandungan baru tersedia</string>
+    <string name="sesl_material_overflow_badge_text_n">B</string>
+    <string name="sesl_more_item_label">Lebih</string>
+    <string name="sesl_preferecne_badge_description">Pemberitahuan baru</string>
+    <string name="sesl_preferencecategory_added_title">Pengepala</string>
+    <string name="sesl_search_hint">Cari</string>
+    <string name="sesl_searchview_description_clear">Kosongkan medan carian</string>
+    <string name="sesl_searchview_description_clear_field">Medan carian dikosongkan</string>
+    <string name="sesl_searchview_description_query">Carian pertanyaan</string>
+    <string name="sesl_searchview_description_search">Cari</string>
+    <string name="sesl_searchview_description_submit">Serah pertanyaan</string>
+    <string name="sesl_searchview_description_voice">Carian suara</string>
+    <string name="sesl_switch_off">Mati</string>
+    <string name="sesl_switch_on">Hidup</string>
+    <string name="sesl_switchbar_off_text">Mati</string>
+    <string name="sesl_switchbar_on_text">Hidup</string>
+    <string name="sesl_toolbar_collapse_description">Runtuh</string>
+    <string name="skip">Langkau</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings tidak dipasang pada telefon anda. Muat turunnya daripada Play Store.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings tidak dipasang pada tablet anda. Muat turunnya daripada Play Store.</string>
+    <string name="this_phone">Telefon ini</string>
+    <string name="this_tablet">Tablet ini</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Cuba lagi dalam %1$d jam %2$d minit</string>
+    <string name="unauthorized_software_detected">Perisian tidak dibenarkan telah dikesan</string>
+    <string name="unauthorized_software_detected_description_other_phone">Perisian sistem yang tidak dibenarkan boleh membuatkan telefon anda terdedah kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian rasmi Samsung atau log keluar daripada Samsung account anda dalam Aturan > Samsung account > Peranti. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Perisian sistem tanpa kebenaran boleh mendedahkan peranti anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian Samsung rasmi atau alih keluar peranti ini dalam aplikasi SmartThings. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Perisian sistem yang tidak dibenarkan boleh membuatkan tablet anda terdedah kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian rasmi Samsung atau log keluar daripada Samsung account anda dalam Aturan > Samsung account > Peranti. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Perisian sistem yang tidak dibenarkan boleh membuatkan peranti anda terdedah kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian rasmi Samsung atau log keluar daripada Samsung account anda dalam Aturan > Samsung account > Peranti > Urus peranti dilog masuk. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Perisian sistem tanpa kebenaran boleh mendedahkan telefon anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian Samsung rasmi atau log keluar daripada Samsung account anda. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Perisian sistem tanpa kebenaran boleh mendedahkan tablet anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, pasang perisian Samsung rasmi atau log keluar daripada Samsung account anda. Untuk bantuan memasang perisian rasmi, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unlocked_bootloader">Pemuat but dibuka kunci</string>
+    <string name="unlocked_bootloader_description_other_phone">"Semasa pemuat but telefon anda dibuka kunci, perisian sistem yang tidak dibenarkan boleh dipasang. Perisian sistem yang tidak dibenarkan boleh membuatkan telefon anda terdedah kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, kunci pemuat but telefon anda atau log keluar daripada Samsung account anda dalam Aturan > Samsung account > Peranti. Untuk bantuan mengunci pemuat but, hubungi Perkhidmatan Pelanggan Samsung.
+
+Selepas anda menguncinya, perubahan status keselamatan di sini mungkin mengambil sedikit masa."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Semasa pemuat but tablet anda dibuka kunci, perisian sistem yang tidak dibenarkan boleh dipasang. Perisian sistem yang tidak dibenarkan boleh membuatkan tablet anda terdedah kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, kunci pemuat but tablet anda atau log keluar daripada Samsung account anda dalam Aturan > Samsung account > Peranti. Untuk bantuan mengunci pemuat but, hubungi Perkhidmatan Pelanggan Samsung.
+
+Selepas anda menguncinya, perubahan status keselamatan di sini mungkin mengambil sedikit masa."</string>
+    <string name="unlocked_bootloader_description_this_phone">Apabila pemuat but telefon anda dibuka kunci, perisian sistem yang tidak dibenarkan boleh dipasang. Perisian sistem tanpa kebenaran boleh mendedahkan telefon anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, kunci pemuat but telefon anda atau log keluar daripada Samsung account anda. Untuk bantuan penguncian pemuat but, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Apabila pemuat but tablet anda dibuka kunci, perisian sistem yang tidak dibenarkan boleh dipasang. Perisian sistem tanpa kebenaran boleh mendedahkan tablet anda kepada risiko keselamatan. Untuk melindungi akaun dan data peribadi anda, kunci pemuat but tablet anda atau log keluar daripada Samsung account anda. Untuk bantuan penguncian pemuat but, hubungi Perkhidmatan Pelanggan Samsung.</string>
+    <string name="update">Kemas kini</string>
+    <string name="update_multi_apps_to_continue">Kemas kini aplikasi berikut untuk meneruskan:</string>
+    <string name="update_ps_to_continue">Kemas kini %s untuk meneruskan.</string>
+    <string name="verify_current_description_phone">Anda boleh membuka kunci data anda yang disulitkan, termasuk kekunci laluan, dengan mengesahkan identiti anda dengan PIN, corak atau kata laluan telefon ini.</string>
+    <string name="verify_current_description_tablet">Anda boleh membuka kunci data anda yang disulitkan, termasuk kekunci laluan, dengan mengesahkan identiti anda dengan PIN, corak atau kata laluan tablet ini.</string>
+    <string name="verify_current_detail_password">Masukkan kata laluan semasa anda.</string>
+    <string name="verify_current_detail_pattern">Lukiskan corak semasa anda.</string>
+    <string name="verify_current_detail_pin">Masukkan PIN semasa anda.</string>
+    <string name="verify_current_title_phone">Guna telefon ini untuk membuka kunci data yang disulitkan</string>
+    <string name="verify_current_title_tablet">Guna tablet ini untuk membuka kunci data yang disulitkan</string>
+    <string name="verify_old_password_description_phone">Untuk keselamatan, sahkan identiti diri anda dengan kata laluan telefon anda yang sebelum ini.</string>
+    <string name="verify_old_password_description_tablet">Untuk keselamatan, sahkan identiti diri anda dengan kata laluan tablet anda yang sebelum ini.</string>
+    <string name="verify_old_pattern_description_phone">Untuk keselamatan, sahkan identiti diri anda dengan corak telefon anda yang sebelum ini.</string>
+    <string name="verify_old_pattern_description_tablet">Untuk keselamatan, sahkan identiti diri anda dengan corak tablet anda yang sebelum ini.</string>
+    <string name="verify_old_pin_description_phone">Untuk keselamatan, sahkan identiti diri anda dengan PIN telefon anda yang sebelum ini.</string>
+    <string name="verify_old_pin_description_tablet">Untuk keselamatan, sahkan identiti diri anda dengan PIN tablet anda yang sebelum ini.</string>
+    <string name="verify_old_ppp_title">Buka kunci data anda yang disulitkan</string>
+    <string name="version">Versi %s</string>
+</resources>

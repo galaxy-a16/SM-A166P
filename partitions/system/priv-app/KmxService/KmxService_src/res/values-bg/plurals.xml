@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d оставащи опита</item>
+        <item quantity="one">Остава %d опит</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нови известия</item>
+        <item quantity="one">%d ново известие</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Тъй като не успяхте да потвърдите самоличността си след %d опита, шифрованите данни ще бъдат изтрити от съображения за сигурност:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Тъй като не успяхте да потвърдите самоличността си след %d опит, шифрованите данни ще бъдат изтрити от съображения за сигурност:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Опитайте отново след 1 час и %d минути</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Опитайте отново след 1 час и %d минута</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Опитайте отново след %d часа</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Опитайте отново след %d час</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Опитайте отново след %d часа и 1 минута</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Опитайте отново след %d час и 1 минута</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Опитайте пак след %d минути</item>
+        <item quantity="one">Опитайте отново след %d минута</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Опитайте пак след %d секунди</item>
+        <item quantity="one">Опитайте отново след %d секунда</item>
+    </plurals>
+</resources>

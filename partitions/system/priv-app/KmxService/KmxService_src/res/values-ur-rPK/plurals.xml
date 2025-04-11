@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d کوششیں باقی</item>
+        <item quantity="one">%d کوشش بچی ہے</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">چونکہ آپ %d کوششوں کے بعد بھی اپنی شناخت کی توثیق نہیں کر سکے، اسلئے آپ کی سیکیورٹی کی خاطر آپ کے اینکرپٹ کردہ ڈیٹا کو حذف کر دیا جائے گا:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">چونکہ آپ %d کوشش کے بعد بھی اپنی شناخت کی توثیق نہیں کر سکے، اسلئے آپ کی سیکیورٹی کی خاطر آپ کے اینکرپٹ کردہ ڈیٹا کو حذف کر دیا جائے گا:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 گھنٹے %d منٹ میں دوبارہ کوشش کریں</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 گھنٹے %d منٹ میں دوبارہ کوشش کریں</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d گھنٹے میں دوبارہ کوشش کریں</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d گھنٹے میں دوبارہ کوشش کریں</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d گھنٹے 1 منٹ میں دوبارہ کوشش کریں</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d گھنٹے 1 منٹ میں دوبارہ کوشش کریں</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d منٹ میں دوبارہ کوشش کریں</item>
+        <item quantity="one">%d منٹ میں دوبارہ کوشش کریں</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d سیکنڈ میں دوبارہ کوشش کریں</item>
+        <item quantity="one">%d سیکنڈ میں دوبارہ کوشش کریں</item>
+    </plurals>
+</resources>

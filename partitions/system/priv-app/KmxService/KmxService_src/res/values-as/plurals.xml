@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d টা প্ৰয়াস বাকী</item>
+        <item quantity="one">%d টা প্ৰয়াস বাকী আছে</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">"কাৰণ %d টা প্ৰয়াসৰ পিছত আপুনি আপোনাৰ পৰিচয় সত্যাপন কৰিবলৈ অক্ষম হৈছিল, আপোনাৰ নিৰাপত্তাৰ বাবে আপোনাৰ এনক্ৰিপ্ট কৰা ডাটা বিলোপ কৰা হ'ব:"</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">"কাৰণ %d টা প্ৰয়াসৰ পিছত আপুনি আপোনাৰ পৰিচয় সত্যাপন কৰিবলৈ অক্ষম হৈছিল, আপোনাৰ নিৰাপত্তাৰ বাবে আপোনাৰ এনক্ৰিপ্ট কৰা ডাটা বিলোপ কৰা হ'ব:"</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 ঘণ্টা %d মিনিটত পুনঃচেষ্টা কৰক</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 ঘণ্টা %d মিনিটত পুনঃচেষ্টা কৰক</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d ঘণ্টাত পুনঃচেষ্টা কৰক</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ঘণ্টাত পুনঃচেষ্টা কৰক</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d ঘণ্টা 1 মিনিটত পুনঃচেষ্টা কৰক</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ঘণ্টা 1 মিনিটত পুনঃচেষ্টা কৰক</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d মি. পিছত পুনঃচেষ্টা কৰক</item>
+        <item quantity="one">%d মিনিটৰ ভিতৰত পুনঃচেষ্টা কৰক</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d ছে. পিছত পুনঃচেষ্টা কৰক</item>
+        <item quantity="one">%d ছেকেণ্ডৰ ভিতৰত পুনঃচেষ্টা কৰক</item>
+    </plurals>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d प्रयत्न शिल्लक आहेत</item>
+        <item quantity="one">%d प्रयत्न शिल्लक</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">आपण %d प्रयत्नांनंतर आपली ओळख पडताळणी करण्यात अक्षम असल्यामुळे, आपल्या सुरक्षिततेसाठी आपला एन्क्रिप्ट केलेला डेटा हटवला जाईल:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">आपण %d प्रयत्नानंतर आपली ओळख पडताळणी करण्यात अक्षम असल्यामुळे, आपल्या सुरक्षिततेसाठी आपला एन्क्रिप्ट केलेला डेटा हटवला जाईल:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">1 तास %d मिनिटांमध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">1 तास %d मिनिटामध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">%d तासांत पुन्हा प्रयत्न करा</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d तासात पुन्हा प्रयत्न करा</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">%d तास 1 मिनिटामध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d तास 1 मिनिटामध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">%d मिनिटांमध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="one">%d मिनिटां मध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">%d सेकंदांमध्‍ये पुन्‍हा प्रयत्‍न करा</item>
+        <item quantity="one">%d सेकंदां मध्ये पुन्हा प्रयत्न करा</item>
+    </plurals>
+</resources>

@@ -1,0 +1,281 @@
+.class final Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;
+.super Lio/reactivex/rxjava3/internal/observers/BasicIntQueueDisposable;
+.source "SourceFile"
+
+# interfaces
+.implements Ljb/m;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/reactivex/rxjava3/internal/observers/BasicIntQueueDisposable<",
+        "TT;>;",
+        "Ljb/m;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x3907ba0b13897e3dL
+
+
+# instance fields
+.field final downstream:Ljb/m;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljb/m;"
+        }
+    .end annotation
+.end field
+
+.field final onFinally:Llb/a;
+
+.field qd:Lio/reactivex/rxjava3/operators/b;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/reactivex/rxjava3/operators/b;"
+        }
+    .end annotation
+.end field
+
+.field syncFused:Z
+
+.field upstream:Lio/reactivex/rxjava3/disposables/b;
+
+
+# direct methods
+.method public constructor <init>(Ljb/m;Llb/a;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljb/m;",
+            "Llb/a;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lio/reactivex/rxjava3/internal/observers/BasicIntQueueDisposable;-><init>()V
+
+    iput-object p1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Ljb/m;
+
+    iput-object p2, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Llb/a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public clear()V
+    .locals 0
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lio/reactivex/rxjava3/operators/b;
+
+    invoke-interface {p0}, Lio/reactivex/rxjava3/operators/f;->clear()V
+
+    return-void
+.end method
+
+.method public dispose()V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/rxjava3/disposables/b;
+
+    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/b;->dispose()V
+
+    invoke-virtual {p0}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->runFinally()V
+
+    return-void
+.end method
+
+.method public isDisposed()Z
+    .locals 0
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/rxjava3/disposables/b;
+
+    invoke-interface {p0}, Lio/reactivex/rxjava3/disposables/b;->isDisposed()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public isEmpty()Z
+    .locals 0
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lio/reactivex/rxjava3/operators/b;
+
+    invoke-interface {p0}, Lio/reactivex/rxjava3/operators/f;->isEmpty()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public onComplete()V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Ljb/m;
+
+    invoke-interface {v0}, Ljb/m;->onComplete()V
+
+    invoke-virtual {p0}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->runFinally()V
+
+    return-void
+.end method
+
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Ljb/m;
+
+    invoke-interface {v0, p1}, Ljb/m;->onError(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->runFinally()V
+
+    return-void
+.end method
+
+.method public onNext(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Ljb/m;
+
+    invoke-interface {p0, p1}, Ljb/m;->onNext(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public onSubscribe(Lio/reactivex/rxjava3/disposables/b;)V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/rxjava3/disposables/b;
+
+    invoke-static {v0, p1}, Lio/reactivex/rxjava3/internal/disposables/DisposableHelper;->validate(Lio/reactivex/rxjava3/disposables/b;Lio/reactivex/rxjava3/disposables/b;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/rxjava3/disposables/b;
+
+    instance-of v0, p1, Lio/reactivex/rxjava3/operators/b;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lio/reactivex/rxjava3/operators/b;
+
+    iput-object p1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lio/reactivex/rxjava3/operators/b;
+
+    :cond_0
+    iget-object p1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Ljb/m;
+
+    invoke-interface {p1, p0}, Ljb/m;->onSubscribe(Lio/reactivex/rxjava3/disposables/b;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public poll()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lio/reactivex/rxjava3/operators/b;
+
+    invoke-interface {v0}, Lio/reactivex/rxjava3/operators/f;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    iget-boolean v1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->syncFused:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->runFinally()V
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public requestFusion(I)I
+    .locals 3
+
+    iget-object v0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lio/reactivex/rxjava3/operators/b;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    and-int/lit8 v2, p1, 0x4
+
+    if-nez v2, :cond_2
+
+    invoke-interface {v0, p1}, Lio/reactivex/rxjava3/operators/c;->requestFusion(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    iput-boolean v1, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->syncFused:Z
+
+    :cond_1
+    return p1
+
+    :cond_2
+    return v1
+.end method
+
+.method public runFinally()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object p0, p0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Llb/a;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {p0}, Li4/f;->L(Ljava/lang/Throwable;)V
+
+    invoke-static {p0}, Lv4/b;->Q(Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    return-void
+.end method

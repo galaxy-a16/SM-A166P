@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s ಕುರಿತು</string>
+    <string name="back">ಹಿಂದೆ</string>
+    <string name="chan_mkt">ಮಾರ್ಕೆಟಿಂಗ್</string>
+    <string name="chan_ntc">ಪ್ರಕಟಣೆ</string>
+    <string name="character_counter_content_description">%2$d ರಲ್ಲಿ %1$d ಅಕ್ಷರಗಳು</string>
+    <string name="close_app">ಆಪ್ ಮುಚ್ಚಿ</string>
+    <string name="contact_us">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="couldnt_get_samsung_account_information">ನಿಮ್ಮ ಖಾತೆ ಮಾಹಿತಿ ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="couldnt_get_samsung_account_information_description">ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕ ಪರೀಕ್ಷಿಸಿ ಮತ್ತು Samsung account ಅನ್ನು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ, ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="data_info_dialog_title">ನೀವು ಅನ್‌ಲಾಕ್ ಮಾಡಬಹುದಾದ ಡೇಟಾ</string>
+    <string name="data_info_menu">ನೀವು ಯಾವ ಡೇಟಾ ಅನ್‌ಲಾಕ್ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ನೋಡಿ</string>
+    <string name="delete_dialog_message">ನಿಮ್ಮ ಹಿಂದಿನ ಸಾಧನದ PIN, ಪ್ಯಾಟರ್ನ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್ ನೆನಪಿಟ್ಟುಕೊಳ್ಳಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗದೇ ಇದ್ದರೆ ನಿಮ್ಮ ಡೇಟಾ ಅನ್‌ಲಾಕ್ ಮಾಡುವುದನ್ನು ನೀವು ಸ್ಕಿಪ್ ಮಾಡಬಹುದು. ಆದರೆ, ನಿಮ್ಮ ಗುರುತನ್ನು ದೃಢಪಡಿಸಲು ನಮಗೆ ಸಾಧ್ಯವಾಗದೇ ಇರುವ ಕಾರಣದಿಂದ ಕೆಳಗಿನ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾವನ್ನು ಸುರಕ್ಷತೆಗಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="delete_dialog_title">ಅನ್‌ಲಾಕ್ ಮಾಡುವಲ್ಲಿ ತೊಂದರೆ ಇದೆಯೇ?</string>
+    <string name="delete_menu">ಹೇಗೆ ಅನ್‌ಲಾಕ್ ಮಾಡಬೇಕೆಂದು ನೆನಪಿಲ್ಲವೇ?</string>
+    <string name="dragndroplist_drag_move">ಇದೀಗ %d ಸ್ಥಾನದಲ್ಲಿದೆ</string>
+    <string name="dragndroplist_drag_release">ಅಂಶವನ್ನು %d ಸ್ಥಾನಕ್ಕೆ ಡ್ರಾಪ್ ಮಾಡಲಾಗಿದೆ.</string>
+    <string name="dragndroplist_drag_start">ಅಂಶವನ್ನು %d ಸ್ಥಾನದಲ್ಲಿ ಡ್ರ್ಯಾಗ್ ಮಾಡುವುದಕ್ಕೆ ಆರಂಭಿಸಲಾಗಿದೆ.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d ಸ್ಥಾನದಲ್ಲಿರುವ ಅಂಶವನ್ನು ಡ್ರ್ಯಾಗ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="go_to">%sಗೆ ಹೋಗಿ</string>
+    <string name="go_to_developer_options">ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳಿಗೆ ಹೋಗಿ</string>
+    <string name="go_to_sign_out">ಸೈನ್ ಔಟ್‌ಗೆ ಹೋಗಿ</string>
+    <string name="incorrect_password_entered">ತಪ್ಪಾದ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿದೆ</string>
+    <string name="incorrect_pattern_drawn">ತಪ್ಪಾದ ಮಾದರಿ ಚಿತ್ರಿಸಲಾಗಿದೆ</string>
+    <string name="incorrect_pin_entered">ತಪ್ಪಾದ PIN ನಮೂದಿಸಿದೆ</string>
+    <string name="latest_version_is_already_installed">ಈಗಾಗಲೇ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾಗಿದೆ.</string>
+    <string name="menu_cancel">ರದ್ದು</string>
+    <string name="menu_continue">ಮುಂದುವರಿಯಿರಿ</string>
+    <string name="new_version_is_available">ಒಂದು ಹೊಸ ಆವೃತ್ತಿಯು ಲಭ್ಯವಿರುತ್ತದೆ.</string>
+    <string name="next">ಮುಂದೆ</string>
+    <string name="no_network_connection">ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕವಿಲ್ಲ</string>
+    <string name="no_network_connection_description">ನಿಮ್ಮ ಸಾಧನಗಳ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಸಂಪರ್ಕ ಪರೀಕ್ಷಿಸಿ ಹಾಗೂ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="no_threats_found">ಯಾವುದೇ ಅಪಾಯಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="notify_delete_dialog_title">ನಿಮ್ಮ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ</string>
+    <string name="notify_delete_dialog_title_previous_devices">ನಿಮ್ಮ ಹಿಂದಿನ ಸಾಧನಗಳನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="notify_delete_dialog_title_previous_phone">ನಿಮ್ಮ ಹಿಂದಿನ ಫೋನ್ ಅನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="notify_delete_dialog_title_previous_phones">ನಿಮ್ಮ ಹಿಂದಿನ ಫೋನ್‌ಗಳನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="notify_delete_dialog_title_previous_tablet">ನಿಮ್ಮ ಹಿಂದಿನ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="notify_delete_dialog_title_previous_tablets">ನಿಮ್ಮ ಹಿಂದಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="oem_unlocking_is_turned_on">OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನ್ನು ಆನ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನುಮತಿಸಬಹುದು. ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ.
+
+ಅದನ್ನು ನೀವು ಆಫ್ ಮಾಡಿದ ನಂತರ, ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಇಲ್ಲಿ ಬದಲಾಗುವುದಕ್ಕೆ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನಲ್ಲಿ ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನುಮತಿಸಬಹುದು. ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನಲ್ಲಿ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ.
+
+ಅದನ್ನು ನೀವು ಆಫ್ ಮಾಡಿದ ನಂತರ, ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಇಲ್ಲಿ ಬದಲಾಗುವುದಕ್ಕೆ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನುಮತಿಸಬಹುದು. ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು ಎಂಬಲ್ಲಿ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನಲ್ಲಿ ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನುಮತಿಸಬಹುದು. ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು ಎಂಬಲ್ಲಿ OEM ಅನ್‌ಲಾಕಿಂಗ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ.</string>
+    <string name="ok">ಸರಿ</string>
+    <string name="open_source_licenses">ಮುಕ್ತ ಮೂಲ ಪರವಾನಗಿ</string>
+    <string name="other_devices">ಬೇರೆ ಸಾಧನಗಳು</string>
+    <string name="password_set">ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಿಸಲಾಗಿದೆ %s</string>
+    <string name="pattern_set">ನಮೂನೆ ಹೊಂದಿಸಲಾಗಿದೆ %s</string>
+    <string name="pin_set">PIN ಹೊಂದಿಸಲಾಗಿದೆ %s</string>
+    <string name="ppp_delegate_description">ನಿಮ್ಮ ಡೇಟಾ ರಕ್ಷಿಸಲು PIN, ಪ್ಯಾಟರ್ನ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಹೊಂದಿಸಿ.</string>
+    <string name="ppp_delegate_title">ಸುರಕ್ಷತೆ ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಹೊಂದಿಸಿ</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloudನಲ್ಲಿ ವೃದ್ಧಿಸಿದ ಡೇಟಾ ರಕ್ಷಣೆ ಬ್ಯಾಕಪ್ ಮತ್ತು ಸಿಂಕ್ ಮಾಡುವಿಕೆಗಾಗಿ ಸ್ಕ್ರೀನ್ ಲಾಕ್</string>
+    <string name="ppp_dialog_description_SamsungPass">ಪಾಸ್‌ಕೀಗಳನ್ನು Samsung Passನಲ್ಲಿ ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="remove_this_device">ಈ ಸಾಧನ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="security_status_main_description">ಸುರಕ್ಷಿತ ಖಾಸಗಿ ಬ್ಲಾಕ್‌ಚೈನ್ ಬಳಸಿಕೊಂಡು ನಿಮ್ಮ Samsung accountಗೆ ಸೈನ್ ಇನ್ ಆಗಿರುವ ಬೆಂಬಲಿತ ಸಾಧನಗಳನ್ನು Knox Matrix ಮಾನಿಟರ್ ಮಾಡುತ್ತದೆ. ಚೈನ್‌ನಲ್ಲಿರುವ ಪ್ರತಿ ಸಾಧನವು ಇತರ ಸಾಧನಗಳ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸಬಹುದು ಮತ್ತು ಯಾವುದೇ ಅಪಾಯಗಳಿದ್ದರೆ ನಿಮಗೆ ತಿಳಿಸಬಹುದು.</string>
+    <string name="security_status_not_available_yet">ಸುರಕ್ಷತೆ ಸ್ಥಿತಿ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="security_status_not_available_yet_description">ಇದಕ್ಕೆ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು. ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪರೀಕ್ಷಿಸಿ.</string>
+    <string name="security_status_not_up_to_date">ಸುರಕ್ಷತೆ ಸ್ಥಿತಿ ಅಪ್ ಟು ಡೇಟ್ ಆಗಿಲ್ಲ</string>
+    <string name="security_status_not_up_to_date_description_phone">"ಈ ಫೋನ್‌ನ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು 30ಕ್ಕಿಂತ ಹೆಚ್ಚು ದಿನಗಳಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿಲ್ಲ. ಫೋನ್ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಇರಬಹುದು ಅಥವಾ ಅದರ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸದಂತೆ ಏನಾದರೂ ಅದನ್ನು ತಡೆಯುತ್ತಿರಬಹುದು. ಇನ್ನು ಮುಂದೆ ಈ ಫೋನ್ ಅನ್ನು ನೀವು ಬಳಸುತ್ತಿಲ್ಲದಿದ್ದರೆ, ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡುವುದಕ್ಕೆ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನೀವು ಸೈನ್ ಔಟ್ ಮಾಡಬಹುದು.
+
+ನೀವು ಈ ಫೋನ್ ಬಳಸುತ್ತಿದ್ದರೆ ಆದರೆ ಅದರ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಅಪ್‌ಡೇಟ್ ಆಗುತ್ತಿಲ್ಲದಿದ್ದರೆ, ಅದು ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"ಈ ಸಾಧನದ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು 30ಕ್ಕಿಂತ ಹೆಚ್ಚು ದಿನಗಳಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿಲ್ಲ. ಸಾಧನ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಇರಬಹುದು ಅಥವಾ ಅದರ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸದಂತೆ ಏನಾದರೂ ಅದನ್ನು ತಡೆಯುತ್ತಿರಬಹುದು. ನೀವು ಇನ್ನು ಮುಂದೆ ಈ ಸಾಧನವನ್ನು ಬಳಸುತ್ತಿಲ್ಲದಿದ್ದರೆ, SmartThings ಆ್ಯಪ್‌ನಲ್ಲಿ ಈ ಸಾಧನ ತೆಗೆದುಹಾಕುವುದಕ್ಕೆ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.
+
+ನೀವು ಈ ಸಾಧನ ಬಳಸುತ್ತಿದ್ದರೆ ಆದರೆ ಅದರ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಅಪ್‌ಡೇಟ್ ಆಗುತ್ತಿಲ್ಲದಿದ್ದರೆ, ಅದು ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"ಈ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು 30ಕ್ಕಿಂತ ಹೆಚ್ಚು ದಿನಗಳಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿಲ್ಲ. ಟ್ಯಾಬ್ಲೆಟ್ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಇರಬಹುದು ಅಥವಾ ಅದರ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸದಂತೆ ಏನಾದರೂ ಅದನ್ನು ತಡೆಯುತ್ತಿರಬಹುದು. ಇನ್ನು ಮುಂದೆ ಈ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ನೀವು ಬಳಸುತ್ತಿಲ್ಲದಿದ್ದರೆ, ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡುವುದಕ್ಕೆ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನೀವು ಸೈನ್ ಔಟ್ ಮಾಡಬಹುದು.
+
+ನೀವು ಈ ಟ್ಯಾಬ್ಲೆಟ್ ಬಳಸುತ್ತಿದ್ದರೆ ಆದರೆ ಅದರ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಅಪ್‌ಡೇಟ್ ಆಗುತ್ತಿಲ್ಲದಿದ್ದರೆ, ಅದು ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="security_status_not_up_to_date_description_vd">"ಈ ಸಾಧನದ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯನ್ನು 30ಕ್ಕಿಂತ ಹೆಚ್ಚು ದಿನಗಳಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿಲ್ಲ. ಸಾಧನ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಇರಬಹುದು ಅಥವಾ ಅದರ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸದಂತೆ ಏನಾದರೂ ಅದನ್ನು ತಡೆಯುತ್ತಿರಬಹುದು. ಇನ್ನು ಮುಂದೆ ಈ ಸಾಧನವನ್ನು ನೀವು ಬಳಸುತ್ತಿಲ್ಲದಿದ್ದರೆ, ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡುವುದಕ್ಕೆ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು > ಸೈನ್-ಇನ್ ಮಾಡಲಾದ ಸಾಧನಗಳನ್ನು ನಿರ್ವಹಿಸಿ ಎಂಬಲ್ಲಿ ನೀವು ಸೈನ್ ಔಟ್ ಮಾಡಬಹುದು.
+
+ನೀವು ಈ ಸಾಧನ ಬಳಸುತ್ತಿದ್ದರೆ ಆದರೆ ಅದರ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಅಪ್‌ಡೇಟ್ ಆಗುತ್ತಿಲ್ಲದಿದ್ದರೆ, ಅದು ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="security_status_of_your_devices">ನಿಮ್ಮ ಸಾಧನಗಳ ಸುರಕ್ಷತೆ ಸ್ಥಿತಿ</string>
+    <string name="sesl_action_bar_up_description">ಮೇಲೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
+    <string name="sesl_action_menu_overflow_badge_description">ಹೊಸ ವಿಷಯ ಲಭ್ಯವಿದೆ</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">ಹೊ</string>
+    <string name="sesl_action_menu_overflow_description">ಹೆಚ್ಚು ಆಯ್ಕೆಗಳು</string>
+    <string name="sesl_appbar_suggest_all_dismissed">ಎಲ್ಲ ಸಲಹೆಗಳನ್ನು ವಜಾಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="sesl_appbar_suggest_dismiss">ಸಲಹೆಯನ್ನು ವಜಾಗೊಳಿಸಿ</string>
+    <string name="sesl_appbar_suggest_dismissed">ಸಲಹೆಯನ್ನು ವಜಾಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="sesl_appbar_suggest_pagination">%2$dರಲ್ಲಿ %1$dನೇ ಪುಟ</string>
+    <string name="sesl_index_assistant_text">ಸ್ಕ್ರಾಲ್ ಮಾಡಲು ಎರಡು ಕೈಬೆರಳುಗಳೊಂದಿಗೆ ಮೇಲಕ್ಕೆ ಅಥವಾ ಕೆಳಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ.</string>
+    <string name="sesl_index_scrollbar">ಸ್ಕ್ರಾಲ್ ಬಾರ್</string>
+    <string name="sesl_index_section">ವಿಭಾಗ ಇಂಡೆಕ್ಸ್</string>
+    <string name="sesl_index_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ</string>
+    <string name="sesl_material_badge_description">ಹೊಸ ವಿಷಯ ಲಭ್ಯವಿದೆ</string>
+    <string name="sesl_material_overflow_badge_text_n">ಹೊ</string>
+    <string name="sesl_more_item_label">ಅಧಿಕ</string>
+    <string name="sesl_preferecne_badge_description">ಹೊಸ ಪ್ರಕಟಣೆಗಳು</string>
+    <string name="sesl_preferencecategory_added_title">ತಲೆಬರಹ</string>
+    <string name="sesl_search_hint">ಹುಡುಕಿ</string>
+    <string name="sesl_searchview_description_clear">ಹುಡುಕಾಟ ಕ್ಷೇತ್ರ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="sesl_searchview_description_clear_field">ಹುಡುಕಾಟ ಕ್ಷೇತ್ರ ಕ್ಲಿಯರ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="sesl_searchview_description_query">ಪ್ರಶ್ನೆ ಶೋಧಿಸಿ</string>
+    <string name="sesl_searchview_description_search">ಹುಡುಕಿ</string>
+    <string name="sesl_searchview_description_submit">ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ</string>
+    <string name="sesl_searchview_description_voice">ಧ್ವನಿ ಶೋಧ</string>
+    <string name="sesl_switch_off">ಆಫ್</string>
+    <string name="sesl_switch_on">ಆನ್</string>
+    <string name="sesl_switchbar_off_text">ಆಫ್</string>
+    <string name="sesl_switchbar_on_text">ಆನ್</string>
+    <string name="sesl_toolbar_collapse_description">ಕುಸಿತ</string>
+    <string name="skip">ಸ್ಕಿಪ್</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ SmartThings ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾಗಿಲ್ಲ. ಅದನ್ನು Play Storeನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನಲ್ಲಿ SmartThings ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾಗಿಲ್ಲ. ಅದನ್ನು Play Storeನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="this_phone">ಈ ಫೋನ್</string>
+    <string name="this_tablet">ಈ ಟ್ಯಾಬ್ಲೆಟ್</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d ಗಂಟೆಗಳು %2$d ನಿಮಿಷಗಳಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="unauthorized_software_detected">ಅನಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಪತ್ತೆಯಾಗಿದೆ</string>
+    <string name="unauthorized_software_detected_description_other_phone">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಸಾಧನವನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ SmartThings ಆ್ಯಪ್‌ನಲ್ಲಿ ಈ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unauthorized_software_detected_description_other_vd">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಸಾಧನವನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು > ಸೈನ್-ಇನ್ ಮಾಡಲಾದ ಸಾಧನಗಳನ್ನು ನಿರ್ವಹಿಸಿ ಎಂಬಲ್ಲಿ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಕ್ಕೆ ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unauthorized_software_detected_description_this_phone">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ಅಧಿಕೃತ ಸ್ಯಾಮ್‌ಸಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಅಧಿಕೃತ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unlocked_bootloader">ಅನ್‌ಲಾಕ್ ಆಗಿರುವ ಬೂಟ್‌ಲೋಡರ್</string>
+    <string name="unlocked_bootloader_description_other_phone">"ನಿಮ್ಮ ಫೋನ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್‌ಲಾಕ್ ಆಗಿರುವಾಗ, ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು. ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ನಿಮ್ಮ ಫೋನ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್ನು ಲಾಕ್ ಮಾಡಿ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಬೂಟ್‌ಲೋಡರ್ ಲಾಕ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.
+
+ನೀವು ಅದನ್ನು ಲಾಕ್ ಮಾಡಿದ ನಂತರ, ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಇಲ್ಲಿ ಬದಲಾಗುವುದಕ್ಕೆ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್‌ಲಾಕ್ ಆಗಿರುವಾಗ, ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು. ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸುವುದಕ್ಕಾಗಿ, ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್ನು ಲಾಕ್ ಮಾಡಿ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Samsung account > ಸಾಧನಗಳು ಎಂಬಲ್ಲಿ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಬೂಟ್‌ಲೋಡರ್ ಲಾಕ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.
+
+ನೀವು ಅದನ್ನು ಲಾಕ್ ಮಾಡಿದ ನಂತರ, ಸುರಕ್ಷತೆ ಸ್ಥಿತಿಯು ಇಲ್ಲಿ ಬದಲಾಗುವುದಕ್ಕೆ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು."</string>
+    <string name="unlocked_bootloader_description_this_phone">ನಿಮ್ಮ ಫೋನ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್‌ಲಾಕ್ ಆಗಿರುವಾಗ, ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು. ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ನಿಮ್ಮ ಫೋನ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್ನು ಲಾಕ್ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಬೂಟ್‌ಲೋಡರ್ ಲಾಕ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="unlocked_bootloader_description_this_tablet">ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್‌ಲಾಕ್ ಆಗಿರುವಾಗ, ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು. ಅನಧಿಕೃತ ಸಿಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸುರಕ್ಷತೆ ಅಪಾಯಗಳಿಗೆ ತುತ್ತಾಗಿಸಬಹುದು. ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು, ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಬೂಟ್‌ಲೋಡರ್ ಅನ್ನು ಲಾಕ್ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮ Samsung accountನಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಿ. ಬೂಟ್‌ಲೋಡರ್ ಲಾಕ್ ಮಾಡಲು ಸಹಾಯಕ್ಕಾಗಿ, ಸ್ಯಾಮ್‌ಸಂಗ್ ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="update">ನವೀಕರಿಸಿ</string>
+    <string name="update_multi_apps_to_continue">ಮುಂದುವರಿಯಲು ಮುಂದಿನ ಆ್ಯಪ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಿ:</string>
+    <string name="update_ps_to_continue">ಮುಂದುವರಿಯಲು %s ನವೀಕರಿಸಿ.</string>
+    <string name="verify_current_description_phone">ಈ ಫೋನ್‌ನ PIN, ಪ್ಯಾಟರ್ನ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್ ಜೊತೆಗೆ ನಿಮ್ಮ ಗುರುತನ್ನು ದೃಢಪಡಿಸುವ ಮೂಲಕ ಪಾಸ್‌ಕೀಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ನಿಮ್ಮ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾವನ್ನು ನೀವು ಅನ್‌ಲಾಕ್ ಮಾಡಬಹುದು.</string>
+    <string name="verify_current_description_tablet">ಈ ಟ್ಯಾಬ್ಲೆಟ್‌ನ PIN, ಪ್ಯಾಟರ್ನ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್ ಜೊತೆಗೆ ನಿಮ್ಮ ಗುರುತನ್ನು ದೃಢಪಡಿಸುವ ಮೂಲಕ ಪಾಸ್‌ಕೀಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ನಿಮ್ಮ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾವನ್ನು ನೀವು ಅನ್‌ಲಾಕ್ ಮಾಡಬಹುದು.</string>
+    <string name="verify_current_detail_password">ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ.</string>
+    <string name="verify_current_detail_pattern">ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಮಾದರಿ ರಚಿಸಿ.</string>
+    <string name="verify_current_detail_pin">ನಿಮ್ಮ ಸದ್ಯದ PIN ನಮೂದಿಸಿ.</string>
+    <string name="verify_current_title_phone">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾ ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಈ ಫೋನ್ ಬಳಸಿ</string>
+    <string name="verify_current_title_tablet">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ಡೇಟಾ ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಈ ಟ್ಯಾಬ್ಲೆಟ್ ಬಳಸಿ</string>
+    <string name="verify_old_password_description_phone">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಫೋನ್‌ನ ಪಾಸ್‌ವರ್ಡ್ ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_password_description_tablet">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಪಾಸ್‌ವರ್ಡ್ ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_pattern_description_phone">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಫೋನ್‌ನ ಪ್ಯಾಟರ್ನ್ ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_pattern_description_tablet">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ನ ಪ್ಯಾಟರ್ನ್ ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_pin_description_phone">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಫೋನ್‌ನ PIN ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_pin_description_tablet">ಸುರಕ್ಷತೆಗಾಗಿ, ನಿಮ್ಮ ಹಿಂದಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ನ PIN ಮೂಲಕ ಸ್ವತಃ ನಿಮ್ಮನ್ನು ದೃಢೀಕರಿಸಿ.</string>
+    <string name="verify_old_ppp_title">ನಿಮ್ಮ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಡೇಟಾವನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="version">ಆವೃತ್ತಿ %s</string>
+</resources>

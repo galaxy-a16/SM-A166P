@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s വിവരം</string>
+    <string name="back">പിന്നോട്ട്</string>
+    <string name="chan_mkt">വിപണനം</string>
+    <string name="chan_ntc">അറിയിപ്പ്</string>
+    <string name="character_counter_content_description">%2$d-ൽ %1$d അക്ഷരങ്ങൾ</string>
+    <string name="close_app">ആപ്ലിക്കേഷൻ അടയ്ക്കുക</string>
+    <string name="contact_us">ഞങ്ങളെ ബന്ധപ്പെടുക</string>
+    <string name="couldnt_get_samsung_account_information">നിങ്ങളുടെ അക്കൗണ്ട് വിവരങ്ങൾ ലഭ്യമാക്കാനായില്ല</string>
+    <string name="couldnt_get_samsung_account_information_description">നിങ്ങളുടെ നെറ്റ്‌വർക്ക് കണക്ഷൻ പരിശോധിച്ച് Samsung account ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്‌തിട്ടുണ്ടെന്ന് ഉറപ്പാക്കിയശേഷം വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="data_info_dialog_title">നിങ്ങൾക്ക് അൺലോക്ക് ചെയ്യാനാകുന്ന ഡാറ്റ</string>
+    <string name="data_info_menu">നിങ്ങൾക്ക് എന്ത് ഡാറ്റ അൺലോക്ക് ചെയ്യാനാകുമെന്ന് കാണുക</string>
+    <string name="delete_dialog_message">നിങ്ങളുടെ മുമ്പത്തെ ഉപകരണത്തിന്റെ PIN, പാറ്റേൺ അല്ലെങ്കിൽ പാസ്‌വേഡ് ഓർമ്മയില്ലെങ്കിൽ നിങ്ങളുടെ ഡാറ്റ അൺലോക്ക് ചെയ്യുന്നത് ഒഴിവാക്കാം. എന്നിരുന്നാലും, ഞങ്ങൾക്ക് നിങ്ങളുടെ ഐഡന്റിറ്റി സ്ഥിരീകരിക്കാനാവാത്തതിനാൽ സുരക്ഷയ്ക്കായി ചുവടെയുള്ള എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ ഇല്ലാതാക്കും.</string>
+    <string name="delete_dialog_title">അൺലോക്ക് ചെയ്യുന്നതിൽ പ്രശ്‌നം നേരിടുന്നുണ്ടോ?</string>
+    <string name="delete_menu">എങ്ങനെ അൺലോക്ക് ചെയ്യണമെന്ന് ഓർമ്മയില്ലേ?</string>
+    <string name="dragndroplist_drag_move">ഇപ്പോൾ %d സ്ഥാനത്ത്</string>
+    <string name="dragndroplist_drag_release">ഇനത്തെ സ്ഥാനം %d-ലേക്ക് ഇട്ടു.</string>
+    <string name="dragndroplist_drag_start">സ്ഥാനം %d-ലെ ഇനത്തെ ഇഴയ്ക്കാനാരംഭിച്ചു.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">സ്ഥാനം %d-ലെ ഇനത്തെ ഇഴയ്ക്കാനാവില്ല.</string>
+    <string name="go_to">%s-ലേക്ക് പോവുക</string>
+    <string name="go_to_developer_options">ഡെവലപ്പർ ഐച്ഛികങ്ങളിലേക്ക് പോകുക</string>
+    <string name="go_to_sign_out">സൈൻ-ഔട്ടിലേക്ക് പോകുക</string>
+    <string name="incorrect_password_entered">തെറ്റായ പാസ്‌വേഡ് നൽകി</string>
+    <string name="incorrect_pattern_drawn">തെറ്റായ മാതൃക വരച്ചു</string>
+    <string name="incorrect_pin_entered">തെറ്റായ PIN നൽകി</string>
+    <string name="latest_version_is_already_installed">ഏറ്റവും പുതിയ പതിപ്പ് നേരത്തേതന്നെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്.</string>
+    <string name="menu_cancel">റദ്ദാക്കുക</string>
+    <string name="menu_continue">തുടരുക</string>
+    <string name="new_version_is_available">ഒരു പുതിയ പതിപ്പ് ലഭ്യമാണ്.</string>
+    <string name="next">അടുത്തത്</string>
+    <string name="no_network_connection">നെറ്റ്‌വർക്ക് കണക്ഷനില്ല</string>
+    <string name="no_network_connection_description">നിങ്ങളുടെ ഉപകരണങ്ങളുടെ സുരക്ഷാ അവസ്ഥ അപ്‌ഡേറ്റ് ചെയ്യാനായില്ല. കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="no_threats_found">ഭീഷണികൾ ഒന്നും കണ്ടെത്തിയില്ല</string>
+    <string name="notify_delete_dialog_title">നിങ്ങളുടെ എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ ഇല്ലാതാക്കപ്പെടും</string>
+    <string name="notify_delete_dialog_title_previous_devices">നിങ്ങളുടെ മുമ്പത്തെ ഉപകരണങ്ങൾ ഉപയോഗിച്ച് നിങ്ങളെ പരിശോധിച്ചുറപ്പിക്കാനായില്ല</string>
+    <string name="notify_delete_dialog_title_previous_phone">നിങ്ങളുടെ മുമ്പത്തെ ഫോൺ ഉപയോഗിച്ച് നിങ്ങളെ പരിശോധിച്ചുറപ്പിക്കാനായില്ല</string>
+    <string name="notify_delete_dialog_title_previous_phones">നിങ്ങളുടെ മുമ്പത്തെ ഫോണുകൾ ഉപയോഗിച്ച് നിങ്ങളെ പരിശോധിച്ചുറപ്പിക്കാനായില്ല</string>
+    <string name="notify_delete_dialog_title_previous_tablet">നിങ്ങളുടെ മുമ്പത്തെ ടാബ്‌ലറ്റ് ഉപയോഗിച്ച് നിങ്ങളെ പരിശോധിച്ചുറപ്പിക്കാനായില്ല</string>
+    <string name="notify_delete_dialog_title_previous_tablets">നിങ്ങളുടെ മുമ്പത്തെ ടാബ്‌ലറ്റുകൾ ഉപയോഗിച്ച് നിങ്ങളെ പരിശോധിച്ചുറപ്പിക്കാനായില്ല</string>
+    <string name="oem_unlocking_is_turned_on">OEM അൺലോക്കിംഗ് ഓൺ ചെയ്തിരിക്കുന്നു</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM അൺലോക്ക് ചെയ്യുന്നത് നിങ്ങളുടെ ഫോണിൽ അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കും. അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, നിങ്ങളുടെ ഫോണിൽ ക്രമീകരണം > ഡെവലപ്പർ ഐച്ഛികങ്ങളിൽ OEM അൺലോക്കിംഗ് ഓഫ് ചെയ്യുക.
+
+നിങ്ങൾ അത് ഓഫ് ചെയ്തശേഷം, ഇവിടെ സുരക്ഷാ നില മാറാൻ കുറച്ച് സമയമെടുക്കാം."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM അൺലോക്ക് ചെയ്യുന്നത് നിങ്ങളുടെ ടാബ്‌ലറ്റിൽ അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കും. അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, നിങ്ങളുടെ ടാബ്‌ലറ്റിൽ ക്രമീകരണം > ഡെവലപ്പർ ഐച്ഛികങ്ങളിൽ OEM അൺലോക്കിംഗ് ഓഫ് ചെയ്യുക.
+
+നിങ്ങൾ അത് ഓഫ് ചെയ്തശേഷം, ഇവിടെ സുരക്ഷാ നില മാറാൻ കുറച്ച് സമയമെടുക്കാം."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM അൺലോക്ക് ചെയ്യുന്നത് നിങ്ങളുടെ ഫോണിൽ അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കും. അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, ക്രമീകരണം > ഡെവലപ്പർ ഐച്ഛികങ്ങളിൽ OEM അൺലോക്കിംഗ് ഓഫ് ചെയ്യുക.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM അൺലോക്ക് ചെയ്യുന്നത് നിങ്ങളുടെ ടാബ്‌ലറ്റിൽ അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കും. അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, ക്രമീകരണം > ഡെവലപ്പർ ഐച്ഛികങ്ങളിൽ OEM അൺലോക്കിംഗ് ഓഫ് ചെയ്യുക.</string>
+    <string name="ok">ശരി</string>
+    <string name="open_source_licenses">ഓപ്പൺ സോഴ്സ് ലൈസൻസ്</string>
+    <string name="other_devices">മറ്റ് ഉപകരണങ്ങൾ</string>
+    <string name="password_set">%s-ന് ക്രമീകരിച്ച പാസ്‌വേഡ്</string>
+    <string name="pattern_set">%s-ന് ക്രമീകരിച്ച പാറ്റേൺ</string>
+    <string name="pin_set">%s-ന് ക്രമീകരിച്ച PIN</string>
+    <string name="ppp_delegate_description">നിങ്ങളുടെ ഡാറ്റ പരിരക്ഷിക്കാൻ ഒരു PIN, പാറ്റേൺ അല്ലെങ്കിൽ പാസ്‌വേഡ് ക്രമീകരിക്കുക.</string>
+    <string name="ppp_delegate_title">സുരക്ഷിത സ്ക്രീന്‍ ലോക്ക് ക്രമീകരിക്കുക</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud-ൽ മെച്ചപ്പെടുത്തിയ ഡാറ്റ സംരക്ഷണ ബാക്കപ്പിനും സമന്വയത്തിനും വേണ്ടിയുള്ള സ്‌ക്രീൻ ലോക്ക്</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass-ൽ സംരക്ഷിച്ച പാസ്‌കീകൾ</string>
+    <string name="remove_this_device">ഈ ഉപകരണം നീക്കംചെയ്യുക</string>
+    <string name="security_status_main_description">സുരക്ഷിതമായ ഒരു സ്വകാര്യ ബ്ലോക്ക്‌ചെയിൻ ഉപയോഗിച്ച് നിങ്ങളുടെ Samsung account-ലേക്ക് സൈൻ ഇൻ ചെയ്‌ത പിന്തുണയുള്ള ഉപകരണങ്ങളെ Knox മാട്രിക്‌സ് നിരീക്ഷിക്കുന്നു. ചെയിനിലെ ഓരോ ഉപകരണത്തിനും മറ്റ് ഉപകരണങ്ങളുടെ സുരക്ഷാ നില പരിശോധിക്കാനും എന്തെങ്കിലും ഭീഷണികൾ ഉണ്ടെങ്കിൽ നിങ്ങളെ അറിയിക്കാനുമാകും.</string>
+    <string name="security_status_not_available_yet">സുരക്ഷാ നില ഇപ്പോഴും ലഭ്യമല്ല</string>
+    <string name="security_status_not_available_yet_description">ഇതിന് സ്വൽപ്പം സമയമെടുക്കാം. പിന്നീട് വീണ്ടും പരിശോധിക്കുക.</string>
+    <string name="security_status_not_up_to_date">സുരക്ഷാ നില കാലികമല്ല</string>
+    <string name="security_status_not_up_to_date_description_phone">"ഈ ഫോണിന്റെ സുരക്ഷാ അവസ്ഥ 30 ദിവസത്തിലേറെയായി അപ്‌ഡേറ്റ് ചെയ്‌തിട്ടില്ല. ഫോൺ ഓഫ്‌ലൈനായിരിക്കാം അല്ലെങ്കിൽ അതിന്റെ അവസ്ഥ പരിശോധിക്കുന്നതിൽ നിന്ന് എന്തെങ്കിലും തടഞ്ഞേക്കാം. നിങ്ങൾ ഈ ഫോൺ ഇനി ഉപയോഗിക്കുന്നില്ലെങ്കിൽ, നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാൻ ശുപാർശ ചെയ്യുന്നു. നിങ്ങൾക്ക് ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാനാകും.
+
+നിങ്ങൾ ഈ ഫോൺ ഉപയോഗിക്കുന്നുണ്ടെങ്കിലും അതിന്റെ സുരക്ഷാ നില അപ്‌ഡേറ്റ് ചെയ്യുന്നില്ലെങ്കിൽ, അത് ഒരു നെറ്റ്‌വർക്കിലേക്ക് ബന്ധിപ്പിച്ചിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ അവസ്ഥ 30 ദിവസത്തിലേറെയായി അപ്‌ഡേറ്റ് ചെയ്‌തിട്ടില്ല. ഉപകരണം ഓഫ്‌ലൈനായിരിക്കാം അല്ലെങ്കിൽ അതിന്റെ അവസ്ഥ പരിശോധിക്കുന്നതിൽ നിന്ന് എന്തെങ്കിലും തടഞ്ഞേക്കാം. നിങ്ങൾ ഈ ഉപകരണം ഇനി ഉപയോഗിക്കുന്നില്ലെങ്കിൽ, SmartThings ആപ്പിൽ നിന്ന് ഈ ഉപകരണം നീക്കം ചെയ്യാൻ ശുപാർശ ചെയ്യുന്നു.
+
+നിങ്ങൾ ഈ ഉപകരണം ഉപയോഗിക്കുന്നുണ്ടെങ്കിലും അതിന്റെ സുരക്ഷാ നില അപ്‌ഡേറ്റ് ചെയ്യുന്നില്ലെങ്കിൽ, അത് ഒരു നെറ്റ്‌വർക്കിലേക്ക് ബന്ധിപ്പിച്ചിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"ഈ ടാബ്‌ലറ്റിന്റെ സുരക്ഷാ അവസ്ഥ 30 ദിവസത്തിലേറെയായി അപ്‌ഡേറ്റ് ചെയ്‌തിട്ടില്ല. ടാബ്‌ലറ്റ് ഓഫ്‌ലൈനായിരിക്കാം അല്ലെങ്കിൽ അതിന്റെ അവസ്ഥ പരിശോധിക്കുന്നതിൽ നിന്ന് എന്തെങ്കിലും തടഞ്ഞേക്കാം. നിങ്ങൾ ഈ ടാബ്‌ലറ്റ് ഇനി ഉപയോഗിക്കുന്നില്ലെങ്കിൽ, നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാൻ ശുപാർശ ചെയ്യുന്നു. നിങ്ങൾക്ക് ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാനാകും.
+
+നിങ്ങൾ ഈ ടാബ്‌ലറ്റ് ഉപയോഗിക്കുന്നുണ്ടെങ്കിലും അതിന്റെ സുരക്ഷാ നില അപ്‌ഡേറ്റ് ചെയ്യുന്നില്ലെങ്കിൽ, അത് ഒരു നെറ്റ്‌വർക്കിലേക്ക് ബന്ധിപ്പിച്ചിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക."</string>
+    <string name="security_status_not_up_to_date_description_vd">"ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ അവസ്ഥ 30 ദിവസത്തിലേറെയായി അപ്‌ഡേറ്റ് ചെയ്‌തിട്ടില്ല. ഉപകരണം ഓഫ്‌ലൈനായിരിക്കാം അല്ലെങ്കിൽ അതിന്റെ അവസ്ഥ പരിശോധിക്കുന്നതിൽ നിന്ന് എന്തെങ്കിലും തടഞ്ഞേക്കാം. നിങ്ങൾ ഈ ഉപകരണം ഇനി ഉപയോഗിക്കുന്നില്ലെങ്കിൽ, നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാൻ ശുപാർശ ചെയ്യുന്നു. നിങ്ങൾക്ക് ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ > സൈൻ ഇൻ ചെയ്‌തിരിക്കുന്ന ഉപകരണങ്ങൾ നിയന്ത്രിക്കുക എന്നതിൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യാനാകും.
+
+നിങ്ങൾ ഈ ഉപകരണം ഉപയോഗിക്കുന്നുണ്ടെങ്കിലും അതിന്റെ സുരക്ഷാ നില അപ്‌ഡേറ്റ് ചെയ്യുന്നില്ലെങ്കിൽ, അത് ഒരു നെറ്റ്‌വർക്കിലേക്ക് ബന്ധിപ്പിച്ചിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക."</string>
+    <string name="security_status_of_your_devices">നിങ്ങളുടെ ഉപകരണങ്ങളുടെ സുരക്ഷാ അവസ്ഥ</string>
+    <string name="sesl_action_bar_up_description">മുകളിലേക്ക് നാവിഗേറ്റ് ചെയ്യുക</string>
+    <string name="sesl_action_menu_overflow_badge_description">പുതിയ ഉള്ളടക്കം ലഭ്യം</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">കൂടുതൽ ഐച്ഛികങ്ങൾ</string>
+    <string name="sesl_appbar_suggest_all_dismissed">എല്ലാ നിർദ്ദേശങ്ങളും നിരസിച്ചു</string>
+    <string name="sesl_appbar_suggest_dismiss">നിർദ്ദേശം ഡിസ്മിസ് ചെയ്യുക</string>
+    <string name="sesl_appbar_suggest_dismissed">നിർദ്ദേശം ഡിസ്മിസ് ചെയ്തു</string>
+    <string name="sesl_appbar_suggest_pagination">പേജ് %2$d-ൽ %1$d</string>
+    <string name="sesl_index_assistant_text">സ്ക്രോൾ ചെയ്യുന്നതിന് രണ്ട് വിരലുകളുപയോഗിച്ച് മേലേയ്ക്കോ താഴേയ്ക്കോ സ്വൈപ് ചെയ്യുക.</string>
+    <string name="sesl_index_scrollbar">സ്ക്രോൾ ബാർ</string>
+    <string name="sesl_index_section">വിഭാഗ സൂചിക</string>
+    <string name="sesl_index_selected">തിരഞ്ഞെടുത്തു</string>
+    <string name="sesl_material_badge_description">പുതിയ ഉള്ളടക്കം ലഭ്യം</string>
+    <string name="sesl_material_overflow_badge_text_n">N</string>
+    <string name="sesl_more_item_label">കൂടുതല്‍</string>
+    <string name="sesl_preferecne_badge_description">പുതിയ അറിയിപ്പ്</string>
+    <string name="sesl_preferencecategory_added_title">ശീർഷകം</string>
+    <string name="sesl_search_hint">തിരയുക</string>
+    <string name="sesl_searchview_description_clear">തിരയൽ ഫീൽഡ് മായ്ക്കുക</string>
+    <string name="sesl_searchview_description_clear_field">തിരയൽ ഫീൽഡ് മായ്ച്ചു</string>
+    <string name="sesl_searchview_description_query">തിരച്ചില്‍ സംശയം</string>
+    <string name="sesl_searchview_description_search">തിരയുക</string>
+    <string name="sesl_searchview_description_submit">ക്വറി സമര്‍പ്പിക്കുക</string>
+    <string name="sesl_searchview_description_voice">വോയ്സ് തിരയല്‍</string>
+    <string name="sesl_switch_off">ഓഫ്</string>
+    <string name="sesl_switch_on">ഓൺ</string>
+    <string name="sesl_switchbar_off_text">ഓഫ്</string>
+    <string name="sesl_switchbar_on_text">ഓണ്‍</string>
+    <string name="sesl_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="skip">ഒഴിവാക്കുക</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">നിങ്ങളുടെ ഫോണിൽ SmartThings ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. പ്ലേ സ്റ്റോറിൽ നിന്ന് അത് ഡൗൺലോഡ് ചെയ്യുക.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">നിങ്ങളുടെ ടാബ്‌ലറ്റിൽ SmartThings ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. പ്ലേ സ്റ്റോറിൽ നിന്ന് അത് ഡൗൺലോഡ് ചെയ്യുക.</string>
+    <string name="this_phone">ഈ ഫോൺ</string>
+    <string name="this_tablet">ഈ ടാബ്‌ലറ്റ്</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d മണിക്കൂർ %2$d മിനിറ്റ് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ</string>
+    <string name="unauthorized_software_detected">അംഗീകൃതമല്ലാത്ത സോഫ്റ്റ്‌വെയർ കണ്ടെത്തി</string>
+    <string name="unauthorized_software_detected_description_other_phone">അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾക്ക് വിധേയമാക്കാം. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും സംരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനവുമായി ബന്ധപ്പെടുക.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">അംഗീകൃതമല്ലാത്ത സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഉപകരണത്തെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ SmartThings ആപ്പിൽ നിന്ന് ഈ ഉപകരണം നീക്കം ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾക്ക് വിധേയമാക്കാം. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും സംരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനവുമായി ബന്ധപ്പെടുക.</string>
+    <string name="unauthorized_software_detected_description_other_vd">അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഉപകരണത്തെ സുരക്ഷാ അപകടങ്ങൾക്ക് വിധേയമാക്കാം. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും സംരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ > സൈൻ ഇൻ ചെയ്ത ഉപകരണങ്ങൾ മാനേജ് ചെയ്യുക എന്നതിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനവുമായി ബന്ധപ്പെടുക.</string>
+    <string name="unauthorized_software_detected_description_this_phone">അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, ഔദ്യോഗിക സാംസങ്ങ് സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ഔദ്യോഗിക സോഫ്‌റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.</string>
+    <string name="unlocked_bootloader">ബൂട്ട്‌ലോഡർ അൺലോക്ക് ചെയ്തു</string>
+    <string name="unlocked_bootloader_description_other_phone">"നിങ്ങളുടെ ഫോണിന്റെ ബൂട്ട്‌ലോഡർ അൺലോക്ക് ചെയ്‌തിരിക്കുമ്പോൾ, അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനാകും. അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾക്ക് വിധേയമാക്കാം. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും സംരക്ഷിക്കാൻ, നിങ്ങളുടെ ഫോണിന്റെ ബൂട്ട്‌ലോഡർ ലോക്ക് ചെയ്യുക അല്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ബൂട്ട്ലോഡർ ലോക്ക് ചെയ്യാനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.
+
+നിങ്ങൾ അത് ലോക്ക് ചെയ്തതിന് ശേഷം, ഇവിടെ സുരക്ഷാ നില മാറാൻ കുറച്ച് സമയമെടുക്കാനിടയുണ്ട്."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"നിങ്ങളുടെ ടാബ്‌ലറ്റിന്റെ ബൂട്ട്‌ലോഡർ അൺലോക്ക് ചെയ്‌തിരിക്കുമ്പോൾ, അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനാകും. അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾക്ക് വിധേയമാക്കാം. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും സംരക്ഷിക്കാൻ, നിങ്ങളുടെ ടാബ്‌ലറ്റിന്റെ ബൂട്ട്‌ലോഡർ ലോക്ക് ചെയ്യുക അല്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > Samsung account > ഉപകരണങ്ങൾ എന്നതിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ബൂട്ട്ലോഡർ ലോക്ക് ചെയ്യാനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.
+
+നിങ്ങൾ അത് ലോക്ക് ചെയ്തതിന് ശേഷം, ഇവിടെ സുരക്ഷാ നില മാറാൻ കുറച്ച് സമയമെടുക്കാനിടയുണ്ട്."</string>
+    <string name="unlocked_bootloader_description_this_phone">നിങ്ങളുടെ ഫോണിന്റെ ബൂട്ട്‌ലോഡർ അൺലോക്ക് ചെയ്‌തിരിക്കുമ്പോൾ, അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനാകും. അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ഫോണിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, നിങ്ങളുടെ ഫോണിന്റെ ബൂട്ട്‌ലോഡർ ലോക്ക് ചെയ്യുക അല്ലെങ്കിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ബൂട്ട്ലോഡർ ലോക്ക് ചെയ്യുന്നതിനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.</string>
+    <string name="unlocked_bootloader_description_this_tablet">നിങ്ങളുടെ ടാബ്‌ലറ്റിന്റെ ബൂട്ട്‌ലോഡർ അൺലോക്ക് ചെയ്‌തിരിക്കുമ്പോൾ, അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്റ്റ്‌വെയർ ഇൻസ്റ്റാൾ ചെയ്യാനാകും. അംഗീകൃതമല്ലാത്ത സിസ്റ്റം സോഫ്‌റ്റ്‌വെയർ നിങ്ങളുടെ ടാബ്‌ലറ്റിനെ സുരക്ഷാ അപകടങ്ങൾ വരുത്തുന്നതിനിടയാക്കും. നിങ്ങളുടെ അക്കൗണ്ടും വ്യക്തിഗതമായ ഡാറ്റയും പരിരക്ഷിക്കാൻ, നിങ്ങളുടെ ടാബ്‌ലറ്റിന്റെ ബൂട്ട്‌ലോഡർ ലോക്ക് ചെയ്യുക അല്ലെങ്കിൽ നിങ്ങളുടെ Samsung account-ൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക. ബൂട്ട്ലോഡർ ലോക്ക് ചെയ്യുന്നതിനുള്ള സഹായത്തിന്, സാംസങ്ങ് ഉപഭോക്തൃ സേവനത്തെ ബന്ധപ്പെടുക.</string>
+    <string name="update">അപ്‍ഡേറ്റ് ചെയ്യുക</string>
+    <string name="update_multi_apps_to_continue">തുടരാൻ ഇനിപ്പറയുന്ന ആപ്പുകൾ അപ്ഡേറ്റ് ചെയ്യുക:</string>
+    <string name="update_ps_to_continue">തുടരുന്നതിന് %s അപ്‌ഡേറ്റ് ചെയ്യുക.</string>
+    <string name="verify_current_description_phone">ഈ ഫോണിന്റെ PIN, പാറ്റേൺ അല്ലെങ്കിൽ പാസ്‌വേഡ് ഉപയോഗിച്ച് നിങ്ങളുടെ ഐഡന്റിറ്റി പരിശോധിച്ചുറപ്പിച്ച് പാസ്‌കീകൾ ഉൾപ്പെടെയുള്ള എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ നിങ്ങൾക്ക് അൺലോക്ക് ചെയ്യാം.</string>
+    <string name="verify_current_description_tablet">ഈ ടാബ്‌ലറ്റിന്റെ PIN, പാറ്റേൺ അല്ലെങ്കിൽ പാസ്‌വേഡ് ഉപയോഗിച്ച് നിങ്ങളുടെ ഐഡന്റിറ്റി പരിശോധിച്ച് പാസ്‌കീകൾ ഉൾപ്പെടെയുള്ള എൻക്രിപ്റ്റ് ചെയ്‌ത ഡാറ്റ നിങ്ങൾക്ക് അൺലോക്ക് ചെയ്യാനാകും.</string>
+    <string name="verify_current_detail_password">നിങ്ങളുടെ നിലവിലെ പാസ്‌വേഡ് നൽകുക.</string>
+    <string name="verify_current_detail_pattern">നിലവിലെ പാറ്റേൺ വരയ്ക്കുക.</string>
+    <string name="verify_current_detail_pin">നിങ്ങളുടെ നിലവിലെ PIN നല്‍കുക.</string>
+    <string name="verify_current_title_phone">എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ അൺലോക്ക് ചെയ്യാൻ ഈ ഫോൺ ഉപയോഗിക്കുക</string>
+    <string name="verify_current_title_tablet">എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ അൺലോക്ക് ചെയ്യാൻ ഈ ടാബ്‌ലറ്റ് ഉപയോഗിക്കുക</string>
+    <string name="verify_old_password_description_phone">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ഫോണിന്റെ പാസ്‌വേഡ് ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_password_description_tablet">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ടാബ്‌ലറ്റിന്റെ പാസ്‌വേഡ് ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_pattern_description_phone">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ഫോണിന്റെ പാറ്റേൺ ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_pattern_description_tablet">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ടാബ്‌ലറ്റിന്റെ പാറ്റേൺ ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_pin_description_phone">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ഫോണിന്റെ PIN ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_pin_description_tablet">സുരക്ഷയ്ക്കായി, നിങ്ങളുടെ മുമ്പത്തെ ടാബ്‌ലറ്റിന്റെ PIN ഉപയോഗിച്ച് സ്വയം പരിശോധിച്ചുറപ്പിക്കുക.</string>
+    <string name="verify_old_ppp_title">നിങ്ങളുടെ എൻക്രിപ്റ്റ് ചെയ്ത ഡാറ്റ അൺലോക്ക് ചെയ്യുക</string>
+    <string name="version">പതിപ്പ് %s</string>
+</resources>

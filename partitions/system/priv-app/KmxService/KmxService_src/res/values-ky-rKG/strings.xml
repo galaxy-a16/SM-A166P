@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s жөнүндө</string>
+    <string name="back">Артка</string>
+    <string name="chan_mkt">Маркетинг</string>
+    <string name="chan_ntc">Эскертүү</string>
+    <string name="character_counter_content_description">%2$d белгиден %1$d белги</string>
+    <string name="close_app">Колдон. жабуу</string>
+    <string name="contact_us">Биз менен байланышыңыз</string>
+    <string name="couldnt_get_samsung_account_information">Аккаутуңуздун маалыматы алынбай койду</string>
+    <string name="couldnt_get_samsung_account_information_description">"Тармак туташууңузду текшерип, Samsung account'у соңку версияга жаңыртылганын текшерип, кайра аракет кылыңыз."</string>
+    <string name="data_info_dialog_title">Кулпусун ача турган дайындар</string>
+    <string name="data_info_menu">Кайсы дайындардын кулпусун ача аларыңызды көрүңүз</string>
+    <string name="delete_dialog_message">Мурунку түзмөгүңүздүн PIN кодун, графикалык ачкычын же сырсөзүн унутуп калсаңыз, дайындарыңыздын кулпусун ачууну өткөрүп жиберсеңиз болот. Бирок өздүгүңүздү ырастай албагандыктан, төмөнкү шифрленген дайындар коопсуздук үчүн өчүрүлөт.</string>
+    <string name="delete_dialog_title">Кулпуну ачуу көйгөйү барбы?</string>
+    <string name="delete_menu">Кулпуну ачууну эстей албай жатасызбы?</string>
+    <string name="dragndroplist_drag_move">Эми %d абалында</string>
+    <string name="dragndroplist_drag_release">Нерсе %d турагына ташталды.</string>
+    <string name="dragndroplist_drag_start">Нерсе сүйрөөнү %d турагынан баштоо.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d туракты алган нерсени сүйрөөгө болбойт.</string>
+    <string name="go_to">%s көздөй барыңыз</string>
+    <string name="go_to_developer_options">Иштеп чыгуучунун парам. өтүү</string>
+    <string name="go_to_sign_out">Чыгуу бөлүмүнө өтүү</string>
+    <string name="incorrect_password_entered">Туура эмес сырсөз киргизилди</string>
+    <string name="incorrect_pattern_drawn">Туура эмес cүрөт тартылды</string>
+    <string name="incorrect_pin_entered">Туура эмес PIN киргизилди</string>
+    <string name="latest_version_is_already_installed">Акыркы нускасы эчак орнотулган.</string>
+    <string name="menu_cancel">Токтотуу</string>
+    <string name="menu_continue">Улантуу</string>
+    <string name="new_version_is_available">Жаңы версия байкалат</string>
+    <string name="next">Кийинки</string>
+    <string name="no_network_connection">Тармак туташуусу жок</string>
+    <string name="no_network_connection_description">Түзмөктөрүңүздүн коопсуздук статусу жаңыртылган жок. Байланышты текшерип, кайра аракет кылыңыз.</string>
+    <string name="no_threats_found">Коркунуч табылган жок</string>
+    <string name="notify_delete_dialog_title">Шифрленген дайындарыңыз өчүрүлөт</string>
+    <string name="notify_delete_dialog_title_previous_devices">Мурунку түзмөктөрүңүз менен өздүгүңүз ырасталган жок</string>
+    <string name="notify_delete_dialog_title_previous_phone">Мурунку телефонуңуз менен өздүгүңүз ырасталган жок</string>
+    <string name="notify_delete_dialog_title_previous_phones">Мурунку телефондоруңуз менен өздүгүңүз ырасталган жок</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Мурунку планшетиңиз менен өздүгүңүз ырасталган жок</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Мурунку планшеттериңиз менен өздүгүңүз ырасталган жок</string>
+    <string name="oem_unlocking_is_turned_on">OEM кулпусун ачуу күйгүзүлдү</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM кулпусун ачуу телефонуңузга уруксатсыз программаны орнотууга мүмкүндүк берет. Уруксатсыз программа телефонуңузду коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, телефондогу Жөндөөлөр > Иштеп чыгуучунун параметрлеринен OEM кулпусун ачууну өчүрүңүз.
+
+Аны өчүргөндөн кийин, бул жерден коопсуздук статусун өзгөртүүгө бир аз убакыт талап кылынышы мүмкүн."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM кулпусун ачуу планшетиңизге уруксатсыз программаны орнотууга мүмкүндүк берет. Уруксатсыз программа планшетти коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, планшеттеги Жөндөөлөр > Иштеп чыгуучунун параметрлеринен OEM кулпусун ачууну өчүрүңүз.
+
+Аны өчүргөндөн кийин, бул жерден коопсуздук статусун өзгөртүүгө бир аз убакыт талап кылынышы мүмкүн."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM кулпусун ачуу телефонуңузга уруксатсыз программаны орнотууга мүмкүндүк берет. Уруксатсыз программа телефонуңузду коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, Жөндөөлөр > Иштеп чыгуучунун параметрлеринен OEM кулпусун ачууну өчүрүңүз.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM кулпусун ачуу планшетиңизге уруксатсыз программаны орнотууга мүмкүндүк берет. Уруксатсыз программа планшетти коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, Жөндөөлөр > Иштеп чыгуучунун параметрлеринен OEM кулпусун ачууну өчүрүңүз.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Ачык булак лицензиясы</string>
+    <string name="other_devices">Башка түзмөктөр</string>
+    <string name="password_set">Сырсөз топтому %s</string>
+    <string name="pattern_set">Сүрөт топтому %s</string>
+    <string name="pin_set">PIN коюлган %s</string>
+    <string name="ppp_delegate_description">Дайындарыңызды коргоо үчүн PIN кодду, үлгүнү же сырсөздү коюңуз.</string>
+    <string name="ppp_delegate_title">Коопсуз экран кулпусун коюңуз</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud кызматында Дайындардын өркүндөтүлгөн коргоосунун камдык сактоосу жана синхрондоштуруу үчүн экран кулпусу</string>
+    <string name="ppp_dialog_description_SamsungPass">Сакталган киргизүүчү ачкычтар Samsung Pass кызматында</string>
+    <string name="remove_this_device">Түзмөктү өчүрүү</string>
+    <string name="security_status_main_description">"Knox Matrix коопсуз жеке блокчейн аркылуу Samsung account'уңузга кирген колдоого алынган түзмөктөрдү көзөмөлдөйт. Чынжырдагы ар бир түзмөк башка түзмөктөрдүн коопсуздук абалын текшерип, кандайдыр бир коркунучтар болсо, сизге кабарлай алат."</string>
+    <string name="security_status_not_available_yet">Коопсуздук абалы азырынча жеткиликтүү эмес</string>
+    <string name="security_status_not_available_yet_description">Бул бир аз убакытты алышы мүмкүн. Кийинчерээк кайра текшериңиз.</string>
+    <string name="security_status_not_up_to_date">Коопсуздук абалы жаңыртылган эмес</string>
+    <string name="security_status_not_up_to_date_description_phone">"Бул телефондун коопсуздук абалы 30 күндөн ашык убакыттан бери жаңыртыла элек. Телефон офлайн болушу же анын абалын текшерүүгө бир нерсе тоскоол болушу мүмкүн. Эгер бул телефонду мындан ары колдонбосоңуз, Samsung account'уңуздан чыгуу сунушталат. Жөндөөлөр > Samsung account > Түзмөктөр бөлүмүнөн чыксаңыз болот.
+
+Эгер бул телефонду колдонуп жатсаңыз, бирок анын коопсуздук абалы жаңыртылбай жатса, анын тармакка туташып турганын текшериңиз."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Бул түзмөктүн коопсуздук абалы 30 күндөн ашык убакыттан бери жаңыртыла элек. Түзмөк офлайн болушу же анын абалын текшерүүгө бир нерсе тоскоол болушу мүмкүн. Эгер бул түзмөктү мындан ары колдонбосоңуз, бул түзмөктү SmartThings колдонмосунан алып салуу сунушталат.
+
+Эгер бул түзмөктү колдонуп жатсаңыз, бирок анын коопсуздук абалы жаңыртылбай жатса, анын тармакка туташып турганын текшериңиз."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Бул планшеттин коопсуздук абалы 30 күндөн ашык убакыттан бери жаңыртыла элек. Планшет офлайн болушу же анын абалын текшерүүгө бир нерсе тоскоол болушу мүмкүн. Эгер бул планшетти мындан ары колдонбосоңуз, Samsung account'уңуздан чыгуу сунушталат. Жөндөөлөр > Samsung account > Түзмөктөр бөлүмүнөн чыксаңыз болот.
+
+Эгер бул планшетти колдонуп жатсаңыз, бирок анын коопсуздук абалы жаңыртылбай жатса, анын тармакка туташып турганын текшериңиз."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Бул түзмөктүн коопсуздук абалы 30 күндөн ашык убакыттан бери жаңыртыла элек. Түзмөк офлайн болушу же анын абалын текшерүүгө бир нерсе тоскоол болушу мүмкүн. Эгер бул түзмөктү мындан ары колдонбосоңуз, Samsung account'уңуздан чыгуу сунушталат. Жөндөөлөр > Samsung account > Түзмөктөр > Каттоо эсебине кирген түзмөктөрдү башкаруу бөлүмүнөн чыксаңыз болот.
+
+Эгер бул түзмөктү колдонуп жатсаңыз, бирок анын коопсуздук абалы жаңыртылбай жатса, анын тармакка туташып турганын текшериңиз."</string>
+    <string name="security_status_of_your_devices">Түзмөктөрдүн коопсуздук абалы</string>
+    <string name="sesl_action_bar_up_description">Өйдө жол өтүү</string>
+    <string name="sesl_action_menu_overflow_badge_description">Жаңы мазмун байкалат</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Ж</string>
+    <string name="sesl_action_menu_overflow_description">Дагы тандоолор</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Бардык сунуштар четке кагылды</string>
+    <string name="sesl_appbar_suggest_dismiss">Сунушту четке кагуу</string>
+    <string name="sesl_appbar_suggest_dismissed">Сунуш четке кагылды</string>
+    <string name="sesl_appbar_suggest_pagination">%2$d беттин ичинен %1$d</string>
+    <string name="sesl_index_assistant_text">Жылдыруу үчүн эки бармагыңыз менен өйдө же ылдый жылдырыңыз.</string>
+    <string name="sesl_index_scrollbar">Айландыруу тилкеси</string>
+    <string name="sesl_index_section">Бөлүм индекси</string>
+    <string name="sesl_index_selected">Тандалды</string>
+    <string name="sesl_material_badge_description">Жаңы мазмун байкалат</string>
+    <string name="sesl_material_overflow_badge_text_n">Ж</string>
+    <string name="sesl_more_item_label">Дагы</string>
+    <string name="sesl_preferecne_badge_description">Жаңы билдирүү</string>
+    <string name="sesl_preferencecategory_added_title">Баш аты</string>
+    <string name="sesl_search_hint">Издөө</string>
+    <string name="sesl_searchview_description_clear">Издөө талаасын тазалоо</string>
+    <string name="sesl_searchview_description_clear_field">Издөө талаасы тазаланды</string>
+    <string name="sesl_searchview_description_query">Издөө сурамы</string>
+    <string name="sesl_searchview_description_search">Издөө</string>
+    <string name="sesl_searchview_description_submit">Сурамды которуу</string>
+    <string name="sesl_searchview_description_voice">Үн издөө</string>
+    <string name="sesl_switch_off">Өчүк</string>
+    <string name="sesl_switch_on">Күйүк</string>
+    <string name="sesl_switchbar_off_text">Өчүрүү</string>
+    <string name="sesl_switchbar_on_text">Күйүк</string>
+    <string name="sesl_toolbar_collapse_description">Жыюу</string>
+    <string name="skip">Өткөрүп жиберүү</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">"SmartThings телефонуңузга орнотулган эмес. Аны Play Store'дон жүктөп алыңыз."</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">"SmartThings планшетиңизге орнотулган эмес. Аны Play Store'дон жүктөп алыңыз."</string>
+    <string name="this_phone">Бул телефон</string>
+    <string name="this_tablet">Бул планшет</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d саат %2$d мүнөттөн кийин кайра аракет кылыңыз</string>
+    <string name="unauthorized_software_detected">Уруксаты жок программа аныкталды</string>
+    <string name="unauthorized_software_detected_description_other_phone">"Уруксатсыз система программасы телефондун коопсуздук абалын начарлатышы мүмкүн. Аккаунтуңузду жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же Жөндөөлөр > Samsung account > Түзмөктөр аркылуу Samsung account'уңуздан чыгыңыз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Уруксатсыз система программасы түзмөгүңүздү коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же бул түзмөктү SmartThings колдонмосунан өчүрүңүз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">"Уруксатсыз система программасы планшеттин коопсуздук абалын начарлатышы мүмкүн. Аккаунтуңузду жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же Жөндөөлөр > Samsung account > Түзмөктөр аркылуу Samsung account'уңуздан чыгыңыз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unauthorized_software_detected_description_other_vd">"Уруксатсыз система программасы түзмөктүн коопсуздук абалын начарлатышы мүмкүн. Аккаунтуңузду жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же Жөндөөлөр > Samsung account > Түзмөктөр > Кирген түзмөктөрдү башкаруу аркылуу Samsung account'уңуздан чыгыңыз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unauthorized_software_detected_description_this_phone">"Уруксатсыз система программасы телефонуңузду коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же Samsung account'уңуздан чыгыңыз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unauthorized_software_detected_description_this_tablet">"Уруксатсыз система программасы планшетиңизди коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, расмий Samsung программасын орнотуңуз же Samsung account'уңуздан чыгыңыз. Расмий программаны орнотууга жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unlocked_bootloader">Кулпусу ачылган жүктөгүч</string>
+    <string name="unlocked_bootloader_description_other_phone">"Телефонуңуздун жүктөгүчүнүн кулпусу ачылганда, уруксатсыз система программасы орнотулушу мүмкүн. Уруксатсыз система программасы телефондун коопсуздук абалын начарлатышы мүмкүн. Аккаунтуңузду жана жеке маалыматыңызды коргоо үчүн, телефондун жүктөгүчүн кулпулаңыз же Жөндөөлөр > Samsung account > Түзмөктөр аркылуу Samsung account'уңуздан чыгыңыз. Жүктөгүчтү кулпулоо боюнча жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз.
+
+Аны кулпулап салгандан кийин, бул жерде коопсуздук абалын өзгөртүүгө бир аз убакыт талап кылынышы мүмкүн."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Планшетиңиздин жүктөгүчүнүн кулпусу ачылганда, уруксатсыз система программасы орнотулушу мүмкүн. Уруксатсыз система программасы планшеттин коопсуздук абалын начарлатышы мүмкүн. Аккаунтуңузду жана жеке маалыматыңызды коргоо үчүн, планшеттин жүктөгүчүн кулпулаңыз же Жөндөөлөр > Samsung account > Түзмөктөр аркылуу Samsung account'уңуздан чыгыңыз. Жүктөгүчтү кулпулоо боюнча жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз.
+
+Аны кулпулап салгандан кийин, бул жерде коопсуздук абалын өзгөртүүгө бир аз убакыт талап кылынышы мүмкүн."</string>
+    <string name="unlocked_bootloader_description_this_phone">"Телефонуңуздун жүктөгүчүнүн кулпусу ачылганда, уруксатсыз система программасы орнотулушу мүмкүн. Уруксатсыз система программасы телефонуңузду коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, телефонуңуздун жүктөгүчүн кулпулап коюңуз же Samsung account'уңуздан чыгыңыз. Жүктөгүчтү кулпулоо боюнча жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="unlocked_bootloader_description_this_tablet">"Планшетиңиздин жүктөгүчүнүн кулпусу ачылганда, уруксатсыз система программасы орнотулушу мүмкүн. Уруксатсыз система программасы планшетиңизди коопсуздук коркунучуна алсыз кылып коюшу мүмкүн. Аккаунтту жана жеке маалыматыңызды коргоо үчүн, планшеттин жүктөгүчүн кулпулап коюңуз же Samsung account'уңуздан чыгыңыз. Жүктөгүчтү кулпулоо боюнча жардам алуу үчүн, Samsung Кардарлар кызматына кайрылыңыз."</string>
+    <string name="update">Жаңыртуу</string>
+    <string name="update_multi_apps_to_continue">Улантуу үчүн төмөнкү колдонмолорду жаңыртыңыз:</string>
+    <string name="update_ps_to_continue">Улантуу үчүн %s жаңыртыңыз.</string>
+    <string name="verify_current_description_phone">Бул телефондун PIN коду, үлгүсү же сырсөзү менен өздүгүңүздү ырастоо менен шифрленген дайындарыңыздын, анын ичинде киргизүүчү ачкычтардын кулпусун ача аласыз.</string>
+    <string name="verify_current_description_tablet">Бул планшеттин PIN коду, үлгүсү же сырсөзү менен өздүгүңүздү ырастап, шифрленген дайындарыңыздын, анын ичинде киргизүүчү ачкычтардын кулпусун ача аласыз.</string>
+    <string name="verify_current_detail_password">Учурдагы сырсөзүңүздү киргизиңиз.</string>
+    <string name="verify_current_detail_pattern">Учурдагы сүрөтүңүздү тартыңыз.</string>
+    <string name="verify_current_detail_pin">Учурдагы ПИН кодуңузду киргизиңиз.</string>
+    <string name="verify_current_title_phone">Шифрленген дайындардын кулпусун ачуу үчүн бул телефонду колдонуңуз</string>
+    <string name="verify_current_title_tablet">Шифрленген дайындардын кулпусун ачуу үчүн бул планшетти колдонуңуз</string>
+    <string name="verify_old_password_description_phone">Коопсуздук үчүн мурунку телефонуңуздун сырсөзү менен өздүгүңүздү ырастаңыз.</string>
+    <string name="verify_old_password_description_tablet">Коопсуздук үчүн мурунку планшетиңиздин сырсөзү менен өздүгүңүздү ырастаңыз.</string>
+    <string name="verify_old_pattern_description_phone">Коопсуздук үчүн мурунку телефонуңуздун үлгүсү менен өздүгүңүздү ырастаңыз.</string>
+    <string name="verify_old_pattern_description_tablet">Коопсуздук үчүн мурунку планшетиңиздин үлгүсү менен өздүгүңүздү ырастаңыз.</string>
+    <string name="verify_old_pin_description_phone">Коопсуздук үчүн мурунку телефонуңуздун PIN коду менен өздүгүңүздү ырастаңыз.</string>
+    <string name="verify_old_pin_description_tablet">Коопсуздук үчүн өздүгүңүздү мурунку планшетиңиздин PIN коду менен ырастаңыз.</string>
+    <string name="verify_old_ppp_title">Шифрленген дайындарыңыздын кулпусун ачыңыз</string>
+    <string name="version">Версия %s</string>
+</resources>

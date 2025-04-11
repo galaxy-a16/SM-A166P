@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Дар бораи %s</string>
+    <string name="back">Қафо</string>
+    <string name="chan_mkt">Маркетингӣ</string>
+    <string name="chan_ntc">Тавзеҳ</string>
+    <string name="character_counter_content_description">%1$d аз %2$d аломат</string>
+    <string name="close_app">Брнмро пӯшидан</string>
+    <string name="contact_us">Тамос бо мо</string>
+    <string name="couldnt_get_samsung_account_information">Гирифтани маълумоти ҳисоби шумо барор наёфт</string>
+    <string name="couldnt_get_samsung_account_information_description">Пайвасти шабакавии худро тафтиш карда, мутмаин шавед, ки Samsung account то версияи охирин навсозӣ карда шудааст, ва баъдан кӯшишро такрор кунед.</string>
+    <string name="data_info_dialog_title">Иттилооте, ки шумо озод карда метавонед</string>
+    <string name="data_info_menu">Бинед, кадом иттилоотро озод карда метавонед</string>
+    <string name="delete_dialog_message">Агар PIN, расм ё пароли дастгоҳи қаблии худро дар хотир надошта бошед, метавонед озодкунии иттилоотро иҷро накарда, давом диҳед. Бо вуҷуди ин, иттилооти рамзбандишудаи зерин баҳри амният нест карда мешавад, зеро мо шахсияти шуморо муайян карда натавонистем.</string>
+    <string name="delete_dialog_title">Ҳангоми озод кардан бо мушкилӣ дучор мешавед?</string>
+    <string name="delete_menu">Тарзи озодкуниро фаромӯш кардед?</string>
+    <string name="dragndroplist_drag_move">Ҳоло дар мавқеи %d</string>
+    <string name="dragndroplist_drag_release">Объект ба навбати%d партофта шуд.</string>
+    <string name="dragndroplist_drag_start">Объект дар навбати %d кашонида мешавад.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Объект дар навбати %d кашонида шуда наметавонад.</string>
+    <string name="go_to">Ба %s гузаштан</string>
+    <string name="go_to_developer_options">Ба Имконоти таҳиягар гузаштан</string>
+    <string name="go_to_sign_out">Ба “Хориҷ ш-н” гзштн</string>
+    <string name="incorrect_password_entered">Пароли нодуруст ворид карда шуд</string>
+    <string name="incorrect_pattern_drawn">Расми нодуруст кашида шуд</string>
+    <string name="incorrect_pin_entered">PIN-и нодуруст ворид карда шуд</string>
+    <string name="latest_version_is_already_installed">Версияи охирин аллакай насб шудааст.</string>
+    <string name="menu_cancel">Бекор кардан</string>
+    <string name="menu_continue">Идома додан</string>
+    <string name="new_version_is_available">Версияи нав дастрас аст</string>
+    <string name="next">Навбатӣ</string>
+    <string name="no_network_connection">Ягон пайвастагии шабака нест</string>
+    <string name="no_network_connection_description">Нав кардани ҳолати амнияти дастгоҳҳои шумо барор наёфт. Пайвастро тафтиш карда, кӯшишро такрор кунед.</string>
+    <string name="no_threats_found">Таҳдиде ёфт нашуд</string>
+    <string name="notify_delete_dialog_title">Иттилооти рамзбандишудаи шумо нест карда мешавад</string>
+    <string name="notify_delete_dialog_title_previous_devices">Тафтиши шахсияти шумо бо истифодаи дастгоҳҳои қаблии шумо барор наёфт</string>
+    <string name="notify_delete_dialog_title_previous_phone">Тафтиши шахсияти шумо бо истифодаи телефони қаблии шумо барор наёфт</string>
+    <string name="notify_delete_dialog_title_previous_phones">Тафтиши шахсияти шумо бо истифодаи телефонҳои қаблии шумо барор наёфт</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Тафтиши шахсияти шумо бо истифодаи планшети қаблии шумо барор наёфт</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Тафтиши шахсияти шумо бо истифодаи планшетҳои қаблии шумо барор наёфт</string>
+    <string name="oem_unlocking_is_turned_on">Озодкунии OEM фурӯзон аст</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"Озодкунии OEM метавонад насб шудани нармафзори тасвибнашударо дар телефони шумо имконпазир созад. Нармафзори тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, Озодкунии OEM-ро дар телефони худ дар Танзимот > Имконоти таҳиягар хомӯш кунед.
+
+Баъди онро хомӯш кардан, ҳолати амният дар инҷо метавонад каме дертар иваз шавад."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"Озодкунии OEM метавонад насб шудани нармафзори тасвибнашударо дар планшети шумо имконпазир созад. Нармафзори тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, Озодкунии OEM-ро дар планшети худ дар Танзимот > Имконоти таҳиягар хомӯш кунед.
+
+Баъди онро хомӯш кардан, ҳолати амният дар инҷо метавонад каме дертар иваз шавад."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">Озодкунии OEM метавонад насб шудани нармафзори тасвибнашударо дар телефони шумо имконпазир созад. Нармафзори тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, Озодкунии OEM-ро дар Танзимот > Имконоти таҳиягар хомӯш кунед.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">Озодкунии OEM метавонад насб шудани нармафзори тасвибнашударо дар планшети шумо имконпазир созад. Нармафзори тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, Озодкунии OEM-ро дар Танзимот > Имконоти таҳиягар хомӯш кунед.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">Иҷозатномаи манбаи кушод</string>
+    <string name="other_devices">Дастгоҳҳои дигар</string>
+    <string name="password_set">Парол танзим шуд %s</string>
+    <string name="pattern_set">Расм танзим шуд %s</string>
+    <string name="pin_set">PIN танзим шуд %s</string>
+    <string name="ppp_delegate_description">Барои иттилооти худро муҳофизат кардан, PIN, расм ё парол танзим кунед.</string>
+    <string name="ppp_delegate_title">Танзими банди эмини экран</string>
+    <string name="ppp_dialog_description_SamsungCloud">Банди экран барои нусхагирии эҳтиётӣ ва ҳамоҳангсозии Муҳофизати такмилёфтаи иттилоот дар Samsung Cloud</string>
+    <string name="ppp_dialog_description_SamsungPass">Рамзҳои дар Samsung Pass захирашуда</string>
+    <string name="remove_this_device">Ин дастгоҳро нест к</string>
+    <string name="security_status_main_description">Knox Matrix дастгоҳҳои дастгирӣ мешудаи ба Samsung account-и шумо воридшударо бо истифодаи блокчейни махфии муҳофизатшуда назорат мекунад. Ҳар як дастгоҳи дохили занҷир (чейн) метавонад ҳолати амнияти дигар дастгоҳҳоро тафтиш кунад ва шуморо оид ба таҳдидҳо огоҳ кунад.</string>
+    <string name="security_status_not_available_yet">Ҳолати амният ҳоло дастнорас аст</string>
+    <string name="security_status_not_available_yet_description">Ин метавонад андак вақт гирад. Дертар баргардед.</string>
+    <string name="security_status_not_up_to_date">Ҳолати амният муосир намебошад</string>
+    <string name="security_status_not_up_to_date_description_phone">"Ҳолати амнияти ин телефон зиёда аз 30 рӯз нав карда нашудааст. Телефон метавонад офлайн бошад ё чизе ба тафтиш шудани ҳолати он монеъ шуда истодааст. Агар ин телефонро дигар истифода набурда истода бошед, тавсия медиҳем, ки онро аз Samsung account-и худ хориҷ кунед. Метавонед дар Танзимот > Samsung account > Дастгоҳҳо хориҷ кунед.
+
+Агар телефонро истифода бурда истода бошед, вале ҳолати амният нав нашавад, мутмаин шавед, ки он ба шабака пайваст шудааст."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Ҳолати амнияти ин дастгоҳ зиёда аз 30 рӯз нав карда нашудааст. Дастгоҳ метавонад офлайн бошад ё чизе ба тафтиш шудани ҳолати он монеъ шуда истодааст. Агар ин дастгоҳро дигар истифода набурда истода бошед, тавсия медиҳем, ки онро дар барномаи SmartThings нест кунед.
+
+Агар дастгоҳро истифода бурда истода бошед, вале ҳолати амният нав нашавад, мутмаин шавед, ки он ба шабака пайваст шудааст."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Ҳолати амнияти ин планшет зиёда аз 30 рӯз нав карда нашудааст. Планшет метавонад офлайн бошад ё чизе ба тафтиш шудани ҳолати он монеъ шуда истодааст. Агар ин планшетро дигар истифода набурда истода бошед, тавсия медиҳем, ки онро аз Samsung account-и худ хориҷ кунед. Метавонед дар Танзимот > Samsung account > Дастгоҳҳо хориҷ кунед.
+
+Агар планшетро истифода бурда истода бошед, вале ҳолати амният нав нашавад, мутмаин шавед, ки он ба шабака пайваст шудааст."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Ҳолати амнияти ин дастгоҳ зиёда аз 30 рӯз нав карда нашудааст. Дастгоҳ метавонад офлайн бошад ё чизе ба тафтиш шудани ҳолати он монеъ шуда истодааст. Агар ин дастгоҳро дигар истифода набурда истода бошед, тавсия медиҳем, ки онро аз Samsung account-и худ хориҷ кунед. Метавонед дар Танзимот > Samsung account > Дастгоҳҳо > Дастгоҳҳои воридшударо идора кардан хориҷ кунед.
+
+Агар дастгоҳро истифода бурда истода бошед, вале ҳолати амният нав нашавад, мутмаин шавед, ки он ба шабака пайваст шудааст."</string>
+    <string name="security_status_of_your_devices">Ҳолати амнияти дастгоҳҳои шумо</string>
+    <string name="sesl_action_bar_up_description">Паймоиш ба боло</string>
+    <string name="sesl_action_menu_overflow_badge_description">Муҳтавои нав дастрас аст</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Н</string>
+    <string name="sesl_action_menu_overflow_description">Имконоти бештар</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Ҳамаи тавсияҳо пӯшида шуданд</string>
+    <string name="sesl_appbar_suggest_dismiss">Тавсияро пӯшидан</string>
+    <string name="sesl_appbar_suggest_dismissed">Тавсия пӯшида шуд</string>
+    <string name="sesl_appbar_suggest_pagination">Саҳифаи %1$d аз %2$d</string>
+    <string name="sesl_index_assistant_text">Барои варақ задан, бо ду ангушт ба боло ё поён бимолед.</string>
+    <string name="sesl_index_scrollbar">Навори ҳаракат</string>
+    <string name="sesl_index_section">Мундариҷаи қисмат</string>
+    <string name="sesl_index_selected">Интихоб шуд</string>
+    <string name="sesl_material_badge_description">Муҳтавои нав дастрас аст</string>
+    <string name="sesl_material_overflow_badge_text_n">Н</string>
+    <string name="sesl_more_item_label">Бештар</string>
+    <string name="sesl_preferecne_badge_description">Огоҳии нав</string>
+    <string name="sesl_preferencecategory_added_title">Унвон</string>
+    <string name="sesl_search_hint">Ҷустуҷӯ</string>
+    <string name="sesl_searchview_description_clear">Майдони ҷустуҷӯро тоза кардан</string>
+    <string name="sesl_searchview_description_clear_field">Майдони ҷустуҷӯ тоза карда шуд</string>
+    <string name="sesl_searchview_description_query">Дархости ҷустуҷӯ</string>
+    <string name="sesl_searchview_description_search">Ҷустуҷӯ</string>
+    <string name="sesl_searchview_description_submit">Фиристодани дархост</string>
+    <string name="sesl_searchview_description_voice">Ҷустуҷӯи овозӣ</string>
+    <string name="sesl_switch_off">Хомӯш</string>
+    <string name="sesl_switch_on">Фурӯзон</string>
+    <string name="sesl_switchbar_off_text">Хомӯш</string>
+    <string name="sesl_switchbar_on_text">Фурӯзон</string>
+    <string name="sesl_toolbar_collapse_description">Печонидан</string>
+    <string name="skip">Бе амал</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings дар телефони шумо насб нашудааст. Онро аз Play Store боргирӣ кунед.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings дар планшети шумо насб нашудааст. Онро аз Play Store боргирӣ кунед.</string>
+    <string name="this_phone">Ин телефон</string>
+    <string name="this_tablet">Ин планшет</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">Кӯшишро баъди %1$d соат %2$d дақиқа такрор кунед</string>
+    <string name="unauthorized_software_detected">Нармафзори иҷозатнашуда ошкор шудааст</string>
+    <string name="unauthorized_software_detected_description_other_phone">Нармафзори системавии тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё дар Танзимот > Samsung account > Дастгоҳҳо аз Samsung account-и худ хориҷ шавед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Нармафзори системавии тасвибнашуда метавонад дастгоҳи шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё ин дастгоҳро дар барномаи SmartThings нест кунед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Нармафзори системавии тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё дар Танзимот > Samsung account > Дастгоҳҳо аз Samsung account-и худ хориҷ шавед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Нармафзори системавии тасвибнашуда метавонад дастгоҳи шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё дар Танзимот > Samsung account > Дастгоҳҳо > Дастгоҳҳои воридшударо идора кардан аз Samsung account-и худ хориҷ шавед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Нармафзори системавии тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё аз Samsung account-и худ хориҷ шавед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Нармафзори системавии тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, нармафзори расмии Samsung-ро насб кунед ё аз Samsung account-и худ хориҷ шавед. Барои доир ба насб кардани нармафзори расмӣ кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unlocked_bootloader">Бутлодер озод карда шудааст</string>
+    <string name="unlocked_bootloader_description_other_phone">"Ҳангоми озод будани бутлодери телефони шумо, нармафзори системавии тасвибнашуда метавонад насб карда шавад. Нармафзори системавии тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, бутлодери телефони худро бандед ё дар Танзимот > Samsung account > Дастгоҳҳо аз Samsung account-и худ хориҷ шавед. Барои доир ба бастани бутлодер кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.
+
+Баъд аз онро бастан, ҳолати амният дар инҷо метавонад каме дертар иваз шавад."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Ҳангоми озод будани бутлодери планшети шумо, нармафзори системавии тасвибнашуда метавонад насб карда шавад. Нармафзори системавии тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, бутлодери планшети худро бандед ё дар Танзимот > Samsung account > Дастгоҳҳо аз Samsung account-и худ хориҷ шавед. Барои доир ба бастани бутлодер кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.
+
+Баъд аз онро бастан, ҳолати амният дар инҷо метавонад каме дертар иваз шавад."</string>
+    <string name="unlocked_bootloader_description_this_phone">Ҳангоми озод будани бутлодери телефони шумо, нармафзори системавии тасвибнашуда метавонад насб карда шавад. Нармафзори системавии тасвибнашуда метавонад телефони шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, бутлодери телефони худро бандед ё аз Samsung account-и худ хориҷ шавед. Барои доир ба бастани бутлодер кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Ҳангоми озод будани бутлодери планшети шумо, нармафзори системавии тасвибнашуда метавонад насб карда шавад. Нармафзори системавии тасвибнашуда метавонад планшети шуморо нисбат ба таҳдидҳои амният осебпазир созад. Барои ҳисоб ва иттилооти шахсии худро муҳофизат кардан, бутлодери планшети худро бандед ё аз Samsung account-и худ хориҷ шавед. Барои доир ба бастани бутлодер кӯмак гирифтан, ба Маркази хизматрасонии муштариёни Samsung муроҷиат кунед.</string>
+    <string name="update">Навсозӣ</string>
+    <string name="update_multi_apps_to_continue">Барои давом додан, барномаҳои зеринро навсозӣ кунед:</string>
+    <string name="update_ps_to_continue">Барои идома додан, %s-ро навсозӣ кунед.</string>
+    <string name="verify_current_description_phone">Шумо метавонед шахсияти худро бо истифодаи PIN, расм ё пароли ин телефон исбот карда, иттилооти рамзбандишудаи худро, аз ҷумла рамзҳоро озод кунед.</string>
+    <string name="verify_current_description_tablet">Шумо метавонед шахсияти худро бо истифодаи PIN, расм ё пароли ин планшет исбот карда, иттилооти рамзбандишудаи худро, аз ҷумла рамзҳоро озод кунед.</string>
+    <string name="verify_current_detail_password">Пароли ҷориро дохил кунед.</string>
+    <string name="verify_current_detail_pattern">Расми ҷориро бикашед.</string>
+    <string name="verify_current_detail_pin">PIN-и ҷориро дохил кунед.</string>
+    <string name="verify_current_title_phone">Иттилооти рамзбандишудаи худро бо истифодаи ин телефон озод кунед</string>
+    <string name="verify_current_title_tablet">Ин планшетро барои озод кардани иттилооти рамзбандишуда истифода баред</string>
+    <string name="verify_old_password_description_phone">Бо мақсади таъмини амният, шахсияти худро бо истифодаи пароли телефони қаблии худ исбот кунед.</string>
+    <string name="verify_old_password_description_tablet">Бо мақсади таъмини амният, шахсияти худро бо истифодаи пароли планшети қаблии худ исбот кунед.</string>
+    <string name="verify_old_pattern_description_phone">Бо мақсади таъмини амният, шахсияти худро бо истифодаи расми телефони қаблии худ исбот кунед.</string>
+    <string name="verify_old_pattern_description_tablet">Бо мақсади таъмини амният, шахсияти худро бо истифодаи расми планшети қаблии худ исбот кунед.</string>
+    <string name="verify_old_pin_description_phone">Бо мақсади таъмини амният, шахсияти худро бо истифодаи PIN-и телефони қаблии худ исбот кунед.</string>
+    <string name="verify_old_pin_description_tablet">Бо мақсади таъмини амният, шахсияти худро бо истифодаи PIN-и планшети қаблии худ исбот кунед.</string>
+    <string name="verify_old_ppp_title">Иттилооти рамзбандишудаи худро озод кунед</string>
+    <string name="version">Версияи %s</string>
+</resources>

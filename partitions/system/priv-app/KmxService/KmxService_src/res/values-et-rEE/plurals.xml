@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d katset jäänud</item>
+        <item quantity="one">%d katset jäänud</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Kuna teil ei õnnestunud pärast %d katset oma identiteeti kinnitada, kustutatakse krüptitud andmed teie turvalisuse huvides:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Kuna teil ei õnnestunud pärast %d katset oma identiteeti kinnitada, kustutatakse krüptitud andmed teie turvalisuse huvides:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Proovige uuesti 1 tunni ja %d minuti pärast</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Proovige uuesti 1 tunni ja %d minuti pärast</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Proovige uuesti %d tunni pärast</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Proovige uuesti %d tunni pärast</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Proovige uuesti %d tunni ja 1 minuti pärast</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Proovige uuesti %d tunni ja 1 minuti pärast</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Proovige uuesti %d min pärast</item>
+        <item quantity="one">Proovige uuesti %d minuti pärast</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Proovige uuesti %d s pärast</item>
+        <item quantity="one">Proovige uuesti %d sekundi pärast</item>
+    </plurals>
+</resources>

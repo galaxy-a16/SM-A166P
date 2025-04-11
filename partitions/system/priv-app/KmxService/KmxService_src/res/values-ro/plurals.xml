@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d încercări rămase</item>
+        <item quantity="one">%d încercare rămasă</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d de notificări noi</item>
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Pentru că nu ați putut să vă verificați identitatea după %d încercări, datele dumneavoastră criptate vor fi șterse pentru siguranța dumneavoastră:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Pentru că nu ați putut să vă verificați identitatea după %d încercare, datele dumneavoastră criptate vor fi șterse pentru siguranța dumneavoastră:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Pentru că nu ați putut să vă verificați identitatea după %d încercări, datele dumneavoastră criptate vor fi șterse pentru siguranța dumneavoastră:</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Încercați din nou peste 1 oră și %d minute</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Încercați din nou peste 1 oră și %d minut</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Încercați din nou peste 1 oră și %d minute</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Încercați din nou peste %d ore</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Încercați din nou peste %d oră</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Încercați din nou peste %d ore</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Încercați din nou peste %d ore și 1 minut</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Încercați din nou peste %d oră și 1 minut</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Încercați din nou peste %d ore și 1 minut</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Încercați din nou peste %d minute</item>
+        <item quantity="one">Încercați din nou peste %d minut</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Încercați din nou peste %d secunde</item>
+        <item quantity="one">Încercați din nou peste %d secundă</item>
+    </plurals>
+</resources>

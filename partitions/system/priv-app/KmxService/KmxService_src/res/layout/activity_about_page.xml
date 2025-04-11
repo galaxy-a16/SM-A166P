@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:expanded="false">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <androidx.appcompat.widget.Toolbar android:layout_gravity="bottom" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:background="@color/security_status_about_page_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="34.0sp" android:textColor="@color/security_status_about_page_title_text_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="@string/security_status_of_your_devices" android:fontFamily="@font/newsec700bold" android:layout_marginHorizontal="24.0dip" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/security_status_about_page_description_text_color" android:gravity="center" android:id="@id/app_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:fontFamily="@font/newsec400regular" android:layout_marginHorizontal="24.0dip" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/update_progressbar" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginTop="20.0dip" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff8c8c91" android:gravity="center" android:id="@id/update_available_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="A new version is available." android:fontFamily="@font/newsec400regular" android:layout_marginHorizontal="24.0dip" />
+            <Button android:id="@id/update_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Update" android:layout_marginHorizontal="60.0dip" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:textSize="18.0sp" android:textColor="@color/security_status_about_page_bottom_button_text_color" android:layout_gravity="center" android:id="@id/open_source_btn" android:background="@drawable/about_page_bottom_button_bg" android:layout_width="240.0dip" android:layout_height="wrap_content" android:layout_marginBottom="36.0dip" android:text="@string/open_source_licenses" android:fontFamily="@font/newsec600semibold" android:layout_marginHorizontal="60.0dip" android:paddingHorizontal="16.0dip" android:paddingVertical="14.0dip" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

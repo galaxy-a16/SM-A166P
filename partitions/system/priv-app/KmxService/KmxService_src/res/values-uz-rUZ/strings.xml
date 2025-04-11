@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s haqida</string>
+    <string name="back">Orqaga</string>
+    <string name="chan_mkt">Marketing</string>
+    <string name="chan_ntc">Eslatma</string>
+    <string name="character_counter_content_description">%2$d ta belgidan %1$d tasi</string>
+    <string name="close_app">Ilovani yopish</string>
+    <string name="contact_us">Bog‘lanish</string>
+    <string name="couldnt_get_samsung_account_information">Akkauntingiz ma’lumotlarini olib bo‘lmadi</string>
+    <string name="couldnt_get_samsung_account_information_description">Tarmoq ulanishini tekshiring va Samsung account’i so‘nggi versiyagacha yangilanganligiga ishonch hosil qiling, so‘ngra qayta urinib ko‘ring.</string>
+    <string name="data_info_dialog_title">Blokdan chiqarishingiz mumkin bo‘lgan ma’lumotlar</string>
+    <string name="data_info_menu">Qaysi maʼlumotlarni blokdan chiqarishingiz mumkinligini koʻring</string>
+    <string name="delete_dialog_message">Oldingi qurilmangiz PIN-kodi, grafik kaliti yoki parolini eslay olmasangiz, maʼlumotlaringizni blokdan chiqarishni oʻtkazib yuborishingiz mumkin. Biroq, shaxsingizni tasdiqlay olmaganimiz sababli quyidagi shifrlangan maʼlumotlar xavfsizlik maqsadida oʻchirib tashlanadi.</string>
+    <string name="delete_dialog_title">Blokdan chiqarishda muammo mavjudmi?</string>
+    <string name="delete_menu">Qanday blokdan chiqarishni unutdingizmi?</string>
+    <string name="dragndroplist_drag_move">Hozir %d holatda</string>
+    <string name="dragndroplist_drag_release">Element %d holatga olib borib qo‘yildi.</string>
+    <string name="dragndroplist_drag_start">Elementni %d holatiga tortib o‘tkazish boshlandi.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d holatidagi elementni tortib o‘tkazib bo‘lmaydi.</string>
+    <string name="go_to">%s’ga o‘tish</string>
+    <string name="go_to_developer_options">Ishlab chiqaruvchi opsiya. o‘t</string>
+    <string name="go_to_sign_out">Chiqish bo‘lim. o‘t</string>
+    <string name="incorrect_password_entered">Noto‘g‘ri parol kiritildi</string>
+    <string name="incorrect_pattern_drawn">Noto‘g‘ri chizma</string>
+    <string name="incorrect_pin_entered">Noto‘g‘ri PIN-kod kiritildi</string>
+    <string name="latest_version_is_already_installed">So‘nggi versiya oldinroq o‘rnatilgan.</string>
+    <string name="menu_cancel">Bekor qilish</string>
+    <string name="menu_continue">Davom ettirish</string>
+    <string name="new_version_is_available">Yangi versiya mavjud.</string>
+    <string name="next">Keyingi</string>
+    <string name="no_network_connection">Tarmoq ulanishi yo‘q</string>
+    <string name="no_network_connection_description">Qurilmalaringizning xavfsizlik holatini yangilab bo‘lmadi. Ulanishingizni tekshiring va qayta urinib ko‘ring.</string>
+    <string name="no_threats_found">Tahdidlar topilmadi</string>
+    <string name="notify_delete_dialog_title">Shifrlangan ma’lumotlaringiz o‘chirib tashlanadi</string>
+    <string name="notify_delete_dialog_title_previous_devices">Avvalgi qurilmalaringizdan foydalanayotganingizni tasdiqlab bo‘lmadi</string>
+    <string name="notify_delete_dialog_title_previous_phone">Avvalgi telefoningizdan foydalanayotganingizni tasdiqlab bo‘lmadi</string>
+    <string name="notify_delete_dialog_title_previous_phones">Avvalgi telefonlaringizdan foydalanayotganingizni tasdiqlab bo‘lmadi</string>
+    <string name="notify_delete_dialog_title_previous_tablet">Avvalgi planshetingizdan foydalanayotganingizni tasdiqlab bo‘lmadi</string>
+    <string name="notify_delete_dialog_title_previous_tablets">Avvalgi planshetlaringizdan foydalanayotganingizni tasdiqlab bo‘lmadi</string>
+    <string name="oem_unlocking_is_turned_on">OEM blokdan chiqarilishi yoqilgan</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM blokdan chiqarilishi telefoningizga ruxsat berilmagan dasturiy ta’minot o‘rnatilishiga imkon berishi mumkin. Ruxsat berilmagan dastur telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun telefoningizdagi Sozlamalar > Dasturchi opsiyalarida OEM blokdan chiqarilishini o‘chiring.
+
+Uni o‘chirganingizdan so‘ng, xavfsizlik holati bu yerda o‘zgarishi uchun bu bir oz vaqtni olishi mumkin."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM blokdan chiqarilishi planshetingizga ruxsat berilmagan dasturiy ta’minot o‘rnatilishiga imkon berishi mumkin. Ruxsat berilmagan dastur planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun planshetingizdagi Sozlamalar > Dasturchi opsiyalarida OEM blokdan chiqarilishini o‘chiring.
+
+Uni o‘chirganingizdan so‘ng, xavfsizlik holati bu yerda o‘zgarishi uchun bu bir oz vaqtni olishi mumkin."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM blokdan chiqarilishi telefoningizga ruxsat berilmagan dasturiy ta’minot o‘rnatilishiga imkon berishi mumkin. Ruxsat berilmagan dastur telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun Sozlamalar > Dasturchi opsiyalarida OEM blokdan chiqarilishini o‘chiring.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM blokdan chiqarilishi planshetingizga ruxsat berilmagan dasturiy ta’minot o‘rnatilishiga imkon berishi mumkin. Ruxsat berilmagan dastur planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun Sozlamalar > Dasturchi opsiyalarida OEM blokdan chiqarilishini o‘chiring.</string>
+    <string name="ok">OK</string>
+    <string name="open_source_licenses">"Ochiq
+man.lit-
+senziya"</string>
+    <string name="other_devices">Boshqa qurilmalar</string>
+    <string name="password_set">Parol toʻplami %s</string>
+    <string name="pattern_set">Grafik kalit toʻplami %s</string>
+    <string name="pin_set">PIN-kod oʻrnatildi: %s</string>
+    <string name="ppp_delegate_description">Maʼlumotlaringizni himoya qilish uchun PIN-kod, grafik kalit yoki parolni oʻrnating.</string>
+    <string name="ppp_delegate_title">Xavfsiz ekran blokini o‘rnatish</string>
+    <string name="ppp_dialog_description_SamsungCloud">Yaxshilangan ma’lumotlarni himoyasini arxivlash va Samsung Cloud’da sinxronlash uchun Ekran bloki</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass’da saqlangan kirish kalitlari</string>
+    <string name="remove_this_device">Bu qurilmani ol</string>
+    <string name="security_status_main_description">Knox Matrix xavfsiz maxfiy blokcheyn yordamida Samsung account’ingizga kirgan qo‘llab-quvvatlanadigan qurilmalarni nazorat qiladi. Zanjirdagi har bir qurilma boshqa qurilmalarning xavfsizlik holatini tekshirishi va tahdidlar mavjudligini sizga xabar qilishi mumkin.</string>
+    <string name="security_status_not_available_yet">Xavfsizlik holatidan hozircha foydalanib bo‘lmaydi</string>
+    <string name="security_status_not_available_yet_description">Bu bir oz vaqt talab qilishi mumkin. Keyinroq qayta tekshirib ko‘ring.</string>
+    <string name="security_status_not_up_to_date">Xavfsizlik holati yangilanmagan</string>
+    <string name="security_status_not_up_to_date_description_phone">"Ushbu telefonning xavfsizlik holati 30 kundan ortiq vaqt davomida yangilanmagan. Telefon oflayn bo‘lishi mumkin yoki biror narsa uning holatini tekshirishga xalaqit berayotgan bo‘lishi mumkin. Agar siz ushbu telefondan boshqa foydalanmasangiz, Samsung account’ingizdan chiqish tavsiya etiladi. Sozlamalar > Samsung account > Qurilmalarda tizimdan chiqishingiz mumkin.
+
+Agar siz ushbu telefondan foydalanayotgan bo‘lsangiz, lekin uning xavfsizlik holati yangilanmasa, uning tarmoqqa ulanganligiga ishonch hosil qiling."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"Ushbu qurilmaning xavfsizlik holati 30 kundan ortiq vaqt davomida yangilanmagan. Qurilma oflayn bo‘lishi mumkin yoki biror narsa uning holatini tekshirishga xalaqit berayotgan bo‘lishi mumkin. Agar bu qurilmadan boshqa foydalanmayotgan bo‘lsangiz, SmartThings ilovasida ushbu qurilmani olib tashlash tavsiya etiladi.
+
+Agar siz ushbu qurilmadan foydalanayotgan bo‘lsangiz, lekin uning xavfsizlik holati yangilanmasa, uning tarmoqqa ulanganligiga ishonch hosil qiling."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"Ushbu planshetning xavfsizlik holati 30 kundan ortiq vaqt davomida yangilanmagan. Planshet oflayn bo‘lishi mumkin yoki biror narsa uning holatini tekshirishga xalaqit berayotgan bo‘lishi mumkin. Agar siz ushbu planshetdan boshqa foydalanmasangiz, Samsung account’ingizdan chiqish tavsiya etiladi. Sozlamalar > Samsung account > Qurilmalarda tizimdan chiqishingiz mumkin.
+
+Agar siz ushbu planshetdan foydalanayotgan bo‘lsangiz, lekin uning xavfsizlik holati yangilanmasa, uning tarmoqqa ulanganligiga ishonch hosil qiling."</string>
+    <string name="security_status_not_up_to_date_description_vd">"Ushbu qurilmaning xavfsizlik holati 30 kundan ortiq vaqt davomida yangilanmagan. Qurilma oflayn bo‘lishi mumkin yoki biror narsa uning holatini tekshirishga xalaqit berayotgan bo‘lishi mumkin. Agar siz ushbu qurilmadan boshqa foydalanmasangiz, Samsung account’ingizdan chiqish tavsiya etiladi. Sozlamalar > Samsung account > Qurilmalar > Kirilgan qurilmalarni boshqarishda tizimdan chiqishingiz mumkin.
+
+Agar siz ushbu qurilmadan foydalanayotgan bo‘lsangiz, lekin uning xavfsizlik holati yangilanmasa, uning tarmoqqa ulanganligiga ishonch hosil qiling."</string>
+    <string name="security_status_of_your_devices">Qurilmalar xavfsizlik holati</string>
+    <string name="sesl_action_bar_up_description">Yuqoriga</string>
+    <string name="sesl_action_menu_overflow_badge_description">Yangi tarkib mavjud</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">Y</string>
+    <string name="sesl_action_menu_overflow_description">Qo‘shimcha opsiyalar</string>
+    <string name="sesl_appbar_suggest_all_dismissed">Barcha takliflar rad etildi</string>
+    <string name="sesl_appbar_suggest_dismiss">Tavsiyani rad etish</string>
+    <string name="sesl_appbar_suggest_dismissed">Tavsiya rad etildi</string>
+    <string name="sesl_appbar_suggest_pagination">Sahifa %1$d/%2$d</string>
+    <string name="sesl_index_assistant_text">Aylantirish uchun ikkita barmoq bilan yuqoriga yoki pastga suring.</string>
+    <string name="sesl_index_scrollbar">Aylantirish satri</string>
+    <string name="sesl_index_section">Boʻlim indeksi</string>
+    <string name="sesl_index_selected">Tanlangan</string>
+    <string name="sesl_material_badge_description">Yangi tarkib mavjud</string>
+    <string name="sesl_material_overflow_badge_text_n">Y</string>
+    <string name="sesl_more_item_label">Ko‘proq</string>
+    <string name="sesl_preferecne_badge_description">Yangi bildirishnoma</string>
+    <string name="sesl_preferencecategory_added_title">Sarlavha</string>
+    <string name="sesl_search_hint">Qidirish</string>
+    <string name="sesl_searchview_description_clear">Qidirish maydonini tozalash</string>
+    <string name="sesl_searchview_description_clear_field">Qidirish maydoni tozalandi</string>
+    <string name="sesl_searchview_description_query">Qidirish so‘rovi</string>
+    <string name="sesl_searchview_description_search">Qidirish</string>
+    <string name="sesl_searchview_description_submit">So‘rovni jo‘natish</string>
+    <string name="sesl_searchview_description_voice">Ovozli qidirish</string>
+    <string name="sesl_switch_off">O‘chirilgan</string>
+    <string name="sesl_switch_on">Yoqilgan</string>
+    <string name="sesl_switchbar_off_text">O‘ch</string>
+    <string name="sesl_switchbar_on_text">Yoq.</string>
+    <string name="sesl_toolbar_collapse_description">O‘rash</string>
+    <string name="skip">O‘tkazib yuborish</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">SmartThings telefoningizda o‘rnatilmagan. Uni Play Store’dan yuklab oling.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">SmartThings planshetingizda o‘rnatilmagan. Uni Play Store’dan yuklab oling.</string>
+    <string name="this_phone">Bu telefon</string>
+    <string name="this_tablet">Ushbu planshet</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d soat, %2$d daqiqadan so‘ng qayta urinib ko‘ring</string>
+    <string name="unauthorized_software_detected">Ruxsat berilmagan dasturiy ta’minot aniqlandi</string>
+    <string name="unauthorized_software_detected_description_other_phone">Ruxsat berilmagan tizim dasturiy ta’minoti telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki Sozlamalar > Samsung account > Qurilmalarda Samsung account’ingizdan chiqing. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">Ruxsat berilmagan tizim dasturi qurilmangizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki SmartThings ilovasida bu qurilmani olib tashlang. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish xizmati bilan bog‘laning.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">Ruxsat berilmagan tizim dasturiy ta’minoti planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki Sozlamalar > Samsung account > Qurilmalarda Samsung account’ingizdan chiqing. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.</string>
+    <string name="unauthorized_software_detected_description_other_vd">Ruxsat berilmagan tizim dasturiy ta’minoti qurilmangizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki Sozlamalar > Samsung account > Qurilmalar > Kirilgan qurilmalarni boshqarishda Samsung account’ingizdan chiqing. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.</string>
+    <string name="unauthorized_software_detected_description_this_phone">Ruxsat berilmagan tizim dasturi telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki Samsung account’ingizdan chiqing. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish xizmati bilan bog‘laning.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">Ruxsat berilmagan tizim dasturi planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun rasmiy Samsung dasturiy ta’minotini o‘rnating yoki Samsung account’ingizdan chiqing. Rasmiy dasturiy ta’minotni o‘rnatishga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish xizmati bilan bog‘laning.</string>
+    <string name="unlocked_bootloader">Blokdan chiqarilgan yuklash vositasi</string>
+    <string name="unlocked_bootloader_description_other_phone">"Telefoningizning boshlang‘ich yuklovchisi blokdan chiqarilgan vaqtda ruxsat berilmagan tizim dasturiy ta’minoti o‘rnatilishi mumkin. Ruxsat berilmagan tizim dasturiy ta’minoti telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun telefoningiz boshlang‘ich yuklovchisini bloklang yoki Sozlamalar > Samsung account > Qurilmalarda Samsung account’ingizdan chiqing. Boshlang‘ich yuklovchini bloklashga yordam berish uchun Samsung mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.
+
+Uni bloklaganingizdan so‘ng, bu yerda xavfsizlik holati o‘zgarishi uchun bir oz vaqt talab qilinishi mumkin."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"Planshetingizning boshlang‘ich yuklovchisi blokdan chiqarilgan vaqtda ruxsat berilmagan tizim dasturiy ta’minoti o‘rnatilishi mumkin. Ruxsat berilmagan tizim dasturiy ta’minoti planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun planshetingiz boshlang‘ich yuklovchisini bloklang yoki Sozlamalar > Samsung account > Qurilmalarda Samsung account’ingizdan chiqing. Boshlang‘ich yuklovchini bloklashga yordam berish uchun Samsung mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.
+
+Uni bloklaganingizdan so‘ng, bu yerda xavfsizlik holati o‘zgarishi uchun bir oz vaqt talab qilinishi mumkin."</string>
+    <string name="unlocked_bootloader_description_this_phone">Telefoningizning boshlang‘ich yuklovchisi blokdan chiqarilgan vaqtda ruxsat berilmagan tizim dasturi o‘rnatilishi mumkin. Ruxsat berilmagan tizim dasturi telefoningizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun telefoningiz boshlang‘ich yuklovchisini bloklang yoki Samsung account’ingizdan chiqing. Boshlang‘ich yuklovchini bloklashga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish xizmati bilan bog‘laning.</string>
+    <string name="unlocked_bootloader_description_this_tablet">Planshetingizning boshlang‘ich yuklovchisi blokdan chiqarilgan vaqtda ruxsat berilmagan tizim dasturi o‘rnatilishi mumkin. Ruxsat berilmagan tizim dasturi planshetingizni xavfsizlik tahdidlaridan himoyasiz qoldirishi mumkin. Akkauntingiz va shaxsiy ma’lumotlaringizni himoya qilish uchun planshetingiz boshlang‘ich yuklovchisini bloklang yoki Samsung account’ingizdan chiqing. Boshlang‘ich yuklovchini bloklashga yordam berish uchun Samsung Mijozlarga xizmat ko‘rsatish xizmati bilan bog‘laning.</string>
+    <string name="update">Yangilash</string>
+    <string name="update_multi_apps_to_continue">Davom etish uchun quyidagi ilovalarni yangilang:</string>
+    <string name="update_ps_to_continue">Davom etish uchun %s’ni yangilang.</string>
+    <string name="verify_current_description_phone">Ushbu telefonning PIN-kodi, grafik kaliti yoki paroli bilan shaxsingizni tasdiqlash orqali shifrlangan maʼlumotlaringizni, jumladan, kirish kalitlarini blokdan chiqarishingiz mumkin.</string>
+    <string name="verify_current_description_tablet">Ushbu planshetning PIN-kodi, grafik kaliti yoki paroli bilan shaxsingizni tasdiqlash orqali shifrlangan maʼlumotlaringizni, jumladan, kirish kalitlarini blokdan chiqarishingiz mumkin.</string>
+    <string name="verify_current_detail_password">Joriy parolingizni kiriting.</string>
+    <string name="verify_current_detail_pattern">Joriy chizmangizni chizing.</string>
+    <string name="verify_current_detail_pin">Joriy PIN-kodni kiriting.</string>
+    <string name="verify_current_title_phone">Shifrlangan maʼlumotlarni blokdan chiqarish uchun ushbu telefondan foydalaning</string>
+    <string name="verify_current_title_tablet">Shifrlangan maʼlumotlarni blokdan chiqarish uchun ushbu planshetdan foydalaning</string>
+    <string name="verify_old_password_description_phone">Xavfsizlik uchun avvalgi telefoningiz paroli bilan shaxsingizni tasdiqlang.</string>
+    <string name="verify_old_password_description_tablet">Xavfsizlik uchun avvalgi planshetingiz paroli bilan shaxsingizni tasdiqlang.</string>
+    <string name="verify_old_pattern_description_phone">Xavfsizlik uchun avvalgi telefoningiz grafik kaliti bilan shaxsingizni tasdiqlang.</string>
+    <string name="verify_old_pattern_description_tablet">Xavfsizlik uchun avvalgi planshetingiz grafik kaliti bilan shaxsingizni tasdiqlang.</string>
+    <string name="verify_old_pin_description_phone">Xavfsizlik uchun avvalgi telefoningiz PIN-kodi bilan shaxsingizni tasdiqlang.</string>
+    <string name="verify_old_pin_description_tablet">Xavfsizlik maqsadida avvalgi planshetingiz PIN-kodi yordamida oʻzingizni tasdiqlang.</string>
+    <string name="verify_old_ppp_title">Shifrlangan ma’lumotlaringizni blokdan chiqaring</string>
+    <string name="version">%s versiyasi</string>
+</resources>

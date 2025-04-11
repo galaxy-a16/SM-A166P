@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Pozostało prób: %d</item>
+        <item quantity="one">Pozostała %d próba</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nowego powiadomienia</item>
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">%d nowe powiadomienia</item>
+        <item quantity="many">%d nowych powiadomień</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Ponieważ nie udało Ci się zweryfikować swojej tożsamości po %d próby, ze względów bezpieczeństwa Twoje zaszyfrowane dane zostaną usunięte:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Ponieważ nie udało Ci się zweryfikować swojej tożsamości po %d próbie, ze względów bezpieczeństwa Twoje zaszyfrowane dane zostaną usunięte:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Ponieważ nie udało Ci się zweryfikować swojej tożsamości po %d próbach, ze względów bezpieczeństwa Twoje zaszyfrowane dane zostaną usunięte:</item>
+        <item quantity="many">Ponieważ nie udało Ci się zweryfikować swojej tożsamości po %d próbach, ze względów bezpieczeństwa Twoje zaszyfrowane dane zostaną usunięte:</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Spróbuj ponownie za 1 godzinę i %d minuty</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Spróbuj ponownie za 1 godzinę i %d minutę</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Spróbuj ponownie za 1 godzinę i %d minuty</item>
+        <item quantity="many">Spróbuj ponownie za 1 godzinę i %d minut</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Spróbuj ponownie za %d godziny</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Spróbuj ponownie za %d godzinę</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Spróbuj ponownie za %d godziny</item>
+        <item quantity="many">Spróbuj ponownie za %d godzin</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Spróbuj ponownie za %d godziny i 1 minutę</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Spróbuj ponownie za %d godzinę i 1 minutę</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Spróbuj ponownie za %d godziny i 1 minutę</item>
+        <item quantity="many">Spróbuj ponownie za %d godzin i 1 minutę</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Spróbuj ponownie za %d min</item>
+        <item quantity="one">Spróbuj ponownie za %d minutę</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Spróbuj ponownie za %d s</item>
+        <item quantity="one">Spróbuj ponownie za %d sekundę</item>
+    </plurals>
+</resources>

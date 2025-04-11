@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">Še toliko poskusov: %d</item>
+        <item quantity="one">Še %d poskus</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obvestil</item>
+        <item quantity="one">%d novo obvestilo</item>
+        <item quantity="two">%d novi obvestili</item>
+        <item quantity="few">%d nova obvestila</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Ker po %d poskusih niste mogli potrditi svoje identitete, bodo vaši šifrirani podatki izbrisani zaradi vaše varnosti:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Ker po %d poskusu niste mogli potrditi svoje identitete, bodo vaši šifrirani podatki izbrisani zaradi vaše varnosti:</item>
+        <item quantity="two">Ker po %d poskusih niste mogli potrditi svoje identitete, bodo vaši šifrirani podatki izbrisani zaradi vaše varnosti:</item>
+        <item quantity="few">Ker po %d poskusih niste mogli potrditi svoje identitete, bodo vaši šifrirani podatki izbrisani zaradi vaše varnosti:</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Poskusite znova čez 1 uro %d minut</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poskusite znova čez 1 uro %d minuto</item>
+        <item quantity="two">Poskusite znova čez 1 uro %d minuti</item>
+        <item quantity="few">Poskusite znova čez 1 uro %d minute</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Poskusite znova čez %d ur</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poskusite znova čez %d uro</item>
+        <item quantity="two">Poskusite znova čez %d uri</item>
+        <item quantity="few">Poskusite znova čez %d ure</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Poskusite znova čez %d ur 1 minuto</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poskusite znova čez %d uro 1 minuto</item>
+        <item quantity="two">Poskusite znova čez %d uri 1 minuto</item>
+        <item quantity="few">Poskusite znova čez %d ure 1 minuto</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Poskusite znova čez %d min</item>
+        <item quantity="one">Poskusite znova čez %d min</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Poskusite znova čez %d s</item>
+        <item quantity="one">Poskusite znova čez %d s</item>
+    </plurals>
+</resources>

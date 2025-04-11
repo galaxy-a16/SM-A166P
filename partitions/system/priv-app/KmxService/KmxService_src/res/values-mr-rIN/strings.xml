@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">%s विषयी</string>
+    <string name="back">मागे</string>
+    <string name="chan_mkt">मार्केटिंग</string>
+    <string name="chan_ntc">सूचना</string>
+    <string name="character_counter_content_description">%2$d पैकी %1$d वर्ण</string>
+    <string name="close_app">अनुप्रयोग बंद करा</string>
+    <string name="contact_us">आमच्‍याशी संपर्क साधा</string>
+    <string name="couldnt_get_samsung_account_information">आपली खाते माहिती मिळवू शकलो नाही</string>
+    <string name="couldnt_get_samsung_account_information_description">आपले नेटवर्क कनेक्शन तपासा आणि Samsung account नवीनतम आवृत्तीवर अपडेट केले असल्याची खात्री करा, नंतर पुन्हा प्रयत्न करा.</string>
+    <string name="data_info_dialog_title">आपण अनलॉक करू शकता असा डेटा</string>
+    <string name="data_info_menu">आपण कोणता डेटा अनलॉक करू शकता ते पहा</string>
+    <string name="delete_dialog_message">आपल्याला आपल्या मागील डिव्हाईसचा PIN, पॅटर्न किंवा पासवर्ड आठवत नसल्यास आपण आपला डेटा अनलॉक करणे वगळू शकता. तथापि, खाली दिलेला एन्क्रिप्‍ट केलेला डेटा सुरक्षिततेसाठी हटवला जाईल कारण आम्ही आपली ओळख पडताळणी करू शकलो नाही.</string>
+    <string name="delete_dialog_title">अनलॉक करण्यात अडचण येत आहे?</string>
+    <string name="delete_menu">अनलॉक कसे करायचे ते आठवत नाही?</string>
+    <string name="dragndroplist_drag_move">आता स्थिती %d वर</string>
+    <string name="dragndroplist_drag_release">%d जागेवर आयटेम्स ड्रॉप केले.</string>
+    <string name="dragndroplist_drag_start">%d जागेवर आयटेम ड्रॅग करणे सुरू करा.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">%d जागेवरील आयटेम्स ड्रॅग केले जाऊ शकत नाहीत.</string>
+    <string name="go_to">%s वर जा</string>
+    <string name="go_to_developer_options">विकसक पर्यायांवर जा</string>
+    <string name="go_to_sign_out">साइन आउट करा वर जा</string>
+    <string name="incorrect_password_entered">चुकीचा पासवर्ड प्रविष्ट केला</string>
+    <string name="incorrect_pattern_drawn">चुकीचे पॅटर्न ड्रॉ केले</string>
+    <string name="incorrect_pin_entered">चुकीचा PIN प्रविष्ट केला</string>
+    <string name="latest_version_is_already_installed">नवीनतम व्हर्जन आधीपासूनच इन्‍स्‍टॉल केली आहे.</string>
+    <string name="menu_cancel">रद्द करा</string>
+    <string name="menu_continue">सुरू ठेवा</string>
+    <string name="new_version_is_available">नवी व्हर्जन उपलब्‍ध आहे.</string>
+    <string name="next">पुढील</string>
+    <string name="no_network_connection">कोणतेही नेटवर्क कनेक्शन नाही</string>
+    <string name="no_network_connection_description">आपल्या डिव्हाईसेसची सुरक्षा स्थिती अपडेट करू शकलो नाही. कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="no_threats_found">कोणतेही धोके आढळले नाहीत</string>
+    <string name="notify_delete_dialog_title">आपला एनक्रिप्ट केलेला डेटा हटवला जाईल</string>
+    <string name="notify_delete_dialog_title_previous_devices">आपले मागील डिव्हाईसेस वापरून आपली पडताळणी करू शकलो नाही</string>
+    <string name="notify_delete_dialog_title_previous_phone">आपला मागील फोन वापरून आपली पडताळणी करू शकलो नाही</string>
+    <string name="notify_delete_dialog_title_previous_phones">आपले मागील फोन्स वापरून आपली पडताळणी करू शकलो नाही</string>
+    <string name="notify_delete_dialog_title_previous_tablet">आपला मागील टॅबलेट वापरून आपली पडताळणी करू शकलो नाही</string>
+    <string name="notify_delete_dialog_title_previous_tablets">आपले मागील टॅबलेट्स वापरून आपली पडताळणी करू शकलो नाही</string>
+    <string name="oem_unlocking_is_turned_on">OEM अनलॉकिंग चालू केले आहे</string>
+    <string name="oem_unlocking_is_turned_on_description_other_phone">"OEM अनलॉक केल्याने आपल्या फोनवर अनधिकृत सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, सेटिंग्स > विकसक पर्यायांमध्ये आपल्या फोनवर OEM अनलॉक करणे बंद करा.
+
+आपण ते बंद केल्यानंतर, येथे सुरक्षा स्थिती बदलण्यासाठी काही वेळ लागू शकतो."</string>
+    <string name="oem_unlocking_is_turned_on_description_other_tablet">"OEM अनलॉक केल्याने आपल्या टॅबलेटवर अनधिकृत सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, सेटिंग्स > विकसक पर्यायांमध्ये आपल्या टॅबलेटवर OEM अनलॉक करणे बंद करा.
+
+आपण ते बंद केल्यानंतर, येथे सुरक्षा स्थिती बदलण्यासाठी काही वेळ लागू शकतो."</string>
+    <string name="oem_unlocking_is_turned_on_description_this_phone">OEM अनलॉक केल्याने आपल्या फोनवर अनधिकृत सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, सेटिंग्स > विकसक पर्यायांमध्ये OEM अनलॉक करणे बंद करा.</string>
+    <string name="oem_unlocking_is_turned_on_description_this_tablet">OEM अनलॉक केल्याने आपल्या टॅबलेटवर अनधिकृत सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, सेटिंग्स > विकसक पर्यायांमध्ये OEM अनलॉक करणे बंद करा.</string>
+    <string name="ok">ठीक आहे</string>
+    <string name="open_source_licenses">खुला स्‍त्रोत परवाना</string>
+    <string name="other_devices">अन्य उपकरणे</string>
+    <string name="password_set">%s ला पासवर्ड सेट केला</string>
+    <string name="pattern_set">%s ला पॅटर्न सेट केला</string>
+    <string name="pin_set">%s ला PIN सेट केला</string>
+    <string name="ppp_delegate_description">आपला डेटा संरक्षित करण्यासाठी PIN, पॅटर्न किंवा पासवर्ड सेट करा.</string>
+    <string name="ppp_delegate_title">सुरक्षित स्‍क्रीन लॉक सेट करा</string>
+    <string name="ppp_dialog_description_SamsungCloud">Samsung Cloud मध्ये वर्धित डेटा संरक्षण बॅकअप आणि सिंक करण्यासाठी स्क्रीन लॉक</string>
+    <string name="ppp_dialog_description_SamsungPass">Samsung Pass मध्ये पासकीज जतन केल्या आहेत</string>
+    <string name="remove_this_device">हे डिव्हाईस काढा</string>
+    <string name="security_status_main_description">Knox Matrix सुरक्षित खाजगी ब्लॉकचेन वापरून आपल्या Samsung account मध्ये साइन इन केलेल्या समर्थित डिव्हाईसेसचे निरीक्षण करते. साखळीतील प्रत्येक डिव्हाईस इतर डिव्हाईसेसची सुरक्षा स्थिती तपासू शकते आणि काही धोके असल्यास आपल्याला कळवू शकतात.</string>
+    <string name="security_status_not_available_yet">सुरक्षा स्थिती अद्याप उपलब्ध नाही</string>
+    <string name="security_status_not_available_yet_description">यास काही वेळ लागू शकतो. नंतर पुन्हा तपासा.</string>
+    <string name="security_status_not_up_to_date">सुरक्षा स्थिती अप डू डेट नाही</string>
+    <string name="security_status_not_up_to_date_description_phone">"या फोनची सुरक्षा स्थिती 30 दिवसांपेक्षा अधिक काळ अपडेट केलेली नाही. फोन ऑफलाइन असू शकतो किंवा काहीतरी त्याची स्थिती तपासण्यापासून प्रतिबंधित करत असेल. आपण यापुढे हा फोन वापरत नसल्यास, आपल्या Samsung account मधून साइन आउट करण्याची शिफारस केली जाते. आपण सेटिंग्स > Samsung account > डिव्हाईसेसमध्ये साइन आउट करू शकता.
+
+आपण हा फोन वापरत असल्यास, पण त्याची सुरक्षा स्थिती अपडेट होत नसल्यास, तो नेटवर्कशी कनेक्ट केलेला असल्याची खात्री करा."</string>
+    <string name="security_status_not_up_to_date_description_smart_things">"या डिव्हाईसची सुरक्षा स्थिती 30 दिवसांपेक्षा अधिक काळ अपडेट केलेली नाही. डिव्हाईस ऑफलाइन असू शकते किंवा काहीतरी त्याची स्थिती तपासण्यापासून प्रतिबंधित करत असेल. आपण यापुढे हे डिव्हाईस वापरत नसल्यास, SmartThings ऍपमधून हे डिव्हाईस काढून टाकण्याची शिफारस केली जाते.
+
+आपण हे डिव्हाईस वापरत असल्यास, पण त्याची सुरक्षा स्थिती अपडेट होत नसल्यास, तो नेटवर्कशी कनेक्ट केलेला असल्याची खात्री करा."</string>
+    <string name="security_status_not_up_to_date_description_tablet">"या टॅबलेटची सुरक्षा स्थिती 30 दिवसांपेक्षा अधिक काळ अपडेट केलेली नाही. टॅबलेट ऑफलाइन असू शकतो किंवा काहीतरी त्याची स्थिती तपासण्यापासून प्रतिबंधित करत असेल. आपण यापुढे हा टॅबलेट वापरत नसल्यास, आपल्या Samsung account मधून साइन आउट करण्याची शिफारस केली जाते. आपण सेटिंग्स > Samsung account > डिव्हाईसेसमध्ये साइन आउट करू शकता.
+
+आपण हा टॅबलेट वापरत असल्यास, पण त्याची सुरक्षा स्थिती अपडेट होत नसल्यास, तो नेटवर्कशी कनेक्ट केलेला असल्याची खात्री करा."</string>
+    <string name="security_status_not_up_to_date_description_vd">"या डिव्हाईसची सुरक्षा स्थिती 30 दिवसांपेक्षा अधिक काळ अपडेट केलेली नाही. डिव्हाईस ऑफलाइन असू शकते किंवा काहीतरी त्याची स्थिती तपासण्यापासून प्रतिबंधित करत असेल. आपण यापुढे हे डिव्हाईस वापरत नसल्यास, आपल्या Samsung account मधून साइन आउट करण्याची शिफारस केली जाते. आपण सेटिंग्स > Samsung account > डिव्हाईसेस > साइन-इन केलेली डिव्हाईसेस मॅनेज करा मध्ये साइन आउट करू शकता.
+
+आपण हे डिव्हाईस वापरत असल्यास, पण त्याची सुरक्षा स्थिती अपडेट होत नसल्यास, तो नेटवर्कशी कनेक्ट केलेला असल्याची खात्री करा."</string>
+    <string name="security_status_of_your_devices">आपल्या डिव्हाईसेसची सुरक्षा स्थिती</string>
+    <string name="sesl_action_bar_up_description">वर नेव्हिगेट करा.</string>
+    <string name="sesl_action_menu_overflow_badge_description">नवीन सामग्री उपलब्ध</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">नव.</string>
+    <string name="sesl_action_menu_overflow_description">अधिक पर्याय</string>
+    <string name="sesl_appbar_suggest_all_dismissed">सर्व सूचना डिसमिस केल्या</string>
+    <string name="sesl_appbar_suggest_dismiss">सूचना डिसमिस करा</string>
+    <string name="sesl_appbar_suggest_dismissed">सूचना डिसमिस केली</string>
+    <string name="sesl_appbar_suggest_pagination">%2$d पैकी %1$d पृष्‍ठ</string>
+    <string name="sesl_index_assistant_text">स्क्रोल करण्यासाठी दोन बोटांनी वर किंवा खाली स्वाइप करा.</string>
+    <string name="sesl_index_scrollbar">स्‍क्रोल बार</string>
+    <string name="sesl_index_section">विभाग निर्देशांक</string>
+    <string name="sesl_index_selected">निवडले</string>
+    <string name="sesl_material_badge_description">नवीन सामग्री उपलब्ध</string>
+    <string name="sesl_material_overflow_badge_text_n">नव.</string>
+    <string name="sesl_more_item_label">अधिक</string>
+    <string name="sesl_preferecne_badge_description">नवीन अधिसूचना</string>
+    <string name="sesl_preferencecategory_added_title">हेडर</string>
+    <string name="sesl_search_hint">शोधा</string>
+    <string name="sesl_searchview_description_clear">शोध क्षेत्र साफ करा</string>
+    <string name="sesl_searchview_description_clear_field">शोध क्षेत्र साफ केले</string>
+    <string name="sesl_searchview_description_query">क्वेरी शोधा</string>
+    <string name="sesl_searchview_description_search">शोधा</string>
+    <string name="sesl_searchview_description_submit">क्वेरी सबमिट करा.</string>
+    <string name="sesl_searchview_description_voice">आवाज शोध</string>
+    <string name="sesl_switch_off">बंद आहे</string>
+    <string name="sesl_switch_on">चालू आहे</string>
+    <string name="sesl_switchbar_off_text">बंद</string>
+    <string name="sesl_switchbar_on_text">चालू</string>
+    <string name="sesl_toolbar_collapse_description">संक्षिप्त करा</string>
+    <string name="skip">वगळा</string>
+    <string name="smart_things_app_is_not_available_on_this_phone">आपल्या फोनवर SmartThings इन्‍स्‍टॉल केलेले नाही. प्ले स्टोअर वरून डाउनलोड करा.</string>
+    <string name="smart_things_app_is_not_available_on_this_tablet">आपल्या टॅबलेटवर SmartThings इन्‍स्‍टॉल केलेले नाही. प्ले स्टोअर वरून डाउनलोड करा.</string>
+    <string name="this_phone">हा फोन</string>
+    <string name="this_tablet">हा टॅबलेट</string>
+    <string name="too_many_failed_attempts_countdown_hour_and_min">%1$d तास %2$d मिनिटांमध्ये पुन्‍हा प्रयत्‍न करा</string>
+    <string name="unauthorized_software_detected">अनधिकृत सॉफ्टवेअर आढळले</string>
+    <string name="unauthorized_software_detected_description_other_phone">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा सेटिंग्स > Samsung account > डिव्हाईसेसमध्ये आपल्या Samsung account मधून साइन आउट करा. अधिकृत सॉफ्टवेअर इन्स्टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unauthorized_software_detected_description_other_smart_things">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या डिव्हाईसला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा SmartThings ऍपमधून हे डिव्हाईस काढून टाका. अधिकृत सॉफ्टवेअर इन्‍स्‍टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unauthorized_software_detected_description_other_tablet">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा सेटिंग्स > Samsung account > डिव्हाईसेसमध्ये आपल्या Samsung account मधून साइन आउट करा. अधिकृत सॉफ्टवेअर इन्स्टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unauthorized_software_detected_description_other_vd">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या डिव्हाईसला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा सेटिंग्स > Samsung account > डिव्हाईसेस > साइन इन केलेले डिव्हाईसेस मॅनेज करा मधील आपल्या Samsung account मधून साइन आउट करा. अधिकृत सॉफ्टवेअर इन्स्टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unauthorized_software_detected_description_this_phone">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा आपल्या Samsung account मधून साइन आउट करा. अधिकृत सॉफ्टवेअर इन्‍स्‍टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unauthorized_software_detected_description_this_tablet">अनधिकृत सिस्टम सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, अधिकृत सॅमसंग सॉफ्टवेअर इन्‍स्‍टॉल करा किंवा आपल्या Samsung account मधून साइन आउट करा. अधिकृत सॉफ्टवेअर इन्‍स्‍टॉल करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unlocked_bootloader">अनलॉक केलेले बूटलोडर</string>
+    <string name="unlocked_bootloader_description_other_phone">"आपल्या फोनचे बूटलोडर अनलॉक केलेले असताना, अनधिकृत सिस्टम सॉफ्टवेअर इन्स्टॉल केले जाऊ शकते. अनधिकृत सिस्टम सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, आपल्या फोनचा बूटलोडर लॉक करा किंवा आपल्या Samsung account मधून सेटिंग्स > Samsung account > डिव्हाईसेस मध्ये साइन आउट करा. बूटलोडर लॉक करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.
+
+आपण ते लॉक केल्यानंतर, येथे सुरक्षा स्थिती बदलण्यासाठी काही वेळ लागू शकतो."</string>
+    <string name="unlocked_bootloader_description_other_tablet">"आपल्या टॅबलेटचे बूटलोडर अनलॉक केलेले असताना, अनधिकृत सिस्टम सॉफ्टवेअर इन्स्टॉल केले जाऊ शकते. अनधिकृत सिस्टम सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, आपल्या टॅबलेटचा बूटलोडर लॉक करा किंवा आपल्या Samsung account मधून सेटिंग्स > Samsung account > डिव्हाईसेस मध्ये साइन आउट करा. बूटलोडर लॉक करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.
+
+आपण ते लॉक केल्यानंतर, येथे सुरक्षा स्थिती बदलण्यासाठी काही वेळ लागू शकतो."</string>
+    <string name="unlocked_bootloader_description_this_phone">आपल्या फोनचे बूटलोडर अनलॉक केलेले असताना, अनधिकृत सिस्टम सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सिस्टम सॉफ्टवेअर आपल्या फोनला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, आपल्या फोनचा बूटलोडर लॉक करा किंवा आपल्या Samsung account मधून साइन आउट करा. बूटलोडर लॉक करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="unlocked_bootloader_description_this_tablet">आपल्या टॅबलेटचे बूटलोडर अनलॉक केलेले असताना, अनधिकृत सिस्टम सॉफ्टवेअर इन्‍स्‍टॉल केले जाऊ शकते. अनधिकृत सिस्टम सॉफ्टवेअर आपल्या टॅबलेटला सुरक्षिततेच्या जोखमीसाठी असुरक्षित बनवू शकते. आपले खाते आणि वैयक्तिक डेटा संरक्षित करण्यासाठी, आपल्या टॅबलेटचा बूटलोडर लॉक करा किंवा आपल्या Samsung account मधून साइन आउट करा. बूटलोडर लॉक करण्यात मदतीसाठी, सॅमसंग ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="update">अद्ययावत करा</string>
+    <string name="update_multi_apps_to_continue">सुरू ठेवण्यासाठी खालील ऍप्स अद्ययावत करा:</string>
+    <string name="update_ps_to_continue">सुरू ठेवण्या साठी %s अद्ययावत करा.</string>
+    <string name="verify_current_description_phone">या फोनच्या PIN, पॅटर्न किंवा पासवर्डने आपली ओळख पडताळणी करून आपण पासकीज सह आपला एन्क्रिप्ट केलेला डेटा अनलॉक करू शकता.</string>
+    <string name="verify_current_description_tablet">या टॅबलेटच्या PIN, पॅटर्न किंवा पासवर्डने आपली ओळख पडताळणी करून आपण पासकीज सह आपला एन्क्रिप्ट केलेला डेटा अनलॉक करू शकता.</string>
+    <string name="verify_current_detail_password">आपला सध्‍याचा पासवर्ड प्रविष्‍ट करा.</string>
+    <string name="verify_current_detail_pattern">आपला वर्तमान पॅटर्न ड्रॉ करा.</string>
+    <string name="verify_current_detail_pin">आपले सध्‍याचे PIN प्रविष्‍ट करा.</string>
+    <string name="verify_current_title_phone">एनक्रिप्ट केलेला डेटा अनलॉक करण्यासाठी हा फोन वापरा</string>
+    <string name="verify_current_title_tablet">एनक्रिप्ट केलेला डेटा अनलॉक करण्यासाठी हा टॅबलेट वापरा</string>
+    <string name="verify_old_password_description_phone">सुरक्षिततेसाठी, आपल्या मागील फोनच्या पासवर्डसह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_password_description_tablet">सुरक्षिततेसाठी, आपल्या मागील टॅबलेटच्या पासवर्डसह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_pattern_description_phone">सुरक्षिततेसाठी, आपल्या मागील फोनच्या पॅटर्नसह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_pattern_description_tablet">सुरक्षिततेसाठी, आपल्या मागील टॅबलेटच्या पॅटर्नसह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_pin_description_phone">सुरक्षिततेसाठी, आपल्या मागील फोनच्या PIN सह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_pin_description_tablet">सुरक्षिततेसाठी, आपल्या मागील टॅबलेटच्या PIN सह स्वतःची पडताळणी करा.</string>
+    <string name="verify_old_ppp_title">आपला एनक्रिप्ट केलेला डेटा अनलॉक करा</string>
+    <string name="version">संस्करण %s</string>
+</resources>

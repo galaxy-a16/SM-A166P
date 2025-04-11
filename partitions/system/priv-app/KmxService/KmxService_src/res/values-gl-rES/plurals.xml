@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="attempt_left">
+        <item quantity="other">%d intentos restantes</item>
+        <item quantity="one">Queda %d intento</item>
+    </plurals>
+    <plurals name="notify_delete_dialog_message">
+        <item quantity="other">Como non puideches verificar a túa identidade despois de %d intentos, eliminaranse os datos cifrados por motivos de seguridade:</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Como non puideches verificar a túa identidade despois de %d intento, eliminaranse os datos cifrados por motivos de seguridade:</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Téntao outra vez en 1 hora e %d minutos</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Téntao outra vez en 1 hora e %d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Téntao outra vez en %d horas</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Téntao outra vez en %d hora</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Téntao outra vez en %d horas e 1 minuto</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Téntao outra vez en %d hora e 1 minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_min">
+        <item quantity="other">Téntao outra vez en %d minutos</item>
+        <item quantity="one">Téntao outra vez en %d minuto</item>
+    </plurals>
+    <plurals name="too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Téntao outra vez en %d segundos</item>
+        <item quantity="one">Téntao outra vez en %d segundo</item>
+    </plurals>
+</resources>
