@@ -1,0 +1,14 @@
+#decompile
+apktool d services.jar -o services_src
+
+# nuke .line 
+find . -name "*.smali" -exec sed -i '/^\s*\.line\s\+[0-9]\+/d' {} +
+
+#test before patching
+patch -p1 --dry-run < filename.patch 
+
+#actual patch
+patch -p1 < filename.patch 
+
+#recompile
+apktool b services_src -o new_services.jar
