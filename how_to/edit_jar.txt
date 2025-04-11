@@ -23,3 +23,10 @@ eg:
 alias signapk="java -jar /home/ravindu644/Desktop/Files/SM-A166P/signing_keys/signapk.jar"
 
 then, you can directly type `signapk` in your terminal.
+
+#How to use signapk?
+
+java -jar signapk.jar \
+  aosp_platform.x509.pem aosp_platform.pk8 \
+  your_unsigned.apk \
+  your_signed.apk
