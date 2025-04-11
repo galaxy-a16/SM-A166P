@@ -328,20 +328,20 @@
     return-object v0
 .end method
 
-.method public static applyPolicy(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ILcom/android/server/pm/pkg/AndroidPackage;Z)V
+.method public static applyPolicy(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ILcom/android/server/pm/pkg/AndroidPackage;Z[Landroid/content/pm/Signature;)V
     .locals 5
 
     const/high16 v0, 0x10000
 
     and-int/2addr v0, p1
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSystem(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {p0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSystem(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->isDirectBootAware()Z
 
@@ -349,7 +349,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setAllComponentsDirectBootAware(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {p0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setAllComponentsDirectBootAware(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getPath()Ljava/lang/String;
@@ -362,10 +362,10 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setStub(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {p0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setStub(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     :cond_1
-    move v0, v1
+    move v0, v2
 
     goto :goto_0
 
@@ -374,19 +374,19 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setCoreApp(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {v0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setCoreApp(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setPersistent(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {v0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setPersistent(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setDefaultToDeviceProtectedStorage(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {v0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setDefaultToDeviceProtectedStorage(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setDirectBootAware(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-interface {v0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setDirectBootAware(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
 
@@ -410,24 +410,24 @@
 
     if-eqz v4, :cond_4
 
-    move v4, v1
+    move v4, v2
 
     goto :goto_1
 
     :cond_4
-    move v4, v2
+    move v4, v1
 
     :goto_1
     invoke-interface {p0, v4}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setApex(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     if-eqz v3, :cond_5
 
-    move v3, v1
+    move v3, v2
 
     goto :goto_2
 
     :cond_5
-    move v3, v2
+    move v3, v1
 
     :goto_2
     invoke-interface {p0, v3}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setPrivileged(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -440,12 +440,12 @@
 
     if-eqz v4, :cond_6
 
-    move v4, v1
+    move v4, v2
 
     goto :goto_3
 
     :cond_6
-    move v4, v2
+    move v4, v1
 
     :goto_3
     invoke-interface {v3, v4}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setOem(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -458,12 +458,12 @@
 
     if-eqz v4, :cond_7
 
-    move v4, v1
+    move v4, v2
 
     goto :goto_4
 
     :cond_7
-    move v4, v2
+    move v4, v1
 
     :goto_4
     invoke-interface {v3, v4}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setVendor(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -476,12 +476,12 @@
 
     if-eqz v4, :cond_8
 
-    move v4, v1
+    move v4, v2
 
     goto :goto_5
 
     :cond_8
-    move v4, v2
+    move v4, v1
 
     :goto_5
     invoke-interface {v3, v4}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setProduct(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -494,12 +494,12 @@
 
     if-eqz v4, :cond_9
 
-    move v4, v1
+    move v4, v2
 
     goto :goto_6
 
     :cond_9
-    move v4, v2
+    move v4, v1
 
     :goto_6
     invoke-interface {v3, v4}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSystemExt(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -512,12 +512,12 @@
 
     if-eqz p1, :cond_a
 
-    move p1, v1
+    move p1, v2
 
     goto :goto_7
 
     :cond_a
-    move p1, v2
+    move p1, v1
 
     :goto_7
     invoke-interface {v3, p1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setOdm(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
@@ -556,18 +556,30 @@
 
     move-result p1
 
-    if-nez p1, :cond_b
-
-    goto :goto_8
+    if-eqz p1, :cond_c
 
     :cond_b
-    move v1, v2
+    invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
+
+    move-result-object p1
+
+    invoke-static {p4, p1}, Lcom/android/server/pm/PackageManagerServiceUtils;->compareSignatures([Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)I
+
+    move-result p1
+
+    if-nez p1, :cond_d
 
     :cond_c
-    :goto_8
+    move v1, v2
+
+    :cond_d
     invoke-interface {p0, v1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSignedWithPlatformKey(Z)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
     invoke-interface {p0}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->clearOriginalPackages()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
@@ -575,7 +587,7 @@
 
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->clearAdoptPermissions()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
-    :cond_d
+    :cond_e
     invoke-static {p0, v0, p3}, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->modifySharedLibraries(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
 
     return-void
@@ -1271,20 +1283,20 @@
     throw p0
 .end method
 
-.method public static collectCertificatesLI(Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/parsing/pkg/ParsedPackage;Lcom/android/server/pm/Settings$VersionInfo;ZZZ)V
+.method public static collectCertificatesLI(Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/parsing/pkg/ParsedPackage;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/Settings$VersionInfo;ZZZ[Landroid/content/pm/Signature;)V
     .locals 4
 
-    if-eqz p5, :cond_0
+    if-eqz p6, :cond_0
 
-    new-instance p5, Ljava/io/File;
+    new-instance p6, Ljava/io/File;
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {p6, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p5}, Ljava/io/File;->lastModified()J
+    invoke-virtual {p6}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
 
@@ -1296,11 +1308,11 @@
     move-result-wide v0
 
     :goto_0
-    const-string p5, "PackageManager"
+    const-string p6, "PackageManager"
 
     if-eqz p0, :cond_2
 
-    if-nez p3, :cond_2
+    if-nez p4, :cond_2
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getPathString()Ljava/lang/String;
 
@@ -1324,86 +1336,96 @@
 
     if-nez v0, :cond_2
 
-    invoke-static {p2}, Lcom/android/server/pm/ReconcilePackageUtils;->isCompatSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
+    invoke-static {p3}, Lcom/android/server/pm/ReconcilePackageUtils;->isCompatSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-static {p2}, Lcom/android/server/pm/ReconcilePackageUtils;->isRecoverSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
+    invoke-static {p3}, Lcom/android/server/pm/ReconcilePackageUtils;->isRecoverSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
 
-    move-result p2
+    move-result p3
 
-    if-nez p2, :cond_2
-
-    invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_1
+    if-nez p3, :cond_2
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
-    move-result-object p2
+    move-result-object p3
 
-    invoke-virtual {p2}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
+    invoke-virtual {p3}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
 
-    move-result-object p2
+    move-result-object p3
 
-    array-length p2, p2
-
-    if-eqz p2, :cond_1
+    if-eqz p3, :cond_1
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
-    move-result-object p2
+    move-result-object p3
 
-    invoke-virtual {p2}, Landroid/content/pm/SigningDetails;->getSignatureSchemeVersion()I
+    invoke-virtual {p3}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
 
-    move-result p2
+    move-result-object p3
 
-    if-eqz p2, :cond_1
+    array-length p3, p3
 
-    new-instance p2, Landroid/content/pm/SigningDetails;
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/pm/SigningDetails;->getSignatureSchemeVersion()I
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    new-instance p3, Landroid/content/pm/SigningDetails;
+
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
+
+    move-result-object p4
+
+    invoke-direct {p3, p4}, Landroid/content/pm/SigningDetails;-><init>(Landroid/content/pm/SigningDetails;)V
+
+    invoke-interface {p1, p3}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSigningDetails(Landroid/content/pm/SigningDetails;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object p0
 
-    invoke-direct {p2, p0}, Landroid/content/pm/SigningDetails;-><init>(Landroid/content/pm/SigningDetails;)V
+    invoke-virtual {p0}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
 
-    invoke-interface {p1, p2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSigningDetails(Landroid/content/pm/SigningDetails;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    move-result-object p0
+
+    invoke-static {p1, p2, p7, p0}, Lcom/android/server/pm/ScanPackageUtils;->setCustomSignatures(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Lcom/android/server/pm/pkg/AndroidPackage;[Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)V
 
     return-void
 
     :cond_1
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p3, "PackageSetting for "
+    const-string p4, "PackageSetting for "
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, " is missing signatures.  Collecting certs again to recover them."
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p5, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p6, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
@@ -1414,53 +1436,61 @@
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPath()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p3
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p2, " changed; collecting certs"
+    const-string p3, " changed; collecting certs"
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p3, :cond_3
+    if-eqz p4, :cond_3
 
-    const-string p2, " (forced)"
+    const-string p3, " (forced)"
 
     goto :goto_1
 
     :cond_3
-    const-string p2, ""
+    const-string p3, ""
 
     :goto_1
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p5, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p6, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
-    const-wide/32 p2, 0x40000
+    const-wide/32 p3, 0x40000
 
     :try_start_0
     const-string p0, "collectCertificates"
 
-    invoke-static {p2, p3, p0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
+    invoke-static {p3, p4, p0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
     invoke-static {}, Landroid/content/pm/parsing/result/ParseTypeImpl;->forDefaultParsing()Landroid/content/pm/parsing/result/ParseTypeImpl;
 
     move-result-object p0
 
-    invoke-static {p0, p1, p4}, Lcom/android/server/pm/pkg/parsing/ParsingPackageUtils;->getSigningDetails(Landroid/content/pm/parsing/result/ParseInput;Lcom/android/server/pm/parsing/pkg/ParsedPackage;Z)Landroid/content/pm/parsing/result/ParseResult;
+    invoke-static {p0, p1, p5}, Lcom/android/server/pm/pkg/parsing/ParsingPackageUtils;->getSigningDetails(Landroid/content/pm/parsing/result/ParseInput;Lcom/android/server/pm/parsing/pkg/ParsedPackage;Z)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
 
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->isError()Z
 
-    move-result p4
+    move-result p5
 
-    if-nez p4, :cond_4
+    if-nez p5, :cond_4
+
+    invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getResult()Ljava/lang/Object;
+
+    move-result-object p5
+
+    check-cast p5, Landroid/content/pm/SigningDetails;
+
+    invoke-interface {p1, p5}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSigningDetails(Landroid/content/pm/SigningDetails;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getResult()Ljava/lang/Object;
 
@@ -1468,13 +1498,22 @@
 
     check-cast p0, Landroid/content/pm/SigningDetails;
 
-    invoke-interface {p1, p0}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSigningDetails(Landroid/content/pm/SigningDetails;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+    invoke-virtual {p0}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
+
+    move-result-object p0
+
+    invoke-static {p1, p2, p7, p0}, Lcom/android/server/pm/ScanPackageUtils;->setCustomSignatures(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Lcom/android/server/pm/pkg/AndroidPackage;[Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p2, p3}, Landroid/os/Trace;->traceEnd(J)V
+    invoke-static {p3, p4}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_3
 
     :cond_4
     :try_start_1
@@ -1482,7 +1521,7 @@
 
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getErrorCode()I
 
-    move-result p4
+    move-result p2
 
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getErrorMessage()Ljava/lang/String;
 
@@ -1492,16 +1531,14 @@
 
     move-result-object p0
 
-    invoke-direct {p1, p4, p5, p0}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, p2, p5, p0}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
     throw p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p2, p3}, Landroid/os/Trace;->traceEnd(J)V
+    :goto_3
+    invoke-static {p3, p4}, Landroid/os/Trace;->traceEnd(J)V
 
     throw p0
 .end method
@@ -3219,6 +3256,27 @@
     invoke-direct/range {v0 .. v8}, Lcom/android/server/pm/ScanResult;-><init>(Lcom/android/server/pm/ScanRequest;Lcom/android/server/pm/PackageSetting;Ljava/util/List;ZILandroid/content/pm/SharedLibraryInfo;Landroid/content/pm/SharedLibraryInfo;Ljava/util/List;)V
 
     return-object v9
+.end method
+
+.method public static setCustomSignatures(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Lcom/android/server/pm/pkg/AndroidPackage;[Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)V
+    .locals 0
+
+    invoke-static {p2, p3}, Lcom/android/server/pm/PackageManagerServiceUtils;->compareSignatures([Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)I
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->setSigningDetails(Landroid/content/pm/SigningDetails;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
+
+    :cond_0
+    return-void
 .end method
 
 .method public static setInstantAppForUser(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageSetting;IZZ)V
