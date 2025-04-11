@@ -15,3 +15,11 @@ patch -p1 < filename.patch
 
 #recompile
 apktool b services_src -o new_services.jar
+
+#how install signapk
+
+eg:
+
+alias signapk="java -jar /home/ravindu644/Desktop/Files/SM-A166P/signing_keys/signapk.jar"
+
+then, you can directly type `signapk` in your terminal.
