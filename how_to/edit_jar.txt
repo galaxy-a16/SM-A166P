@@ -1,3 +1,6 @@
+#install framework-res.apk
+apktool if partitions/system/framework/framework-res.apk
+
 #decompile
 apktool d services.jar -o services_src
 
