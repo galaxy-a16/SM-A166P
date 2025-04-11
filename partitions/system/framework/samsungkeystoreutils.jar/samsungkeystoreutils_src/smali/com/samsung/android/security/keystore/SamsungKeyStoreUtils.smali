@@ -18,7 +18,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 42
     new-instance v0, Ljava/security/ProviderException;
 
     const-string v1, "SamsungKeyStoreUtils is Deprecated, use AttestationUtils"
@@ -87,7 +85,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 52
     new-instance v0, Ljava/security/ProviderException;
 
     const-string v1, "SamsungKeyStoreUtils is Deprecated, use AttestationUtils"
@@ -120,7 +117,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 61
     .local p2, "iterable":Ljava/lang/Iterable;, "Ljava/lang/Iterable<[B>;"
     new-instance v0, Ljava/security/ProviderException;
 

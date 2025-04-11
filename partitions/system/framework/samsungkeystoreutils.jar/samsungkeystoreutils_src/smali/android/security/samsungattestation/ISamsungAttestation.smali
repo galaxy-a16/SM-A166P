@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 165
     const/16 v0, 0x24
 
     const/16 v1, 0x2e

@@ -46,7 +46,6 @@
     .param p6, "spec"    # Landroid/security/keystore/KeyGenParameterSpec;
     .param p7, "certificateSubject"    # Ljavax/security/auth/x500/X500Principal;
 
-    .line 72
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -69,7 +68,6 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/samsung/android/security/keystore/AttestParameterSpec;-><init>(Ljava/lang/String;[BZZZZLjava/lang/String;Landroid/security/keystore/KeyGenParameterSpec;Ljavax/security/auth/x500/X500Principal;)V
 
-    .line 74
     return-void
 .end method
 
@@ -85,28 +83,23 @@
     .param p8, "spec"    # Landroid/security/keystore/KeyGenParameterSpec;
     .param p9, "certificateSubject"    # Ljavax/security/auth/x500/X500Principal;
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 45
     const-string v0, "EC"
 
     iput-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mAlgorithm:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 47
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mAlgorithm:Ljava/lang/String;
 
-    .line 49
     :goto_0
     invoke-direct {p0, p2}, Lcom/samsung/android/security/keystore/AttestParameterSpec;->cloneIfNotNull([B)[B
 
@@ -114,28 +107,20 @@
 
     iput-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mChallenge:[B
 
-    .line 50
     iput-boolean p3, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mDeviceAttestation:Z
 
-    .line 51
     iput-boolean p4, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mVerifiableIntegrity:Z
 
-    .line 52
     iput-boolean p5, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mDevicePropertiesAttestationIncluded:Z
 
-    .line 53
     iput-boolean p6, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z
 
-    .line 54
     iput-object p7, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mPackageName:Ljava/lang/String;
 
-    .line 55
     iput-object p8, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
-    .line 56
     iput-object p9, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mCertificateSubject:Ljavax/security/auth/x500/X500Principal;
 
-    .line 57
     return-void
 .end method
 
@@ -143,7 +128,6 @@
     .locals 1
     .param p1, "value"    # [B
 
-    .line 346
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, [B->clone()Ljava/lang/Object;
@@ -166,7 +150,6 @@
 .method public getAlgorithm()Ljava/lang/String;
     .locals 1
 
-    .line 81
     iget-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mAlgorithm:Ljava/lang/String;
 
     return-object v0
@@ -175,7 +158,6 @@
 .method public getCertificateSubject()Ljavax/security/auth/x500/X500Principal;
     .locals 1
 
-    .line 99
     iget-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mCertificateSubject:Ljavax/security/auth/x500/X500Principal;
 
     return-object v0
@@ -184,7 +166,6 @@
 .method public getChallenge()[B
     .locals 1
 
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mChallenge:[B
 
     return-object v0
@@ -193,7 +174,6 @@
 .method public getKeyGenParameterSpec()Landroid/security/keystore/KeyGenParameterSpec;
     .locals 1
 
-    .line 158
     iget-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     return-object v0
@@ -202,7 +182,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 149
     iget-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -211,7 +190,6 @@
 .method public isDeviceAttestation()Z
     .locals 1
 
-    .line 108
     iget-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mDeviceAttestation:Z
 
     return v0
@@ -220,7 +198,6 @@
 .method public isDevicePropertiesAttestationIncluded()Z
     .locals 1
 
-    .line 132
     iget-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mDevicePropertiesAttestationIncluded:Z
 
     return v0
@@ -229,7 +206,6 @@
 .method public isSAKUidRequired()Z
     .locals 1
 
-    .line 141
     iget-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z
 
     return v0
@@ -238,7 +214,6 @@
 .method public isVerifiableIntegrity()Z
     .locals 1
 
-    .line 117
     iget-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mVerifiableIntegrity:Z
 
     return v0
